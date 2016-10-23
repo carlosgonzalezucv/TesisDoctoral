@@ -1,0 +1,916 @@
+\chapter{Multifunciones.}
+\label{ChapMultifunciones}
+\setcounter{theorem}{0}
+En el siguiente capítulo, se establece el concepto
+de multifunción o función conjunto-valuada junto con
+algunas propiedades importantes. Las definiciones aquí establecidas
+han sido tomadas del libro de análisis conjunto-valuado 
+de Aubin et. al. \cite{AubPieFra09}.
+
+\section{Definiciones Básicas.}
+A menos que se especifique otra cosa, $X$ y $Y$ denotarán
+espacios topológicos lineales.
+\Defi{SVM}{
+Si a cada $x\in X$ le corresponde un subconjunto
+$F(x)\in\P(Y)$, se dice que $F$ es una multifunción
+de $X$ en $Y$ y simplemente la denotaremos como 
+$F:X\to\P(Y).$
+}
+\Defi{domSVM}{
+El dominio de la multifunción $F:X\to\P(Y)$ es el conjunto
+$$
+\Dom(F):= \{x\in X \quad|\quad F(x)\neq\emptyset\}.
+$$
+}
+\Exa{svm1}{
+El primer ejemplo de una multifunción, surge naturalmente
+a partir de una función dada $f:X\to Y$. Defínase 
+$F:Y\to\P(X)$, tal que 
+$$F(y) = f^{-1}(y)= \{x\in X \quad|\quad y=f(x)\}.$$
+Note que $F(y)\neq\emptyset$ si y sólo si, $y\in f(X)$,
+por lo tanto, $\Dom(F) = f(X)$.
+}
+A menos que se especifique otra cosa,
+$F$ denotará a una multifunción de $X$ en $Y$ y al dominio
+de $F$ lo denotaremos por $D$.
+\Defi{grSVM}{
+El gráfico de una multifunción lo denotaremos por $\Gr(F)$
+y se define como
+\Eq{*}{
+\Gr(F):=\{(x,y)\in X\times Y \quad|\quad y\in F(x)\}.
+}
+}
+El concepto de convexidad para una multifunción $F$
+está relacionado con su gráfico, en este sentido, se tiene
+la siguiente definición.
+\Defi{cvxSVM}{
+Se dice que la multifunción $F$ es convexa, si $\Gr(F)$ es 
+un subconjunto convexo de $X\times Y$.
+}
+\Prp{cvxSVM1}{
+La multifunción $F$ es convexa si y sólo si para todo $x_1,x_2\in X$
+y para todo $t\in[0,1]$, se tiene que 
+\Eq{cvxInc}{
+tF(x_1) + (1-t)F(x_2)\subseteq F(tx_1+(1-t)x_2).
+}
+}
+\begin{proof}
+Supongamos que $F$ es convexa, ie, $\Gr(F)$ es un conjunto convexo de 
+$X\times Y.$ Sean $x_1,x_2\in X$ y consideremos $z\in tF(x_1) + (1-t)F(x_2)$.
+Por lo tanto, existen $y_1\in F(x_1)$, $y_2\in F(x_2)$ tales que, 
+$
+z=ty_1+(1-t)y_2.
+$
+Como $\Gr(F)$ es convexo, entonces, para todo $t\in[0,1]$
+\Eq{*}{
+t(x_1,y_1)+(1-t)(x_2,y_2)=(tx_1+(1-t)x_2,ty_1+(1-t)y_2)\in\Gr(F),
+}
+es decir,
+$z=ty_1+(1-t)y_2\in F(tx_1+(1-t)x_2)$, para todo $t\in[0,1]$. Lo que
+demuestra que la inclusión \eq{cvxInc} es válida. El recíproco, se demuestra
+de manera análoga.
+\end{proof}
+
+\Prp{HcvxS}{
+Si $H\subseteq X$ es un subconjunto estrellado de $X$ con respecto al
+origen, entonces, para $0<a<b$ se tiene que $aH\subseteq bH$.
+}
+\begin{proof}
+Como el conjunto $H$ es estrellado con respecto a $0\in H$, se tiene que para 
+todo $\alpha\in[0,1]$ y para todo $h\in H$, $\alpha h + (1-\alpha)0\in H$.
+Por lo tanto, para $\alpha\in[0,1]$ se tiene que $\alpha H\subseteq H$.
+Ahora bien, como $0<a<b$ entonces $0<\frac{a}{b}<1$ y por lo tanto
+$aH=b\bigg(\dfrac{a}{b}H\bigg)\subseteq bH,$ lo que completa la demostración. 
+\end{proof}
+\Rem{HcvxS}{
+La proposición anterior es válida si $a<b<0$, pero no necesariamente
+lo es cuando $a<0<b$. Note que si $a<b<0$ entonces, $0<\frac{a}{b}<1$
+y por lo tanto se puede aplicar el mismo m\'etodo que se aplic\'o en
+la demostraci\'on anterior. Para el caso $a<0<b$, basta considerar
+$X=\R$, $H=[0,1]$, $a=-1$ y $b=1$.  
+}
+
+\Exa{B1}{
+Sea $H\subseteq \R^3$ un conjunto convexo y no vacío que posee al origen de $\R^3.$
+Sea $G:\R\to\P(\R^3)$ la multifunción definida por $G(x):= -x^2H$. 
+Siendo $g(x) = -x^2$ una función cóncava, se tiene que para todo $t\in[0,1]$
+y para todo $x,y\in\R$
+$$
+-(tx^2+(1-t)y^2)\leq -(tx+(1-t)y)^2.
+$$ 
+Como el conjunto $H$ es convexo y posee al origen, podemos aplicar la
+\prp{HcvxS} para llegar a la siguiente inclusión
+$$
+-(tx^2+(1-t)y^2)H\subseteq -(tx+(1-t)y)^2H=G(tx+(1-t)y).
+$$ 
+De nuevo, usando la convexidad del conjunto $H$ se obtiene que 
+$$
+-(tx^2+(1-t)y^2)H=-tx^2H-(1-t)y^2H=tG(x)+(1-t)G(y),
+$$
+y por lo tanto
+$$
+tG(x)+(1-t)G(y)\subseteq G(tx+(1-t)y).
+$$
+}
+\Defi{midCvxSVM}{
+La multifunción $F$ es midconvexa o Jensen-convexa si satisface
+la inclusión \eq{cvxInc} para $t=1/2$, es decir
+\Eq{midCvxSVM}{
+\frac{F(x)+F(y)}{2}\subseteq F\bigg(\frac{x+y}{2}\bigg).
+}
+}
+\Exa{cvxSVM1}{
+Sean $f,g:[a,b]\subseteq\R\to\R$ dos funciones tales que $f(x)<g(x)$
+para todo $x\in[a,b]$ y que además $f$ y $-g$ son funciones convexas,
+es decir que para todo $x,y\in[a,b]$ y $t\in[0,1]$ se satisface lo siguiente
+\Eq{cvxF}{
+f(tx+(1-t)y)&\leq tf(x) + (1-t)f(y) \\
+tg(x) + (1-t)g(y)&\leq g(tx+(1-t)y).
+}
+Entonces, mediante un cálculo elemental, se puede ver que
+la multifunción $F:[a,b]\to\mathcal{\R}$ definida por la fórmula 
+$F(x):=[f(x),g(x)]$, para $x\in [a,b]$ es convexa. 
+}
+Así como en el caso de funciones a valores reales, también es posible generalizar
+el concepto de concavidad para una multifunción. 
+\Defi{ccvSVM}{
+Se dice que la multifuncion $F$ es cóncava en $D$ si para todo $x,y\in D$
+y para todo $t\in[0,1]$ se tiene que 
+\Eq{ccvSVM}{
+F(tx+(1-t)y)\subseteq tF(x)+(1-t)F(y)
+}
+}
+Recordemos en el caso de las funciones, se tiene que una función $f$ es 
+cóncava si y sólo si, la función $-f$ es convexa y esta caracterización
+permite extender los resultados obtenidos para funciones convexas a funciones
+cóncavas sin mayores dificultades. Lamentablemente, para el caso de multifunciones
+esta caracterización no existe y el siguiente ejemplo lo ilustra de manera sencilla.
+
+\Exa{Fcvx-Fcvx}{
+Para $r>0$, se denotará por $D(r)$ al disco cerrado de radio $r$ centrado
+en el origen, esto es 
+$$
+D(r):=\{(x,y)\in\R^2\quad|\quad x^2+y^2\leq r^2\}.
+$$
+Sea $F:[0,\infty)\to\P(\R^2)$ la multifunción definida por
+$F(r):= D(r)$ para $r\geq0$. El gráfico de la multifunción $F$
+es el conjunto
+\Eq{*}{
+\Gr(F)&=\{(r,(x,y))\in[0,\infty)\times\R^2\quad|\quad (x,y)\in F(r)\} \\
+      &=\{(r,(x,y))\in[0,\infty)\times\R^2\quad|\quad x^2+y^2\leq r^2\}.
+}
+Es claro que al conjunto $\Gr(F)$ 
+lo podemos representar como un cono en $\R^3$ con
+vértice en el origen. Además, la multifunción $G=-F$ por
+simetría posee el mismo gráfico de $F$ y esto significa
+que sigue siendo una multifunción convexa.
+}
+
+Es decir que, si $F$ es convexa no necesariamente se tiene que
+$-F$ es cóncava. Esto trae como consecuencia, que los resultados
+obtenidos para multifunciones convexas no puedan extenderse directamente 
+a resultados para multifunciones cóncavas y por lo tanto, ambas direcciones
+deben tratarse por separado.
+
+\Exa{cvxValuedNoCvx}{
+Si las imagenes de una multifunción $F$ son conjuntos convexos,
+no necesariamente ella es convexa. Si definimos
+$F(r):=D(|r|)$ para $r\in\R$, es claro que $F(r)$
+es un conjunto convexo para todo $r\in\R$, sin embargo,
+el gráfico de dicha multifunción es un bicono en $\R^3$ con
+vértice en el origen el cual no es un conjunto convexo.
+}
+
+\Rem{uniCase}{
+Si $f:D\to Y$ es una función a valores en $Y$ y $F:D\to\P(Y)$
+se define como $F(x):=\{f(x)\}$ para $x\in D$, entonces, la inclusión
+\eq{cvxInc} se transforma en
+$$
+t\{f(x)\}+(1-t)\{f(y)\}\subseteq \{f(tx+(1-t)y)\}.
+$$
+Pero esto se cumple si y sólo si $f(tx+(1-t)y)=tf(x)+(1-t)f(y)$
+para todo $t\in[0,1]$ y para todo $x,y\in D$. Note que 
+las funciones lineales, tienen dicha propiedad. Aquí se evidencia
+que la definición de convexidad dada por la inclusión 
+\eq{cvxInc} no generaliza la \defi{cvxFunc}.
+}
+
+El siguiente Teorema es una generalización de un teorema 
+clásico en la teoría de funciones convexas. Para su demostración
+vamos a necesitar el siguiente lema, también conocido como
+ley de cancelación de R\aa dstrom.
+
+\begin{lemma}[\cite{Rad52}, Lema 1.]
+\label{LRad52}
+Sean $A,B$ y $C$ conjuntos dados de un espacio lineal topológico.
+Suponga que $B$ es cerrado y convexo, $C$ es acotado y que además
+$A+C\subseteq B+C$. Entonces, $A\subseteq B$.
+\end{lemma}
+
+\Thm{loc1}{
+Sea $F:D\to \P_0(Y)$ una multifunción midconvexa tal que para todo
+$x\in D$, el conjunto $F(x)$ es cerrado, convexo y acotado. Entonces,
+para cualquier colección de puntos $x_1,\ldots,x_n$ en $D$
+con $n\in\N$, se tiene que 
+\Eq{loc1}{
+\frac1n(F(x_1)+\cdots+F(x_n))\subseteq F\bigg(\frac{x_1+\cdots x_n}{n}\bigg).
+}
+}
+\begin{proof}
+Se puede demostrar fácilmente por inducción que para $p\in\N$, 
+la multifunción $F$ satisface la inclusión
+\Eq{loc11}{
+\frac1{2^p}(F(x_1)+\cdots+F(x_{2^p}))\subseteq F\bigg(\frac{x_1+\cdots x_{2^p}}{2^p}\bigg).
+}
+Ahora bien, para $n\in\N$ fijo, consideremos $p\in\N$ tal que $n\leq2^p$.
+Sean $x_1,\ldots,x_n$ puntos arbitrarios en $D$ y definamos
+$x_k:=\bar{x}:=(x_1+\cdots+x_n)/n$ para $k=n+1,\ldots,2^p$.
+
+Observe que con esta notación se tiene  
+$\bar{x}=(x_1+\cdots+x_{2^p})/2^p$ y por lo tanto la inclusión \eq{loc11}
+se convierte en
+\Eq{loc12}{
+\frac1{2^p}(F(x_1)+\cdots+F(x_n)+F(x_{n+1})+\cdots+F(x_{2^p}))\subseteq F(\bar{x}).
+}
+Como $x_k:=\bar{x}$ para $k=n+1,\ldots,2^p$ entonces, 
+$F(x_{n+1})=\cdots=F(x_{2^p})=F(\bar{x})$ por lo tanto, 
+la convexidad de las imágenes de la multifunción $F$ 
+nos da la siguiente fórmula
+\Eq{*}{
+F(x_{n+1})+\cdots+F(x_{2^p})=(2^p-n)F(\bar{x}).
+}
+Luego, la inclusión \eq{loc12} equivale a
+\Eq{loc13}{
+\frac1{2^p}\big(F(x_1)+\cdots+F(x_n)+(2^p-n)F(\bar{x})\big)\subseteq F(\bar{x}).
+}
+Multiplicando \eq{loc13} por $2^p$ y usando de nuevo la convexidad de las imágenes de la 
+multifunción $F$ se tiene lo siguiente
+\Eq{*}{
+F(x_1)+\cdots+F(x_n)+(2^p-n)F(\bar{x})\subseteq (2^p-n)F(\bar{x})+nF(\bar{x}).
+}
+Aplicando el \lem{Rad52} a la inclusión anterior se obtiene \eq{loc1} y esto
+completa la demostración.
+\end{proof}
+
+\Cor{loc}{
+Bajo las hipótesis del \thm{loc1} se cumple que para
+todo $x,y\in D$ y para todo $t\in[0,1]\cap\Q$ 
+\Eq{*}{
+tF(x)+(1-t)F(y)\subseteq F(tx+(1-t)y).
+}
+}
+
+\section{$K$-convexidad y $K$-concavidad de multifunciones.}
+
+Sea $K\subseteq Y$ un cono convexo, las siguientes definiciones generalizan
+las definiciones de convexidad y concavidad dadas en la sección anterior.
+\Defi{K-cvxSVM}{
+Se dice que la multifunción $F$ es $K$-convexa en $D$ si para todo $x,y\in D$ 
+y para todo $t\in[0,1]$
+\Eq{Kcvxsvm}{
+tF(x)+(1-t)F(y)\subseteq F(tx+(1-t)y)+K
+}
+}
+\Defi{K-ccvSVM}{
+Se dice que la multifunción $F$ es $K$-cóncava en $D$ si para todo $x,y\in D$ 
+y para todo $t\in[0,1]$
+\Eq{Kccvsvm}{
+F(tx+(1-t)y)\subseteq tF(x)+(1-t)F(y)+K
+}
+}
+
+\Prp{nikHabil1}{
+Si $K\subseteq Y$ es un cono que posee al origen, entonces,
+una multifunción $F:X\to\P_0(Y)$ es $K$-convexa (resp. $K$-cóncava) si y sólo si
+la multifunción $F+K:X\to \P_0(Y)$ definida por $(F+K)(x):=F(x)+K$
+es convexa (resp. cóncava).
+}
+\begin{proof}
+Supongamos que la multifunción $F$ es $K$-convexa, es decir, que para todo
+$x,y\in D$ y para todo $t\in[0,1]$ se satisface la siguiente inclusión
+\Eq{*}{
+tF(x)+(1-t)F(y)\subseteq F(tx+(1-t)y)+K.
+}
+Ahora bien, para $x,y\in D$ y para $t\in[0,1]$ 
+\Eq{*}{
+t(F+K)(x)+(1-t)(F+K)(y) &= t(F(x)+K)+(1-t)(F(y)+K)\\
+&=tF(x)+tK+(1-t)F(y)+(1-t)K
+}
+pero como $K$ es un cono convexo entonces, 
+$tK+(1-t)K\subseteq K$ para todo $t\in[0,1]$ por lo tanto,
+\Eq{*}{
+t(F+K)(x)+(1-t)(F+K)(y)\subseteq tF(x)+(1-t)F(y)+K.
+}
+Finalmente, la $K$-convexidad de $F$ implica que 
+\Eq{*}{
+tF(x)+(1-t)F(y)+K&\subseteq F(tx+(1-t)y)+K+K \\
+&\subseteq F(tx+(1-t)y)+K=(F+K)(tx+(1-t)y),
+}
+y así
+\Eq{*}{
+t(F+K)(x)+(1-t)(F+K)(y)\subseteq (F+K)(tx+(1-t)y),
+}
+lo que demuestra que la multifunción $(F+K)$ es convexa.
+
+Recíprocamente, supongamos que la multifunción $(F+K)$ es
+convexa. Como $0\in K$, entonces, para $t\in[0,1]$ y para 
+$x,y\in D$,
+\Eq{*}{
+tF(x)+(1-t)F(y)\subseteq tF(x)+(1-t)F(y)+K.
+}
+Por otra parte, usando la convexidad del cono $K$, se sigue
+que $K=tK+(1-t)K$ y así
+\Eq{*}{
+tF(x)+(1-t)F(y)+K &= t(F(x)+K)+(1-t)(F(y)+K) \\ 
+&= t(F+K)(x)+(1-t)(F+K)(y).
+}
+Ahora bien, como $(F+K)$ es convexa entonces
+\Eq{*}{
+t(F+K)(x)+(1-t)(F+K)(y) \subseteq (F+K)(tx+(1-t)y).
+}
+Luego, para todo $t\in[0,1]$ y para todo $x,y\in D$
+\Eq{*}{
+tF(x)+(1-t)F(y)\subseteq F(tx+(1-t)y)+K,
+}
+lo que finaliza la demostración.
+\end{proof}
+
+\Defi{K-midCvxSVM}{
+Se dice que la multifunción $F$ es $K$-midconvexa en $D$ si para todo $x,y\in D$ 
+$F$ satisface la inclusión \eq{Kcvxsvm} para $t=\frac12$, i.e,
+\Eq{Kmcvxsvm}{
+\frac{F(x)+F(y)}2\subseteq F\bigg(\frac{x+y}2\bigg)+K.
+}
+}
+
+\Defi{K-midCcvSVM}{
+Se dice que la multifunción $F$ es $K$-midcóncava en $D$ si para todo $x,y\in D$ 
+$F$ satisface la inclusión \eq{Kccvsvm} para $t=\frac12$, i.e,
+\Eq{Kmccvsvm}{
+F\bigg(\frac{x+y}2\bigg)\subseteq \frac{F(x)+F(y)}2+K.
+}
+}
+\Rem{cvxSV}{
+Dado un cono convexo $K\subseteq Y,$ definamos la relación $\leq_K$ en $Y$
+de la siguiente manera
+$$
+x\leq_K y \iff y-x\in K.
+$$
+Si $F(x)=\{f(x)\}$, donde $f:X\to Y$ es una función cualquiera, entonces las 
+inclusiones \eq{Kcvxsvm} y \eq{Kccvsvm} equivalen a 
+\Eq{*}{
+f(tx+(1-t)y)\leq_K tf(x)+(1-t)f(y)
+\quad\mbox{y}\quad
+tf(x)+(1-t)f(y)\leq_K f(tx+(1-t)y)
+}
+respectivamente. De hecho si $Y=\R$ y $K=\R_+$, entonces estas definiciones
+coinciden con las definiciones de convexidad y concavidad de funciones 
+respectivamente introducidas en el Capítulo 2.
+}
+%Muchos resultados importantes relacionados con multifunciones $K$-convexas 
+%y $K$-cóncavas pueden ser encontrados en la tesis doctoral del
+%profesor Kazimierz Nikodem \cite{Nik89}.
+%
+%En los resultados principales las siguientes definiciones serán importantes
+
+Como es de esperarse, no toda multifunción $K$-midconvexa es convexa. Sin
+embargo, K. Nikodem en \cite{Nik86} demuestra el siguiente resultado
+
+\begin{theorem}
+\label{TNik860}
+Sea $F:D\to \P_0(Y)$ es una multifunción $K$-midconvexa, entonces
+$F$ satisface la inclusión \eq{Kcvxsvm} para todo $x,y\in D$
+y para todo $t\in\D\cap[0,1]$.
+\end{theorem}
+
+\Defi{Klbddsvm}{
+Se dice que la multifunción $F$ es localmente $K$-acotada inferior en $x_0\in D$, si existe
+un abierto $U\in\U(X)$ y un conjunto acotado $H\subseteq Y$ tales que 
+\Eq{*}{
+F(u)\subseteq H+K,\qquad\mbox{para todo }u\in (x_0+U)\cap D.
+}
+}
+\Defi{Kubddsvm}{
+Se dice que la multifunción $F$ es localmente $K$-acotada superior en $x_0\in D$, 
+si $F$ es localmente $(-K)$-acotada inferior en dicho punto.
+}
+\Exa{Klwbdd}{
+Definamos $F(x):=(\sin(x),\infty),$ $x\in\R$. Evidentemente, para todo $x\in\R$ 
+el conjunto $F(x)$ no es acotado. Sin embargo, al considerar 
+$K:=(0,\infty)$ se tiene que $F(x)\subseteq \{-1\}+K$ para todo $x\in \R$ por lo tanto,
+esta multifunción así definida es $K$-acotada inferiormente en todo $\R$. 
+}
+\Defi{clKlbddsvm}{
+Se dice que la multifunción $F$ es localmente semi-$K$-acotada inferior en $x_0\in D$, 
+si existe un abierto $U\in\U(X)$ y un conjunto acotado $H\subseteq Y$ tales que 
+\Eq{*}{
+F(u)\subseteq \cl(H+K),\qquad\mbox{para todo }u\in (x_0+U)\cap D.
+}
+}
+\Rem{equiv}{
+Si $Y$ es un espacio localmente acotado, i.e., existe un abierto $V\in\U(Y)$ que es acotado,
+entonces la \defi{Klbddsvm} y la \defi{clKlbddsvm} son equivalentes.
+Basta ver que si $F(u)\subseteq\cl(H+K)$ entonces,
+$F(u)\subseteq H+V+K$. Siendo $H+V$ un conjunto acotado,
+se tiene que $F$ es localmente $K$-acotada inferior.
+}
+\Defi{weakKlbddsvm}{
+Se dice que la multifunción $F$ es localmente débil-$K$-acotada superior en $x_0\in D$, si existe
+un abierto $U\in\U(X)$ y un conjunto acotado $H\subseteq Y$ tales que 
+\Eq{*}{
+0\in F(u)+H+K,\qquad\mbox{para todo }u\in (x_0+U)\cap D.
+}
+}
+\Defi{weakclKlbddsvm}{
+Se dice que la multifunción $F$ es localmente débil-semi-$K$-acotada superior en $x_0\in D$, 
+si existe un abierto $U\in\U(X)$ y un conjunto acotado $H\subseteq Y$ tales que 
+\Eq{*}{
+0\in\cl(F(u)+H+K),\qquad\mbox{para todo }u\in (x_0+U)\cap D.
+}
+}
+\Prp{lem2.3}{
+Supongamos que $F:D\to\P_0(Y)$ es una multifunción localmente semi-$K$-acotada inferior. 
+Entonces, para cada subconjunto compacto $C\subseteq D$, existe un conjunto acotado 
+$H\subseteq Y$ tal que, $F(x)\subseteq\cl(H+K),$ para todo $x\in C$.
+}
+\begin{proof}
+Sea $C\subseteq D$ un conjunto compacto no-vacío.
+Como la multifunción $F$ es localmente semi-$K$-acotada inferior, entonces, para cada
+$x\in C$ existe un abierto $U_x\in \U(X)$ y un conjunto acotado $H_x\subseteq Y$ tales que
+para todo $u\in (x+U_x)\cap D$, $F(u)\subseteq\cl(H_x+K)$. Ahora bien, es claro que 
+$C\subseteq \bigcup_{x\in C}(x+U_x)$, es decir que la familia $\{x+U_x:x\in C\}$ es un 
+cubrimiento por abiertos del compacto $C$, por lo tanto, existen $x_1,\ldots,x_n\in C$
+tales que $C\subseteq\bigcup_{i=1}^n(x_i+U_{x_i})$. Sea $H:=H_{x_1}\cup\cdots\cup H_{x_n}$,
+es claro que $H$ es un conjunto acotado, pues es la unión finita de conjuntos acotados. Además,
+si $z\in C$ es un elemento arbitrario de $C$ entonces $z\in x_i+U_{x_i}$ para algún $i=0,\ldots,n$
+y por lo tanto $F(z)\subseteq\cl(H_{x_i}+K)\subseteq\cl(H+K)$. Lo cual, finaliza la demostración. 
+\end{proof}
+
+\Prp{lem2.4}{
+Supongamos que $F:D\to\P_0(Y)$ es una multifunción localmente débil-semi-$K$-acotada superior. 
+Entonces, para cada subconjunto compacto $C\subseteq D$, existe un conjunto acotado 
+$H\subseteq Y$ tal que, $0\in\cl(F(x)+H+K),$ para todo $x\in C$.
+}
+\begin{proof}
+Sea $C\subseteq D$ un conjunto compacto no-vacío.
+Como la multifunción $F$ es localmente débil-semi-$K$-acotada superior, entonces para cada
+$x\in C$ existe un abierto $U_x\in \U(X)$ y un conjunto acotado $H_x\subseteq Y$ tales que
+para todo $u\in (x+U_x)\cap D$, $0\in\cl(F(u)+H_x+K)$. Ahora bien, es claro que 
+$C\subseteq \bigcup_{x\in C}(x+U_x)$, es decir que la familia $\{x+U_x:x\in C\}$ es un 
+cubrimiento por abiertos del compacto $C$, por lo tanto, existen $x_1,\ldots,x_n\in C$
+tales que $C\subseteq\bigcup_{i=1}^n(x_i+U_{x_i})$. Sea $H:=H_{x_1}\cup\cdots\cup H_{x_n}$,
+es claro que $H$ es un conjunto acotado, pues es la unión finita de conjuntos acotados. Además,
+si $z\in C$ es un elemento arbitrario de $C$ entonces $z\in x_i+U_{x_i}$ para algún $i=0,\ldots,n$
+y por lo tanto, $0\in\cl(F(z)+H_{x_i}+K)\subseteq\cl(F(z)+H+K)$. Lo cual, finaliza la demostración. 
+\end{proof}
+
+\section{El teorema de Bernstein--Doetsch para multifunciones.}
+
+Con el fin de establecer algunos resultados importantes relacionados con
+el Teorema de Bernstein--Doetsch en el contexto de multifunciones convexas,
+es necesario establecer las siguientes definiciones.
+
+\Defi{KupSemConSVM}{
+Sea $F:D\to\P_0(Y)$ una multifunción. Se dice que $F$ es $K$-semicontinua superior si
+para todo abierto $V\in \U(Y)$, existe un abierto $U\in\U(X)$ tal que
+\Eq{KupSemConSVM}{
+F(x)\subseteq F(x_0)+V+K\qquad(x\in x_0+U).
+}
+}
+\Defi{KloSemConSVM}{
+Sea $F:D\to\P_0(Y)$ una multifunción. Se dice que $F$ es $K$-semicontinua inferior si
+para todo abierto $V\in \U(Y)$, existe un abierto $U\in\U(X)$ tal que
+\Eq{KloSemConSVM}{
+F(x_0)\subseteq F(x)+V+K\qquad(x\in x_0+U).
+}
+}
+\Defi{KConSVM}{
+Sea $F:D\to\P_0(Y)$ una multifunción. Se dice que $F$ es $K$-continua si
+$F$ es $K$-semicontinua superior e inferior al mismo tiempo.
+}
+
+\Rem{semCon}{
+Cuando $K=\{0\}$, la $K$-continuidad de una multifunción equivale a la continuidad con 
+respecto a la topología de Hausdorff, ver \cite{DeBPia83}. 
+
+Por otra parte, si $F(x)={f(x)}$, para alguna función $f:D\to \R$
+y $K=[0,\infty)$, entonces $K$-semicontinuidad superior e inferior
+equivalen a semicontinuidad superior e inferior respectivamente.
+}
+
+\Exa{Kcon1}{
+Si $A\subseteq Y$ es un conjunto acotado y $K\subseteq Y$ es un cono convexo. Entonces,
+la multifunción $F:\R\to\P_0(Y)$ definida mediante la fórmula
+$F(t):= tA+K$ es $K$-continua con respecto a la topología de Hausdorff.
+
+Sea $t_0\in\R$ y sea $V\in\U(Y)$ un entorno abierto del origen en $Y$. 
+Observemos lo siguiente
+\Eq{*}{
+F(t_0)=t_0A+K=(t_0-t+t)A+K\subseteq(t_0-t)A+tA+K=(t_0-t)A+F(t).
+}
+Ahora bien, como el conjunto $A$ es acotado, existe $\delta>0$ tal que 
+si $0<s<\delta$ entonces $sA\subseteq V.$ Luego, si $0<t-t_0<\delta$
+entonces $(t-t_0)A\subseteq V$ y por lo tanto,
+\Eq{*}{
+F(t_0)\subseteq F(t)+W.
+}
+Esto demuestra que la multifunción $F$ así definida es
+semicontinua inferior con respecto a la topología de Hausdorff.
+Para demostrar la semicontinuidad superior de $F$ se procede de manera
+similar.
+}
+
+Es bien conocido que toda función midconvexa y continua es convexa.
+A continuación, veremos un resultado análogo para la clase de multifunciones
+midconvexas. Para un conjunto $A$ y $n\in\N$ se denotará 
+$$
+[n]A:=\{x_1+\cdots x_n | x_1,\ldots,x_n\in A\}.
+$$ 
+\Thm{midConSVM}{
+Sean $X,Y$ espacios topológicos lineales.
+Sea $F:D\to \P_0(Y)$ una multifunción $K$-semicontinua superior
+tal que para todo $x\in D$ el conjunto
+$F(x)\subseteq Y$  es compacto. Si $F$ es $K$-midconvexa y $K$-semicontinua superior
+en $D$, entonces, $F$ es $K$-convexa.
+}
+\begin{proof}
+Sean $x,y\in D$ y $t\in[0,1]$ fijos. Sea $(q_n)_n\subseteq\D$ una sucesión de números
+diádicos racionales que converge a $t$. Sea $V\in \U(Y)$ un abierto 
+arbitrario y consideremos $W\in\U(Y)$ tal que $[3]\,W\subseteq V.$ 
+Por el \thm{Nik860} se tiene que para
+todo $n\in\N$, la multifunción $F$ satisface la inclusión
+\Eq{*}{
+q_nF(x)+(1-q_n)F(y)\subseteq F(q_nx+(1-q_n)y)+K.
+}
+Como las imágenes de $F$ son conjuntos acotados, entonces existen
+números naturales $n_1, n_2$ tales que para $n\geq n_1$, 
+$$tF(x)\subseteq q_nF(x)+W$$
+ y para $n\geq n_2$
+$$(1-t)F(y)\subseteq(1-q_n)F(y)+W.$$ 
+Por otra parte, la $K$-semicontinuidad superior de $F$ en 
+el punto $tx+(1-t)y$ da como resultado que para $n\geq n_3$,
+$n_3\in\N$ 
+\Eq{*}{
+F(q_nx+(1-q_n)y)\subseteq F(tx+(1-t)y)+W+K.
+}
+Ahora bien, si $n\geq\max\{n_1,n_2,n_3\}$ entonces
+\Eq{*}{
+tF(x)+(1-t)F(y)&\subseteq q_nF(x)+(1-q_n)F(y)+[2]W\\
+&\subseteq F(q_nx+(1-q_n)y)+[2]W+K
+ \subseteq F(tx+(1-t)y)+[3]W+K \\
+&\subseteq F(tx+(1-t)y)+V+K.
+}
+Como el abierto $V$ es arbitrario, entonces
+\Eq{*}{
+tF(x)+(1-t)F(y)\subseteq \bigcap_{V\in\U(Y)}(F(tx+(1-t)y)+K+V)
+=\cl(F(tx+(1-t)y)+K).
+}
+Como $K$ es un cono cerrado y $F(tx+(1-t)y)$ es un conjunto
+compacto, entonces, por la \prp{sumSets} se tiene que
+la suma de ellos es un conjunto cerrado y por lo tanto
+$\cl(F(tx+(1-t)y)+K)=F(tx+(1-t)y)+K$, lo que completa la demostración.
+\end{proof}
+
+
+En este contexto, K. Nikodem en \cite{Nik86} establece el siguiente resultado, que 
+generaliza el \thm{BD15} y además engloba parte de los resultados 
+obtenidos por Trudzik en \cite{Tru84}.
+
+\begin{theorem}[\cite{Nik86}, Teorema 1]
+\label{Nik861}
+Sean $X,Y$ espacios topológicos lineales, y sea $K\subseteq Y$ un cono convexo
+tal que $0\in K$.
+Sea $F:D\to \P_0(Y)$ una multifunción tal que para todo $x\in D$ el conjunto
+$F(x)\subseteq Y$ es acotado. Si $F$ es $K$-midconvexa y $K$-acotada superior
+en un subconjunto $H\subseteq D$ con interior no vacío, entonces,
+$F$ es $K$-continua en $D$.
+\end{theorem}
+
+Cuando $K=\{0\}$, entonces, $K$-convexidad es simplemente convexidad
+y K. Nikodem en 1987 obtuvo los siguientes resultados, 
+\begin{theorem}[\cite{Nik87c}, Teorema 1]
+\label{Nik87c1}
+Sean $X,Y$ espacios topológicos lineales.
+Sea $F:D\to \P_0(Y)$ una multifunción tal que para todo $x\in D$ el conjunto
+$F(x)\subseteq Y$ es acotado. Si $F$ es midconvexa y acotada superiormente
+en un subconjunto $H\subseteq D$ con interior no vacío, entonces,
+$F$ es continua en $D$ con respecto a la topología de Hausdorff.
+\end{theorem}
+
+\begin{theorem}[\cite{Nik87a}, Teorema 1]
+\label{Nik87a1}
+Sean $X,Y$ espacios topológicos lineales.
+Sea $F:D\to \P_0(Y)$ una multifunción tal que para todo $x\in D$ el conjunto
+$F(x)\subseteq Y$ es acotado y convexo. Si $F$ es midcóncava y acotada 
+en un subconjunto $H\subseteq D$ con interior no vacío, entonces,
+$F$ es continua en $D$ con respecto a la topología de Hausdorff.
+\end{theorem}
+
+\section{Convexidad fuerte.}
+Supongamos ahora que $(X,\|\cdot\|)$ y $(Y,\|\cdot\|)$
+son espacios vectoriales normados
+y sea $B_Y\subseteq Y$ el interior 
+de la bola unitaria en $Y$. Huang en su artículo 
+del año 2010 \cite{Hua10}, establece la siguiente 
+definición, generalizando el concepto de convexidad fuerte
+para funciones, introducido por Polyak en \cite{Pol66}. 
+
+\Defi{StrgCvxSVM}{
+Sea $F:D\to\P_0(Y)$ una multifunción y sea $c>0$. Se dice que 
+$F$ es fuertemente convexa con módulo $c$
+si 
+\Eq{StrgCvxSVM}{
+tF(x)+(1-t)F(y)+ct(1-t)\|x-y\|^2\overline{B_Y} \subseteq 
+F(tx+(1-t)y)
+}
+para todo $x,y\in D$ y para todo $t\in[0,1]$.
+}
+En base a esta definición surge de forma natural la
+definición de midconvexidad fuerte.
+\Defi{StrgMidCvxSVM}{
+Sea $F:D\to\P_0(Y)$ una multifunción y sea $c>0$. Se dice que 
+$F$ es fuertemente midconvexa con módulo $c$ si 
+\Eq{StrgMidCvxSVM}{
+\frac{F(x)+F(y)}2+\frac{c}4\|x-y\|^2\overline{B_Y} \subseteq 
+F\bigg(\frac{x+y}2\bigg).
+}
+}
+El siguiente Teorema caracteriza a la familia de multifunciones
+fuertemente convexas con m\'odulo $c$.
+\begin{theorem}[\cite{LeiMerNikSan13}, Teorema 12]
+Sean $(X,\|\cdot\|)$ un espacio con producto interno, $t$
+un n\'umero fijo en $(0,1)$ y $D$ un subconjunto
+convexo de $X$. Una multifunci\'on $F:D\to\P_0(Y)$ tal que $F(x)$
+es un conjunto convexo y cerrado para todo $x\in D,$ es 
+fuertemente convexa con m\'odulo $c$ si y s\'olo si
+la multifunci\'on $G$ definida por $G(x):=F(x)+\|x\|^2\overline{B_Y}$
+para $x\in D$ es convexa.
+\end{theorem}
+
+Es evidente que toda multifunción fuertemente convexa con módulo $c$
+es convexa. Ahora bien, para esta nueva clase de multifunciones,
+H. Leiva et. al. en \cite{LeiMerNikSan13} obtienen el siguiente
+resultado de tipo Bernstein--Doetsch.
+
+\begin{theorem}[\cite{LeiMerNikSan13}, Teorema 4]
+Sea $F:D\to\P_0(Y)$ una multifunci\'on fuertemente midconvexa con m\'odulo
+$c$ tal que para todo $x\in D$ el conjunto $F(x)$ es cerrado y acotado. Si
+$F$ es semicontinua superior en $D$, entonces esta es fuertemente
+convexa con m\'odulo $c$.
+\end{theorem}   
+
+Como consecuencia del teorema anterior surge el siguiente
+
+\begin{corollary}
+Supongamos que $D\subseteq X$ es un conjunto abierto y convexo. Si 
+una multifunci\'on $F:D\to\P_0(Y)$ es fuertemente convexa con m\'odulo
+$c$ y semicontinua inferior en un punto de $D$ entonces, $F$ es continua
+y fuertemente convexa con m\'odulo $c$.
+\end{corollary}
+
+Hasta ahora hemos presentado la mayoría de los resultados de tipo Bernstein--Doetsch
+que han sido obtenidos a lo largo del tiempo tanto para funciones como para
+multifunciones. En el cap\'itulo 4 como se mencion\'o en la introducci\'on 
+presentaremos dos Teoremas que pretenden englobar a gran parte de los resultados
+de tipo Bernstein--Doetsch obtenidos hasta el momento.
+
+
+\section{Transformación de Takagi de una multifunción.}
+
+En el Capítulo \ref{chapPrevio} definimos la función de Takagi
+$T$ para cada $x\in\R$, mediante la fórmula
+\Eq{*}{
+T(x):=\sum_{k=0}^\infty\frac{d_\Z(2^kt)}{2^k},
+}
+donde $d_\Z(x) = \dist(\Z,x):=\inf\{|z-x| : z\in\Z\}$, $x\in\R$.
+
+Supongamos ahora que $D$ es un conjunto estrellado con respecto al origen, 
+y consideremos una multifunción $S:D\to\P_0(Y)$ con la propiedad de 
+que $0\in S(x)$ para todo $x\in D$.
+Para dicha multifunción, se define $S^T:\R\times D\to Y$ de la siguiente manera
+\Eq{TakTrS}{
+ S^T(t,x):=\cl\bigg(\bigcup_{n=0}^{\infty} \sum_{k=0}^{n} 
+                 \frac{1}{2^k}S\big(2d_{\Z}(2^kt)x\big)\bigg)\qquad(t\in\R,\,x\in D).
+}
+\Rem{TakTrans}{
+El hecho de que $0\in S(x)$ para todo $x\in D$ es crucial, ya que esto trae como consecuencia
+que la sucesión de conjuntos 
+\Eq{*}{
+\Bigg(\sum_{k=0}^{n}\frac{1}{2^k}S\big(2d_{\Z}(2^kt)x\big)\Bigg)_{n\in\N}
+}
+sea creciente. Por lo tanto, $S^T$ no es más que el límite inferior
+de dicha sucesión.
+}
+La multifunción $S^T$ será llamada transformación de Takagi de $S$ a lo largo del trabajo. 
+\Defi{Recsvm}{
+El cono recesión de la multifunción $S:D\to\P_0(Y)$ es el conjunto
+\Eq{*}{
+\rec(S):= \bigcap_{x\in D}\rec S(x)
+}
+}
+De la definición se puede observar que para todo $x\in D$ se tiene que 
+$$\rec(S)+S(x)\subseteq S(x).$$ 
+A continuación, se establecerá la relación entre
+una multifunción y su transformación de Takagi.
+\Prp{SST}{
+Sea $D\subseteq X$ un conjunto estrellado y sea $S:D\to\P_0(Y)$ una multifunción
+tal que $0\in S(x)$ para todo $x\in D$. Entonces
+\Eq{TT1}{
+   \cl(S(x))\subseteq S^T\big(\tfrac12,x\big) \qquad (x\in D).
+}
+Si además, $S(0)\subseteq \overline\rec(S)$, entonces
+\Eq{TT2}{
+   \cl(S(x))= S^T\big(\tfrac12,x\big) \qquad (x\in D).
+}
+}
+\begin{proof} 
+Observe que $d_{\Z}\big(\tfrac12\big)=\tfrac12$ y $d_{\Z}\big(2^k\cdot\tfrac12\big)=0$ para $k\in\N$.
+Por lo tanto,
+\Eq{*}{
+  S^T\big(\tfrac12,x\big)
+   =\cl\bigg(\bigcup_{n=0}^{\infty} \sum_{k=0}^{n}\frac{1}{2^k}S\big(2d_{\Z}(2^k\cdot\tfrac12)x\big)\bigg)
+   =\cl\bigg(S(x)+\bigcup_{n=0}^{\infty} \sum_{k=1}^{n}\frac{1}{2^k}S(0)\bigg).
+}
+Como $0\in S(0)$, entonces la inclusión \eq{TT1} se sigue inmediatamente. Para demostrar
+\eq{TT2}, asuma que $S(0)\subseteq \overline\rec(S)$. Entonces, 
+$S(0)\subseteq \overline\rec(S(x))\subseteq\rec(\overline{S(x)})$.
+Como $\rec(\overline{S(x)})$ es un cono convexo, se tiene que este conjunto es cerrado
+bajo la suma y bajo la multiplicación por escalares positivos.
+Así, para todo $n\in\N$,
+\Eq{*}{
+  \sum_{k=1}^{n}\frac{1}{2^k}S(0)
+  \subseteq\sum_{k=1}^{n}\frac{1}{2^k}\rec(\overline{S(x)})
+  \subseteq\rec(\overline{S(x)}).
+}
+En consecuencia, 
+\Eq{*}{
+\bigcup_{n=0}^{\infty} \sum_{k=1}^{n}\frac{1}{2^k}S(0)\subseteq\rec(\overline{S(x)}).
+}
+Luego,
+\Eq{*}{
+  S^T\big(\tfrac12,x\big)
+   =\cl\bigg(S(x)+\bigcup_{n=0}^{\infty}\sum_{k=1}^{n}\frac{1}{2^k}S(0)\bigg)
+   \subseteq\cl\bigg(\overline{S(x)}+\rec(\overline{S(x)})\bigg)
+   \subseteq \cl(S(x)),
+}
+lo cual completa la demostración de \eq{TT2}. 
+\end{proof}
+
+\Prp{Tak}{
+Sea $D\subseteq X$ un conjunto estrellado, $S_0\subseteq Y$ un conjunto convexo  
+que contiene a $0\in Y$ y $K\subseteq Y$ un cono convexo. Sea $\varphi:D\to \R_+$ 
+una función localmente acotada superior y no negativa.
+Definamos $S:D\to\P_0(Y)$ por $S(x):=K+\varphi(x)S_0$. Entonces
+\Eq{Tak1}{
+  S^T(t,x)=\cl\big(K+\varphi^T(t,x) S_0\big)
+  \qquad(t\in\R,\,x\in D),
+}
+donde
+\Eq{Tak2}{  
+  \varphi^T(t,x)=\sum_{n=0}^{\infty}\frac{1}{2^n}\varphi\big(2d_{\Z}(2^nt)x\big)
+  \qquad(t\in\R,\,x\in D).
+}
+Si además, $\varphi(0)=0$, entonces
+\Eq{Tak+}{
+  \varphi^T\big(\tfrac12,x\big)=\varphi(x) \qquad\mbox{y}\qquad 
+  S^T\big(\tfrac12,x\big)=\cl(K+\varphi(x)S_0)=\cl(S(x))\qquad(x\in D).
+}}
+
+\begin{proof} 
+Para $t\in\R$ y $n\geq 0$, se tiene que $0\leq 2d_{\Z}(2^nt)\leq 1$,
+por lo tanto $2d_{\Z}(2^nt)x\in[0,x]$. Como la función $\varphi$ es localmente acotada 
+superior en $D$, entonces es acotada superior en el segmento $[0,x]$ por alguna constante
+$M(x)$. Luego
+\Eq{*}{
+  \varphi^T(t,x)=\sum_{n=0}^{\infty}\frac{1}{2^n}\varphi\big(2d_{\Z}(2^nt)x\big) 
+    \leq \sum_{n=0}^{\infty}\frac{1}{2^n}M(x)=2M(x) \qquad(t\in\R).
+}
+
+Para probar \eq{Tak1}, fijemos $(t,x)\in\R\times D$. 
+
+Para demostrar la inclusión $\subseteq$ en \eq{Tak1}, primero se demostrará que
+\Eq{Tak3}{
+\bigcup_{n=0}^{\infty} \sum_{k=0}^{n}\frac{1}{2^k}S\big(2d_{\Z}(2^kt)x\big)
+\subseteq K+\varphi^T(t,x) S_0.
+}
+Usando la definición de $S$, la convexidad del conjunto $S_0$ y el hecho 
+de que la función $\varphi$ es no-negativa, se tiene que para $n\geq 0$
+\Eq{*}{
+\sum_{k=0}^{n} \frac{1}{2^k}S\big(2d_{\Z}(2^kt)x\big) 
+      &= \sum_{k=0}^{n} \bigg(K + \frac{1}{2^k}\varphi\big(2d_{\Z}(2^kt)x\big)S_0\bigg) 
+      = K + \bigg(\sum_{k=0}^{n} \frac{1}{2^k}\varphi\big(2d_{\Z}(2^kt)x\big)\bigg)S_0 \\
+      &\subseteq K + \bigg(\sum_{k=0}^{\infty} \frac{1}{2^k}\varphi\big(2d_{\Z}(2^kt)x\big)\bigg)S_0
+      = K+\varphi^T(t,x) S_0.
+}
+Así, queda demostrada la inclusión \eq{Tak3}. Tomando la clausura en ambos lados, 
+la inclusión $\subseteq$ en \eq{Tak1} se sigue de inmediato. 
+
+Para la prueba de la inclusión $\supseteq$ en \eq{Tak1}, 
+es suficiente mostrar que
+\Eq{*}{
+  K+\varphi^T(t,x)S_0\subseteq S^T(t,x).
+}
+Observe que para $n\geq0$ se tiene lo siguiente
+\Eq{*}{
+K&+\Bigg(\sum_{k=0}^{n} \frac{1}{2^k}\varphi\big(2d_{\Z}(2^kt)x\big)\Bigg)S_0
+  \subseteq \Bigg(\sum_{k=0}^{n} \frac{1}{2^k}\varphi\big(2d_{\Z}(2^kt)x\big)\Bigg)(S_0+K)\\
+	 &\subseteq \sum_{k=0}^{n} \frac{1}{2^k}\varphi\big(2d_{\Z}(2^kt)x\big)(S_0+K) 
+	\subseteq \sum_{k=0}^{n} \frac{1}{2^k}\big(\varphi\big(2d_{\Z}(2^kt)x\big)S_0+K\big)\\
+	&=\sum_{k=0}^{n} \frac{1}{2^k}S(2d_{\Z}(2^kt)x) 
+	\subseteq \bigcup_{\ell=0}^{\infty} \sum_{k=0}^{\ell}\frac{1}{2^k}S\big(2d_{\Z}(2^kt)x\big).
+}
+Por lo tanto,
+\Eq{*}{
+K+\varphi^T(t,x)S_0 
+	&=K+\Bigg(\sum_{k=0}^{\infty} \frac{1}{2^k}\varphi\big(2d_{\Z}(2^kt)x\big)\Bigg)S_0 \\
+  &\subseteq \cl\Bigg(\bigcup_{\ell=0}^{\infty} \sum_{k=0}^{\ell}
+								\frac{1}{2^k}S\big(2d_{\Z}(2^kt)x\big)\Bigg)
+	= S^T(t,x).
+}
+Con lo cual se termina la demostración.
+
+En el caso de que $\varphi(0)=0$, la primera igualdad en \eq{Tak+} es inmediata, la segunda
+igualdad es consecuencia de \eq{Tak1}. 
+\end{proof}
+
+\Cor{Tak}{
+Sea $X$ un espacio normado, $D\subseteq X$ un conjunto estrellado, $S_0\subseteq Y$ un 
+conjunto convexo que contiene a $0\in Y$, $K\subseteq Y$ un cono convexo, 
+y $\alpha>0$. Definamos $S:D\to\P_0(Y)$ por
+$S(x):=K+\|x\|^\alpha S_0$. Entonces
+\Eq{Tak1+}{
+  S^T(t,x)=\cl\big(K+T_\alpha(t)\|x\|^\alpha S_0\big)
+  \qquad(t\in\R,\,x\in D),
+}
+donde $T_\alpha:\R\to\R$ es la función de Takagi de orden $\alpha$
+y es definida por
+\Eq{Tak2+}{
+  T_\alpha(t):=\sum_{n=0}^{\infty}2^{\alpha-n}(d_{\Z}(2^nt))^\alpha
+  \qquad(t\in\R).
+}}
+
+\begin{proof}
+Aplicando la \prp{Tak} con la función $\varphi$
+definida mediante la f\'ormula
+ $\varphi(x):=\|x\|^\alpha$, se observa que para
+todo $t\in\R$ y para todo $x\in D$
+\Eq{*}{
+  \varphi^T(t,x)=\sum_{n=0}^{\infty}\frac{1}{2^n}\varphi\big(2d_{\Z}(2^nt)x\big)
+  =\sum_{n=0}^{\infty}2^{\alpha-n} \big(d_{\Z}(2^nt)\big)^\alpha\|x\|^\alpha
+  = T_\alpha(t)\|x\|^\alpha.
+}
+Por lo tanto, \eq{Tak1+} es consecuencia de \eq{Tak1}. 
+\end{proof}
+
+\Rem{Tak}{
+Un caso particular importante es cuando $\alpha=1$, entonces $T_1=2T$, donde $T$ es la función de Takagi 
+definida por \eq{Tak} en el Capítulo \ref{chapPrevio}. 
+En el caso $\alpha=2$ un argumento interesante nos da una forma cerrada para $T_2$. 
+Observe que $T_\alpha$ (para cualquier $\alpha>0$) satisface la ecuación funcional
+\Eq{TT}{
+  T_\alpha(t)=2^{\alpha}\big(d_{\Z}(t)\big)^\alpha+\frac12 T_\alpha(2t) \qquad(t\in\R).
+}
+Por el teorema de punto fijo de Banach, esta ecuación funcional tiene solución única en el espacio 
+de Banach de las funciones reales, acotadas sobre la recta real (equipado con la norma
+del supremo). Asi $T_\alpha$ es la única solución a \eq{TT}. Por otro lado, para $\alpha=2$ 
+se puede verificar que la función periódica $T_2^*$ definida en $[0,1]$ por 
+$T_2^*(t)=4t(1-t)$ también es solución de \eq{TT}, así, debe ocurrir que 
+$T_2(t)=4t(1-t)$ para $t\in [0,1]$. Para mayores detalles, puede revisar \cite{MakPal13b}.}
+
+\Cor{Tk}{
+Sea $X$ un espacio normado, $D\subseteq X$ un conjunto estrellado, $S_0\subseteq Y$ un 
+conjunto convexo que contiene a $0\in Y$, $K\subseteq Y$ un cono convexo. 
+Definamos $S:D\to\P_0(Y)$ por $S(x):=K+S_0$. Entonces
+\Eq{Tk}{
+  S^T(t,x)=\cl\big(K+2S_0\big)  \qquad(t\in\R,\,x\in D).
+}
+}
+\begin{proof} 
+Aplicaremos la \prp{Tak} a la función constante $\varphi\equiv 1$.
+Por lo tanto \eq{Tak2} nos dá $\varphi^T\equiv 2$, luego \eq{Tak1} es equivalente a lo
+que queremos demostrar.
+\end{proof}
+
+\section{Transformación de Takagi-Tabor de una multifunción.}
+
+Motivados por el t\'ermino de error introducido en el \thm{TabTab3}
+por los profesores Ja. Tabor y J\'o. Tabor, se introduce la siguiente
+definici\'on
+
+\Defi{TakTabTransf}{
+Sean $D$ un conjunto estrellado con respecto al origen, 
+y $S:D\to\P_0(Y)$ una multifunci\'on con la propiedad de 
+que $0\in S(x)$ para todo $x\in D$.
+Para dicha multifunción, se define la transformaci\'on
+de Takagi-Tabor $S^\perp:\R\times D\to Y$ de la siguiente manera
+\Eq{TakTabTransf}{
+ S^\perp(t,x):=\cl\bigg(\bigcup_{n=0}^{\infty} \sum_{k=0}^{n} 
+                 2d_{\Z}(2^kt)S\bigg(\frac{x}{2^k}\bigg)\bigg)\qquad(t\in\R,\,x\in D).
+}
+}
+
+
+
+
+
+
