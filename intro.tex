@@ -1,0 +1,158 @@
+\chapter*{Introducción}
+\markright{INTRODUCCIÓN}
+
+
+El Teorema de Bernstein y Doetsch \cite{BerDoe15} publicado hace 100 años, ha sido uno de los
+resultados fundamentales en la teoría de convexidad
+\cite{Kuc09}. Este teorema asegura que si la funci\'on $f:I\to\R$ es 
+Jensen convexa (donde $I$ es un intervalo de la recta real), i.e.,
+\Eq{JC}{
+  f\Big(\frac{x + y}{2}\Big)\leq \frac{f(x) + f(y)}{2} \qquad(x,y\in I)
+}
+y también es localmente acotada superior, entonces $f$ debe ser continua
+sobre $I$ y por lo tanto convexa en $I$. 
+Si $-f$ es Jensen convexa, entonces se dice que $f$ es Jensen cóncava y los resultados obtenidos
+para esta clase de funciones son análogos bajo la hipótesis de que $f$ debe ser localmente
+acotada inferior. Este teorema es muy importante y ha sido aplicado y generalizado de muchas maneras
+las cuales describiremos brevemente a continuación.
+
+Cuando el co-dominio $Y$ de la función $f$ es un espacio vectorial ordenado, 
+i.e, el conjunto $K$ de elementos
+no-negativos de $Y$ forma un cono convexo, entonces se puede definir la convexidad de tipo Jensen 
+con respecto al cono $K$ (frecuentemente conocida como Jensen $K$-convexidad) de la función
+$f:I\to Y$ por
+\Eq{JCK}{
+  \frac{f(x) + f(y)}{2}\in f\Big(\frac{x + y}{2}\Big)+K \qquad(x,y\in I).
+}
+En particular, si $Y=\R$ y $K=\R_+$, entonces \eq{JCK} es equivalente a \eq{JC}. 
+Las extensiones del teorema de Bernstein--Doetsch a esta clase de funciones fueron formuladas por
+Trudzik \cite{Tru84}. Las funciones $f:I\to Y$ que satisfacen la inclusión
+\Eq{JCVK}{
+  f\Big(\frac{x + y}{2}\Big)\in \frac{f(x) + f(y)}{2} + K \qquad(x,y\in I)
+}
+se denominan $K$-Jensen cóncavas. Evidentemente, esta última relación es válida si y sólo
+si $(-f)$ es $K$-Jensen convexa (ó si $f$ es $(-K)$-Jensen convexa). 
+Por lo tanto, los resultados relacionados con funciones $K$-Jensen cóncavas siempre pueden
+ser obtenidos directamente de los resultados establecidos para funciones $K$-Jensen convexas.
+%(Esto sin embargo, no ocurrirá para el caso de multifunciones.)
+
+Generalizado un poco más, podemos considerar el caso de las multifunciones.
+Una multifunci\'on no es m\'as que una funci\'on cuyas im\'agenes
+son subconjuntos de un conjunto $Y$ cualquiera.
+Si $X$ es un espacio normado, $D\subseteq X$ es un conjunto convexo y abierto y
+$Y$ es un espacio vectorial ordenado,
+entonces se dice que una multifunción $F:D\to \P_0(Y)$ es $K$-Jensen convexa si para todo 
+$x,y\in D$ se cumple lo siguiente
+\Eq{SVJCK}{
+  \frac{F(x) + F(y)}{2}\subseteq F\Big(\frac{x + y}{2}\Big)+K. 
+}
+Observe que si $F$ es de la forma $F(x)=\{f(x)\}$ para alguna función $f:D\to Y$, entonces \eq{SVJCK}
+es equivalente a \eq{JCK}, y así se evidencia como la inclusión \eq{SVJCK} generaliza \eq{JCK}.
+Los resultados de tipo Bernstein--Doetsch  para este tipo de multifunciones han sido obtenidos 
+durante las últimas cinco décadas por los profesores 
+Averna, Cardinali, Nikodem, Papalini \cite{AveCar90,CarNikPap93,Nik86,Nik87a,Nik87c,Nik89,Pap90} 
+y Borwein \cite{Bor77}. La noción de $K$-Jensen concavidad para una multifunción 
+$F:D\to \P_0(Y)$, análoga a la inclusión \eq{JCVK}, se define por 
+\Eq{SVJCVK}{
+  F\Big(\frac{x + y}{2}\Big)\subseteq \frac{F(x) + F(y)}{2} + K \qquad(x,y\in D).
+}
+En el desarrollo de este trabajo, veremos que, en general, la $K$-Jensen concavidad 
+de $F$ \textit{no es} equivalente a la $K$-Jensen 
+convexidad de $-F$. Esto trae como consecuencia, que al hablar de multifunciones, 
+los resultados relacionados a convexidad y concavidad necesitan ser tratados por separado. 
+
+Otra cadena de generalizaciones del teorema de Bernstein--Doetsch emerge del artículo del profesor
+K. Nikodem junto con el prof. Ng \cite{NgNik93} en el contexto de convexidad aproximada.
+Allí, ellos demuestran que si $f:D\to\R$ es $\varepsilon$-Jensen convexa para algún 
+$\varepsilon\geq0$, i.e.,
+\Eq{JCe}{
+  f\Big(\frac{x + y}{2}\Big)\leq \frac{f(x) + f(y)}{2} + \varepsilon \qquad(x,y\in D),
+}
+y si además $f$ es localmente acotada superior, entonces $f$ es $2\varepsilon$-convexa, i.e.,
+\Eq{Ce}{
+  f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)+2\varepsilon \qquad(x,y\in D,\,t\in[0,1]).
+}
+%La versión correspondiente del resultado anterior para el caso de multifunciones, será formulado 
+%como una consecuencia de los resultados principales obtenidos en nuestra investigación.
+
+Considerando un término de error más general, Házy y Páles \cite{HazPal04} investigaron la 
+siguiente desigualdad de tipo Jensen aproximada
+\Eq{JCHP}{
+  f\Big(\frac{x + y}{2}\Big)\leq \frac{f(x) + f(y)}{2} + \varepsilon\|x-y\| \qquad(x,y\in D),
+}
+asumiendo que $D$ es un subconjunto de un espacio normado $X$ y $f$ es una función a valores reales.
+En dicho artículo, los autores demostraron que bajo la hipótesis usual de que $f$ es localmente 
+acotada superior, la desigualdad \eq{JCHP} implica
+\Eq{CHP}{
+  f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)+2\varepsilon T(t)\|x-y\| \qquad(x,y\in D,\,t\in[0,1]),
+}
+donde la función $T:\R\to[0,1]$, es la conocida función de Takagi, y se define por
+\Eq{*}{
+  T(t):=\sum_{n=0}^\infty \frac1{2^n}\dist(2^nt,\Z).
+}
+Algunos resultados, que extienden este tipo de nociones a términos más generales de errores y también 
+a conceptos de convexidad relacionados con sistemas de Chebyshev, han sido obtenidos recientemente
+por Házy, Makó and Páles \cite{Haz05a,Haz07b,HazPal05,HazPal09,MakPal10b,MakPal12b,MakPal12c,MakPal13b}
+y por Mureńko, Ja. Tabor, Jó. Tabor, and Żoldak 
+\cite{MurTabTab12,TabTab09b,TabTab09a,TabTabZol10b,TabTabZol10a}.
+
+%
+%Para el caso de multifunciones $K$-Jensen convexas y $K$-Jensen cóncavas, haremos formulaciones
+%más generales como consecuencia directa de los resultados principales de nuestra investigación.
+
+Finalmente, haremos mención a la noción de convexidad fuerte, la cual en cierto sentido, es lo contrario 
+a convexidad aproximada. Siguiendo a Polyak \cite{Pol66}, una función $f:D\to\R$ es 
+fuertemente Jensen convexa con módulo $\varepsilon\geq0$ si
+\Eq{SJC}{
+  f\Big(\frac{x + y}{2}\Big)\leq \frac{f(x) + f(y)}{2} - \frac{\varepsilon}{4}\|x-y\|^2 \qquad(x,y\in D).
+}
+Asumiendo que $f$ es localmente acotada superior, los profesores Azócar, Gimenez, Nikodem y Sánchez en
+ \cite{AzoGimNikSan11} demostraron que si $f$ es fuertemente Jensen convexa 
+entonces $f$ es fuertemente convexa con módulo $\varepsilon$, i.e., 
+\Eq{SC}{
+  f(tx+(1-t)y)\leq tf(x)+(1-t)f(y) - \varepsilon t(1-t)\|x-y\|^2 \qquad(x,y\in D,\,t\in[0,1]).
+}
+La versión conjunto valuada de este resultado fue establecida por Leiva, Merentes, Nikodem, y Sánchez 
+en \cite{LeiMerNikSan13}.
+
+En este trabajo, mostraremos una generalización del teorema de Bernstein--Doetsch 
+para multifunciones que satisfacen una inclusión general de tipo Jensen
+de la forma
+\Eq{intro1}{
+\frac{F(x)+F(y)}2 + A(x-y) \subseteq F\bigg(\frac{x+y}{2}\bigg) + B(x-y)
+\qquad (x,y\in D),
+}
+donde $A$ y $B$ son multifunciones definidas en $D-D$. Bajo ciertas condiciones
+de regularidad sobre la multifunción $F$ demostraremos que ella satisface
+la inclusión
+\Eq{intro2}{
+tF(x)+(1-t)F(y)+S_A(t,x-y)\subseteq F(tx+(1-t)y)+S_B(t,x-y)
+} 
+para todo $t\in [0,1]$ y para todo $x,y\in D$.
+Donde $S_A$ y $S_B$ son ciertas multifunciones definidas en
+$[0,1]\times D-D$ que surgen de forma natural como una 
+generalización conjunto-valuada de la función de Takagui cuya 
+importancia se ve reflejada en los artículos de Z. Páles, J. Makó,
+A. Hazy, Jo. Tabor, Ja. Tabor \cite{MakPal10b,MakPal12a,TabTab09b,TabTab09a}
+como veremos en el Capítulo 2 de esta monografía.
+Los resultados que presentaremos aquí generalizan
+ a la mayoría  de los resultados
+obtenidos en esta línea de investigación desde el año 1915 y además
+proporcionan nuevos Teoremas de tipo Bernstein--Doetsch
+para multifunciones aproximadamente midconvexas y midcóncavas.
+
+Note que la inclusión \eq{intro1} es una combinación de 
+midconvexidad aproximada y midconvexidad fuerte para la multifunción
+$F$, mientras que la inclusión \eq{intro2} combina convexidad fuerte y 
+aproximada. De hecho, si $A=\{0\}$, entonces \eq{intro1} corresponde
+a un tipo de midconvexidad aproximada mientras que por el contrario
+si $B=\{0\}$ entonces la misma inclusión corresponde a un tipo de 
+midconvexidad fuerte. Por otra parte, podemos decir que en este
+trabajo no se demuestra que la inclusión \eq{intro2} es óptima
+y por lo tanto queda como problema abierto.
+
+Debido a la observación hecha previamente con respecto a la naturaleza
+de las multifunciones convexas y cóncavas, estableceremos también, 
+un Teorema de tipo Bernstein--Doetsch para multifunciones midcóncavas. Los resultados principales
+de esta investigación que  serán presentados en el Capítulo 4 de esta monografía,
+se pueden encontrar en \cite{GonNikPalRoa}.

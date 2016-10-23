@@ -1,0 +1,40 @@
+\chapter*{Resumen}
+\markright{RESUMEN}
+
+
+En general, no toda función midconvexa es convexa. Sin embargo, en la clase de  
+funciones continuas, es bien conocido que una función es midconvexa y continua si 
+y sólo si ella es convexa \cite{Kuc09}. El teorema de Bernstein-Doetsch publicado hace 100 años da una condición
+más débil que la continuidad, para que una función midconvexa definida en un subconjunto
+convexo de la recta real sea continua y por lo tanto convexa. 
+Este teorema fue establecido en 1915, y es uno de los resultados clásicos más importantes 
+obtenidos en la teoría de funciones convexas. Desde entonces, ha sido generalizado de varias 
+maneras diferentes y por muchos autores. 
+
+Los teoremas principales en esta monografía generalizan algunos de los resultados obtenidos por Ng, Nikodem
+Averna, Cardinali, Papalini, y otros, relacionados con funciones fuertemente y aproximadamente convexas,
+puede revisar \cite{MakPal10b,MakPal13b,Nik89} y las referencias que allí los autores mencionan.
+Aquí, consideramos una multifunción $F(\cdot)$ definida en un subconjunto convexo $D$ de
+un espacio topológico lineal $X$ la cual toma valores en la clase de subconjuntos no-vacíos 
+de otro espacio topológico lineal $Y$ y que satisface la siguiente inclusión de tipo Jensen:
+$$
+\frac{F(x)+F(y)}2 + A(x-y) \subseteq \overline{\bigg(F\bigg(\frac{x+y}2\bigg)+B(x-y)\bigg)},
+\qquad
+(x,y\in D)
+$$
+donde, $A(\cdot)$ y $B(\cdot)$ son multifunciones definidas en $D-D$ y que además satisfacen que para todo $x\in D-D$,
+$0\in A(x)\cap B(x)$. Ahora bien, asumiendo algunas condiciones de regularidad sobre la multifunción $F$  
+se puede demostrar que la multifunción $F(\cdot)$ satisface para $x,y\in D$ y $t\in[0,1]$
+la siguiente inclusión:
+$$
+tF(x)+(1-t)F(y) + A^T(t,x-y) \subseteq \overline{\bigg(F(tx+(1-t)y)+B^T(t,x-y)\bigg)}.
+$$
+
+Aquí, $A^T$ denota la transformación de Takagi asociada a la multifunción $A$, 
+y esta definida para $t\in[0,1]$ y $x\in D- D$ mediante la siguiente fórmula:
+$$
+A^T(t,x) = \overline{\bigcup_{n=0}^{\infty}\sum_{k=0}^n{\frac1{2^k}A(2\mbox{dist}(2^kt,\Z)x)}}.
+$$
+
+{\bf Palabras Claves:} K-Jensen convexidad/concavidad, multifunción, Transformación de Takagi, convexidad aproximada,
+convexidad fuerte.
