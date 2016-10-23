@@ -1,0 +1,436 @@
+
+\chapter{T\'ermino de error de tipo Takagi-Hazy-Pales.}
+\setcounter{theorem}{0}
+%Los resultados principales de esta investigación están concentrados en los siguientes
+%dos teoremas. 
+A lo largo de este capítulo, se asume que $X$ y $Y$ son espacios topológicos
+lineales.
+
+%El siguiente teorema teorema dá condiciones suficientes sobre una multifunción
+%que satisface una inclusión de convexidad tipo Jensen, para que esta satisfaga
+%una inclusión de tipo convexidad más general.
+\section[Teorema de tipo Bernstein--Doetsch para multifunciones convexas]
+{Teorema de tipo Bernstein--Doetsch con errores de tipo
+THP para multifunciones convexas.}
+\Thm{Convex}{
+Sea $D\subseteq X$ un conjunto convexo no-vacío y $A,B:(D-D)\to\P_0(Y)$ multifunciones tales que
+$0\in A(x)\cap B(x)$ para todo $x\in (D-D)$. Sea $K=\overline{\rec}(B)$, la clausura del
+cono recesión de $B$. Sea $F:D\to\P_0(Y)$ una multifunción que satisface la inclusión de 
+convexidad tipo Jensen 
+\Eq{JCV}{
+\dfrac{F(x) + F(y)}{2} + A(x-y) \subseteq \cl\bigg(F\pr{\dfrac{x+y}{2}} + B(x-y)\bigg) \qquad (x,y\in D).
+}
+Supongamos además, que $F$ tiene las siguientes propiedades:
+\begin{enumerate}[i.]
+ \item $F$ es puntualmente semi-$K$-acotada inferior.
+ \item $F$ es localmente debíl-semi-$K$-acotada superior en $D$.
+\end{enumerate}
+Entonces $F$ satisface la siguiente inclusión 
+\Eq{CV}{
+ tF(x)+(1-t)F(y)+A^T(t,x-y)\subseteq \cl\big(F(tx+(1-t)y)+B^T(t,x-y)\big)
+}
+para todo $x,y\in D$ y $t\in[0,1].$
+}
+
+\begin{proof}
+El primer paso en la demostración de \eq{CV}, será mostrar que, para todo $x,y\in D$
+existe un conjunto acotado $H\subseteq Y$ tal que, para todo $n\geq 0$, $t\in[0,1]$, 
+\Eq{CVn}{
+ tF(x)&+(1-t)F(y) + \sum_{k=0}^{n-1}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k t)(x-y)\big)} \\
+ &\subseteq \cl\bigg(F(tx+(1-t)y) + \dfrac{1}{2^n} H + K +
+  \sum_{k=0}^{n-1}{\dfrac{1}{2^k}B\big(2 d_{\Z}(2^k t)(x-y)\big)}\bigg). 
+}
+
+Fijemos $x,y\in D$ arbitrarios. Para verificar que \eq{CVn} se cumple, vamos a proceder aplicando
+inducción sobre $n.$ 
+Para el caso $n=0$, debemos demostrar que existe un conjunto acotado $H\subseteq Y$ tal que para todo
+$t\in[0,1]$, 
+\Eq{J0}{
+tF(x)+(1-t)F(y)\subseteq \cl\big(F(tx+(1-t)y) + H + K\big).
+}
+Sea $U\in\U(Y)$ y escojamos un abierto balanceado $V\in\U(Y)$ tal que $V+V+V\subseteq U$. 
+Como $F$ es puntualmente semi-$K$-acotada inferior, existen conjuntos acotados $H_x,H_y\subseteq Y$
+tales que 
+\Eq{*}{
+F(x) \subseteq \cl(H_x + K)\subseteq V+H_x+K
+}
+y
+\Eq{*}{
+F(y) \subseteq \cl(H_y + K) \subseteq V+H_y + K.
+} 
+Multiplicando estas inclusiones por $t$ y $1-t$, respectivamente, sumándolas,
+usando la convexidad del cono $K$ y el hecho de que $V$ es balanceado,
+\Eq{J1}{
+tF(x)+(1-t)F(y)&\subseteq tV + tH_x + tK + (1-t)V + (1-t)H_y +(1-t)K \\
+               &\subseteq V + V + tH_x + (1-t)H_y + K.
+}
+Por la \prp{bddtH}, se tiene 
+que tanto el conjunto $H_1:=\bigcup_{t\in[0,1]} tH_x$ como el
+conjunto $H_2:=\bigcup_{t\in[0,1]} (1-t)H_y$
+son acotados. Así, la inclusión \eq{J1} nos da que para todo $t\in[0,1]$,
+\Eq{J2}{
+tF(x)+(1-t)F(y)\subseteq V + V + H_1 + H_2 + K.
+}
+Por otra parte, como $F$ es localmente débil-semi-$K$-acotada superior y el segmento 
+$[x,y]$ es compacto, entonces por la \prp{lem2.4}, existe un conjunto acotado $H_0$ 
+tal que para todo $t\in[0,1]$,
+\Eq{J3}{
+ 0\in \cl(F(tx+(1-t)y) + H_0 + K)\subseteq V + F(tx+(1-t)y) + H_0 + K.
+} 
+Ahora bien, sumando las inclusiones \eq{J2} y \eq{J3} lado a lado, se tiene que 
+para todo $t$ en $[0,1]$, 
+\Eq{*}{
+tF(x)+(1-t)F(y)&\subseteq V + V + V+ F(tx+(1-t)y) + H_0 + H_1 + H_2 + K \\
+               &\subseteq U + F(tx+(1-t)y) + H_0 + H_1 + H_2 + K.
+} 
+Por lo tanto,
+\Eq{*}{
+tF(x)+(1-t)F(y)&\subseteq \bigcap_{U\in\U}\big(U + F(tx+(1-t)y) + H_0 + H_1 + H_2 + K\big)\\
+               &=\cl\big(F(tx+(1-t)y) + H_0 + H_1 + H_2 + K\big).
+}
+Así, la inclusión \eq{J0} se obtiene con $H:=H_0+H_1+H_2$.
+
+Supongamos ahora que la ecuación \eq{CVn} es válida para $n$ y demostraremos que también es 
+válida para $n+1$.
+Supongamos que $t\in\big[0,\frac12\big]$ (el caso cuando $t\in\big[\frac12,1\big]$ es
+análogo). Entonces, $d_{\Z}(t)=t$ y podemos reescribir el lado izquierdo de la inclusión 
+que queremos demostrar como 
+\Eq{e11}{
+ tF(x)&+(1-t)F(y) + \sum_{k=0}^{n}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k t)(x-y)\big)} \\
+ &= tF(x)+(1-t)F(y)+ A\big(2t(x-y)\big) 
+   + \sum_{k=1}^{n}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^kt)(x-y)\big)}.
+}
+Observemos que
+\Eq{CVC1}{
+ (1-t)F(y) = \frac{1-2t+1}{2}F(y)\subseteq \frac{1-2t}2 F(y) + \frac12 F(y),
+}
+por lo tanto,
+\Eq{II1}{
+ &tF(x)+(1-t)F(y)+ A\big(2t(x-y)\big) 
+   + \sum_{k=1}^{n}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^kt)(x-y)\big)} \\
+ &\subseteq \dfrac{1}{2}\bigg( 2tF(x)+(1-2t)F(y)
+   + \sum_{k=0}^{n-1}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k(2t))(x-y)\big)} \bigg) \\
+&\hspace{8cm}+ \frac{1}{2}F(y) \!+\! A\big(2d_{\Z}(t)(x-y)\big).
+}
+Al usar la hipótesis inductiva con $2t$ en vez de $t,$ se sigue que
+\Eq{II2}{
+2t&F(x)+(1-2t)F(y)+ \sum_{k=0}^{n-1} \dfrac{1}{2^k}A\big(2 d_{\Z}(2^k(2t))(x-y)\big) \\
+   & \subseteq \cl\bigg(F(2tx + (1-2t)y)+ \frac{1}{2^n}H + K 
+   + \sum_{k=0}^{n-1} \dfrac{1}{2^k}B\big(2 d_{\Z}(2^k(2t))(x-y)\big)\bigg).
+}
+Combinando las inclusiones \eq{e11}, \eq{II1} y \eq{II2}, llegamos a la siguiente inclusión
+\Eq{*}{
+ & tF(x)+(1-t)F(y) + \sum_{k=0}^{n}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k t)(x-y)\big)} \\
+ & \subseteq \dfrac{1}{2}\cl\bigg(F(2tx + (1-2t)y)+ \frac{1}{2^n}H + K 
+   + \sum_{k=0}^{n-1} \dfrac{1}{2^k}B\big(2 d_{\Z}(2^k(2t))(x-y)\big)\bigg) \\
+ &\hspace{6cm} + \frac{1}{2}F(y) \!+\! A\big(2d_{\Z}(t)(x-y)\big)\\
+ & \subseteq \cl\bigg(\dfrac{F(2tx + (1-2t)y)+ F(y)}{2}+ \frac{1}{2^{n+1}}H + K 
+    + A\big(2t(x-y)\big) \\
+&\hspace{6cm}		+ \sum_{k=0}^{n-1}\dfrac{1}{2^{k+1}}B\big(2d_{\Z}(2^k(2t))(x-y)\big)\bigg)
+}
+Como $F$ satisface la inclusión de tipo Jensen \eq{JCV}, entonces,
+\Eq{*}{
+\frac{F(2tx + (1-2t)y) + F(y)}{2} &+ A\big(2t(x-y)\big) \\
+ \subseteq \cl\bigg(&F\bigg(\frac{2tx+(1-2t)y+y}{2}\bigg) + B\big(2t(x-y)\big)\bigg).
+}
+Por lo tanto,
+\Eq{*}{
+&tF(x)+(1-t)F(y) + \sum_{k=0}^{n}\dfrac{1}{2^k}A\big(2 d_{\Z}(2^kt)(x-y)\big) \\
+& \subseteq \cl\bigg(\!\cl\bigg(F\bigg(\frac{2tx+(1-2t)y+y}{2}\bigg) 
+     + B\big(2t(x-y)\big)\bigg) + \frac{1}{2^{n+1}}H + K \\
+&\hspace{6.5cm}     + \sum_{k=0}^{n-1}\dfrac{1}{2^{k+1}}B\big(2d_{\Z}(2^k(2t))(x-y)\big)\bigg)\\
+& = \cl\bigg(F\big(tx+(1-t)y\big) + \frac{1}{2^{n+1}}H + K 
+  + \sum_{k=0}^{n}\dfrac{1}{2^{k}}B\big(2d_{\Z}(2^k t)(x-y)\big)\bigg).
+}
+Ahora podemos concluir que la inclusion \eq{CVn} es válida para todo $n\geq 0.$
+
+Para completar la demostración del teorema, sea $t\in[0,1]$ fijo y apliquemos la \prp{L2.2} 
+a las sucesiones de conjuntos y números definidas para $n\geq0$ de la siguiente manera
+\Eq{*}{
+ A_n &:= tF(x)+(1-t)F(y) + \sum_{k=0}^{n-1}\dfrac{1}{2^k}A(2 d_{\Z}(2^k t)(x-y)) \\
+ B_n &:= F\big(tx+(1-t)y\big) + \sum_{k=0}^{n-1}\dfrac{1}{2^{k}}B\big(2d_{\Z}(2^k t)(x-y)\big) \\
+ \varepsilon_n &:= \frac{1}{2^{n}}
+}
+Con esta notación, la inclusión \eq{CVn} es equivalente a \eq{Incn}.
+Por otra parte, como $0\in A(u)\cap B(u)$ para todo $u\in (D-D)$,
+entonces las sucesiones $(A_n)$ y $(B_n)$ son sucesiones no-decrecientes en $Y$.
+Aplicando la \prp{L2.2}, 
+\Eq{*}{
+  \cl\bigg(\bigcup_{n=1}^\infty \bigg(tF(x)&+(1-t)F(y)
+     + \sum_{k=0}^{n-1}\dfrac{1}{2^k}A(2 d_{\Z}(2^k t)(x-y))\bigg)\bigg)\\
+  &\subseteq \cl\bigg(\bigcup_{n=1}^\infty \bigg(F\big(tx+(1-t)y\big)
+     + \sum_{k=0}^{n-1}\dfrac{1}{2^{k}}B\big(2d_{\Z}(2^k t)(x-y)\big)\bigg)\bigg).
+}
+Ahora, aplicamos el numeral 2 del \thm{f1} en ambos lados de la inclusión anterior y se obtiene
+\Eq{*}{
+  \cl\bigg(tF(x)&+(1-t)F(y) + \cl\bigg(\bigcup_{n=1}^\infty
+     \sum_{k=0}^{n-1}\dfrac{1}{2^k}A(2 d_{\Z}(2^k t)(x-y))\bigg)\bigg)\\
+  &\subseteq \cl\bigg(F\big(tx+(1-t)y\big) +\cl\bigg(\bigcup_{n=1}^\infty 
+     \sum_{k=0}^{n-1}\dfrac{1}{2^{k}}B\big(2d_{\Z}(2^k t)(x-y)\big)\bigg)\bigg),
+}
+lo cual es equivalente a la inclusión \eq{CV} que queríamos demostrar.
+\end{proof}
+%\newpage
+
+\section[Teorema de tipo Bernstein--Doetsch para multifunciones cóncavas.]
+{Teorema de tipo Bernstein--Doetsch con errores de tipo
+THP para multifunciones c\'oncavas.}
+\Thm{Concave}{
+Sea $D\subseteq X$ un conjunto convexo no-vacío y $A,B:(D-D)\to\P_0(Y)$ multifunciones tales que
+$0\in A(x)\cap B(x)$ para todo $x\in (D-D)$. Sea $K=\overline{\rec}(B)$, la clausura del
+cono recesión de $B$. Sea $F:D\to\P_0(Y)$ una multifunción que satisface la inclusión de 
+concavidad tipo Jensen 
+\Eq{JCC}{
+F\pr{\dfrac{x+y}{2}} + A(x-y) \subseteq \cl\bigg(\dfrac{F(x) + F(y)}{2} + B(x-y)\bigg) \qquad (x,y\in D).
+}
+Supongamos además, que $F$ tiene las siguientes propiedades:
+\begin{enumerate}[i.]
+ \item $F$ es puntualmente semi-$K$-convexa, i.e., $tF(x)+(1-t)F(x)\subseteq \cl(F(x) + K)$  
+para todo $x\in D$ y para todo $t\in[0,1]$;
+ \item $F$ es localmente semi-$K$-acotada inferior.
+\end{enumerate}
+Entonces $F$ satisface la siguiente inclusión 
+\Eq{CC}{
+ F(tx+(1-t)y)+A^T(t,x-y)\subseteq \cl\big(tF(x)+(1-t)F(y)&+B^T(t,x-y)\big)
+}
+para todo $x,y\in D$ y $t\in[0,1]$.
+}
+\begin{proof}
+Para demostrar la inclusión \eq{CC}, primero vamos a demostrar que para todo $x,y\in D$,
+existe un conjunto acotado $H\subseteq Y$ tal que, para todo $n\geq 0$ y $t\in[0,1]$, 
+\Eq{CCn}{
+ F(tx&+(1-t)y) + \sum_{k=0}^{n-1}\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k t)(x-y)\big) \\[-2mm]
+ &\subseteq \cl\bigg(tF(x)+(1-t)F(y) + \dfrac{1}{2^n} H + K +
+  \sum_{k=0}^{n-1}\dfrac{1}{2^k}B\big(2 d_{\Z}(2^k t)(x-y)\big)\bigg).
+}
+
+Sean $x,y\in D$ fijos. Para verificar que la inclusión \eq{CCn} es válida, 
+vamos a proceder por inducción sobre $n$. Para $n=0$, se debe demostrar
+que existe un conjunto acotado $H\subseteq Y$ tal que, para todo $t\in[0,1]$
+\Eq{CC0}{
+  F(tx+(1-t)y)\subseteq \cl\big(tF(x)+ (1-t)F(y) + H + K\big).
+}
+Como $F$ es semi-$K$-acotada inferior y el segmento $[x,y]$ es compacto, se tiene
+que por la \prp{lem2.3}, existe un conjunto acotado $H_0\subseteq Y$ 
+tal que 
+\Eq{H0}{
+F(tx+(1-t)y)\subseteq \cl(H_0 + K)   \qquad  (t \in[0,1]).
+}
+Por otra parte, como $F(x)$ y $F(y)$ son no-vacíos, podemos escoger dos elementos
+$u\in F(x)$ y $v\in F(y)$, lo cual implica que
+\Eq{Hxy}{
+0 \in F(x)-u \qquad\mbox{y}\qquad 0 \in F(y)-v.
+}    
+Multiplicando ambas inclusiones en \eq{Hxy} por $t$ y $(1-t)$, respectivamente, y sumándolas
+junto con la inclusión \eq{H0}, se tiene que para $t\in[0,1]$, 
+\Eq{*}{
+F(tx+(1-t)y) &\subseteq tF(x)+(1-t)F(y) - tu - (1-t)v + \cl(H_0 + K)\\
+            &\subseteq \cl\big(tF(x)+(1-t)F(y) -[u,v] + H_0 + K\big).
+}
+Por lo tanto, la inclusión \eq{CC0} es válida con $H := H_0-[u,v],$ el cual es obviamente 
+un conjunto acotado.
+
+Ahora, supongamos que \eq{CCn} es válida para $n$ y veamos que también es válida para $n+1.$
+Supongamos, al igual que en la demostración anterior que $t\in\big[0,\frac12\big]$ y  
+observe que entonces $d_{\Z}(t)=t$. Reescribiendo el lado izquierdo de la inclusión que 
+queremos demostrar se obtiene la siguiente expresión
+\Eq{I1}{
+ & F(tx+(1-t)y) + \sum_{k=0}^{n}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k t)(x-y)\big)} \\
+ & = F(tx+(1-t)y) + A(2d_{\Z}(t)(x-y)) + \sum_{k=1}^{n}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k t)(x-y)\big)} \\
+ & = F(tx+(1-t)y) + A\big(2t(x-y)\big)
+ + \dfrac{1}{2}\sum_{k=0}^{n-1}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k (2t))(x-y)\big)}.
+}
+Además, 
+\Eq{*}{
+tx+(1-t)y = \frac{2tx+(1-2t)y + y}{2}
+}
+y como $F$ satisface la inclusión de tipo Jensen dada en \eq{JCC},
+\Eq{I2}{
+ F\bigg(\dfrac{2tx+(1-2t)y + y}{2}\bigg) &+ A\big(2t(x-y)\big) \\
+  &\subseteq \cl\bigg(\dfrac{F(2tx+(1-2t)y) + F(y)}{2} + B\big(2t(x-y)\big)\bigg).
+}
+Combinando \eq{I1} y \eq{I2}, se obtiene
+\Eq{I3}{
+ F&(tx+(1-t)y) + \sum_{k=0}^{n}\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k t)(x-y)\big) \\
+  &\subseteq \cl\bigg(\dfrac{F(2tx+(1-2t)y) + F(y)}{2} + B\big(2t(x-y)\big)\bigg) \\
+ &\hspace{7cm}  +\dfrac{1}{2}\sum_{k=0}^{n-1}\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k (2t))(x-y)\big) \\
+  & \subseteq \cl\bigg(\dfrac12\bigg(F(2tx+(1-2t)y)
+   +\sum_{k=0}^{n-1}\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k (2t))(x-y)\big)\bigg) \\
+ &\hspace{7cm}  + \dfrac12 F(y)+B\big(2d_{\Z}(t)(x-y)\big)\bigg).
+}
+Por la hipótesis inductiva, sabemos que  
+\Eq{I4}{  
+F&(2tx+(1-2t)y)+\sum_{k=0}^{n-1}\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k (2t))(x-y)\big) \\ 
+&\subseteq \cl\bigg(2tF(x)+(1-2t)F(y) + \dfrac{1}{2^{n}}H + K +
+\sum_{k=0}^{n-1}\dfrac{1}{2^k}B\big(2 d_{\Z}(2^k (2t))(x-y)\big)\bigg).
+}
+Insertando \eq{I4} en \eq{I3} y usando el hecho de que 
+\Eq{*}{
+(1-2t)F(y)+F(y)\subseteq \cl\big((2-2t)F(y)+K\big)
+}
+lo cual es una consecuencia
+de que $F$ es puntualmente semi-$K$-convexa, llegamos a la siguiente inclusión
+\Eq{*}{
+ F&(tx+(1-t)y) + \sum_{k=0}^{n}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k t)(x-y)\big)} \\
+& \subseteq \cl\bigg(\dfrac12\cl\bigg(2tF(x)+(1-2t)F(y) + 
+\sum_{k=0}^{n-1}\dfrac{1}{2^k}B\big(2 d_{\Z}(2^k (2t))(x-y)\big)\bigg)\\
+   &\hspace{5cm} +\dfrac{1}{2^{n}}H + K + \dfrac12 F(y)+B\big(2d_{\Z}(t)(x-y)\big)\bigg)\\
+&\subseteq \cl\bigg(\dfrac{1}{2}\big(2t F(x) + (1-2t) F(y) + F(y) + K\big)  \\
+&\hspace{5cm} + \dfrac{1}{2^{n+1}}H 
+ +\sum_{k=0}^{n}\dfrac{1}{2^{k}}B\big(2 d_{\Z}(2^k t)(x-y)\big)\bigg) \\
+&\subseteq \cl\bigg(tF(x)+(1-t)F(y)+ \dfrac{1}{2^{n+1}}H + K +
+\sum_{k=0}^{n}\dfrac{1}{2^{k}}B\big(2 d_{\Z}(2^k t)(x-y)\big)\bigg). 
+}
+Esto completa la demostración de la inducción y así la inclusión \eq{CCn} es válida para todo $n\geq0$.
+
+Ahora, vamos a usar la \prp{L2.2}. Para ello vamos a definir las sucesiones 
+\Eq{*}{
+A_n &:= F(tx+(1-t)y) + \sum_{k=0}^{n-1}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^k t)(x-y)\big)}, \\
+B_n &:= tF(x)+(1-t)F(y) + \sum_{k=0}^{n-1}{\dfrac{1}{2^k}B\big(2 d_{\Z}(2^k t)(x-y)\big)}, \\
+\varepsilon_n &= \frac1{2^n}.
+}
+para $t\in [0,1]$ fijo.
+
+Por lo tanto, la inclusión \eq{CCn}, con las sucesiones $(A_n),(B_n)$ y $(\varepsilon_n)$ así definidas, 
+es equivalente a la inclusión \eq{Incn}. Así, por la \prp{L2.2}, se sigue lo siguiente
+\Eq{*}{
+  \cl\bigg(\bigcup_{n=0}^{\infty}F(tx+(1-t)y) 
+   &+ \sum_{k=0}^{n-1}{\dfrac{1}{2^k}A\big(2 d_{\Z}(2^kt)(x-y)\big)}\bigg)\\
+  &\subseteq \cl\bigg(\bigcup_{n=0}^{\infty}tF(x)+(1-t)F(y) 
+   + \sum_{k=0}^{n-1}{\dfrac{1}{2^k}B\big(2 d_{\Z}(2^k t)(x-y)\big)}\bigg).
+}
+De manera similar a como se hizo en la prueba del \thm{Convex}, la relación anterior
+implica la inclusión que deseamos probar.
+\end{proof}
+%
+%\Rem{R}{In each of the above theorems the closure operation can be removed from the right hand sides
+%of the inclusions \eq{JCV}, \eq{CV}, \eq{JCC}, and \eq{CC} if the values of the set-valued map $F$ are 
+%compact and $B$ has closed values. The closure operation can also be removed from the right hand sides
+%of \eq{JCV} and \eq{CV} if $F$ has closed values and $B$ is compact valued. This observation also applies
+%to the corollaries below. Another thing is which is worth mentioning is that if 
+%$A(0)\subseteq\overline{\rec}(A)$ and $B(0)\subseteq \overline{\rec}(B)$, then, in view of \lem{TT},
+%the inclusions \eq{CC} and \eq{CV} reduce to \eq{JCC} and \eq{JCV} for the substitution $t=\frac12$,
+%respectively. Therefore, in this case, under the boundedness and convexity assumptions on $F$, 
+%\eq{CC} and \eq{CV} are equivalent to \eq{JCC} and \eq{JCV}, respectively. The problem whether 
+%inclusions \eq{CC} and \eq{CV} are the sharpest possible is an open problem. Results where the
+%exactness of such estimates are obtained due to Boros \cite{Bor08}, Makó and Páles \cite{MakPal10b,MakPal13b}.}
+%
+
+\section{Consecuencias de los teoremas previos.}
+
+Tomando multifunciones particulares $A,$ $B$ y usando la \prp{Tak}, vamos a establecer algunas
+consecuencias importantes de los dos teoremas que acabamos de demostrar. Los siguientes 
+corolarios resaltan la manera en que los resultados mencionados en la introducción están relacionados
+de manera directa con nuestros resultados.
+
+En los siguientes cuatro corolarios supondremos que $D\subseteq X$ es un conjunto convexo y no-vacío,
+$K\subseteq Y$ es un cono convexo y cerrado, $S_0\subseteq Y$ es un conjunto convexo que contiene a 
+$0$ y $\varphi:(D-D)\to\R_+$ es una función localmente acotada superior y no-negativa. 
+Note que por la convexidad de $D$ se tiene que el conjunto 
+$(D-D)$ es estrellado, por lo tanto la \prp{Tak} puede ser aplicada. 
+
+Los primeros dos corolarios tratan sobre multifunciones fuertemente y aproximadamente
+$K$-Jensen convexas respectivamente.
+
+\Cor{Convex+1}{
+Supongamos que $F:D\to\P_0(Y)$ es una multifunción puntualmente semi-$K$-acotada inferior y 
+localmente débil-semi-$K$-acotada superior que satisface
+\Eq{JCV+1}{
+\dfrac{F(x) + F(y)}{2} \subseteq 
+\cl\bigg(F\pr{\dfrac{x+y}{2}} + K + \varphi(x-y)S_0 \bigg) 
+}
+para todo $x,y\in D.$ Entonces
+\Eq{CV+1}{
+ tF(x)+(1-t)F(y) \subseteq \cl\big(F(tx+(1-t)y)+K+\varphi^T(t,x-y)S_0\big)
+}
+para todo $x,y\in D$ y para todo $t\in[0,1].$
+}
+\begin{proof}
+Para cada $u\in D-D$, definamos las multifunciones $A(u)=0$ y $B(u)=K+\varphi(u)S_0$.
+Ahora bien, por definición se tiene que para todo $u\in D-D$ 
+\Eq{*}{
+\rec(B(u))=\{y\in Y\,|\,ty+B(u)\subseteq B(u),\mbox{ para todo } t\geq0\}
+}
+y por lo tanto, si $y\in K$, entonces
+\Eq{*}{
+ty+B(u)=ty+K+\varphi(u)S_0\subseteq K+\varphi(u)S_0 =B(u).
+}
+Esto significa que $K\subseteq \rec(B(u))$ para todo $u\in D-D$ y 
+en consecuencia $K\subseteq \overline{\rec}(B).$
+Luego, $F$ es puntualmente semi-$\overline{\rec}(B)$-acotada inferior y localmente
+débil-semi-$\overline{\rec}(B)$-acotada inferior. Aplicando
+el \thm{Convex}, se tiene que para todo $x,y\in D$ y   
+para todo $t\in[0,1]$
+\Eq{*}{
+ tF(x)+(1-t)F(y)\subseteq \cl\big(F(tx+(1-t)y)+B^T(t,x-y)\big).
+}
+Además, por la \prp{Tak} se obtiene que para $t\in[0,1]$ y $x,y\in D$ 
+\Eq{*}{
+B^T(t,x-y)=\cl(K+\varphi^T(t,x-y)).
+}
+Esto completa la demostración.
+\end{proof}
+\Cor{Convex+2}{
+Supongamos que $F:D\to\P_0(Y)$ es una multifunción puntualmente semi-$K$-acotada inferior y 
+localmente débil-semi-$K$-acotada superior que satisface
+\Eq{JCV+2}{
+\dfrac{F(x) + F(y)}{2} + \varphi(x-y)S_0 \subseteq \cl\bigg(F\pr{\dfrac{x+y}{2}} + K \bigg) 
+}
+para todo $x,y\in D.$ Entonces
+\Eq{CV+2}{
+ tF(x)+(1-t)F(y) + \varphi^T(t,x-y)S_0 \subseteq \cl\big(F(tx+(1-t)y) + K \big)
+}
+para todo $x,y\in D$ y para todo $t\in[0,1].$
+}
+\begin{proof}
+La demostración de este resultado es completamente análoga a la demostración
+anterior. Basta considerar $A(u)=\varphi(x-y)S_0$ y $B(u)=K$ para $u\in D-D$ 
+y proceder de la misma manera que en la demostración anterior.
+\end{proof}
+Los siguientes dos corolarios tratan sobre multifunciones fuertemente y aproximadamente
+$K$-Jensen cóncavas respectivamente y sus demostraciones son similares a la demostración
+de los Corolarios \ref{CConvex+1} y \ref{CConvex+2} por lo cual serán omitidas.
+%Usando el \thm{Convex} con las multifunciones $A(u)=0$ y $B(u)=K+\varphi(u)S_0$ 
+%y aplicando la \prp{Tak}, se obtiene el resultado deseado. 
+%Observe que, tenemos que $K\subseteq\overline{\rec}(B)$, 
+%por lo tanto $F$ será puntualmente semi-$\overline{\rec}(B)$-acotada inferior y 
+%localmente debíl-semi-$\overline{\rec}(B)$-acotada superior.
+\Cor{Concave+1}{
+Supongamos que $F:D\to\P_0(Y)$ es una multifunción puntualmente semi-$K$-convexa y
+localmente semi-$K$-acotada inferior que satisface
+\Eq{JCC+1}{
+F\pr{\dfrac{x+y}{2}} \subseteq \cl\bigg(\dfrac{F(x) + F(y)}{2} + K + \varphi(x-y)S_0 \bigg)
+}
+para todo $x,y\in D.$ Entonces
+\Eq{CC+1}{
+ F(tx+(1-t)y) \subseteq \cl\big(tF(x)+(1-t)F(y) + K + \varphi^T(t,x-y)S_0 \big)
+}
+para todo $x,y\in D$ y para todo $t\in[0,1].$
+}
+
+\Cor{Concave+2}{
+Supongamos que $F:D\to\P_0(Y)$ es una multifunción puntualmente semi-$K$-convexa y
+localmente semi-$K$-acotada inferior que satisface
+\Eq{JCC+2}{
+F\pr{\dfrac{x+y}{2}} + \varphi(x-y)S_0 \subseteq \cl\bigg(\dfrac{F(x) + F(y)}{2} + K\bigg)
+}
+para todo $x,y\in D.$ Entonces
+\Eq{CC+2}{
+ F(tx+(1-t)y)+\varphi^T(t,x-y)S_0 \subseteq \cl\big(tF(x)+(1-t)F(y) + K \big)
+}
+para todo $x,y\in D$ y para todo $t\in[0,1].$
+}
+%
+%\Rem{CC}{The results mentioned and recalled in the introduction can be derived as obvious consequences of
+%the above corollaries. In the real valued setting, the Bernstein--Doetsch Theorem \cite{BerDoe15}, the 
+%results of Ng--Nikodem \cite{NgNik93} and Házy--Páles \cite{HazPal04} follow if, in \cor{Convex+1}, we take 
+%$Y:=\R$, $K:=\R_+$, $S_0:=[-1,0]$, $F(x):=\{f(x)\}$, and $\varphi(x):=0$, $\varphi(x):=\varepsilon$, $\varphi(x):=\varepsilon\|x\|$, respectively. Observe that, in these cases, \prp{Tak} yields 
+%$\varphi^T(t,x):=0$, $\varphi^T(t,x):=2\varepsilon$, $\varphi^T(t,x):=2\varepsilon T(t)\|x\|$, respectively.
+%The results of Averna, Cardinali, Nikodem, and Papalini \cite{AveCar90,CarNikPap93,Nik86,Nik87a,Nik87c,Nik89,Pap90} 
+%and by Borwein \cite{Bor77} that are related to $K$-Jensen convex/concave vector valued and set-valued mappings
+%can also be obtained directly. Numerous results obtained for approximate midconvexity by Makó and Páles \cite{MakPal10b,MakPal13b} and by Mure?ko, Ja. Tabor, Jó. Tabor, and ?oldak
+%\cite{MurTabTab12,TabTab09b,TabTab09a,TabTabZol10b,TabTabZol10a} are generalized by Corollaries \ref{CConvex+1}--\ref{CConcave+2} to the vector valued and set-valued setting. Similarly, using the
+%explicit form of the function $T_2$ described in \rem{Tak}, one can easily derive the results of Azócar, 
+%Gimenez, Nikodem and Sanchez \cite{AzoGimNikSan11} and Leiva, Merentes, Nikodem, and Sanchez 
+%\cite{LeiMerNikSan13} that are related to strongly $K$-Jensen convex real valued and set-valued functions 
+%from \cor{Convex+2}.}
