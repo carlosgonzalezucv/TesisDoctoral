@@ -1,0 +1,488 @@
+\chapter{El teorema de Bernstein--Doetsch}
+\label{chapPrevio}
+
+En este capítulo se presentarán las diferentes versiones 
+del teorema de Bernstein--Doetsch que serán englobadas más 
+adelante como consecuencia directa de los resultados principales que
+obtuvimos al realizar este trabajo. Esta línea de investigación
+comienza formalmente en el año 1905, con el artículo del matemático 
+Danés, Johan Jensen \cite{Jen06}, luego en el año 1915, Bernstein y Doetsch 
+publican un artículo donde demuestran el teorema que hoy en día lleva su nombre 
+y que ha sido uno de los teoremas más importantes en la teoría de convexidad \cite{Kuc09}. 
+
+Comenzaremos este capítulo dando dos definiciones que serán fundamentales
+a lo largo del resto del trabajo.
+\Defi{cvxFunc}{
+Sea $X$ un espacio normado y sea $D$ un subconjunto convexo de $X$.
+Una función $f:D\to\R$ es convexa si para todo $x,y\in D$ 
+y para todo $t\in[0,1]$ se tiene que 
+\Eq{cvxFunc}{
+f(tx+(1-t)y)\leq tf(x)+(1-t)f(y).
+}
+}
+\Defi{midCvx}{
+Sea $X$ un espacio normado y sea $D$ un subconjunto convexo de $X$.
+Una función $f:D\to\R$ es midconvexa si para todo $x,y\in D$ 
+se tiene que
+\Eq{midCvxFunc}{
+f\bigg(\frac{x+y}{2}\bigg)\leq \frac{f(x)+f(y)}2.
+}
+}
+Es elemental demostrar que si $f$ es una función midconvexa,
+entonces $f$ satisface la desigualdad \eq{cvxFunc} para todo
+$x,y\in D$ y para todo $t\in[0,1]\cap\Q$ (ver \cite{Kuc09}). 
+Por lo tanto, en la clase de las funciones continuas, las nociones
+de convexidad y midconvexidad son equivalentes entre sí.
+%En este capítulo se pretende dar a conocer algunos resultados previos
+%relacionados con funciones convexas, aproximadamente convexas y 
+%fuertemente convexas los cuales han sido la motivación de nuestra investigación.
+
+Antes de ir al teorema de Bernstein--Doetsch, no podemos dejar a un lado un resultado 
+que se puede decir, sin dudas que dió comienzo a esta linea de investigación. 
+El matemático Johan Jensen en 1905, 
+publica un artículo en el cual demuestra el siguiente teorema. 
+
+\begin{theorem}[\cite{Jen06}, pg. 188]
+\label{TJensenFirst}
+Sean $a,b\in\R$, $a<b$. 
+Toda función $f:(a,b)\to\R$ acotada superiormente en $(a,b)$ que satisface 
+la desigualdad
+$$
+f\bigg(\frac{x+y}{2}\bigg)\leq \frac{f(x)+f(y)}{2},
+$$
+para todo $x,y\in (a,b)$ necesariamente tiene que ser continua
+y por lo tanto convexa.
+\end{theorem}
+
+\section{Versión Original.}
+No es sino, diez años más tarde que Felix Bernstein y Gustav Doetsch publican,
+en el año 1915, lo que será una generalización del resultado obtenido
+por Jensen en 1905 y lo que hoy en día se conoce como el teorema de Bernstein--Doetsch. 
+En dicho teorema, los autores debilitan la condición de que la función en cuestión
+sea acotada en su dominio y la cambian por una condición más débil, a saber,
+la condición de estar localmente acotada superior en solo un punto.
+%
+%En el libro verde del prof. Marek Kuczma \cite{Kuc09}, se pueden encontrar 
+%dos demostraciones de dicho teorema. A continuación presentaremos una de ellas
+%en la cual se usan tres resultados importantes que serán englobados en el siguiente 
+%teorema
+Debido a la importancia del teorema de Bernstein--Doetsch para el desarrollo
+de esta investigación, haremos una demostración de dicho resultado. Para ello,
+necesitaremos el siguiente lema auxiliar.
+\begin{lemma}[\cite{Kuc09}, Teoremas 6.2.1, 6.2.2 y 6.2.3]
+\label{LLocUpBdd}
+Sean $D\subseteq\R^n$ un conjunto abierto y convexo. Sea $f:D\to\R$ una función 
+midconvexa.
+Si $f$ es localmente acotada superior en un punto $x_0\in D$, entonces
+$f$ es localmente acotada en cada punto de $D$.
+\end{lemma}
+
+Vale la pena destacar que la demostración del lema anterior es la 
+combinación de tres teoremas, cada uno de los cuales amerita
+una demostración detallada. Con esta herramamienta, estaremos en la 
+capacidad de demostrar el siguiente teorema.
+
+\begin{theorem}[Teorema de Bernstein--Doetsch,\cite{BerDoe15}]
+\label{TBD15}
+Sea $N\in\N$ y sea $f:D\subseteq\R^N\to\R$ una función midconvexa. Si
+$f$ es localmente acotada superior en un punto de $D$ entonces 
+$f$ es continua en $D$.
+\end{theorem}
+
+\begin{proof}
+El hecho de que la función midconvexa $f$ sea localmente acotada superior
+en un punto, implica, según el \lem{LocUpBdd} que la función $f$ tiene que
+ser localmente acotada en cada punto de $D$. Por lo tanto, a partir de $f$
+podemos definir los siguientes números
+\Eq{*}{
+m_f(x_0)= \lim_{h\to0}\inf_{B(x_0,h)}{f(x)} \qquad\mbox{y}\qquad
+M_f(x_0)= \lim_{h\to0}\sup_{B(x_0,h)}{f(x)}.
+}
+Note que tanto $m_f$ como $M_f$ son finitos y además, se tiene que para
+todo $x\in D$
+\Eq{mfM}{
+m_f(x) \leq f(x) \leq M_f(x),
+}
+Ahora bien, sea $x\in D$ arbitrario. Podemos construir un par de sucesiones 
+$(x_n)\subseteq D$ y $(z_n)\subseteq D$ tales que 
+\Eq{limx}{
+\lim_{n\to\infty}x_n=x, \qquad \lim_{n\to\infty}f(x_n) = m_f(x),
+}
+\Eq{limz}{
+\lim_{n\to\infty}z_n=x, \qquad \lim_{n\to\infty}f(z_n) = M_f(x).
+}
+Para $n\in\N$, sea $y_n = 2z_n-x_n$. Es claro que $\lim y_n = x$, más aún
+$z_n=(x_n+y_n)/2$ y por la midconvexidad de $f$ se tiene lo siguiente
+\Eq{*}{
+f(z_n) \leq \frac{f(x_n)+f(y_n)}2,
+}
+o equivalentemente 
+$$
+f(y_n) \geq 2f(z_n)-f(x_n).
+$$
+Si ahora tomamos el limite inferior en ambos lados de la desigualdad anterior, 
+se obtiene lo siguiente
+$$
+\liminf_{n\to\infty} f(y_n) \geq 2M_f(x)-m_f(x),
+$$
+pero también,
+$$
+\liminf_{n\to\infty} f(y_n) \leq M_f(x).
+$$
+En consecuencia, se tiene que $M_f(x)\leq m_f(x)$. Al combinar esto 
+con la desigualdad \eq{mfM} se tiene que $M_f(x)=m_f(x)$ y por lo tanto,
+la función $f$ es continua en $x$. Como $x$ fue escogido de manera arbitraria
+se tiene que la función $f$ es continua en $D$, y esto finaliza la demostración
+del teorema.
+\end{proof}
+
+
+
+\section{Cambio en la estructura del espacio subyacente.}
+
+Casi 50 años más tarde en 1964, el matemático, M.R. Mehdi \cite{Meh64} obtiene 
+el siguiente resultado, que generaliza el Teorema \ref{TBD15}, 
+al cambiar la estructura del espacio subyacente.
+
+\Thm{Mehdi}{
+Sean $X$ un espacio topológico lineal, $D\subseteq X$ un conjunto abierto
+y convexo y sea $f:D\to\R$ una función midconvexa. Si $f$ es acotada superiormente
+en un subconjunto abierto no vacío de $D$, entonces $f$ es una función continua.
+}
+
+Ahora el teorema de Bernstein--Doetsch es válido, para funciones cuyo
+dominio esté sumergido en un espacio lineal topológico. Por otra parte, 
+los matemáticos Z. Kominek y M. Kuczma, aseguran en su artículo \cite{KomKuc89b}
+que los resultados obtenidos en \cite{Kom87a} y \cite{KomKuc89a} implican
+el siguiente teorema y además de eso, ofrecen una generalización inmediata de 
+éste y del Teorema \ref{TMehdi}.
+\begin{theorem}[\cite{KomKuc89b}, Teorema C]
+\label{KK1}
+Sean $X$ un espacio lineal, $D\subseteq X$ un conjunto convexo algebraicamente abierto,
+y sea $f:D\to\R$ una función midconvexa. Si $f$ es acotada superiormente, en un 
+subconjunto no vacío y algebraicamente abierto de $D$, entonces $f$ es continua en $D$
+con respecto a la topología de los conjuntos algebraicamente abiertos.
+\end{theorem}
+\begin{theorem}[\cite{KomKuc89b}, Teorema 1]
+\label{KK2}
+Sea $X$ un espacio lineal, dotado con una topología semilineal, sea $D\subseteq X$ un 
+conjunto abierto y convexo. Sea $f:D\to\R$ una función midconvexa. Si $f$ es acotada
+superiormente en un subconjunto abierto y no-vacío de $D$, entonces, $f$ es continua.
+\end{theorem}
+
+\section{Convexidad Aproximada.}
+
+En el contexto de convexidad aproximada, D. H. Hyers y S. M. Ulam, en 1952
+introducen la definición de $\varepsilon$-convexidad \cite{HyeUla52}, donde $\varepsilon$ es un número
+real positivo. Allí los autores establecen que dados $n\in\N$, $\varepsilon>0$, y
+una función $f$ a valores reales definida en un subconjunto $D\subseteq\R^n,$ se 
+dice que $f$ es $\varepsilon$-convexa si y sólo si, para todo $x,y\in D$ se tiene que
+\Eq{eCvx}{
+f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)+\varepsilon
+}
+para todo $t\in(0,1).$ En su artículo, demostraron que toda solución de la
+desigualdad \eq{eCvx} está en correspondencia con una función convexa $g$,
+tal que $|f-g|\leq\varepsilon$, este resultado es mejor conocido como el teorema
+de estabilidad de Hyers y Ulam. 
+
+Siguiendo esta dirección, K. Nikodem junto con Ng. en \cite{NgNik93}
+demostraron la siguiente versión del teorema de Bernstein--Doetsch para
+funciones $\varepsilon$-convexas que generaliza el Teorema \ref{TBD15}. 
+Este resultado también fue establecido independientemente
+por Lacskovich en \cite{Lac99}.
+\begin{theorem}[\cite{NgNik93}, Teorema 1]
+\label{TNgNik}
+Sea $D\subseteq X$ un conjunto abierto y convexo de un espacio lineal topológico $X$. 
+Si $f:D\to\R$ es una función localmente acotada superior en un punto de $D$, y
+$\varepsilon$-midconvexa, i.e, para todo $x,y\in D$ se tiene que
+$$
+f\bigg(\frac{x+y}{2}\bigg)\leq\frac{f(x)+f(y)}2 + \varepsilon,
+$$ 
+entonces, $f$ es $2\varepsilon$-convexa.
+\end{theorem}  
+
+Diez años más tarde, Zolt Páles en \cite{Pal03a} formula la siguiente
+definición: Una función $f$ definida en un subconjunto abierto
+y convexo $D$ de un espacio normado real $X,$ es $(\delta,\varepsilon)$-convexa
+si satisface
+\Eq{edMCvx}{
+f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)+\delta t(1-t)\|x-y\|+\varepsilon
+}
+para todo $x,y\in D$ y $t\in(0,1)$. En su artículo, Z. Páles, obtiene
+propiedades de estabilidad de tipo Hyers--Ulam asociadas
+con la desigualdad \eq{edMCvx} y estudia las propiedades
+que caracterizan este tipo de funciones. Un año depués,
+en 2004, buscando más generalizaciones del \thm{BD15}, 
+A. Házy y Z. Páles, en \cite{HazPal04} se plantean la siguiente interrogante:
+¿Qué propiedades tendrán las funciones $(\delta,\varepsilon)$-midconvexas, 
+localmente acotadas? La respuesta a esta interrogante, la encontramos
+en los siguientes teoremas.
+
+\begin{theorem}[\cite{HazPal04}, Teorema 3]
+\label{THazPal1}
+Sea $\delta$ un número no negativo. Si $f:D\to\R$ es $(\delta,0)$-midconvexa,
+i.e, $f$ satisface la desigualdad
+$$
+f\bigg(\frac{x+y}{2}\bigg) \leq \frac{f(x)+f(y)}{2}+\delta\|x-y\|
+$$
+para todo $x,y\in D$, y si además $f$ es localmente acotada superior en un punto
+de $D$. Entonces, $f$ es continua.
+\end{theorem}
+
+Además, llegan a la conclusión de que si $\varepsilon$ es un número positivo,
+ no se puede garantizar que toda función $(\delta,\varepsilon)$-convexa
+localmente acotada superior en un punto sea continua. Sin embargo, plantean
+el siguiente teorema que generaliza el \thm{BD15} y el \thm{NgNik}
+\begin{theorem}[\cite{HazPal04}, Teorema 4]
+\label{THazPal2}
+Sean $\delta$ y $\varepsilon$ dos números no negativos. Si $f:D\to\R$ es una función
+$(\delta,\varepsilon)$-midconvexa acotada superiormente en un punto de $D$ entonces,
+para todo $x,y\in D$ y para todo $t\in(0,1)$
+\Eq{HazPal2}{
+f(tx+(1-t)y) \leq tf(x)+(1-t)f(y)+2\delta \varphi(t)\|x-y\|+2\varepsilon
+}
+donde $\varphi$ es un punto fijo del operador $\mathcal{H}:\R^{[0,1]}\to\R^{[0,1]}$
+definido por 
+\Eq{HazPal3}{
+(\mathcal{H}\varphi)(t):=
+\left\{
+\begin{array}{ll}
+\dfrac{\varphi(2t)}{2} + t,& 0\leq t\leq \frac12, \\[.3cm]
+\dfrac{\varphi(2t-1)}{2} + (1-t),& \frac12\leq t\leq1.
+\end{array}
+\right.
+}
+\end{theorem}
+\Rem{takSol}{
+Note que la función de Takagi, $T:\R\to[0,1]$ definida en la introducción
+mediante la fórmula 
+\Eq{Tak}{
+T(t) = \sum_{n=0}^{\infty}\frac1{2^n}\dist(2^nt,\Z),\qquad(t\in\R),
+}
+satisface la siguiente cadena de igualdades
+\Eq{*}{
+T(2t) =\sum_{n=0}^{\infty}\frac1{2^n}\dist(2^{n+1}t,\Z)
+			=2\sum_{n=1}^{\infty}\frac1{2^n}\dist(2^{n}t,\Z)
+			=2(T(t)-\dist(t,\Z)).
+}
+Despejando $T(t)$ en la expresión anterior llegamos a la siguiene
+relación
+\Eq{Takrec}{
+T(t)=\frac12T(2t)+\dist(t,\Z).
+}
+Ahora bien, si $t\in[0,1/2]$ entonces, $\dist(t,\Z)=t$, por lo tanto
+\eq{Takrec} se convierte en 
+\Eq{*}{
+T(t)=\frac12T(2t)+ t,\qquad 0\leq t\leq\frac12
+}
+por otra parte, si $t\in(1/2,1]$ entonces, $\dist(t,\Z)=1-t$, y en este
+caso \eq{Takrec} se convierte en
+\Eq{*}{
+T(t)=\frac12T(2t)+ 1-t,
+}
+además, como consecuencia de las propiedades elementales del ínfimo de un conjunto
+se tiene que 
+\Eq{*}{
+\dist(2t,\Z)=\inf_{\alpha\in\Z}{|2t-\alpha|}
+=\inf_{\alpha\in\Z}{|2t-1-(\alpha-1)|}
+=\inf_{\beta\in\Z}{|2t-1-\beta|}
+=\dist(2t-1,\Z)
+}
+lo que demuestra que la función de Takagi es 1-periódica y por lo tanto,
+si $t\in(1/2,1],$ entonces
+$$
+T(t)=\frac12T(2t-1)+1-t.
+$$ 
+Esto significa que la función $T$ es solución
+de la ecuación funcional $\mathcal{H}\varphi = \varphi$ y por lo tanto, 
+ésta puede ser usada en la conclusión del \thm{HazPal2}.
+
+Usualmente $T$ es conocida como función de ``Vander Waerden'' \cite{Wae30},
+sin embargo Knoop \cite{Kno18} ya había descubierto que dicha función ya
+había sido construida casi 30 años antes por T. Takagi
+\cite{Tak03}. Para más detalles históricos, se pueden consultar los artículos de 
+Billingsley \cite{Bil82}, Cater \cite{Cat84} y Kairies \cite{Kai98}.
+}
+Una pregunta que surge de manera natural luego de ver la conclusión
+del \thm{HazPal2} es la siguiente, ¿Cúal será la mejor función que
+puede ser colocada en el lugar de $\varphi$ en la desigualdad
+\eq{HazPal2}? En respuesta a este planteamiento, A. Házy y Z. Páles en \cite{HazPal04}
+conjeturan que la función óptima está dada por el límite de la
+sucesión de funciones $\varphi_{n+1}=\mathcal{H}(\varphi_{n})$
+$n\in\N$ con $\varphi_1(t)=1$ para todo $t\in(0,1)$, sin embargo,
+no logran dar una demostración formal de ello para entonces. 
+
+En 2008, Z. Boros logra resolver satisfactoriamente en su artículo \cite{Bor08},
+el problema planteado por Z. Páles en \cite{ISFE41} sobre la 
+$(1/2,0)$-midconvexidad de la función de Takagi. En el referido artículo
+Boros demuestra que  
+\Eq{*}{
+T\bigg(\frac{x+y}2\bigg)\leq\frac{T(x)+T(y)}{2}+\frac12|x-y|,\qquad(x,y\in[0,1])
+} 
+y que por lo tanto, la función óptima que puede ser utilizada en la conclusión del
+\thm{HazPal2} es la función de Takagi. 
+
+Con base en lo que acabamos de desarrollar, el \thm{HazPal2}
+puede ser reformulado de una manera un poco más simple
+\begin{theorem}[\cite{HazPal04}, Teorema 4]
+\label{THazPal3}
+Sean $\delta$ y $\varepsilon$ dos números no negativos. Si $f:D\to\R$ es una función
+$(\delta,\varepsilon)$-midconvexa acotada superiormente en un punto de $D$ entonces,
+para todo $x,y\in D$ y para todo $t\in(0,1)$
+\Eq{HazPal33}{
+f(tx+(1-t)y) \leq tf(x)+(1-t)f(y)+2\delta T(t)\|x-y\|+2\varepsilon
+}
+donde $T$ es la función de Takagi definida en \eq{Tak}.
+\end{theorem}
+
+\subsection{$\alpha(\cdot)$-convexidad.}
+
+A menos que se especifique otra cosa, a lo largo de esta sección
+$D$ denotará un subconjunto abierto y convexo de un espacio normado
+real $X$.
+
+En el año 2005, A. Házy \cite{Haz05a} introduce el concepto de $(\delta,\varepsilon,p)$-convexidad.
+Allí, el autor establece que
+una función $f:D\to\R$ es $(\delta,\varepsilon,p)$-convexa, si 
+\Eq{*}{
+f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)+\delta\|x-y\|^p+\varepsilon
+}
+para todo $x,y\in D$ y para todo $t\in[0,1]$. En su artículo, Házy
+obtiene resultados análogos a los obtenidos por él y Z. Páles
+en \cite{HazPal04} y que corresponden al \thm{HazPal1} y al \thm{HazPal3}
+de esta sección.
+
+Abriendo el abanico de posibilidades, Jacek Tabor y
+Józef Tabor en \cite{TabTab09b}, generalizan las definiciones 
+establecidas por Z. Páles y A. Házy anteriormente. En su artículo
+ellos introducen la siguiente definición.
+\Defi{alphaCvx}{
+Dada una función 
+$\alpha:[0,\infty)\to[0,\infty)$ 
+no decreciente, se dice que una función $f:D\to\R$ es 
+$\alpha(\cdot)$-midconvexa si
+\Eq{*}{
+f\bigg(\frac{x+y}{2}\bigg)\leq\frac{f(x)+f(y)}2+\alpha(\|x-y\|)
+}
+para todo $x,y\in D$.
+}
+Note que si $\alpha(u)=\varepsilon+\delta \|u\|^p$, la definición anterior
+se reduce a la establecida por A. Házy en \cite{Haz05a}, mientras
+que para $p=1$ se reduce a la definición establecida por Z. Páles 
+en \cite{Pal03a}. De inmediato, Ja. Tabor y Jó. Tabor,
+obtienen una adaptación del teorema de Bernstein--Doetsch
+para esta nueva clase de funciones.
+
+\begin{theorem}[\cite{TabTab09b}, Teorema 2.1]
+\label{TTabTab1}
+Sea $f:D\to\R$ una función $\alpha(\cdot)$-midconvexa y
+localmente acotada superior en un punto. Entonces $f$ es localmente
+acotada en cada punto de $\mbox{int}D$. Si además, 
+$
+\ds\lim_{r\to0^+}\alpha(r) = 0,
+$
+entonces $f$ es continua en $D$.
+\end{theorem}
+Motivado en los resultados obtenidos por Házy y Páles
+en \cite{HazPal04}, Ja. Tabor y Jó. Tabor, establecieron los siguientes
+resultados.
+
+\begin{theorem}[\cite{TabTab09b}, Teorema 2.2]
+\label{TTabTab2}
+Sea $f:D\to\R$ una función $\alpha(\cdot)$-midconvexa. Entonces,
+\Eq{TabTab2}{
+f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)
++\sum_{n=0}^\infty\frac{1}{2^k}\,\alpha\big(\dist(2^nt,\Z)\|x-y\|\big)
+}
+para todo $x,y\in D$, $t\in[0,1]\cap\Q$. Más aún, si $f$ es localmente 
+acotada superior en un punto de $D$, entonces, la desigualdad
+\eq{TabTab2} es válida para todo $t\in[0,1]$.
+\end{theorem}
+
+\begin{theorem}[\cite{TabTab09b}, Teorema 3.1]
+\label{TTabTab3}
+Sea $f:D\to\R$ una función $\alpha(\cdot)$-midconvexa. Entonces,
+\Eq{TabTab3}{
+f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)
++\sum_{n=0}^\infty\dist(2^nt,\Z)\alpha\bigg(\frac{\|x-y\|}{2^k}\bigg)
+}
+para todo $x,y\in D$, $t\in[0,1]\cap\D$, donde $\D$ es el conjunto
+de los racionales diádicos. Más aún, si $f$ es localmente 
+acotada superior en un punto de $D$ y 
+$$
+\sum_{n=0}^\infty\alpha(1/2^n)<\infty
+$$
+entonces, $f$ es continua en $[0,1]$ y la desigualdad
+\eq{TabTab3} es válida para todo $t\in[0,1]$.
+\end{theorem}
+
+Note que el \thm{TabTab2} generaliza el \thm{HazPal2}, mientras que
+el \thm{TabTab3} introduce un nuevo término de error para la 
+convexidad aproximada de la función $f$. Cabe destacar que 
+J. Mako y Z. Páles en \cite[Teorema 26]{MakPal12a} establecen un teorema 
+análogo al \thm{TabTab2} pero la demostración es completamente
+diferente a la hecha por J. Tabor et. al. en \cite{TabTab09b}.
+
+%la pregunta que surge de forma
+%natural es: ¿Cúal de estas estimaciones es la más óptima?. 
+%
+%La respuesta a dicha interrogante, depende, por supuesto de la función 
+%$\alpha$. Tabor et al. y Páles et al. en \cite{TabTab09a} y \cite{MakPal10b}
+%respectivamente investigan al respecto enfocándose en el caso particular
+%$\alpha(u)=\|u\|^p$ para $u\in D$. Por una parte, Ja. Tabor y Jó. Tabor
+%en \cite{TabTab09a} demuestran que cuando $p\in[1,2]$, la estimación
+%hecha en el \thm{TabTab2} es óptima. Por otra parte, J. Mako y Z. Páles 
+%en \cite{MakPal10b} demuestran que en el caso $p\in(0,1)$
+
+\section{Convexidad fuerte.}
+
+En el año 1966, Boris Polyak en \cite{Pol66} establece la siguiente definición.
+\Defi{strgPol}{
+Sea $c$ una constante positiva. Se dice que una función $f:D\to\R$ 
+es fuertemente convexa con módulo $c$, si satisface 
+\Eq{strgPol}{
+f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)-ct(1-t)\|x-y\|^2
+}
+para todo $x,y\in D,$ $t\in[0,1]$.
+}
+Como consecuencia de la definición anterior, se tiene la siguiente
+\Defi{StrMid}{
+Sea $c$ una constante positiva. Se dice que una función $f:D\to\R$ 
+es fuertemente midconvexa con módulo $c$, si satisface 
+\Eq{strgMidPol}{
+f\bigg(\frac{x+y}{2}\bigg)\leq \frac{f(x)+f(y)}2-\frac{c}4\|x-y\|^2
+}
+para todo $x,y\in D,$ $t\in[0,1]$.
+}
+En el año 2011, A. Azócar et. al. en \cite{AzoGimNikSan11} demuestran
+que en la clase de funciones continuas, midconvexidad fuerte
+y convexidad fuerte son equivalentes entre sí. 
+Un resultado de tipo Bernstein--Doetsch para esta nueva 
+clase de funciones fue establecido por A. Azócar et. al.
+en \cite{AzoGimNikSan11}, allí los autores demostraron el 
+siguiente teorema.
+\begin{theorem}[\cite{AzoGimNikSan11}, Teorema 2.3]
+\label{azoBD}
+Sea $c>0$. Si $f:D\to\R$ es una función fuertemente midconvexa 
+con módulo $c$ y acotada superiormente en un subconjunto de $D$ 
+con interior no vacío, entonces, $f$ es una función continua
+y además fuertemente convexa con módulo $c$.
+\end{theorem}
+
+Hasta ahora solo se han presentado resultados de tipo Bernstein--Doetsch
+cuando el conjunto de llegada es $\R$. En el Capítulo 
+\ref{ChapMultifunciones} mostraremos algunos resultados importantes
+de este tipo cuando el codominio tiene una estructura más general.
+
+
+
+%Resultados tipo B--D con convexidad aproximada. NgNik93
+%Resultados tipo B--D con convexidad fuerte. AzoNikGimSan11
+%Resultados tipo B--D para h-convexidad ??
+%Resultados tipo B--D para convexidad aproximada generalizada HazPal, TabTab, 
+%resultados de trudzik,
+%quasy-convex
+%algebraic version
+
+
+
