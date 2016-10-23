@@ -1,0 +1,144 @@
+%\documentclass[oneside,letterpaper,12pt]{report}
+%
+%\usepackage{amssymb,verbatim,enumerate,ifthen,graphics,graphicx,amsmath,amsthm}
+%\usepackage{showkeys}
+%\usepackage{multicol}
+%\usepackage{amsfonts}
+%\usepackage[mathscr]{eucal}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage[spanish]{babel}
+%\usepackage[right=3cm,left=3cm,top=3cm,bottom=2.5cm,headsep=0cm,footskip=0.5cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,letterpaper,reqno,openany,oneside,spanish]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,latexsym,amsfonts,times,ifthen,amsthm,enumerate,euler}
+\usepackage{boiboites}
+\usepackage{calligra}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{latexsym} % Símbolos
+\usepackage{fancybox}
+\usepackage{fancyhdrtesis}
+%\usepackage{showkeys}
+\usepackage{shortvrb}
+
+%\usepackage[latin1]{inputenc} % Caracteres con acentos.
+%\usepackage[activeacute,spanish]{babel} % paquete para utilizar español
+\usepackage{verbatim}
+\usepackage{graphics}
+\usepackage{multicol}
+\usepackage{graphicx} % Inclusión de gráficos.
+\usepackage{makeidx} %para el indice
+\usepackage{colortbl}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{graphpap}
+\usepackage{losymbol} % lista de simbolos
+\usepackage{Tesis}
+\usepackage{titlesec}
+\usepackage[mathscr]{eucal}
+
+\numberwithin{equation}{chapter}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+% Margenes
+\usepackage[text={15.5cm,20.5cm},centering]{geometry}
+ % \usepackage[left=3cm,right=2.5cm]{geometry}
+
+
+% Estilo de página
+% http://www.fceia.unr.edu.ar/lcc/cdrom/Instalaciones/LaTex/latex.html#SECTION01020000000000000000
+\pagestyle{headings}
+%.....................................................................................................
+\frenchspacing
+%.....................................................................................................
+% \newboxedtheorem[boxcolor=orange, background=blue!5, titlebackground=blue!20,titleboxcolor = black]{thm}{Teorema}{thCounter}
+%\newboxedtheorem[boxcolor=orange, background=blue!5, titlebackground=blue!20,titleboxcolor = black]{defn}{Definici\'on}{thCounter}
+%\newboxedtheorem[boxcolor=orange, background=blue!5, titlebackground=blue!20,titleboxcolor = black]{prop}{Proposición}{thCounter}
+%\newtheorem{proposition}{ Proposici\'on  \newline}
+%%\newtheorem{definition}{ Definici\'on\newline}[chapter]
+
+%\numberwithin{equation}{chapter}
+
+\frenchspacing % usar espaciado normal después de '.'
+
+%<<< °°° >>> <<< *** >>> <<< °°° >>> <<< *** >>> <<< °°° >>> <<< *** >>> <<< °°° >>> <<< *** >>> <<< °°° >>>
+% Definicion de los encabezamientos de t_encab.sty
+\pagestyle{fancyplain}
+%\pagestyle{headings}
+\lhead[\fancyplain{}{\normalsize\thepage}]
+          {\fancyplain{}{\normalsize\rightmark}}
+\rhead[\fancyplain{}{\normalsize\leftmark}]
+         {\fancyplain{}{\normalsize\thepage}} \chead{}\lfoot{}\rfoot{}\cfoot{}
+\newcommand{\clearemptydoublepage}{\newpage\thispagestyle{empty}\cleardoublepage}
+%....................................................................................................
+\newcommand{\bigrule}{\titlerule[0.5mm]}
+
+\titleformat{\chapter}[display] % cambiamos el formato de los capítulos
+{\bfseries\Large} % por defecto se usarán caracteres de tamaño \Huge en negrita
+{% contenido de la etiqueta
+ \titlerule % línea horizontal
+ \filleft % texto alineado a la derecha
+ \Huge\chaptertitlename\ % "Capítulo" o "Apéndice" en tamaño \Large en lugar de \Huge
+ \Huge\thechapter} % número de capítulo en tamaño \Large
+{0mm} % espacio mínimo entre etiqueta y cuerpo
+{\filleft} % texto del cuerpo alineado a la derecha
+[\vspace{1mm} \bigrule] % después del cuerpo, dejar espacio vertical y trazar línea horizontal gruesa
+
+
+
+
+
+
+%\usepackage{mathptmx}
+%\renewcommand{\rmdefault}{pifont}
+%\usepackage{helvet}
+
+\hyphenation{con-ve-xi-dad}
+\hyphenation{mid-con-ve-xi-dad}
+
+
+\input{configuracion}
+\input{comandos}
+\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%\pagenumbering{Roman}
+\input{portada}
+
+\include{jurado}
+
+\include{dedicatoria}
+\include{agradecimientos}
+
+\tableofcontents
+\newpage 
+
+\addcontentsline{toc}{chapter}{Resumen}
+\include{resumen}
+%\addcontentsline{toc}{chapter}{Abstract}
+\include{abstract}
+\addcontentsline{toc}{chapter}{Introducci\'on}
+\include{intro}
+%\pagenumbering{Arabic}
+%\addtocounter{page}{13}
+
+%\input{intro}
+\input{ETL}
+\input{previo}
+\input{Multifunciones}
+\input{principales}
+%\input{conclusion}
+\addcontentsline{toc}{chapter}{Conclusiones}
+\include{conclusion}
+
+\bibliography{funcequ,publ}
+%\bibliography{bibliotecaFich}
+\addcontentsline{toc}{chapter}{Bibliograf\'ia}
+\bibliographystyle{amsplain}
+
+
+\end{document}
