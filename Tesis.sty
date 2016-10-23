@@ -1,0 +1,33 @@
+\font\moran=cmr9
+
+
+
+\def\@makechapterhead#1{%
+  \vspace*{-0.5cm}%
+  \par
+  \noindent
+  \textcolor[rgb]{0.18,0.07,0.36}{\rule{10cm}{1pt}}\textcolor[rgb]{00.18,0.07,0.36}{\rule{6cm}{6.5pt}}
+  {  \parindent \z@   \raggedright    
+    \ifnum \c@secnumdepth >\m@ne
+      \dotfill \large\bf \textcolor[rgb]{0.18,0.07,0.36}{\@chapapp{} \thechapter}  %este es el capitulo
+     \par
+     \vskip 1\p@ \fi
+    \Large \bf   % tamaño del titulo del capitulo
+    #1\par \markboth{#1}{#1}
+    \par
+    \noindent
+    \textcolor[rgb]{0.18,0.07,0.36}{\rule{16cm}{1.2pt}}\\
+    %\bigskip
+    %\textcolor[rgb]{0.50,0.50,0.50}{\rule{4.9cm}{8.5pt}}
+  %  \rule{10cm}{1.5pt}\rule{4.9cm}{10.5pt}
+%    \rule{14.9cm}{0.5pt}
+    \nobreak
+    %.............
+
+  }}
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
