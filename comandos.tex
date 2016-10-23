@@ -1,0 +1,91 @@
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\HH}{\mathbb{H}}
+
+\renewcommand{\P}{\mathscr{P}}
+\newcommand{\U}{\mathscr{U}}
+\newcommand{\B}{\mathscr{B}}
+\newcommand{\Tau}{\mathscr{T}}
+
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\pr}[1]{\left( #1\right) }
+\newcommand{\ch}[1]{\left[ #1\right] }
+
+\newcommand{\dist}{\mathop{\hbox{\rm dist}}\nolimits}
+%\newcommand{\d}{\mathop{\hbox{\rm d}}\nolimits}
+
+\newcommand{\conv}{\mathop{\hbox{\rm conv}}\nolimits}
+\newcommand{\rec}{\mathop{\hbox{\rm rec}}\nolimits}
+\newcommand{\rsg}{\mathop{\hbox{\rm rsg}}\nolimits}
+\newcommand{\cl}{\mathop{\hbox{\rm cl}}\nolimits}
+\newcommand{\IIm}{\mathop{\hbox{\rm Im}}\nolimits}
+
+\newcommand{\PV}{\mathop{\hbox{\rm PV}}\nolimits}
+\newcommand{\Dom}{\mathop{\hbox{\rm Dom}}\nolimits}
+\newcommand{\n}{\mathop{\hbox{\rm n}}\nolimits}
+\newcommand{\Gr}{\mathop{\hbox{\rm Gr}}\nolimits}
+
+\newtheorem{theorem}{Teorema}
+\renewcommand{\thetheorem}{\textrm{\thesection.\arabic{theorem}}}
+%\newtheorem*{theorem*}{Teorema}
+
+\def\Thm#1#2{\ifthenelse{\equal{#1}{*}}{\begin{theorem*}#2\end{theorem*}}
+  {\begin{theorem}\label{T#1}#2\end{theorem}}}
+	
+\newtheorem{Atheorem}{Teorema}
+\renewcommand{\theAtheorem}{\Alph{Atheorem}}
+
+\def\THM#1#2{\begin{Atheorem}\label{T#1}#2\end{Atheorem}}
+\def\thm#1{Teorema~\ref{T#1}}
+
+\newtheorem{proposition}[theorem]{Proposición}
+%\newtheorem*{proposition*}{Proposición}
+\def\Prp#1#2{\ifthenelse{\equal{#1}{*}}{\begin{proposition*}#2\end{proposition*}}
+             {\begin{proposition}\label{P#1}#2\end{proposition}}}
+\def\prp#1{Proposición~\ref{P#1}}
+
+\newtheorem{corollary}[theorem]{Corolario}
+%\newtheorem*{corollary*}{Corolario}
+\def\Cor#1#2{\ifthenelse{\equal{#1}{*}}{\begin{corollary*}#2\end{corollary*}}
+             {\begin{corollary}\label{C#1}#2\end{corollary}}}
+\def\cor#1{Corolario~\ref{C#1}}
+
+\newtheorem{lemma}[theorem]{Lema}
+%\newtheorem*{lemma*}{Lema}
+\def\Lem#1#2{\ifthenelse{\equal{#1}{*}}{\begin{lemma*}#2\end{lemma*}}
+             {\begin{lemma}\label{L#1}#2\end{lemma}}}
+\def\lem#1{Lema~\ref{L#1}}
+
+\newtheorem{example}[theorem]{Ejemplo}
+%\newtheorem*{example*}{Ejemplo}
+\long\def\Exa#1#2{\ifthenelse{\equal{#1}{*}}{\begin{example*}\rm #2\end{example*}}
+            {\begin{example}\label{Ex#1}\rm #2\end{example}}}
+\def\exa#1{Example~\ref{E#1}}
+
+\newtheorem{problem}[subsection]{Problem}
+\def\Prob#1#2{\begin{problem}\label{Prob#1}\rm #2\end{problem}}
+\def\prob#1{Problem~\ref{Prob#1}}
+%\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definición}
+%\newtheorem*{definition*}{Definición}
+\def\Defi#1#2{\ifthenelse{\equal{#1}{*}}{\begin{definition*}#2\end{definition*}}
+      {\begin{definition}\label{D#1}#2\end{definition}}}
+\def\defi#1{Definición~\ref{D#1}}
+
+\newtheorem{remark}[theorem]{Observación}
+%\newtheorem*{remark*}{Remark}
+\long\def\Rem#1#2{\ifthenelse{\equal{#1}{*}}{\begin{remark*}#2\end{remark*}}
+             {\begin{remark}\label{R#1}#2\end{remark}}}
+\def\rem#1{Observación~\ref{R#1}}
+\def\eq#1{{\rm(\ref{E#1})}}
+%\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\def\Eq#1#2{\ifthenelse{\equal{#1}{*}}
+  {\begin{equation*}\begin{aligned}[]#2\end{aligned}\end{equation*}}
+  {\begin{equation}\begin{aligned}[]\label{E#1}#2\end{aligned}\end{equation}}}

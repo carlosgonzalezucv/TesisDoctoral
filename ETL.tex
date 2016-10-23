@@ -1,0 +1,970 @@
+\chapter{Espacios Topológicos Lineales.}
+En este capítulo se hará un breve desarrollo de algunos conceptos 
+de topología que serán usados a lo largo de todo el trabajo.
+Los resultados que mencionaremos en este capítulo se encuentran
+desarrollados en el libro del profesor W. Rudin\cite{Rud91}.
+
+\section{Espacios topológicos.}
+Sea $X$ un conjunto, se denota por $\P(X)$ al conjunto potencia de $X$. 
+\Defi{espTop}{
+Un \textbf{espacio topológico} consiste en una dupla $(X,\Tau )$,
+donde $X$ es un conjunto y $\Tau $ es un subconjunto de 
+$\P(X)$ que cumple con las siguientes propiedades:
+\begin{enumerate}[i.]
+\item $\emptyset \in \Tau $ y $X\in\Tau $.
+\item Si $\{U_\alpha\}_{\alpha\in\Delta}\subseteq\Tau $
+es una colección de elementos de $\Tau $, entonces:
+\Eq{*}{
+\bigcup_{\alpha\in\Delta} U_\alpha \in \Tau.
+}
+\item Si 
+$\{U_k\}_{k=1}^n\subseteq\Tau $
+es una colección finita de elementos de $\Tau $, entonces:
+\Eq{*}{
+\bigcap_{k=1}^n U_k \in \Tau.
+}
+\end{enumerate}
+}
+Cuando $(X,\Tau)$ es un espacio topológico, los elementos de $\Tau $ 
+se llaman \textbf{conjuntos abiertos}. En lo que sigue a continuación,
+el par $(X,\Tau )$ denotará un espacio topológico. Cuando no haya lugar
+a confusión se omitirá la topología.
+
+\Defi{Haus}{
+Decimos que el espacio topológico $(X,\Tau)$, es un espacio
+de Hausdorff, si para cada par de puntos diferentes, $x,y\in X$
+existen abiertos disjuntos $U_x, U_y\in\Tau$ tales que
+$x\in U_x$ y $y\in U_y$.
+}
+
+\Defi{basetop}{
+Dado un espacio topológico $(X,\Tau  )$, y un subconjunto 
+$\mathcal{B}\subseteq\Tau  $, se dice que $\mathcal{B}$ es una base 
+para la topología $\Tau  $ si todo conjunto abierto $U \in\Tau $ es la 
+unión de elementos de $\mathcal{B}$. De manera equivalente,
+$\mathcal{B}$ es una base para $\Tau$ si y sólo si, para todo punto
+$p$ perteneciente a cualquier abierto $O\in\Tau$ existe 
+$B\in\mathcal{B}$, tal que $p\in B\subseteq O$.
+}
+
+\Defi{baseLocal}{
+Dado un espacio topológico $(X,\Tau)$ y un punto $p\in X$.
+Una base local en $p$, consiste en una colección de abiertos
+$\mathcal{B}_p$, tal que, cualquier entorno abierto 
+$U\subseteq X$ de $p$, contiene al menos un miembro de 
+$\mathcal{B}_p$.
+}
+
+\Defi{acumPoints}{
+Dado un conjunto $A\subseteq X$ y un punto $p\in X$, se dice que $p$
+es un \textbf{punto de acumulación} del conjunto $A$, si para todo abierto $U\in\Tau $ que contiene a $p$, se tiene que 
+\Eq{acumP}{
+A \cap (U\setminus \{p\}) \neq \emptyset
+}
+}
+\Defi{Closed}{
+Un conjunto $V\subseteq X$ es \textbf{cerrado}, si el conjunto $X\setminus V$ es
+abierto.
+}
+Los conjuntos cerrados también se pueden caracterizar de la siguiente
+manera:
+\Prp{acumP}{
+Un subconjunto $V\subseteq X$ es cerrado, si y sólo si $V$ contiene 
+todos sus puntos de acumulación.
+}
+
+\begin{proof}
+Sea $V\subseteq X$ un conjunto cerrado y sea $p\in X$ un punto de acumulación
+de $V$. Supongamos que $p\notin V$. Como $V$ es cerrado, entonces por definición
+su complemento $U=X\setminus V$ es abierto y como $p\in U$, existe
+un elemento básico $B\in\mathcal{B}$, tal que
+$p\in B\subseteq U$. En consecuencia, $B\cap V=\emptyset$,
+pero esto contradice el hecho de que $p$ es un punto de acumulación de $V$.
+Luego, es falso suponer que $p\notin V$ y así, queda establecido que el
+conjunto $V$ posee a todos sus puntos de acumulación.
+
+Supongamos ahora que el conjunto $V$ posee a todos sus puntos de acumulación y
+sea $U=X\setminus V$. Veamos que $U$ es abierto. Sea $p\in U$, por definición
+se tiene que $p$ no es punto de acumulación de $V$, en consecuencia,
+existe un entorno abierto $B\subseteq X$ de $p$ tal que $V\cap (B\setminus\{p\})=\emptyset$.
+Por lo tanto, $p\in B\subseteq U$ y así, $U$ es abierto.
+\end{proof}
+
+Es posible definir una topología en términos de conjuntos cerrados.
+\Thm{topClosed}{
+Sea $X$ un espacio topológico, la clase de conjuntos cerrados en $X$,
+posee las siguientes propiedades:
+\begin{enumerate}[i.]
+	\item $X$ y $\emptyset$ son conjuntos cerrados.
+	\item La intersección arbitraria de conjuntos cerrados, es cerrado.
+	\item La unión finita de conjuntos cerrados, es cerrado.
+\end{enumerate}
+}
+\Defi{cl}{
+Sea $A\subseteq X$. La \textbf{clausura} de $A$, se denota por
+$\cl(A)$ y se define como la intersección de todos los conjuntos 
+cerrados que contienen al conjunto $A$. Esto es,
+\Eq{*}{
+\cl(A) := \bigcap\{V\subseteq X: A\subseteq V \quad\mbox{y}
+\quad V\quad\mbox{es cerrado}\}.
+}
+}
+Se puede ver que $\cl(A)$ es un conjunto cerrado ya que es la 
+intersección de conjuntos cerrados. Además, $\cl(A)$
+ es el conjunto cerrado más pequeño que contiene al conjunto $A$. 
+Es decir, si $V$ es un conjunto cerrado que contiene al conjunto $A$, 
+entonces:
+\Eq{*}{
+A\subseteq\cl(A) \subseteq V.
+}
+Además, $V\subseteq X$ es un conjunto cerrado si y sólo si $V=\cl(V)$.
+Todo esto se resume en la siguiente proposición.
+\Prp{clcl}{
+Sea $A\subseteq X$. Entonces,
+\begin{enumerate}[i.]
+	\item $\cl(A)$ es cerrado y  $A\subseteq\cl(A)$ .
+	\item Si $V$ es un conjunto cerrado que contiene al conjunto $A$, 
+	entonces $\cl(A)\subseteq V.$
+	\item $A$ es cerrado si y sólo si $A=\cl(A)$.
+\end{enumerate}
+}
+
+\begin{proof} Sea $A\subseteq X$.
+\begin{enumerate}[i.]
+	\item Por definición, el conjunto $\cl(A)$ es la intersección arbitraria
+	de conjuntos cerrados y por el \thm{topClosed} se tiene que es un conjunto cerrado.
+	Además, por definición $A\subseteq\cl(A)$.
+	\item Es consecuencia directa de la definición de clausura.
+	\item Supongamos que $A$ es cerrado. Entonces, por el item II 
+	se tiene que $\cl(A)\subseteq A$ y en consecuencia $\cl(A)=A$.
+	Recíprocamente, si $A=\cl(A)$, entonces, evidentemente  $A$ es cerrado, 
+	lo que completa la demostración.
+\end{enumerate}
+\end{proof}
+
+\Prp{cl2}{
+Sea $A\subseteq X$. La clausura de $A$ es la unión de $A$ con 
+su conjunto de puntos de acumulación $A'$. Esto es,
+$\cl(A) = A \cup A'.$
+}
+
+\begin{proof}
+Veamos que $\cl(A)\subseteq A\cup A'$. Sea $p\in\cl(A)$, y supongamos
+que $p\notin A\cup A'$, esto es $p\notin A$ y $p\notin A'$.
+Como $p\notin A'$, por definición existe un entorno abierto $B\subseteq X$
+de $p$, tal que $A\cap(B\setminus\{p\})=\emptyset$, por lo tanto 
+$B\setminus\{p\}\subseteq X\setminus A$ y en consecuencia $B\subseteq X\setminus A$.
+Pero esto último equivale a $A\subseteq X\setminus B,$ y siendo $B$
+un conjunto abierto, se tiene que $X\setminus B$ es cerrado. Como además,
+este conjunto contiene al conjunto $A$, entonces por la definición de clausura
+se tiene que $\cl(A)\subseteq X\setminus B$ y por lo tanto
+$B\subseteq X\setminus \cl(A).$ Como $p\in B$, debe ocurrir entonces
+que $p\notin\cl(A)$, pero esto es una contradicción. Luego, es falso 
+suponer que $p\notin A\cup A'$ y así $\cl(A)\subseteq A\cup A'$.
+
+Veamos ahora que $A\cup A'\subseteq\cl(A)$. Sea $p\in A\cup A'$. 
+Si $p\in A$, entonces $p\in\cl(A)$ y en este caso la demostración es 
+directa. Si por el contrario, $p\in A'$, entonces supongamos que 
+$p\notin\cl(A)$. Como $\cl(A)$ es un conjunto cerrado entonces su 
+complemento es abierto y por lo tanto existe un entorno abierto $B$
+de $p$ tal que $p\in B\subseteq X\setminus\cl(A)$. En consecuencia,
+$B\cap\cl(A)=\emptyset$ y como $A\subseteq\cl(A)$ entonces 
+$B\cap A=\emptyset$, pero esto es una contradicción ya que $p$ es punto de
+acumulación del conjunto $A$. Luego, es falso suponer que $p\notin\cl(A)$
+y finalmente se tiene que $A\cup A'\subseteq\cl(A)$. Esto completa la demostración.
+\end{proof}
+
+\Prp{Kura}{Sean $A,B\subseteq X$, el operador $\cl(\cdot)$ cumple
+las siguientes propiedades
+\begin{multicols}{2}
+\begin{enumerate}[i.]
+	%\item $\cl(\emptyset) = \emptyset.$
+	%\item $A\subseteq\cl(A).$
+	\item $\cl(A\cup B) = \cl(A)\cup\cl(B).$
+	\item $\cl(\cl(A)) = \cl(A).$
+\end{enumerate}
+\end{multicols}
+}
+\begin{proof}
+La demostración de esta proposición es consecuencia directa
+de la \prp{clcl} y de la \prp{cl2}.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Espacios vectoriales.}
+\setcounter{theorem}{0}
+Denótese por $\R$ al cuerpo de los números reales y por 
+$\C$ al cuerpo de los números complejos. Por ahora,
+se usará $\Phi$ para denotar tanto a $\R$ como a $\C$.
+Un escalar, es un elemento del cuerpo $\Phi$.
+\Defi{VecSp}{
+Un \textit{espacio vectorial} sobre $\Phi$ es un conjunto
+$X$, junto con dos operaciones, suma y producto por un escalar
+las cuales satisfacen las siguientes propiedades:
+\begin{enumerate}[i.]
+	\item A cada par de vectores $x,y\in X$ les corresponde 
+	un vector $x+y\in X$, de manera que 
+	\Eq{*}{
+	x+y=y+x\qquad\mbox{y}\qquad x+(y+z) = (x+y)+z.
+	}
+	\item $X$ contiene un único vector $0$ el cual se llamará 
+	con frecuencia el origen de $X$, tal que $x+0=x,$ para 
+	todo $x\in X$. Además a cada vector $x\in X$ le corresponde
+	un vector $-x\in X$ tal que $x+(-x)=0$.
+	\item A cada par $(\alpha,x)$ con $\alpha\in\Phi$, y 
+	$x\in X$ le corresponde un vector $\alpha x\in X,$
+	de manera que
+	\Eq{*}{
+	1x=x,\qquad \alpha(\beta x) = (\alpha\beta)x,
+	}
+	y además se cumplen las siguientes leyes distributivas
+	\Eq{*}{
+	\alpha(x+y) = \alpha x+\alpha y, \qquad
+	(\alpha + \beta) x = \alpha x + \beta x.
+	}
+\end{enumerate}
+}
+\Rem{vect1}{
+Un espacio vectorial real, es un espacio vectorial donde 
+$\Phi = \R,$ y un espacio vectorial complejo, es un espacio
+vectorial donde $\Phi=\C$. Cualquier afirmación sobre
+un espacio vectorial, donde no se especifique explícitamente
+el cuerpo, será válida para ambos casos.
+}
+\Defi{sumSet}{
+Sea $X$ un espacio vectorial y sean $A,B\subseteq X$, $x\in X$ y
+$\lambda\in\Phi$, entonces
+\Eq{*}{
+x+A &= \{x+a : a\in A\}, \\
+A+B &= \{a+b : a\in A, b\in B\}, \\
+\lambda A &= \{\lambda a: a\in A\}\\
+x-A &= \{x-a : a\in A\}.
+} 
+}
+\Rem{A+A}{
+Con estas operaciones así definidas, puede ocurrir que 
+$A+A\neq 2A.$
+}
+\Defi{subsp}{
+Un subconjunto $W\subseteq X$ es llamado subespacio de $X$
+si el mismo es un espacio vectorial (con respecto a las mismas
+operaciones). 
+}
+\Prp{subsp}{
+Sea $X$ un espacio vectorial y $W\subseteq X$. $W$ es un 
+subespacio de $X$ si y sólo si, $0\in W$ y además,
+para $\alpha,\beta\in\Phi$ se tiene que
+\Eq{*}{
+\alpha W + \beta W \subseteq W.
+}
+}
+\Defi{cvxSet}{
+Un conjunto $D\subseteq X$ es convexo, si para todo $t\in[0,1]$
+se tiene que 
+\Eq{*}{
+tD + (1-t)D\subseteq D.
+}
+En otras palabras, el conjunto $D$ es convexo si para 
+cualesquiera par de puntos $x,y\in D$ se tiene que
+\Eq{*}{
+[x,y]:= \{ty+(1-t)x : t\in [0,1]\}\subseteq D.
+} 
+}
+
+
+\Defi{starSet}{
+Sea $H\subseteq X$ y sea $p\in H$. 
+Se dice que el conjunto $H$ es estrellado con respecto al punto $p$
+si para todo $h\in H$ se tiene que el segmento $[h,p]\subseteq H$.
+}
+Existe una conexión entre los conjuntos estrellados y los conjuntos 
+convexos. La siguiente proposición muestra este hecho
+\Prp{CvxStr}{
+El conjunto $H\subseteq X$ es convexo si y sólo si $H$ es 
+estrellado con respecto a cada uno de sus puntos.
+}
+\Prp{D-DStr}{
+Sea $H\subseteq X$ un conjunto convexo no-vacío. 
+Entonces, el conjunto $H-H$ es estrellado con respecto al origen.
+}
+\begin{proof}
+Sea $p\in H-H$. Por definición existen $h_1,h_2\in H$ tales que 
+$p=h_1-h_2$. Luego, si $t\in[0,1]$, y $h\in H$ es un elemento cualquiera
+de $H$ entonces 
+$$
+tp = th_1-th_2= th_1-th_2+(1-t)(h-h)=th_1+(1-t)h-(th_2+(1-t)h).
+$$ 
+Como $H$ es un conjunto
+convexo, se tiene que $tp\in H-H$ para todo $t\in[0,1]$. Por lo tanto
+el conjunto $H-H$ es estrellado con respecto al origen.
+\end{proof}
+
+\Defi{BlSet}{
+Un conjunto $D\subseteq X$ se dice que es balanceado, si para todo $\alpha\in\Phi,$
+ con $|\alpha|\leq 1$, se tiene que $\alpha D\subseteq D,$
+}
+%\Defi{dimX}{
+%El espacio vectorial $X,$ tiene dimensión $n$ $(\dim X=n),$
+%si $X$ posee una base $\B=\{u_1,\ldots,u_n\}$, de 
+%$n$ vectores linealmente independientes. Esto quiere
+%decir que todo $x\in X$, tiene una representación única
+%de la forma
+%\Eq{*}{
+%x=\alpha_1u_1+\cdots+\alpha_nu_n, \quad \alpha_i\in\Phi,
+%\quad i=1,\ldots,n.
+%} 
+%}
+%\Rem{dim}{
+%Si $\dim X = n$ para algún número natural $n$, se dice que 
+%$X$ es de dimensión finita. Si $X=\{0\}$, entonces
+%$\dim X = 0$.
+%}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Espacios topológicos lineales.}
+\setcounter{theorem}{0}
+
+Supongamos que $\Tau$ es una topología para un espacio vectorial $X$
+que cumple con lo siguiente:
+\begin{enumerate}[i.]
+	\item Todo punto de $X$ es un conjunto cerrado.
+	\item Las operaciones del espacio vectorial, son continuas 
+	con respecto a $\Tau$.
+\end{enumerate}
+
+Bajo estas condiciones, se dice que $\Tau$ es una topología vectorial
+en $X$ y $X$ es un \textit{espacio topológico lineal}.
+
+
+\Defi{TaMl}{
+Sea $X$ un espacio topológico lineal. Para cada $a\in X$
+y para cada $\lambda\neq0$, se definen los operadores de 
+traslación y multiplicación, $T_a(x)$ y $M_\lambda(x)$
+respectivamente, de la siguiente manera
+\Eq{TaMl}{
+T_a(x) = x + a \qquad \mbox{y} \qquad
+M_\lambda(x) = \lambda x, \quad (x\in X).
+}
+}
+
+\Prp{hom}{
+$T_a$ y $M_\lambda$ son homeomorfismos de $X$ en $X$.
+}
+\begin{proof}
+Los axiomas de espacio vectorial, implican que estos
+operadores son biyectivos, y además que sus inversas 
+son $T_{-a}$ y $M_{1/\lambda}$, respectivamente. 
+El hecho de que las operaciones, suma y producto por un 
+escalar sean continuas, implica que tanto $T_a$ como 
+$M_\lambda$, así como sus inversas sean continuas.
+\end{proof}
+
+Como consecuencia de esta proposición, se tiene que 
+toda topología vectorial $\Tau$ es invariante. Es decir, 
+un conjunto $E\subseteq X$ es abierto, si y sólo si, para todo $a\in X,$
+el conjunto $a+E$ es abierto. Así, $\Tau$ está completamente
+determinada por cualquier base local.
+
+En este contexto, el término base local, se refiere a la base 
+local en $0\in X$.
+Se denotará por $\U(X)$ a dicha base.
+
+\Defi{bddSet}{
+Un subconjunto $H\subseteq X$ es acotado, si para todo entorno 
+abierto $U$ de $0\in X,$ existe un número $s>0$ tal que 
+$H\subseteq tU$ para todo $t>s$.
+}
+\Prp{bddtH}{
+Sea $H\subseteq X$ un conjunto acotado. Para cada $\alpha\in[0,1]$
+el conjunto $\alpha H$ es acotado y además $\bigcap_{\alpha\in[0,1]} \alpha H$
+es acotado.
+}
+\begin{proof}
+Sea $U\subseteq X$ un conjunto abierto tal que $0\in U$ y
+sea $\alpha\in[0,1]$. 
+Como $H$ es acotado, existe $s_\alpha>0$ tal que si $t>s_\alpha$, entonces
+$H\subseteq t\big(\frac1\alpha U\big)$. En consecuencia, 
+$\alpha H\subseteq \alpha t\big(\frac1\alpha U\big)=tU$ siempre y cuando
+$t>s_\alpha$. Como $U$ es arbitrario se tiene que el conjunto
+$\alpha H$ es acotado. 
+
+Para ver que la intersección de los conjuntos de la forma $\alpha H$
+con $\alpha\in[0,1]$ es un conjunto acotado, consideremos un abierto balanceado arbitrario
+$U\subseteq X$ tal que $0\in U$. Como el conjunto $H$ es acotado, existe $s>0$
+tal que si $t>s$ entonces, $H\subseteq tU$. Ahora bien, para $\alpha\in[0,1]$
+se tiene que $\alpha H\subseteq \alpha tU$ y como 
+$U$ es balanceado entonces $tU$ también lo es, luego,
+como $\alpha\leq1$, entonces $\alpha tU\subseteq tU$. 
+Por lo tanto, para $t>s$ se tiene lo siguiente
+$$
+\bigcap_{\alpha\in[0,1]}\alpha H\subseteq\bigcap_{\alpha\in[0,1]}\alpha tU
+\subseteq\bigcap_{\alpha\in[0,1]}tU=tU.
+$$
+Como el abierto $U$ es arbitrario, entonces queda demostrado que el conjunto 
+$\bigcap_{\alpha\in[0,1]} \alpha H$ es acotado.
+
+\end{proof}
+
+\Defi{symm}{
+Sea $(X,\Tau)$ un espacio topológico lineal. Se dice 
+que el abierto $U\subseteq X$, es simétrico 
+si y sólo si $U=-U.$ 
+}
+\Prp{symm}{
+Si $W\subseteq X$ es un entorno abierto de $0\in X$, entonces, 
+existe un entorno abierto y simétrico $U\subseteq X$, de 
+$0$ tal que $U+U\subseteq W.$
+}
+\begin{proof}
+Sea $W\subseteq X$ un entorno abierto de $0$. Como la operación 
+suma es continua y $0=0+0$, entonces, existen entornos abiertos 
+$V_1,V_2$ de $0$, tales que
+$V_1+V_2\subseteq W.$ 
+Definamos $U:= V_1\cap V_2\cap (-V_1)\cap (-V_2).$ Es claro que 
+$U$ es un abierto simétrico, y que además
+$U+U\subseteq W.$
+\end{proof}
+\Prp{bddPrp}{
+La familia de subconjuntos acotados es cerrada bajo la suma
+y el producto por escalares positivos.
+}
+\begin{proof}
+Sean $H_1, H_2\subseteq X$ conjuntos acotados. Veamos que la suma
+$H:=H_1+H_2$ es un conjunto acotado. Sea $V\subseteq X$ un entorno abierto de $0\in X$
+ y escojamos $U\in\Tau$ tal que $0\in U$ y $U+U\subseteq V$.
+Como $H_1$ y $H_2$ son acotados, existen escalares positivos
+$t_1$ y $t_2$ tales que
+\Eq{*}{
+H_1 &\subseteq s_1 U \qquad\mbox{si}\quad s_1>t_1, \\
+H_2 &\subseteq s_2 U \qquad\mbox{si}\quad s_2>t_2.
+}
+Ahora bien, si $s>\max(t_1,t_2)$ entonces,
+\Eq{*}{
+H=H_1+H_2\subseteq sU + sU = s(U+U) \subseteq sV.
+}
+Por lo tanto, el conjunto $H$ es acotado. De manera similar
+se demuestra que $tH_1$ es acotado para cualquier escalar
+positivo $t$.
+\end{proof}
+\Thm{sep1}{
+Suponga que $K$ y $C$ son subconjuntos de un espacio topológico
+lineal $X$, $K$ es compacto, $C$ es cerrado y que 
+$K\cap C=\emptyset$. Entonces, existe un entorno $V$ de $0\in X$ 
+tal que 
+\Eq{*}{
+(K+V)\cap(C+V)=\emptyset.
+}
+}
+\begin{proof}
+Si $K=\emptyset$, entonces $K+V=\emptyset$ y la conclusión del 
+teorema es directa. Por lo tanto, asuma que $K\neq\emptyset$.
+Sea $x\in K$. Como $K$ y $C$ son disjuntos, se tiene que $x$
+no está en $C$, por la \prp{symm}, existe un abierto simétrico 
+$V_x\subseteq X$ tal que 
+\Eq{*}{
+(x+V_x+V_x+V_x)\cap C = \emptyset.
+}
+Como $V_x$ es simétrico, la condición anterior equivale a
+\Eq{cond0}{
+(x+V_x+V_x)\cap(C+V_x) = \emptyset.
+}
+Por otra parte, $K$ es compacto, es decir que admite un 
+cubrimiento finito
+\Eq{*}{
+K\subseteq \bigcup_{i=1}^n(x_i + V_{x_i}).
+}
+Ahora bien, al considerar $V:= V_{x_1}\cap\cdots\cap V_{x_n},$
+se tiene que 
+\Eq{*}{
+K+V \subseteq \bigcup_{i=1}^n(x_i + V_{x_i}+V)
+    \subseteq \bigcup_{i=1}^n(x_i + V_{x_i}+V_{x_i}),
+}
+y por \eq{cond0}, ningún término en esta última unión
+intersecta a $C+V$. Finalmente,
+\Eq{*}{
+(K+V)\bigcap(C+V) =\emptyset.
+}
+\end{proof}
+Como consecuencia del resultado anterior, se tienen los siguientes teoremas
+\Thm{clbase}{
+Para todo elemento $B_1\in\U(X)$, existe otro elemento
+$B_2\in\U(X)$, tal que
+\Eq{*}{
+\cl(B_2)\subseteq B_1.
+}
+}
+\begin{proof}
+Sea $B_1\in\U(X)$, definamos los conjuntos 
+$C:=X\setminus B_1$ y $K:=\{0\}$. Es claro que $C$ es
+cerrado, pues, es el complemento de un elemento en $\U(X)$,
+y que además, $K$ es compacto. Por otra parte, 
+$0\notin C$, es decir, $K\cap C=\emptyset$. Por el 
+\thm{sep1}, existe un abierto $W\in\U(X)$, tal que
+$W \cap (W+C)=\emptyset$. Ahora bien, esta última condición
+implica que $W\cap C=\emptyset$, lo que se reduce a
+$W\subseteq B_1$.
+
+Aplicando la \prp{symm} al abierto $W$, se tiene que existe
+un abierto simétrico, $B_2\in\U(X)$, tal que
+$B_2+B_2\subseteq W$, por lo tanto, se tiene la siguiente
+cadena de inclusiones
+\Eq{*}{
+\cl(B_2)\subseteq B_2+B_2 \subseteq W\subseteq B_1,
+} 
+la cual, finaliza la demostración.
+\end{proof}
+\Thm{HausTop}{
+Todo espacio topológico lineal, es un espacio de Hausdorff.
+}
+\begin{proof}
+Basta considerar el hecho de que los conjuntos unipuntuales
+en un espacio topológico lineal, son cerrados y aplicar
+el \thm{sep1}.
+\end{proof}
+\Thm{f1}{
+Sea $X$ un espacio topológico lineal.
+\begin{enumerate}[i.]
+	\item Si $A\subseteq X$ entonces, 
+	$\cl(A)=\bigcap_{V\in\U(X)}(A+V)$, 
+	\item Si $A\subseteq X$ y $B\subseteq X$, entonces, 
+	$\cl(A) +\cl(B) \subseteq \cl(A+B) = \cl(\cl(A)+\cl(B)).$
+	\item Si $A\subseteq X$ es un conjunto acotado, entonces
+	$\cl(A)$ también lo será.
+\end{enumerate}
+}
+\begin{proof} Consideremos el espacio topológico lineal
+$X$.
+\begin{enumerate}[i.]
+	\item Sea $A\subseteq X$, veamos que $\cl(A)=\bigcap(A+V)$, 
+	donde $V$ recorre todos los entornos abiertos de $0$.
+	Ahora bien, $x\in \cl(A)$ si y sólo si, 
+	$(x+V)\cap A \neq\emptyset$ para todo entorno abierto 
+	$V\in\U(X)$. 
+	Pero esta condición se cumple si y sólo si 
+	$x\in A+(-V)$, para todo
+	abierto $V\in\U(X).$ Además, $V$ es un 
+	entorno abierto de $0$, si y sólo si, $-V$ lo es, 
+	por lo tanto, 
+	\Eq{*}{
+	\cl(A) = \bigcap_{V\in\U(X)}(A+V).
+	}
+	\item Sean $U,V\in\U(X)$ tales que $V+V\subseteq U$. 
+	Sean $a\in\cl(A)$ y $b\in\cl(B)$, evidentemente,
+	$a+b\in\cl(A)+\cl(B)$, y además,
+	\Eq{*}{
+	a+b\in\cl(A)+\cl(B)\subseteq A+V+B+V\subseteq A+B+U.
+	}
+	Como $U$ es arbitrario, se tiene lo siguiente
+	\Eq{*}{
+	a+b\in\bigcap_{U\in\U(X)}(A+B+U)=\cl(A+B).
+	}
+	Esto es,
+	\Eq{*}{
+	\cl(A)+\cl(B)\subseteq\cl(A+B).
+	}
+	\item Sea $A\subseteq X$ un conjunto acotado. Veamos que
+	$\cl(A)$ también, es un conjunto acotado. 
+	Considere $U\in \U(X)$, por el \thm{clbase} existe un 
+	abierto $W\in\U(X)$ tal que, $\cl(W)\subseteq U$. Como
+	$A$ es acotado, existe 
+	un número real $s>0$, tal que $A\subseteq tW$,
+	para todo número real $t>s$. Por lo tanto
+	\Eq{*}{
+	\cl(A)\subseteq t\cl(W)\subseteq tU,\qquad (t>s),
+	}
+	es decir, que $\cl(A)$ es acotado.
+\end{enumerate}
+\end{proof}
+
+\Prp{sumSets}{
+Si $\cl(A)$ es un conjunto compacto entonces
+$\cl(A+B)=\cl(A)+\cl(B).$ Esto equivale
+a decir que la suma de un conjunto compacto 
+con un conjunto cerrado resulta ser un conjunto
+cerrado.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conos convexos.}
+\setcounter{theorem}{0}
+A menos que se especifique otra cosa, $X$ denotará
+un espacio topológico lineal.
+\Defi{cono}{
+El conjunto $K\subseteq X$
+es un cono convexo, si 
+$K+K\subseteq K, $ y $tK\subseteq K,$ para todo escalar 
+$t>0$.
+}
+%\Defi{K<}{
+%Dado un cono 
+%$K\subseteq X$, se define la relación $\leq_K$,
+%para $x,y\in X$, de la siguiente manera
+%\Eq{<K}{
+%x\leq_K y \iff y-x\in K\iff y\in x+K.
+%}
+%}
+%De aquí en adelante, $K\subseteq X$ representa
+%un cono convexo a menos que se especifique otra cosa.
+%\Prp{<trans}{
+%La relación $\leq_K$ es antisimétrica y transitiva.
+%}
+%\begin{proof}
+%Veamos que $\leq_K$ es antisimétrica. Sean $x,y\in X$, 
+%tales que
+%$x\leq_K y$. Por definición esto significa que,
+%$y-x\in K$. Pero, esto es equivalente a
+%$-x-(-y) \in K$, por lo tanto, $-y\leq_K -x$.
+%Veamos ahora que $\leq_K$ es transitiva, para ello,
+%sean $a,b,c\in X$ tales que $a\leq_K b$ y $b\leq_K c$.
+%Por definición, se tiene que $b-a\in K$ y que $c-b\in K$.
+%Ahora bien, usando el hecho de que $K$ es cerrado bajo la 
+%suma se sigue que 
+%\Eq{*}{
+%c-a = (c-b)+(b-a)\in K+K\subseteq K.
+%}
+%Esto es, precisamente $a\leq_K c$.
+%\end{proof}
+%\Prp{relOrd}{
+%Si $0\in K$, entonces, la relación $\leq_K$,
+%es reflexiva.
+%}
+%\begin{proof}
+%La demostración es directa, pues $x-x=0\in K$ para todo
+%$x\in X$. 
+%\end{proof}
+\Defi{Klbdd}{
+Se dice que un conjunto $S\subseteq X$ es
+$K$-acotado inferiormente, si existe un conjunto acotado
+$H,$ tal que, $S\subseteq H+K$.
+}
+\Prp{KlbUn}{
+La unión finita de conjuntos $K$-acotados inferiormente,
+es de nuevo un conjunto $K$-acotado inferiormente.
+}
+\begin{proof}
+Basta con probar que la unión de dos conjuntos
+$K$-acotados inferiormente es de nuevo un conjunto 
+$K$-acotado inferiormente. Sean $S_1,S_2\subseteq X$,
+dos conjuntos tales que existen conjuntos acotados 
+$H_1,H_2\subseteq X$ que satisfacen 
+\Eq{*}{
+S_1&\subseteq H_1+K \qquad\mbox{y}\\
+S_2&\subseteq H_2+K.
+}
+Ahora bien, el resultado es consecuencia de la siguiente
+cadena de inclusiones
+\Eq{*}{
+S_1\cup S_2 &\subseteq (H_1+K)\cup(H_2+K) 
+								= \bigcup_{h\in H_1}(h+K)\cup
+								  \bigcup_{h\in H_2}(h+K) \\
+								&= \bigcup_{h\in H_1\cup H_2}(h+K)
+								= (H_1\cup H_2) + K.									
+}
+\end{proof}
+\Prp{Klbbop}{
+La familia de subconjuntos $K$-acotados inferiormente 
+es cerrada bajo la suma y el producto por escalares
+positivos.
+}
+\begin{proof}
+Sean $S_1, S_2\subseteq X$, dos conjuntos, $K$-acotados 
+inferiormente.
+Por definición, existen conjuntos acotados 
+$H_1,H_2\subseteq X$ tales que 
+\Eq{I0}{
+S_1&\subseteq H_1+K \qquad\mbox{y}\qquad
+S_2&\subseteq H_2+K. 
+}
+Por lo tanto
+\Eq{*}{
+S=S_1+S_2 \subseteq H_1+H_2+K+K \subseteq H_1+H_2+K,
+}
+pero por la \prp{bddPrp}, el conjunto $H:=H_1+H_2$
+es acotado. Luego, $S\subseteq H+K$, es decir, que 
+el conjunto $S$ es $K$-acotado inferiormente.
+
+Para ver que $tS_1$ es $K$-acotado inferiormente, basta
+con multiplicar la primera inclusión en \eq{I0}
+por el escalar $t$ y aplicar de nuevo la \prp{bddPrp}.
+\end{proof}
+\Defi{sKlbdd}{
+Se dice que un conjunto $S\subseteq X$ es
+ semi-$K$-acotado inferiormente si existe un conjunto 
+acotado $H,$ tal que, $S\subseteq\cl(H+K)$.
+}
+\Rem{KimpclK}{
+De la definición se obtiene de inmediato que todo conjunto 
+$S,$ $K$-acotado inferiormente, automáticamente es
+semi-$K$-acotado inferiormente.
+}
+\Prp{sKlbddOp}{
+La familia de conjuntos semi-$K$-acotados inferiormente
+es cerrada bajo la suma y el producto por escalares 
+positivos.
+}
+\begin{proof}
+Sean $S_1,S_2\subseteq X$ conjuntos semi-$K$-acotados
+inferiormente. Consideremos un abierto arbitrario 
+$V\in\U(X)$. En vista de la \prp{symm} existe un abierto 
+$U\in\U(X)$ tal que $U+U\subseteq V$ y
+por definición, existen conjuntos acotados 
+$H_1,H_2\subseteq X$ tales que 
+\Eq{*}{
+S_1&\subseteq\cl(H_1+K)\subseteq H_1+K+U,\qquad\mbox{y}\\
+S_2&\subseteq\cl(H_2+K)\subseteq H_2+K+U.
+}
+Luego, usando la convexidad del cono $K$, y el hecho de que
+$U+U\subseteq V$, se tiene que para todo abierto $V\in\U(X)$
+\Eq{*}{
+S_1+S_2\subseteq H_1+H_2+K+K+U+U
+			 \subseteq H_1+H_2+K+V=H+K+V,
+}
+donde $H:=H_1+H_2$. Como $V$ es arbitrario, entonces
+\Eq{*}{
+S_1+S_2\subseteq\bigcap_{V\in\U(X)}(H+K+V)=\cl(H+K).
+}
+Finalmente, concluimos que $S_1+S_2$ es semi-$K$-acotado
+inferiormente.
+
+Veamos ahora que $tS_1$ también es semi-$K$-acotado
+inferiormente, para cualquier escalar $t>0$. 
+Sea $V\in\U(X)$ un abierto arbitrario. Por continuidad,
+existe un abierto $U\subseteq X$ tal que $tU\subset V$.
+Ahora bien, por definición $S_1\subseteq\cl(H_1+K)$, y 
+por lo tanto
+\Eq{*}{
+tS_1\subseteq t\cl(H_1+K)\subseteq tH_1 + tK + tU
+		\subseteq tH_1+K+V,
+}
+pero $H:=tH_1$ es acotado y $V$ es arbitrario, 
+en consecuencia
+\Eq{*}{
+tS_1\subseteq\bigcap_{V\in\U(X)}(H+K+V) = \cl(H+K).
+}
+Es decir, $tS_1$ es semi-$K$-acotado inferiormente.
+\end{proof}
+\Prp{SKl=Kl-bdd}{
+Si el espacio $X$ es localmente acotado, es decir, si 
+existe un abierto $U$ que es acotado,
+entonces la familia de conjuntos $K$-acotados inferiormente
+y semi-$K$-acotados inferiormente coinciden.
+}
+\begin{proof}
+Basta probar que si $X$ es localmente acotado, entonces
+todo subconjunto $S$ de $X$ semi-$K$-acotado 
+inferiormente es $K$-acotado inferiormente.
+Sea $S\subseteq X$ un conjunto semi-$K$-acotado 
+inferiormente y sea $U\in\U(X)$ un conjunto 
+abierto y acotado. Por definición existe un conjunto
+acotado $H_1\subseteq X$ tal que $S\subseteq \cl(H_1+K)$.
+Sea $H:= H_1+U$. Es claro que el conjunto $H$ es acotado
+y además,
+\Eq{*}{
+S\subseteq\cl(H_1+K)\subseteq H_1+K+U = H+K,
+}  
+en conclusión, el conjunto $S$ es $K$-acotado inferiormente.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conjuntos $K$-convexos.}
+\setcounter{theorem}{0}
+\Defi{KCvx}{
+Sea $D\subseteq X$. Se dice que $D$ es $K$-convexo si 
+para todo $x,y\in X$ se tiene que $[x,y]\subseteq D+K.$
+}
+\Rem{0Cvx}{
+Si $K=\{0\}$ la definición anterior se reduce
+a la definición estandar de convexidad.
+}
+\Rem{1Cvx}{
+Si $0\in K$, entonces $D\subseteq D+K$ para cualquier 
+subconjunto $D\subseteq X$. 
+}
+Como consecuencia inmediata de la observación anterior,
+se tiene la siguiente proposición.
+
+\Prp{KCvx-1}{
+Sea $K\subseteq X$ un cono convexo tal que $0\in K$. Si
+el conjunto $D\subseteq X$ es convexo, entonces,
+también es $K$-convexo.
+}
+En general, un conjunto $K$-convexo, no necesariamente
+tiene que ser convexo. 
+\Exa{Kcvx1}{
+Consideremos $X=\R^2$, $K=[0,\infty)\times \{0\}$ y 
+al subconjunto de $X$ dado en coordenadas polares por
+ $D:=\{(r,\theta) : 0\leq r\leq1
+\quad\mbox{y}\quad    \pi/4\leq\theta\leq7\pi/4\}$. 
+El conjunto $D$ es $K$-convexo, pero sin embargo, 
+no es convexo.
+}
+\Exa{Kcvx2}{
+Si $0\notin K$ y $D$ es un conjunto convexo, entonces 
+no necesariamente, $D$ es $K$-convexo. Para ver esto,
+consideremos $X=\R^2,$ $K=(0,\infty)\times\{0\}$ y sea
+$D=\{p\}$ con $p=(x_0,y_0)\in\R^2$. Es obvio que el conjunto 
+$D$ es convexo, pero $D+K=(x_0,\infty)\times\{y_0\}$
+y por lo tanto $D\not\subseteq D+K$, en consecuencia
+el conjunto $D$ no es $K$-convexo.
+}
+\Prp{Kcvx-cvx}{
+Supongamos que $0\in K$.
+Un conjunto $D\subseteq X$ es $K$-convexo si y sólo si
+el conjunto $D+K\subseteq X$ es convexo.
+}
+\begin{proof}
+Sea $t\in[0,1]$. 
+Supongamos que $D\subseteq X$ es $K$-convexo, entonces
+\Eq{*}{
+t(D+K)+(1-t)(D+K) \subseteq tD+(1-t)D + K 
+\subseteq (D+K)+K \subseteq D+K,
+} 
+es decir, que el conjunto $D+K$ es convexo.
+Supongamos ahora que el conjunto $D+K$ es convexo,
+por lo tanto,
+\Eq{*}{
+tD+(1-t)D\subseteq tD+(1-t)D+K=t(D+K)+(1-t)(D+K)
+\subseteq D+K.
+}
+Es decir, el conjunto $D$ es $K$-convexo.
+\end{proof}
+No necesariamente un cono convexo $K$ ha de tener al cero
+como uno de sus elementos, sin embargo, 
+\Prp{0inclK}{
+$0\in\cl(K),$ para cualquier cono convexo $K$.
+}
+\begin{proof}
+Si $0\in K$ la demostración es trivial. Supongamos que
+$0\notin K$ y 
+sean $V\in\U(X)$ un abierto simétrico y $k\in K$.
+Consideremos la sucesión de números reales $(1/2^n)$,
+cuyo límite es cero. Por lo tanto, existe un número
+natural $N$, tal que si $n\geq N$ entonces
+$k/2^n\in V.$ Lo cual es equivalente a
+\Eq{*}{
+0\in \frac{k}{2^n} + V \subseteq K + V.
+}
+Como $V$ es arbitrario, se tiene que 
+$0\in\bigcap_{V\in\U(X)}(K+V) = \cl(K),$ lo que
+completa la prueba. 
+\end{proof}
+\Defi{recH}{
+Dado un subconjunto no vacío $H\subseteq X$, se define el cono
+recesión de $H$, $(\rec(H))$ de la siguiente manera
+\Eq{recH}{
+\rec(H) = \{x\in X : tx+H\subseteq H, \mbox{ para todo }
+	t\geq0\}
+}
+}
+La siguiente proposición ilustra algunas propiedades 
+del cono recesión asociado al conjunto $H$
+\Prp{recH}{
+Sea $H\subseteq X$ un conjunto no vacío. Entonces
+\begin{enumerate}[i.]
+	\item $0\in\rec(H)$ y $\rec(H)$ es un cono convexo.
+	\item $K=\rec(H)$ es el cono convexo más grande 
+	tal que $K+H\subseteq H$.
+	\item $\cl(\rec(H)) \subseteq \rec(\cl(H)).$
+	\item Para todo $x\in X$, $t>0$, $\rec(x+tH) = \rec(H)$.
+	\item Para cualesquiera conjuntos no vacíos 
+	$H_1,H_2\subseteq X$, 
+	$$\rec(H_1)+\rec(H_2)\subseteq\rec(H_1+H_2).$$
+\end{enumerate}
+}
+\begin{proof}$\quad$\vspace{-.2cm}
+\begin{enumerate}[i.]
+	\item En primer lugar, es evidente que $0\in\rec(H)$ pues, 
+	$0t+H=H$. Para ver que $\rec(H)$ es convexo, sean
+	$x,y\in\rec(H)$ y sea $s\in[0,1]$. Ahora bien, 
+	como $x$ e $y$ están en $\rec(H)$, entonces
+	$t(1-s)y + H \subseteq H$ y $tsx+H\subseteq H$, para
+	cualquier número no-negativo $t$. Por lo tanto,
+	\Eq{*}{
+	t(sx+(1-s)y) + H = tsx + t(1-s)y + H 
+	\subseteq tsx + H \subseteq H.
+	}
+	Es decir, que el segmento $[x,y]$ está contenido en 
+	$\rec(H)$ para cualesquiera $x,y\in H$. De esta manera, 
+	se ha demostrado que en efecto, $\rec(H)$ es un conjunto 
+	convexo.
+	
+	\item Supongamos que $K\subseteq X$ es un cono convexo, 
+	con la propiedad $K+H\subseteq H$, por lo tanto, 
+	para cualquier $t\geq0$ se tiene que
+	\Eq{*}{
+	tK+H\subseteq K+H \subseteq H,
+	}
+	lo cual equivale a $K\subseteq\rec(H)$.
+	
+	\item En vista del \thm{f1}, se tiene que 
+	$\cl(\rec(H))+\cl(H)\subseteq\cl(\rec(H)+H)$. 
+	Además, de la definición se sigue el hecho de que 
+	$\rec(H)+H\subseteq H$. Por lo tanto,
+	\Eq{*}{
+	\cl(\rec(H))+\cl(H)\subseteq\cl(\rec(H)+H)
+	\subseteq\cl(H).
+	}
+	Como $\cl(\rec(H))$ es un cono convexo, pues 
+	$\rec(H)$ lo es, entonces usando el numeral 2 de
+	esta proposición, se tiene que 
+	\Eq{*}{
+	\cl(\rec(H)) \subseteq \rec(\cl(H)).
+	}
+	
+	\item La demostración es directa de la definición.
+	
+	\item Es consecuencia directa del numeral 2.
+\end{enumerate}
+\end{proof}
+
+\Prp{L2.2}{
+Sean $(A_n)_{n\in\N},(B_n)_{n\in\N}$ dos sucesiones no-decrecientes
+de subconjuntos de $X$, sea $H\subseteq X$ un conjunto
+acotado, sea $K\subseteq\bigcap_{n\in\N}\cl(\rec(B_n))$ y sea
+$(\epsilon_n)_{n\in\N}$ una sucesión de números reales que converge a 
+cero. Asumamos que, para todo $n\geq0,$
+\Eq{hip2.2}{
+A_n\subseteq\cl(\epsilon_nH+K+B_n).
+}
+Entonces,
+\Eq{Incn}{
+\cl\Bigg(\bigcup_{n=0}^\infty A_n\Bigg) \subseteq
+\cl\Bigg(\bigcup_{n=0}^\infty B_n\Bigg)
+}
+}
+\begin{proof}
+Sean $U\in\U(X)$ arbirario y sea $V\in\U(X)$ un abierto
+balanceado tal que $V+V+V\subseteq U$. Como $H$ es acotado
+y $(\epsilon_n)$ converge a cero, existe $N\in\N$
+tal que si $n\geq N$ entonces, $\epsilon_nH\subseteq V$.
+Además, como $K\subseteq\bigcap_{n\in\N}\cl(\rec(B_n))$,
+se tiene que $K\subseteq\rec(B_n) + V$ para todo $n\in\N$.
+De esta manera, para $n\geq N$
+\Eq{*}{
+A_n&\subseteq\cl(\epsilon_nH+K+B_n)
+\subseteq\epsilon_nH+K+B_n+V \\
+&\subseteq \rec(B_n)+B_n+V+V+V
+\subseteq B_n + U \subseteq U+\bigcup_{n=0}^\infty B_n,
+}
+por lo tanto,
+\Eq{*}{
+\bigcup_{n\geq N}A_n \subseteq U+\bigcup_{n=0}^\infty B_n.
+}
+Como $U$ es arbitrario, y $(A_n)$ es no-decreciente
+entonces
+\Eq{*}{
+\bigcup_{n=0}^\infty A_n\subseteq
+\bigcap_{U\in\U(X)}\Bigg(U+\bigcup_{n=0}^\infty B_n\Bigg)
+= \cl\Bigg(\bigcup_{n=0}^\infty B_n\Bigg).
+}
+El resultado se sigue de inmediato ya que el lado derecho de esta 
+última inclusión es un conjunto cerrado.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CHAPTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
