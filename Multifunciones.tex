@@ -909,8 +909,196 @@ de Takagi-Tabor $S^\perp:\R\times D\to Y$ de la siguiente manera
 }
 }
 
-alkjdslajdslkjadjaldjs
-alkjsdalkjsdlakjd
-lakjdslkajdslkjads
-lkajdlakjdslakjds
-lakjdslakjdsalkjd
+In view of the property that $d_\Z$ vanishes on $\Z$, it is immediate to see that $S^\perp(t,x)=\{0\}$ for all 
+$(t,x)\in\Z\times D$.
+
+In the following lemma we establish the relationship between a set-valued map and its Tabor transform
+and also between the recession cones of these set-valued maps.
+
+\Lem{TT}{Let $D\subseteq X$ be a starshaped set and $S:D\to\P_0(Y)$. Then
+\Eq{TT1}{
+   S^\perp\big(\tfrac12,x)\big)=\cl(S(x)) \qquad (x\in D)
+}
+and 
+\Eq{TT2}{
+  \overline{\rec}\, S\subseteq \rec \big(S^\perp(t,x)\big) \qquad((t,x)\in(\R\setminus\Z)\times D).
+}}
+
+\begin{proof} Observe that $d_{\Z}\big(\tfrac12\big)=\tfrac12$ and $d_{\Z}\big(2^k\cdot\tfrac12\big)=0$ for $k\in\N$.
+Thus,
+\Eq{*}{
+  S^\perp\big(\tfrac12,x\big)
+   =\cl\bigg(\bigcup_{n=0}^{\infty} \sum_{k=0}^{n}2d_{\Z}\Big(\frac{2^k}2\Big)S\Big(\frac{x}{2^k}\Big)\bigg)
+   =\cl(S(x))
+}
+for all $x\in D$.
+
+For the proof of \eq{TT2}, denote $K:=\rec S$. Then, for all $x\in D$, we have 
+\Eq{*}{
+   S(x)+K\subseteq S(x).
+}
+Let $(t,x)\in(\R\setminus\Z)\times D$ be arbitrary. Using the above inclusion and $d_Z(t)\neq0$, for all $n\geq0$,
+we get
+\Eq{*}{
+  \bigg(\sum_{k=0}^{n}2d_{\Z}(2^kt)S\Big(\frac{x}{2^k}\Big)\bigg)+K
+  =\sum_{k=0}^{n}2d_{\Z}(2^kt)\Big(S\Big(\frac{x}{2^k}\Big)+K\Big)
+  \subseteq \sum_{k=0}^{n}2d_{\Z}(2^kt)S\Big(\frac{x}{2^k}\Big)\subseteq S^\perp(t,x).
+}
+Therefore,
+\Eq{*}{
+  \bigcup_{n=0}^\infty \bigg(\sum_{k=0}^{n}2d_{\Z}(2^kt)S\Big(\frac{x}{2^k}\Big)\bigg)+K
+  \subseteq S^\perp(t,x),
+}
+which implies
+\Eq{*}{
+  S^\perp(t,x)+\cl(K)\subseteq S^\perp(t,x).
+}
+This completes the proof of \eq{TT2}.
+\end{proof}
+
+The following result establishes a formula for the Tabor transform of a set-valued map which is constructed as the 
+product of a nonnegative scalar function and a subset of $Y$.
+
+\Prp{Tab}{Let $D\subseteq X$ be a starshaped set, $K\subseteq Y$ be a convex cone and $S_0\subseteq Y$ be a closedly 
+$K$-convex and closedly $K$-starshaped set. Let $\varphi:D\to \R_+$ be a nonnegative function such that
+\Eq{phi}{
+  \sum_{k=0}^\infty \varphi\Big(\frac{x}{2^n}\Big)<\infty \qquad(x\in D).
+}
+Define $S:D\to\P_0(Y)$ by $S(x):=\varphi(x)S_0+K$. Then
+\Eq{Tab1}{
+  S^\perp(t,x)=\cl\big(\varphi^\perp(t,x) S_0+K\big) \qquad ((t,x)\in(\R\setminus\Z)\times D), 
+}
+where
+\Eq{Tab2}{
+  \varphi^\perp(t,x):=\sum_{n=0}^{\infty}2d_{\Z}(2^nt)\varphi\Big(\frac{x}{2^n}\Big)
+  \qquad((t,x)\in\R\times D).
+}}
+
+\begin{proof} Using the convergence condition \eq{phi} and the estimate $0\leq 2d_\Z\leq1$, it follows that the series 
+in \eq{Tab2} converges uniformly in $t$ and consequently, for all $x\in D$, the mapping $t\mapsto\varphi^\perp(t,x)$ is 
+continuous on $\R$.
+
+To prove \eq{Tab1}, fix $(t,x)\in(\R\setminus\Z)\times D$. Then $d_\Z(t)>0$.
+If, for an element $x\in D$, we have $\varphi^\perp(t,x)=0$, then (by the nonnegativity of $\varphi$) it follows that
+$d_{\Z}(2^nt)\varphi\big(\frac{x}{2^n}\big)=0$ for all $n\geq0$. Then,
+\Eq{*}{
+  S^\perp(t,x)
+  &=\cl\bigg(\bigcup_{n=0}^{\infty} \sum_{k=0}^{n}2d_{\Z}(2^kt)\Big(\varphi\Big(\frac{x}{2^k}\Big)S_0+K\Big)\bigg)\\
+  &=\cl\bigg(\bigcup_{n=0}^{\infty} 
+      \Big(\Big(\sum_{k=0}^{n}2d_{\Z}(2^kt)\varphi\Big(\frac{x}{2^k}\Big)S_0\Big)+K\Big)\bigg)
+  =\cl(K)=\cl\big(\varphi^\perp(t,x) S_0+K\big),
+}
+which shows the validity of \eq{Tab1} in this case. 
+Therefore, in the sequel, we may also assume that $x\in D$ is chosen such that $\varphi^\perp(t,x)\neq0$.
+
+Using that $S_0$ is closedly $K$-convex and closedly $K$-starshaped, we have, for all $t_0,\dots,t_n\geq0$ and 
+$t_0+\cdots+t_n\leq t$, that
+\Eq{ttt}{
+  t_0S_0+\cdots+t_nS_0\subseteq \cl(tS_0+K).
+}
+Indeed, if $t_1=\cdots=t_n=t=0$, then \eq{ttt} is equivalent to the trivial inclusion $0\in\cl(K)$. 
+If $t_1=\cdots=t_n=0<t$, then \eq{ttt} reduces to $0\in t\cl(S_0+K)$, which is a consequence of the closed 
+$K$-starshapedness of $S_0$. Finally, if $t_0+\cdots+t_n>0$, then using that $S_0$ is closedly $K$-convex and closedly 
+$K$-starshaped, we obtain
+\Eq{*}{
+  t_0S_0+\cdots+t_nS_0
+  &=(t_0+\cdots+t_n)\Big(\frac{t_0}{t_0+\cdots+t_n}S_0+\cdots+\frac{t_n}{t_0+\cdots+t_n}S_0\Big)\\
+  &\subseteq(t_0+\cdots+t_n)\cl(S_0+K)=\cl((t_0+\cdots+t_n)S_0+K)\\
+  &=\cl\Big(t\frac{t_0+\cdots+t_n}{t}S_0+K\Big)\subseteq \cl(t\cl(S_0+K)+K)=\cl(tS_0+K).
+}
+
+To complete the proof of \eq{Tab1} in the general case, we verify first the inclusion $\subseteq$.
+Applying \eq{ttt}, for all $n\geq 0$, we obtain 
+\Eq{*}{
+\sum_{k=0}^{n}2d_{\Z}(2^kt)\varphi\Big(\frac{x}{2^k}\Big)S_0
+\subseteq\cl\Bigg(\bigg(\sum_{k=0}^{\infty}2d_{\Z}(2^kt)\varphi\Big(\frac{x}{2^k}\Big)\bigg)S_0+K\Bigg)
+  =\cl\big(\varphi^\perp(t,x)S_0+K\big).
+}
+Therefore (using also that $d_Z(t)>0$),
+\Eq{*}{
+  \sum_{k=0}^{n}2d_{\Z}(2^kt)\Big(\varphi\Big(\frac{x}{2^k}\Big)S_0+K\Big)
+  &\subseteq \bigg(\sum_{k=0}^{n}2d_{\Z}(2^kt)\varphi\Big(\frac{x}{2^k}\Big)S_0\bigg)+K \\
+  &\subseteq \cl\big(\varphi^\perp(t,x)S_0+K\big)+K=\cl\big(\varphi^\perp(t,x)S_0+K\big).
+}
+Since this last inclusion is valid for all $n\geq0$, the desired inclusion follows immediately. 
+
+For the opposite inclusion, in view of $\varphi^\perp(t,x)\neq0$, we can choose $n_0$ such that 
+$d_{\Z}(2^{n_0}t)\varphi\big(\frac{x}{2^{n_0}}\big)>0$. Now observe that, for every $n\geq n_0$,
+\Eq{*}{
+\bigg(\sum_{k=0}^n & 2d_\Z(2^kt)\varphi\Big(\frac{x}{2^k}\Big)\bigg)S_0 + K
+  =\bigg(\sum_{k=0}^n2d_\Z(2^kt)\varphi\Big(\frac{x}{2^k}\Big)\bigg)(S_0+K) \\
+  &\subseteq\sum_{k=0}^n2d_\Z(2^kt)\bigg(\varphi\Big(\frac{x}{2^k}\Big)S_0+\varphi\Big(\frac{x}{2^k}\Big)K\bigg)
+  \subseteq\sum_{k=0}^n2d_\Z(2^kt)\bigg(\varphi\Big(\frac{x}{2^k}\Big)S_0+\cl(K)\bigg)\\
+  &\subseteq\cl\bigg(\sum_{k=0}^n2d_\Z(2^kt)\bigg(\varphi\Big(\frac{x}{2^k}\Big)S_0+K\bigg)\bigg)
+  \subseteq\cl\bigg(\bigcup_{\ell=0}^\infty\sum_{k=0}^\ell 2d_\Z(2^kt)S\Big(\frac{x}{2^k}\Big)\bigg)
+  = S^\perp(t,x).
+}
+Let $u\in K$ and $v\in S_0$. Then, the above inclusion yields that, for every $n\geq n_0$,
+\Eq{*}{
+  y_n:=\sum_{k=0}^n2d_\Z(2^kt)\varphi\Big(\frac{x}{2^k}\Big)v+u\in S^\perp(t,x).
+}
+The right hand side is a closed set, hence the limit of the sequence $(y_n)$ is also contained in $S^\perp(t,x)$.
+Therefore, for all $u\in K$ and $v\in S_0$,
+\Eq{*}{
+  \varphi^\perp(t,x)v+u
+  =\sum_{k=0}^\infty 2d_\Z(2^kt)\varphi\Big(\frac{x}{2^k}\Big)v+u
+  =\lim_{n\to\infty} y_n
+  \in S^\perp(t,x).
+}
+which implies that
+\Eq{*}{
+\varphi^\perp(t,x)S_0+K\subseteq S^\perp(t,x).
+}
+This completes the proof of the reversed inclusion in \eq{Tab1}.
+\end{proof}
+
+\Cor{Tak}{Let $X$ be a normed space, $D\subseteq X$ be a starshaped set, $K\subseteq Y$ be a convex cone, 
+$S_0\subseteq Y$ be a closedly $K$-convex set containing $0\in Y$, and $\alpha>0$. Define $S:D\to\P_0(Y)$ by
+$S(x):=\|x\|^\alpha S_0+K$. Then
+\Eq{Tab1+}{
+  S^\perp(t,x)
+  =\cl\big(\tau_\alpha(t)\|x\|^\alpha S_0+K\big) \qquad((t,x)\in(\R\setminus\Z)\times D), \\
+}               
+where $\tau_\alpha:\R\to\R$ is defined by 
+\Eq{Tab2+}{
+  \tau_\alpha(t):=\sum_{n=0}^{\infty}2^{1-\alpha n} d_{\Z}(2^nt)
+  \qquad(t\in\R).
+}}
+
+\begin{proof} To obtain the statement, we can apply \prp{Tab} with the function $\varphi$
+defined by $\varphi(x):=\|x\|^\alpha$. Observe that
+\Eq{*}{
+  \sum_{n=0}^{\infty}\varphi\Big(\frac{x}{2^n}\Big)
+	=\sum_{n=0}^{\infty}\frac{\|x\|^\alpha}{2^{\alpha n}}
+	=\frac{2^\alpha}{2^\alpha-1}\|x\|^\alpha < \infty
+	\qquad(x\in D)
+}
+and
+\Eq{*}{
+  \varphi^\perp(t,x)=\sum_{n=0}^{\infty}2d_{\Z}(2^nt)\varphi\Big(\frac{x}{2^n}\Big)
+	=\sum_{n=0}^{\infty}2d_{\Z}(2^nt)\frac{\|x\|^\alpha}{2^{\alpha n}}
+	=\tau_\alpha(t)\|x\|^\alpha
+	\qquad((t,x)\in\R\times D).
+}
+Therefore, \eq{Tab1+} is a consequence of formula \eq{Tab1} of \prp{Tab}.
+\end{proof}
+
+\Rem{Tak}{An important particular case is when $\alpha=1$, then $\tau_1(t)=2T$, 
+where $T$ is the Takagi function defined by 
+\Eq{takagi}{
+T(t):=\sum_{n=0}^\infty\frac{d_\Z(2^nt)}{2^n} \qquad(t\in\R)
+} 
+Observe that $\tau_\alpha$ (for any $\alpha>0$) satisfies the functional equation
+\Eq{TT}{
+  \tau_\alpha(t)=2d_{\Z}(t)+\frac1{2^\alpha}\tau_\alpha(2t) \qquad(t\in\R).
+}
+By applying the Banach Fixed Point Theorem, this functional equation has a unique solution in the Banach
+space of bounded real functions over the real line (which is equipped with the supremum norm).}
+
+The following lemma will be useful in order to prove our main theorems related to the convexity and concavity type 
+inclusion. For its formulation, we introduce a convergence property for a sequence of sets in $Y$. Given a convex cone 
+$K\subseteq Y$ and a sequence $S_k\subseteq Y$, this sequence is called serially $K$-Cauchy if, for all $U\in\U(Y)$, 
+there exists $m\in\N$ such that, for all $n\geq m$,
+\Eq{iii}{
+ \sum_{k=m}^nS_k \subseteq U+K.
+}
