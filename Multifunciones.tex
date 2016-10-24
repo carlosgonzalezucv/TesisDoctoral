@@ -675,7 +675,7 @@ presentaremos dos Teoremas que pretenden englobar a gran parte de los resultados
 de tipo Bernstein--Doetsch obtenidos hasta el momento.
 
 
-\section{Transformación de Takagi de una multifunción.}
+\section{Transformación de Takagi.}
 
 En el Capítulo \ref{chapPrevio} definimos la función de Takagi
 $T$ para cada $x\in\R$, mediante la fórmula
@@ -891,7 +891,7 @@ Por lo tanto \eq{Tak2} nos dá $\varphi^T\equiv 2$, luego \eq{Tak1} es equivalen
 que queremos demostrar.
 \end{proof}
 
-\section{Transformación de Takagi-Tabor de una multifunción.}
+\section{Transformación de Takagi-Tabor.}
 
 Motivados por el t\'ermino de error introducido en el \thm{TabTab3}
 por los profesores Ja. Tabor y J\'o. Tabor, se introduce la siguiente
@@ -1102,3 +1102,125 @@ there exists $m\in\N$ such that, for all $n\geq m$,
 \Eq{iii}{
  \sum_{k=m}^nS_k \subseteq U+K.
 }
+
+
+\Lem{CchyConv}{
+Let $K\subseteq Y$ be a convex cone and let $(S_k)$ be a sequence of nonempty subsets of $Y$ such that 
+\begin{enumerate}[(i)]
+  \item For all $k\geq 0$, the set $S_k$ is closedly $K$-starshaped and closedly $K$-lower bounded;
+  \item The sequence $(S_k)$ is serially $K$-Cauchy. 
+\end{enumerate}
+Then, for all $U\in\U(Y)$, there exists a positive number $\delta$ such that,
+for all $t,s\in\R$ with $|t-s|<\delta$, 
+\Eq{ts0}{
+\cl\bigg(\bigcup_{n=0}^\infty\sum_{k=0}^n d_\Z(2^kt)S_k\bigg) 
+  \subseteq \cl\bigg(\bigcup_{n=0}^\infty\sum_{k=0}^n d_\Z(2^ks)S_k\bigg) + U + K.
+}}
+
+\begin{proof}
+Let $U\in\U(Y)$. Then there exists $V\in\U(Y)$ such that $[6]V\subseteq U$. 
+
+First, we are going to show that there exists a positive number $\delta$ such that,
+for all $n\geq0$ and for all $t,s\in\R$ with $|t-s|<\delta$, we have
+\Eq{ts}{
+\sum_{k=0}^n d_\Z(2^kt)S_k \subseteq \sum_{k=0}^n d_\Z(2^ks)S_k + [5]V + K.
+}
+
+By the assumption (ii), there exists a positive integer $m$ such that, for $n\geq m$, \eq{iii} holds.
+The members of the sequence $(S_k)$ are closedly $K$-lower bounded, and the family of closedly $K$-lower
+bounded sets is closed under finite union, under algebraic sum and under multiplication by scalars, hence there exists 
+a bounded set $H\subseteq Y$ such that 
+\Eq{*}{
+  \bigcup_{\ell=0}^{m-1}\sum_{k=0}^{\ell} 2^kS_k \subseteq \cl(H+K)\subseteq H+V+K.
+} 
+For the bounded set $H$ there exists a positive number $\delta\leq 1$ such that $\delta H\subseteq V$.
+Thus,
+\Eq{dd}{
+  \delta\bigg(\bigcup_{\ell=0}^{m-1}\sum_{k=0}^{\ell} 2^kS_k\bigg) \subseteq \delta(H+V+K) \subseteq [2]V+K.
+}
+In view of the Lipschitz property of the distance function $d_\Z$ and by the inequality $0\leq d_Z\leq \frac12$, 
+for all $p,q\in\R$, we have that
+\Eq{pq}{
+  d_\Z(p) \leq d_\Z(q)+|d_\Z(p)-d_\Z(q)| \leq d_\Z(q) +\min\big\{1,|p-q|\big\}.
+}
+For a closedly $K$-starshaped set $S$, for $0\leq c\leq d$ and for any $W\in\U(Y)$, we have
+\Eq{*}{
+  cS\subseteq dS+W+K.
+}
+Indeed, this inclusion is obvious for $c=d$. If $c<d$, then, 
+\Eq{*}{
+  cS=d\Big(\frac{c}{d}S\Big)\subseteq d\cl(S+K) \subseteq d\Big(S+\frac1d W+K\Big)=dS+W+K.
+}
+Let $n\in\N$ and $0\leq k\leq n$. Choose $W\in\U(Y)$ such that $[n+1]W\subseteq V$. 
+Using inequality \eq{pq} and that the set $S_k$ is closedly $K$-starshaped, for all $k\geq0$ ad for all 
+$s,t\in\R$, we obtain
+\Eq{*}{
+ d_\Z(2^kt)S_k &\subseteq \big(d_\Z(2^ks) +\min\big\{1,2^k|t-s|\}\big)S_k + W+K \\
+               &\subseteq d_\Z(2^ks)S_k +\min\big\{1,2^k|t-s|\big\}S_k +W+K.
+}
+Hence, 
+\Eq{split}{
+  \sum_{k=0}^n d_\Z(2^kt)S_k  
+     \subseteq \sum_{k=0}^n d_\Z(2^ks)S_k  + \sum_{k=0}^n\min\big\{1,2^k|t-s|\big\}S_k + V+K.
+}
+To complete the proof of \eq{ts}, it suffices to show that, for all $n\geq0$,
+\Eq{fs}{
+  \sum_{k=0}^n\min\big\{1,2^k|t-s|\big\}S_k\subseteq [4]V+K
+}
+whenever $|t-s|<\delta$. 
+
+Let $t,s\in\R$ be such that $|t-s|\leq\delta$. We have that $\min\big\{1,2^k|t-s|\big\}\leq 1$ and
+$\min\big\{1,2^k|t-s|\big\}\leq 2^{k}\delta$ for all $k\geq0$.  
+Using that $S_k$ is closedly $K$-starshaped again and the estimates \eq{iii} and \eq{dd}, we get
+\Eq{*}{
+  \sum_{k=0}^n\min\big\{1,2^k|t-s|\big\}S_k  
+    &\subseteq\sum_{k=0}^{\min\{n,m-1\}}\big(2^{k}\delta S_k+W+K\big)  
+       + \sum_{k=\min(n+1,m)}^n\big(S_k+W+K\big) \\
+    &\subseteq \delta\sum_{k=0}^{\min\{n,m-1\}} 2^kS_k +[2]V+K \\
+    &\subseteq \delta\bigg(\bigcup_{\ell=0}^{m-1}\sum_{k=0}^{\ell} 2^kS_k\bigg) +[2]V+K\subseteq [4]V+K.
+} 
+This completes the proof of \eq{fs} and hence \eq{ts} holds for all $n\geq0$. Applying \eq{ts}, for all $n\geq0$, it 
+follows that
+\Eq{*}{
+  \sum_{k=0}^n d_\Z(2^kt)S_k 
+  \subseteq \cl\bigg(\bigcup_{\ell=0}^\infty\sum_{k=0}^\ell d_\Z(2^ks)S_k\bigg) + [5]V + K.
+}
+Therefore,
+\Eq{*}{
+  \cl\bigg(\bigcup_{n=0}^\infty\sum_{k=0}^n d_\Z(2^kt)S_k\bigg)
+  \subseteq \bigcup_{n=0}^\infty\sum_{k=0}^n d_\Z(2^kt)S_k + V
+  \subseteq \cl\bigg(\bigcup_{\ell=0}^\infty\sum_{k=0}^\ell d_\Z(2^ks)S_k\bigg) + U + K.
+}
+Thus the proof of inclusion \eq{ts0} is complete.
+\end{proof}
+
+In the following lemma we describe an important case when the serial $K$-Cauchy property of a sequence of sets can 
+be established.
+
+\Lem{KC}{Assume that $Y$ is a locally convex topological vector space. Let $K\subseteq Y$ be a convex cone and 
+$S\subseteq Y$ be a closedly $K$-lower bounded set. Let $(\lambda_n)$ be a sequence of 
+nonnegative numbers such that the series $\sum \lambda_n$ is convergent. Define $S_n:=\lambda_n S+K$ for $n\geq 0$. Then 
+the sequence $(S_n)$ is serially $K$-Cauchy.}
+
+\begin{proof} By the boundedness assumption on $S$, there exists a bounded set $H\subseteq Y$ such that 
+$S\subseteq\cl(H+K)$.
+
+To prove the $K$-Cauchy property of $(S_n)$, fix a neighborhood $U\in\U(Y)$ arbitrarily. Then choose a convex 
+$V\in\U(Y)$ such that $[2]V\subseteq U$ and $t>0$ such that $tH\subseteq V$. By the convergence of the series $\sum 
+\lambda_n$, there
+exists $m\in\N$ such that, for all $n\geq m$,
+\Eq{*}{
+  t_n:=\sum_{k=m}^n \lambda_k<t.
+}
+Then, for all $n\geq m$,
+\Eq{*}{
+ \sum_{k=m}^n S_k
+   &=\sum_{k=m}^n (\lambda_k S) + K
+   \subseteq \sum_{k=m}^n (\lambda_k \cl(H+K)) + K
+   \subseteq \cl\bigg(\sum_{k=m}^n (\lambda_k H) + K\bigg)\\
+   &\subseteq \sum_{k=m}^n (\lambda_k H) + V + K
+   \subseteq \sum_{k=m}^n \Big(\frac{\lambda_k}{t}V\Big) + \frac{t-t_n}{t}\{0\} + V + K
+   \subseteq [2]V+K\subseteq U+K.
+}
+This shows that \eq{iii} holds and hence $(S_k)$ is serially $K$-Cauchy.
+\end{proof}

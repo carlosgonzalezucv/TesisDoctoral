@@ -1,16 +1,3 @@
-%\documentclass[oneside,letterpaper,12pt]{report}
-%
-%\usepackage{amssymb,verbatim,enumerate,ifthen,graphics,graphicx,amsmath,amsthm}
-%\usepackage{showkeys}
-%\usepackage{multicol}
-%\usepackage{amsfonts}
-%\usepackage[mathscr]{eucal}
-%\usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
-%\usepackage[spanish]{babel}
-%\usepackage[right=3cm,left=3cm,top=3cm,bottom=2.5cm,headsep=0cm,footskip=0.5cm]{geometry}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[12pt,letterpaper,reqno,openany,oneside,spanish]{book}
 \usepackage[T1]{fontenc}
@@ -22,7 +9,7 @@
 \usepackage{latexsym} % Símbolos
 \usepackage{fancybox}
 \usepackage{fancyhdrtesis}
-%\usepackage{showkeys}
+\usepackage{showkeys}
 \usepackage{shortvrb}
 
 %\usepackage[latin1]{inputenc} % Caracteres con acentos.
@@ -88,9 +75,17 @@
 [\vspace{1mm} \bigrule] % después del cuerpo, dejar espacio vertical y trazar línea horizontal gruesa
 
 
-
-
-
+%\definecolor{myblue}{RGB}{84, 177, 184}
+%\definecolor{myblue1}{RGB}{49, 133, 156}
+%\usepackage{hyperref}
+%\hypersetup{
+%	colorlinks   = true, %Colours links instead of ugly boxes
+%	urlcolor     = myblue1, %Colour for external hyperlinks
+%	linkcolor    = myblue1, %Colour of internal links
+%	citecolor   = red %Colour of citations
+%}
+%\hypersetup{colorlinks=true,allcolors=cyan}
+%\usepackage{hypcap}
 
 %\usepackage{mathptmx}
 %\renewcommand{\rmdefault}{pifont}
@@ -130,7 +125,8 @@
 \input{ETL}
 \input{previo}
 \input{Multifunciones}
-\input{principales}
+\input{Hazy-Pales-Error-Term}
+\input{Tak-Tab-Error-Term}
 %\input{conclusion}
 \addcontentsline{toc}{chapter}{Conclusiones}
 \include{conclusion}
