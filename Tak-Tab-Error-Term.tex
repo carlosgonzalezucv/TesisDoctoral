@@ -1,97 +1,155 @@
 \chapter{T\'ermino de error de tipo Takagi-Tabor.}
 
-\section{Diadic convexity and concavity}
+\section{Convexidad y concavidad sobre los racionales di\'adicos.}
 \setcounter{theorem}{0}
 
-The first pair of main results of this paper are contained in the following two theorems. The notation $\D$ stands for 
-the set of diadic rational numbers, i.e., numbers of the form $\frac{k}{2^n}$, where $k\in\Z$ and $n\in\N$.
+Los resultados principales de esta secci\'on est\'an contenidos
+en el siguiente par de teoremas. Denotaremos por $\D$ al conjunto
+de los n\'umeros racionales di\'adicos, i.e., $\D$ consiste en
+los n\'umeros de la forma $\frac{k}{2^n}$, donde, $k\in\Z$ y $n\in\N$.
 
-\Thm{ConvexTab}{Let $D\subseteq X$ be a nonempty convex set and $A,B:(D-D)\to\P_0(Y)$ 
-such that the values of the set-valued map $B$ are closedly $K$-convex, where $K:=\overline{\rec}(B)$. 
-Let $F:D\to\P_0(Y)$ be a set-valued mapping which satisfies the Jensen-convexity-type inclusion
-\Eq{JCV}{
-\dfrac{F(x) + F(y)}{2} + A(x-y) \subseteq \cl\Big(F\Big(\dfrac{x+y}{2}\Big) + B(x-y)\Big) 
-   \qquad (x,y\in D).
+\Lem{lemTec}{
+	%%
+	Sean $n,\ell\in\N$ dos n\'umeros naturales arbitrarios. Entonces,
+	para todo $k\in\{0,\ldots,n-1\}$ se tiene que
+	\Eq{dZafin}{
+		%%
+		d_\Z\Big(2^k\frac{2\ell+1}{2^{n+1}}\Big)
+		=\frac12\Big(d_\Z\Big(2^k\frac{\ell+1}{2^{n}}\Big)+d_\Z\Big(2^k\frac{\ell}{2^{n}}\Big)\Big)
+	} 
 }
-Then $F$ satisfies the convexity type inclusion
-\Eq{CV}{
- tF(x)&+(1-t)F(y)+\sum_{k=0}^{\infty} 2d_{\Z}\big(2^k t\big)A\Big(\dfrac{x-y}{2^k}\Big) \\
-&\subseteq \cl\bigg(F(tx+(1-t)y)+\sum_{k=0}^{\infty} 2d_{\Z}\big(2^k t\big)B\Big(\dfrac{x-y}{2^k}\Big)\bigg)
-   \qquad (x,y\in D,\,t\in\D\cap[0,1]).
-}
-If, in addition, $0\in\cl(A(u)+K)$ for every $u\in D-D$, then
-\Eq{CV+}{
- tF(x)+(1-t)F(y)+A^\perp(t,x-y) \subseteq \cl\big(F(tx+(1-t)y)&+B^\perp(t,x-y)\big)\\
-   & (x,y\in D,\,t\in\D\cap[0,1]).
-}}
+\begin{proof}
+	%%
+	Observemos que la fracci\'on $\frac{2\ell+1}{2^{n+1}}$ puede ser 
+	representada como
+	%%
+	\Eq{*}{
+		\frac{2\ell+1}{2^{n+1}}=\frac12\Big(\frac{\ell+1}{2^{n}}+\frac{\ell}{2^{n}}\Big)
+	}
+	%%
+	Es suficiente demostrar que $d_\Z$ es af\'in
+	en el intervalo $\Big[2^k\frac{\ell}{2^{n}},2^k\frac{\ell+1}{2^{n}}\Big]$.
+	%%
+	Para esto, veremos que el interior de este intervalo
+	no contiene un elemento de $\frac12\Z$. Supongamos que para alg\'un $j\in\Z$
+	%%
+	\Eq{aux}{
+		2^k\frac{\ell}{2^{n}}<\frac{j}2<2^k\frac{\ell+1}{2^{n}}.
+	}
+	Por lo tanto $\ell<2^{n-k-1}j<\ell+1$, lo que es una contradicci\'on
+	ya que $n-1\geq k$ y en consecuencia, es falso suponer \eq{aux}.
+		
+\end{proof}
 
-\begin{proof} For the proof of \eq{CV}, we are going to show that, for all $x,y\in D$,
-and for all integers $n,m$ with $n\geq 1$, $0\leq m\leq 2^n$,
-\Eq{CVn}{
- \frac{m}{2^n}F(x)+\Big(1-\frac{m}{2^n}\Big)F(y) 
-  &+ \sum_{k=0}^{n-1}2 d_{\Z}\Big(2^k \frac{m}{2^n}\Big)A\Big(\dfrac{x-y}{2^k}\Big) \\
- &\subseteq \cl\bigg(F\Big(\frac{m}{2^n}x+\Big(1-\frac{m}{2^n}\Big)y\Big) 
-   + \sum_{k=0}^{n-1}d_{\Z}\Big(2^k \frac{m}{2^n}\Big)B\Big(\dfrac{x-y}{2^k}\Big)\bigg). 
+\Thm{ConvexTab}{
+	%%
+	Sea $D\subseteq X$ un subconjunto convexo no vac\'io, y sean
+	$A,B:(D-D)\to\P_0(Y)$ tales que, los valores de la multifunci\'on
+	$B$ son semi $K$-convexos, donde $K$ representa la clausura del
+	cono recesi\'on asociado a $B$. 	
+	Sea $F:D\to\P_0(Y)$ una multifunci\'on que satisface la siguiente
+	inclusi\'on de convexidad tipo Jensen
+	%%
+	\Eq{JCV}{
+		\dfrac{F(x) + F(y)}{2} + A(x-y) \subseteq 
+		\cl\Big(F\Big(\dfrac{x+y}{2}\Big) + B(x-y)\Big) 
+		\qquad (x,y\in D).
+	}
+	%%
+	Entonces para $x,y\in D$ y para todo $t\in\D\cap[0,1]$ se tiene
+	que $F$ satisface la siguiente inclusi\'on
+	%%	
+	\Eq{CV}{
+		tF(x)&+(1-t)F(y)+\sum_{k=0}^{\infty} 2d_{\Z}\big(2^k t\big)A\Big(\dfrac{x-y}{2^k}\Big) \\
+		&\subseteq \cl\bigg(F(tx+(1-t)y)
+				  +\sum_{k=0}^{\infty} 2d_{\Z}\big(2^k t\big)B\Big(\dfrac{x-y}{2^k}\Big)\bigg)
+	}
+	%%
+	Si adem\'as, $0\in\cl(A(u)+K)$ para cada $u\in D-D$, entonces,
+	\Eq{CV+}{
+		tF(x)+(1-t)F(y)+A^\perp(t,x-y) \subseteq 
+		\cl\big(F(tx+(1-t)y)&+B^\perp(t,x-y)\big)
+	}
+	para todo $x,y\in D$ y para todo $t\in\D\cap[0,1]$.
 }
 
-Fix $x,y\in D$ arbitrarily. To verify that \eq{CVn} holds, we will proceed by induction on $n$. 
-For $m=0$ or for $m=2^n$, the inclusion \eq{CVn} is obvious (because $d_\Z$ vanishes at integer
-values). Thus, for $n=1$, we need to check \eq{CVn} only for $m=1$. In that case, \eq{CVn} is
-equivalent to the Jensen convexity assumption \eq{JCV}.
-
-Now, suppose that the inclusion \eq{CVn} holds for some $n$ and let us prove that it is also valid for
-$n+1$. Let $0<m<2^{n+1}$ be arbitrary. If $m$ is even, i.e., $m=2\ell$ for some $0<\ell<2^n$, then
-the statement follows from the inductive assumption, because $\frac{m}{2^{n+1}}=\frac{\ell}{2^n}$.
-Therefore, we may assume that $m$ is odd, i.e., $m=2\ell+1$, where $0\leq \ell<2^n$.
-Observe that the fraction $\frac{2\ell+1}{2^{n+1}}$ can be represented as
-\Eq{am}{
-   \frac{2\ell+1}{2^{n+1}}=\frac12\Big(\frac{\ell+1}{2^{n}}+\frac{\ell}{2^{n}}\Big)
-}
-We prove that, for $k\in\{0,\dots,n-1\}$,
-\Eq{JCd}{
-   d_\Z\Big(2^k\frac{2\ell+1}{2^{n+1}}\Big)
-    =\frac12\Big(d_\Z\Big(2^k\frac{\ell+1}{2^{n}}\Big)+d_\Z\Big(2^k\frac{\ell}{2^{n}}\Big)\Big).
-}
-In view of \eq{am}, it suffices to show that $d_\Z$ is affine on the interval 
-$\Big[2^k\frac{\ell}{2^{n}},2^k\frac{\ell+1}{2^{n}}\Big]$. For this, it is enough to show
-that the interior of this interval does not contain an element from $\frac12\Z$. On the contrary,
-assume that, for some $j\in\Z$,
-\Eq{*}{
-   2^k\frac{\ell}{2^{n}}<\frac{j}2<2^k\frac{\ell+1}{2^{n}}.
-}
-Then we have that $\ell<2^{n-k-1}j<\ell+1$, which is a contradiction because $n-1\geq k$. 
-
-Now, we can start proving that \eq{CVn} holds for $n+1$. Using \eq{am} and \eq{JCd}, we obtain
-\Eq{*}{
-  \frac{m}{2^{n+1}}F(x)&+\Big(1-\frac{m}{2^{n+1}}\Big)F(y)
-   + \sum_{k=0}^{n}2 d_{\Z}\Big(2^k \frac{m}{2^{n+1}}\Big)A\Big(\frac{x-y}{2^k}\Big) \\
-  &= \frac{2\ell+1}{2^{n+1}}F(x)+\Big(1-\frac{2\ell+1}{2^{n+1}}\Big)F(y)
-   + \sum_{k=0}^{n}2 d_{\Z}\Big(2^k \frac{2\ell+1}{2^{n+1}}\Big)A\Big(\frac{x-y}{2^k}\Big) \\
-  &\subseteq \frac12\Big(\frac{\ell+1}{2^{n}}F(x)+\Big(1-\frac{\ell+1}{2^{n}}\Big)F(y)\Big) 
-     +\frac12\Big(\frac{\ell}{2^{n}}F(x)+\Big(1-\frac{\ell}{2^{n}}\Big)F(y)\Big)\\
-  &\qquad+\sum_{k=0}^{n-1}\Big(d_\Z\Big(2^k\frac{\ell+1}{2^{n}}\Big)+d_\Z\Big(2^k\frac{\ell}{2^{n}}\Big)\Big)
-             A\Big(\frac{x-y}{2^k}\Big) + A\Big(\frac{x-y}{2^n}\Big) \\
-  &= \frac12\Big(\frac{\ell+1}{2^{n}}F(x)+\Big(1-\frac{\ell+1}{2^{n}}\Big)F(y)
-     +\sum_{k=0}^{n-1}2 d_\Z\Big(2^k\frac{\ell+1}{2^{n}}\Big)A\Big(\frac{x-y}{2^k}\Big)\Big)\\
-  &\qquad +\frac12\Big(\frac{\ell}{2^{n}}F(x)+\Big(1-\frac{\ell}{2^{n}}\Big)F(y)
-   + \sum_{k=0}^{n-1}2d_\Z\Big(2^k\frac{\ell}{2^{n}}\Big)A\Big(\frac{x-y}{2^k}\Big)\Big)
-   + A\Big(\frac{x-y}{2^n}\Big). 
-}
-By applying the inductive assumption \eq{CVn} with $m=\ell+1$ and $m=\ell$, we obtain that
-\Eq{JCVa}{
-  \frac{m}{2^{n+1}}F(x)&+\Big(1-\frac{m}{2^{n+1}}\Big)F(y)
-   + \sum_{k=0}^{n}2 d_{\Z}\Big(2^k \frac{m}{2^{n+1}}\Big)A\Big(\frac{x-y}{2^k}\Big) \\
- &\subseteq \frac12\cl\bigg(F\Big(\frac{\ell+1}{2^{n}}x+\Big(1-\frac{\ell+1}{2^{n}}\Big)y\Big)
-     +\sum_{k=0}^{n-1} 2d_\Z\Big(2^k\frac{\ell+1}{2^{n}}\Big)B\Big(\frac{x-y}{2^k}\Big)\bigg)\\
-   &\qquad+\frac12\cl\bigg(F\Big(\frac{\ell}{2^{n}}x+\Big(1-\frac{\ell}{2^{n}}\Big)y\Big)
-   + \sum_{k=0}^{n-1} 2d_\Z\Big(2^k\frac{\ell}{2^{n}}\Big)B\Big(\frac{x-y}{2^k}\Big)\bigg) 
-      + A\Big(\frac{x-y}{2^n}\Big)\\
- &\subseteq \cl\bigg(\frac12\bigg(F\Big(\frac{\ell+1}{2^{n}}x+\Big(1-\frac{\ell+1}{2^{n}}\Big)y\Big)
-     +F\Big(\frac{\ell}{2^{n}}x+\Big(1-\frac{\ell}{2^{n}}\Big)y\Big)\bigg)
-     +A\Big(\frac{x-y}{2^n}\Big) \\
-   &\qquad+ \sum_{k=0}^{n-1}\bigg(d_\Z\Big(2^k\frac{\ell+1}{2^{n}}\Big)B\Big(\frac{x-y}{2^k}\Big)
-      +d_\Z\Big(2^k\frac{\ell}{2^{n}}\Big) B\Big(\frac{x-y}{2^k}\Big)\bigg)\bigg). \\
-}
+\begin{proof} 
+	%%
+	Para la demostraci\'on de \eq{CV}, primero vamos a demostrar que
+	para todo $x,y\in D$, y para todo par de enteros $n,m$ con 
+	$n\geq 1$, $0\leq m\leq 2^n$, se cumple la siguiente igualdad
+	%%
+	\Eq{CVn}{
+		\frac{m}{2^n}F(x)&+\Big(1-\frac{m}{2^n}\Big)F(y) 
+		+ \sum_{k=0}^{n-1}2 d_{\Z}\Big(2^k \frac{m}{2^n}\Big)A\Big(\dfrac{x-y}{2^k}\Big) \\
+		&\subseteq \cl\bigg(F\Big(\frac{m}{2^n}x+\Big(1-\frac{m}{2^n}\Big)y\Big) 
+		+ \sum_{k=0}^{n-1}d_{\Z}\Big(2^k \frac{m}{2^n}\Big)B\Big(\dfrac{x-y}{2^k}\Big)\bigg). 
+	}
+	%%
+	Fijemos $x,y\in D$ arbitrarios. Para verificar que \eq{CVn} se cumple, 
+	vamos a proceder por inducci\'on sobre $n$. 
+	%%
+	Para $m=0$ o para $m=2^n$, la inclusi\'on \eq{CVn} se sigue de inmediato
+	ya que la funci\'on $d_\Z$ se anula en $\Z$. As\'i, para $n=1$, solo es necesario
+	verificar \eq{CVn} para $m=1$. En ese caso, \eq{CVn} es equivalente
+	a la inclusi\'on de convexidad tipo Jensen en la \eq{JCV}.
+	%%
+	Ahora, supongamos que la inclusi\'on \eq{CVn} se cumple para alg\'un $n$
+	y demostremos que tambi\'en es v\'alida para $n+1$. Sea $0<m<2^{n+1}$
+	arbitrario. Si $m$ es par, i.e., $m=2\ell$ para alg\'un $0<\ell<2^n$,
+	entonces, $\frac{m}{2^{n+1}}=\frac{\ell}{2^n}$ y as\'i, el resultado
+	es consecuencia inmediata de la hip\'otesis inductiva. En vista de
+	esta observaci\'on, podemos asumir entonces que $m$ es impar, i.e., 
+	$m = 2\ell + 1$ para alg\'un $0 < \ell < 2^n$.
+	
+	En vista del \lem{lemTec}, se tenemos que para todo $k\in\{0,\ldots,n-1\}$ 
+	\Eq{am}{
+		%%
+		d_\Z\Big(2^k\frac{2\ell+1}{2^{n+1}}\Big)
+		=\frac12\Big(d_\Z\Big(2^k\frac{\ell+1}{2^{n}}\Big)+d_\Z\Big(2^k\frac{\ell}{2^{n}}\Big)\Big).
+	} 
+	%%
+	Ahora bien, usando \eq{am} y \eq{JCd} obtenemos lo siguiente
+	
+	\Eq{*}{
+	  \frac{m}{2^{n+1}}F(x)&+\Big(1-\frac{m}{2^{n+1}}\Big)F(y)
+	   + \sum_{k=0}^{n}2 d_{\Z}\Big(2^k \frac{m}{2^{n+1}}\Big)A\Big(\frac{x-y}{2^k}\Big) \\
+	  &= \frac{2\ell+1}{2^{n+1}}F(x)+\Big(1-\frac{2\ell+1}{2^{n+1}}\Big)F(y)
+	   + \sum_{k=0}^{n}2 d_{\Z}\Big(2^k \frac{2\ell+1}{2^{n+1}}\Big)A\Big(\frac{x-y}{2^k}\Big) \\
+	  &\subseteq \frac12\Big(\frac{\ell+1}{2^{n}}F(x)+\Big(1-\frac{\ell+1}{2^{n}}\Big)F(y)\Big) 
+	     +\frac12\Big(\frac{\ell}{2^{n}}F(x)+\Big(1-\frac{\ell}{2^{n}}\Big)F(y)\Big)\\
+	  &\qquad+\sum_{k=0}^{n-1}\Big(d_\Z\Big(2^k\frac{\ell+1}{2^{n}}\Big)+d_\Z\Big(2^k\frac{\ell}{2^{n}}\Big)\Big)
+	             A\Big(\frac{x-y}{2^k}\Big) + A\Big(\frac{x-y}{2^n}\Big) \\
+	  &= \frac12\Big(\frac{\ell+1}{2^{n}}F(x)+\Big(1-\frac{\ell+1}{2^{n}}\Big)F(y)
+	     +\sum_{k=0}^{n-1}2 d_\Z\Big(2^k\frac{\ell+1}{2^{n}}\Big)A\Big(\frac{x-y}{2^k}\Big)\Big)\\
+	  &\qquad +\frac12\Big(\frac{\ell}{2^{n}}F(x)+\Big(1-\frac{\ell}{2^{n}}\Big)F(y)
+	   + \sum_{k=0}^{n-1}2d_\Z\Big(2^k\frac{\ell}{2^{n}}\Big)A\Big(\frac{x-y}{2^k}\Big)\Big) \\
+	  &\qquad+ A\Big(\frac{x-y}{2^n}\Big). 
+	}
+	%%
+	Aplicando la hip\'otesis inductiva  \eq{CVn} con $m=\ell+1$ y $m=\ell$, 
+	obtenemos lo siguiente
+	%%
+	\Eq{JCVa}{
+		%%
+		\frac{m}{2^{n+1}}F(x)&+\Big(1-\frac{m}{2^{n+1}}\Big)F(y)
+			+ \sum_{k=0}^{n}2 d_{\Z}\Big(2^k \frac{m}{2^{n+1}}\Big)A\Big(\frac{x-y}{2^k}\Big) \\
+		%%
+		&\subseteq \frac12\cl\bigg(F\Big(\frac{\ell+1}{2^{n}}x+\Big(1-\frac{\ell+1}{2^{n}}\Big)y\Big)
+			+\sum_{k=0}^{n-1} 2d_\Z\Big(2^k\frac{\ell+1}{2^{n}}\Big)B\Big(\frac{x-y}{2^k}\Big)\bigg)\\
+		%%
+		&\qquad+\frac12\cl\bigg(F\Big(\frac{\ell}{2^{n}}x+\Big(1-\frac{\ell}{2^{n}}\Big)y\Big)
+			+ \sum_{k=0}^{n-1} 2d_\Z\Big(2^k\frac{\ell}{2^{n}}\Big)B\Big(\frac{x-y}{2^k}\Big)\bigg) 
+			+ A\Big(\frac{x-y}{2^n}\Big)\\
+		%%
+		&\subseteq \cl\bigg(\frac12\bigg(F\Big(\frac{\ell+1}{2^{n}}x+\Big(1-\frac{\ell+1}{2^{n}}\Big)y\Big)
+			+F\Big(\frac{\ell}{2^{n}}x+\Big(1-\frac{\ell}{2^{n}}\Big)y\Big)\bigg)
+			+A\Big(\frac{x-y}{2^n}\Big) \\
+		%%
+		&\qquad+ \sum_{k=0}^{n-1}\bigg(d_\Z\Big(2^k\frac{\ell+1}{2^{n}}\Big)B\Big(\frac{x-y}{2^k}\Big)
+			+d_\Z\Big(2^k\frac{\ell}{2^{n}}\Big) B\Big(\frac{x-y}{2^k}\Big)\bigg)\bigg). \\
+		%%
+	}
 Now, using the Jensen convexity assumption \eq{JCV}, it follows that
 \Eq{*}{
   \frac12\bigg(F\Big(\frac{\ell+1}{2^{n}}x+\Big(1-\frac{\ell+1}{2^{n}}\Big)y\Big)
