@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.28)  29 OCT 2017 19:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.12.3)  3 DEC 2017 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **TesisDoctoral.tex
 (./TesisDoctoral.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+Babel <3.9h> and hyphenation patterns for 5 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
@@ -734,19 +734,20 @@ Package: calligra 2012/04/10 v1.9 LaTeX package calligra
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2013/12/03 3.9h The Babel package
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2012/08/20 v3.3p English support from the babel system
+(/usr/share/texlive/texmf-dist/tex/generic/babel/spanish.ldf
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2013/12/03 3.9h Babel common definitions
 \babel@savecnt=\count121
 \U@D=\dimen157
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
+\es@quottoks=\toks39
+\es@quotdepth=\count122
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/fancybox/fancybox.sty
 Package: fancybox 2010/05/15 1.4
@@ -755,10 +756,10 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \@fancybox=\box38
 \shadowsize=\dimen158
 \@Sbox=\box39
-\do@VerbBox=\toks39
-\the@fancyput=\toks40
-\this@fancyput=\toks41
-\EndVerbatimTokens=\toks42
+\do@VerbBox=\toks40
+\the@fancyput=\toks41
+\this@fancyput=\toks42
+\EndVerbatimTokens=\toks43
 \Verbatim@Outfile=\write4
 \Verbatim@Infile=\read2
 ) (./fancyhdrtesis.sty
@@ -780,20 +781,20 @@ Package: shortvrb 2010/02/04 v2.1e Standard LaTeX documentation package (FMi)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks43
-\verbatim@line=\toks44
+\every@verbatim=\toks44
+\verbatim@line=\toks45
 \verbatim@in@stream=\read3
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
-\c@tracingmulticols=\count122
+\c@tracingmulticols=\count123
 \mult@box=\box40
 \multicol@leftmargin=\dimen159
-\c@unbalance=\count123
-\c@collectmore=\count124
-\doublecol@number=\count125
-\multicoltolerance=\count126
-\multicolpretolerance=\count127
+\c@unbalance=\count124
+\c@collectmore=\count125
+\doublecol@number=\count126
+\multicoltolerance=\count127
+\multicolpretolerance=\count128
 \full@width=\dimen160
 \page@free=\dimen161
 \premulticols=\dimen162
@@ -823,14 +824,14 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \@tempa=\box61
 \@tempa=\box62
 \@tempa=\box63
-\c@columnbadness=\count128
-\c@finalcolumnbadness=\count129
+\c@columnbadness=\count129
+\c@finalcolumnbadness=\count130
 \last@try=\dimen164
 \multicolovershoot=\dimen165
 \multicolundershoot=\dimen166
 \mult@nat@firstbox=\box64
 \colbreak@box=\box65
-\multicol@sort@counter=\count130
+\multicol@sort@counter=\count131
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
@@ -842,11 +843,11 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen167
 \extrarowheight=\dimen168
-\NC@list=\toks45
+\NC@list=\toks46
 \extratabsurround=\skip60
 \backup@length=\skip61
 )
-\everycr=\toks46
+\everycr=\toks47
 \minrowclearance=\skip62
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/graphpap.sty
@@ -863,7 +864,7 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \aftertitleunit=\skip64
 \ttl@plus=\dimen172
 \ttl@minus=\dimen173
-\ttl@toksa=\toks47
+\ttl@toksa=\toks48
 \titlewidth=\dimen174
 \titlewidthlast=\dimen175
 \titlewidthfirst=\dimen176
@@ -887,9 +888,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count131
-\Gm@cntv=\count132
-\c@Gm@tempcnt=\count133
+\Gm@cnth=\count132
+\Gm@cntv=\count133
+\c@Gm@tempcnt=\count134
 \Gm@bindingoffset=\dimen177
 \Gm@wd@mp=\dimen178
 \Gm@odd@mp=\dimen179
@@ -898,23 +899,22 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen182
 \Gm@layouthoffset=\dimen183
 \Gm@layoutvoffset=\dimen184
-\Gm@dimlist=\toks48
+\Gm@dimlist=\toks49
 )
 (./configuracion.tex) (./comandos.tex
-\c@theorem=\count134
-\c@Atheorem=\count135
+\c@theorem=\count135
+\c@Atheorem=\count136
 )
 \@indexfile=\write5
 \openout5 = `TesisDoctoral.idx'.
 
 
 Writing index file TesisDoctoral.idx
-
-LaTeX Warning: Unused global option(s):
-    [spanish].
-
-(./TesisDoctoral.aux (./jurado.aux) (./dedicatoria.aux) (./agradecimientos.aux)
-(./resumen.aux) (./abstract.aux) (./intro.aux)
+(./TesisDoctoral.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+ (./jurado.aux) (./dedicatoria.aux) (./agradecimientos.aux) (./resumen.aux) (./
+abstract.aux) (./intro.aux)
 
 LaTeX Warning: Label `ETT1' multiply defined.
 
@@ -1019,17 +1019,17 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count136
+\scratchcounter=\count137
 \scratchdimen=\dimen185
 \scratchbox=\box67
-\nofMPsegments=\count137
-\nofMParguments=\count138
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count139
+\nofMPsegments=\count138
+\nofMParguments=\count139
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count140
 \MPscratchDim=\dimen186
-\MPnumerator=\count140
-\makeMPintoPDFobject=\count141
-\everyMPtoPDFconversion=\toks50
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
+\everyMPtoPDFconversion=\toks51
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -1074,6 +1074,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1189,17 +1192,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
-]) (./TesisDoctoral.toc [4
+]) (./TesisDoctoral.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [4
 
 
 ])
 \tf@toc=\write6
 \openout6 = `TesisDoctoral.toc'.
 
+LaTeX Info: Redefining \. on input line 113.
+LaTeX Info: Redefining \% on input line 113.
 
 
 Package Fancyhdr Warning: \headheight is too small (13.59999pt): 
- Make it at least 14.49998pt.
+ Make it at least 15.13202pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
@@ -1211,22 +1219,23 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 7.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (14.26653pt too wide) in paragraph at lines 14--20
-[]\T1/ptm/m/n/12 Los teo-re-mas prin-ci-pales en esta mono-grafía gen-er-al-iza
-n al-gunos de los re-sul-ta-dos obtenidos
- []
-
 [6
 
 
-]) [7]
+])
+LaTeX Info: Redefining \. on input line 116.
+LaTeX Info: Redefining \% on input line 116.
+ [7]
 \openout2 = `abstract.aux'.
 
  (./abstract.tex [8
 
 
 
-]) [9]
+])
+LaTeX Info: Redefining \. on input line 118.
+LaTeX Info: Redefining \% on input line 118.
+ [9]
 \openout2 = `intro.aux'.
 
  (./intro.tex [10
@@ -1234,245 +1243,349 @@ n al-gunos de los re-sul-ta-dos obtenidos
 
 
 ]
-
-Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
- Make it at least 15.13202pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[11] [12]) [13] [14] (./ETL.tex
-Chapter 1.
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+ [11]
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
+ [12])
+LaTeX Info: Redefining \. on input line 120.
+LaTeX Info: Redefining \% on input line 120.
+ [13]
+LaTeX Info: Redefining \. on input line 120.
+LaTeX Info: Redefining \% on input line 120.
+ [14]
+(./ETL.tex
+Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 27.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
 [15
 
 
-] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27]
-Overfull \hbox (0.1618pt too wide) in paragraph at lines 703--703
-[][]\T1/ptm/m/it/12 De la defini-ción se ob-tiene de in-medi-ato que todo con-j
-unto $\U/eur/m/n/12 S;$ $K$\T1/ptm/m/it/12 -acotado
+]
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+ [16]
+LaTeX Info: Redefining \. on input line 131.
+LaTeX Info: Redefining \% on input line 131.
+ [17]
+LaTeX Info: Redefining \. on input line 176.
+LaTeX Info: Redefining \% on input line 176.
+ [18]
+LaTeX Info: Redefining \. on input line 227.
+LaTeX Info: Redefining \% on input line 227.
+ [19]
+LaTeX Info: Redefining \. on input line 273.
+LaTeX Info: Redefining \% on input line 273.
+ [20]
+LaTeX Info: Redefining \. on input line 352.
+LaTeX Info: Redefining \% on input line 352.
+ [21]
+LaTeX Info: Redefining \. on input line 395.
+LaTeX Info: Redefining \% on input line 395.
+ [22]
+LaTeX Info: Redefining \. on input line 444.
+LaTeX Info: Redefining \% on input line 444.
+ [23]
+LaTeX Info: Redefining \. on input line 490.
+LaTeX Info: Redefining \% on input line 490.
+ [24]
+LaTeX Info: Redefining \. on input line 538.
+LaTeX Info: Redefining \% on input line 538.
+ [25]
+LaTeX Info: Redefining \. on input line 581.
+LaTeX Info: Redefining \% on input line 581.
+ [26]
+LaTeX Info: Redefining \. on input line 673.
+LaTeX Info: Redefining \% on input line 673.
+ [27]
+Overfull \hbox (0.1618pt too wide) in paragraph at lines 704--704
+[][]\T1/ptm/m/it/12 De la de-fi-ni-ción se ob-tie-ne de in-me-dia-to que to-do 
+con-jun-to $\U/eur/m/n/12 S;$ $K$\T1/ptm/m/it/12 -acotado
  []
 
-[28] [29] [30] [31] [32]) (./previo.tex [33]
-Chapter 2.
+LaTeX Info: Redefining \. on input line 730.
+LaTeX Info: Redefining \% on input line 730.
+[28]
+LaTeX Info: Redefining \. on input line 780.
+LaTeX Info: Redefining \% on input line 780.
+ [29]
+LaTeX Info: Redefining \. on input line 834.
+LaTeX Info: Redefining \% on input line 834.
+ [30]
+LaTeX Info: Redefining \. on input line 879.
+LaTeX Info: Redefining \% on input line 879.
+ [31]
+LaTeX Info: Redefining \. on input line 923.
+LaTeX Info: Redefining \% on input line 923.
+ [32]) (./previo.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [33]
+Cap\'{\i }tulo 2.
 [34
 
-] [35] [36] [37] [38] [39] [40]
-Overfull \hbox (12.19261pt too wide) in paragraph at lines 317--323
-[]\T1/ptm/m/n/12 En 2008, Z. Boros lo-gra re-solver sat-is-fac-to-ri-a-mente en
- su artículo [][[]], el prob-lema planteado
- []
+]
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+ [35]
+LaTeX Info: Redefining \. on input line 134.
+LaTeX Info: Redefining \% on input line 134.
+ [36]
+LaTeX Info: Redefining \. on input line 174.
+LaTeX Info: Redefining \% on input line 174.
+ [37]
+LaTeX Info: Redefining \. on input line 213.
+LaTeX Info: Redefining \% on input line 213.
+ [38]
+LaTeX Info: Redefining \. on input line 257.
+LaTeX Info: Redefining \% on input line 257.
+ [39]
+LaTeX Info: Redefining \. on input line 308.
+LaTeX Info: Redefining \% on input line 308.
+ [40]
+LaTeX Info: Redefining \. on input line 347.
+LaTeX Info: Redefining \% on input line 347.
+ [41]
+LaTeX Info: Redefining \. on input line 393.
+LaTeX Info: Redefining \% on input line 393.
+ [42]
+LaTeX Info: Redefining \. on input line 450.
+LaTeX Info: Redefining \% on input line 450.
+ [43]) (./Multifunciones.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 
-[41] [42] [43]) (./Multifunciones.tex [44]
-Chapter 3.
-
-Overfull \hbox (11.66998pt too wide) in paragraph at lines 4--9
-\T1/ptm/m/n/12 junto con al-gu-nas propiedades im-por-tantes. Las defini-ciones
- aquí es-table-ci-das han sido tomadas
- []
-
+[44]
+Cap\'{\i }tulo 3.
 [45
 
-] [46] [47] [48]
-Overfull \hbox (5.0874pt too wide) in paragraph at lines 205--208
-[][]\T1/ptm/m/it/12 Sean $\U/eur/m/n/12 A; B$ \T1/ptm/m/it/12 y $\U/eur/m/n/12 
-C$ \T1/ptm/m/it/12 con-jun-tos da-dos de un es-pa-cio lin-eal topológico.
- []
+]
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
+ [46]
+LaTeX Info: Redefining \. on input line 133.
+LaTeX Info: Redefining \% on input line 133.
+ [47]
+LaTeX Info: Redefining \. on input line 182.
+LaTeX Info: Redefining \% on input line 182.
+ [48]
+LaTeX Info: Redefining \. on input line 224.
+LaTeX Info: Redefining \% on input line 224.
+ [49]
+LaTeX Info: Redefining \. on input line 273.
+LaTeX Info: Redefining \% on input line 273.
+ [50]
+LaTeX Info: Redefining \. on input line 308.
+LaTeX Info: Redefining \% on input line 308.
+ [51]
+LaTeX Info: Redefining \. on input line 369.
+LaTeX Info: Redefining \% on input line 369.
+ [52]
+LaTeX Info: Redefining \. on input line 402.
+LaTeX Info: Redefining \% on input line 402.
+ [53]
+LaTeX Info: Redefining \. on input line 447.
+LaTeX Info: Redefining \% on input line 447.
+ [54]
+LaTeX Info: Redefining \. on input line 479.
+LaTeX Info: Redefining \% on input line 479.
+ [55]
+LaTeX Info: Redefining \. on input line 526.
+LaTeX Info: Redefining \% on input line 526.
+ [56]
+LaTeX Info: Redefining \. on input line 567.
+LaTeX Info: Redefining \% on input line 567.
+ [57]
+LaTeX Info: Redefining \. on input line 617.
+LaTeX Info: Redefining \% on input line 617.
+ [58]
+LaTeX Info: Redefining \. on input line 660.
+LaTeX Info: Redefining \% on input line 660.
+ [59]
+LaTeX Info: Redefining \. on input line 706.
+LaTeX Info: Redefining \% on input line 706.
 
-[49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62]
-Overfull \hbox (5.04153pt too wide) detected at line 804
+[60]
+LaTeX Info: Redefining \. on input line 747.
+LaTeX Info: Redefining \% on input line 747.
+ [61]
+LaTeX Info: Redefining \. on input line 798.
+LaTeX Info: Redefining \% on input line 798.
+ [62]
+Overfull \hbox (5.04153pt too wide) detected at line 807
 [] []
  []
 
+LaTeX Info: Redefining \. on input line 837.
+LaTeX Info: Redefining \% on input line 837.
 [63]
-Overfull \hbox (8.92569pt too wide) in paragraph at lines 853--861
-[]\T1/ptm/m/n/12 Aplicando la Proposi-ción []3.5.52[] con la fun-ción $\U/eur/m
-/n/12 '$ \T1/ptm/m/n/12 definida me-di-ante la fór-mula $\U/eur/m/n/12 '\U/euf/
-m/n/12 (\U/eur/m/n/12 x\U/euf/m/n/12 ) :=
- []
+LaTeX Info: Redefining \. on input line 890.
+LaTeX Info: Redefining \% on input line 890.
+ [64]) (./Hazy-Pales-Error-Term.tex
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+ [65]
+Cap\'{\i }tulo 4.
+[66
 
-[64] [65]
-Overfull \hbox (24.81656pt too wide) detected at line 946
+]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+ [67]
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
+ [68]
+LaTeX Info: Redefining \. on input line 144.
+LaTeX Info: Redefining \% on input line 144.
+ [69]
+LaTeX Info: Redefining \. on input line 170.
+LaTeX Info: Redefining \% on input line 170.
+ [70]
+LaTeX Info: Redefining \. on input line 205.
+LaTeX Info: Redefining \% on input line 205.
+ [71]
+LaTeX Info: Redefining \. on input line 242.
+LaTeX Info: Redefining \% on input line 242.
+ [72]
+LaTeX Info: Redefining \. on input line 266.
+LaTeX Info: Redefining \% on input line 266.
+ [73]
+LaTeX Info: Redefining \. on input line 291.
+LaTeX Info: Redefining \% on input line 291.
+ [74]
+LaTeX Info: Redefining \. on input line 334.
+LaTeX Info: Redefining \% on input line 334.
+ [75]
+LaTeX Info: Redefining \. on input line 384.
+LaTeX Info: Redefining \% on input line 384.
+ [76]
+LaTeX Info: Redefining \. on input line 422.
+LaTeX Info: Redefining \% on input line 422.
+ [77])
+(./Tak-Tab-Error-Term.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [78]
+Cap\'{\i }tulo 5.
+[79
+
+]
+LaTeX Info: Redefining \. on input line 90.
+LaTeX Info: Redefining \% on input line 90.
+ [80]
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
+ [81]
+Overfull \hbox (5.82599pt too wide) detected at line 181
 [] []
  []
 
-[66]
-Overfull \hbox (5.78955pt too wide) in paragraph at lines 994--998
-[]\T1/ptm/m/n/12 Using that $\U/eur/m/n/12 S[]$ \T1/ptm/m/n/12 is clos-edly $\U
-/eur/m/n/12 K$\T1/ptm/m/n/12 -convex and clos-edly $\U/eur/m/n/12 K$\T1/ptm/m/n
-/12 -starshaped, we have, for all $\U/eur/m/n/12 t[]; [] ; t[] \OMS/cmsy/m/n/12
- ^^U
- []
+LaTeX Info: Redefining \. on input line 181.
+LaTeX Info: Redefining \% on input line 181.
+[82]
+LaTeX Info: Redefining \. on input line 237.
+LaTeX Info: Redefining \% on input line 237.
+ [83]
+LaTeX Info: Redefining \. on input line 273.
+LaTeX Info: Redefining \% on input line 273.
+ [84]
+LaTeX Info: Redefining \. on input line 318.
+LaTeX Info: Redefining \% on input line 318.
+ [85]
+LaTeX Info: Redefining \. on input line 358.
+LaTeX Info: Redefining \% on input line 358.
+ [86]
+LaTeX Info: Redefining \. on input line 397.
+LaTeX Info: Redefining \% on input line 397.
+ [87]
+LaTeX Info: Redefining \. on input line 452.
+LaTeX Info: Redefining \% on input line 452.
+ [88]
+LaTeX Info: Redefining \. on input line 515.
+LaTeX Info: Redefining \% on input line 515.
+ [89]
+LaTeX Info: Redefining \. on input line 564.
+LaTeX Info: Redefining \% on input line 564.
+ [90]
+LaTeX Info: Redefining \. on input line 599.
+LaTeX Info: Redefining \% on input line 599.
+ [91]
+LaTeX Info: Redefining \. on input line 638.
+LaTeX Info: Redefining \% on input line 638.
+ [92]
+LaTeX Info: Redefining \. on input line 664.
+LaTeX Info: Redefining \% on input line 664.
+ [93]
+LaTeX Info: Redefining \. on input line 727.
+LaTeX Info: Redefining \% on input line 727.
+ [94]
+LaTeX Info: Redefining \. on input line 771.
+LaTeX Info: Redefining \% on input line 771.
+ [95]
+LaTeX Info: Redefining \. on input line 797.
+LaTeX Info: Redefining \% on input line 797.
+ [96]
+LaTeX Info: Redefining \. on input line 830.
+LaTeX Info: Redefining \% on input line 830.
 
-[67]
-Overfull \hbox (45.19041pt too wide) in paragraph at lines 1025--1035
-[]\T1/ptm/m/n/12 For the op-po-site in-clu-sion, in view of $\U/eur/m/n/12 '[]\
-U/euf/m/n/12 (\U/eur/m/n/12 t; x\U/euf/m/n/12 ) \OMS/cmsy/m/n/12 6\U/euf/m/n/12
- = \U/eur/m/n/12 0$\T1/ptm/m/n/12 , we can choose $\U/eur/m/n/12 n[]$ \T1/ptm/m
-/n/12 such that $\U/eur/m/n/12 d[]\U/euf/m/n/12 (\U/eur/m/n/12 2[]t\U/euf/m/n/1
-2 )\U/eur/m/n/12 '[][][] >
- []
-
-
-Overfull \hbox (5.82599pt too wide) detected at line 1035
-[] []
- []
-
-[68]
-Overfull \hbox (4.64815pt too wide) detected at line 1082
-[] []
- []
-
-[69] [70] [71] [72]) (./Hazy-Pales-Error-Term.tex [73]
-Chapter 4.
-[74
-
-] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84]
-Overfull \hbox (12.84966pt too wide) in paragraph at lines 390--409
-\T1/ptm/m/n/12 mente $\U/eur/m/n/12 K$\T1/ptm/m/n/12 -Jensen cón-cavas re-spec-
-ti-va-mente y sus de-mostra-ciones son sim-i-lares a la de-mostración
- []
-
-) (./Tak-Tab-Error-Term.tex [85]
-Chapter 5.
-[86
-
-] [87]
-
-LaTeX Warning: Reference `EJCd' on page 88 undefined on input line 112.
-
-
-Overfull \hbox (8.3285pt too wide) detected at line 152
-[] []
- []
-
-[88]
-
-LaTeX Warning: Reference `JCV' on page 89 undefined on input line 153.
-
-
-LaTeX Warning: Reference `JCd' on page 89 undefined on input line 162.
-
-
-Overfull \hbox (80.74985pt too wide) detected at line 169
-[] []
- []
-
-
-Overfull \hbox (26.71764pt too wide) detected at line 180
-[] []
- []
-
-[89]
-
-LaTeX Warning: Reference `CV+' on page 90 undefined on input line 186.
-
-
-Overfull \hbox (3.79453pt too wide) detected at line 195
-[] []
- []
-
-[90]
-Overfull \hbox (70.3968pt too wide) detected at line 226
-[] []
- []
-
-
-LaTeX Warning: Reference `AB' on page 91 undefined on input line 227.
-
-[91]
-Overfull \hbox (44.59392pt too wide) detected at line 258
-[] []
- []
-
-
-Overfull \hbox (44.59392pt too wide) detected at line 272
-[] []
- []
-
-
-Overfull \hbox (10.73567pt too wide) detected at line 310
-[] []
- []
-
-[92]
-
-LaTeX Warning: Reference `CCn' on page 93 undefined on input line 324.
-
-
-LaTeX Warning: Reference `EJCd' on page 93 undefined on input line 335.
-
-
-Overfull \hbox (35.17752pt too wide) detected at line 350
-[] []
- []
-
-[93]
-Overfull \hbox (7.95168pt too wide) detected at line 358
-[] []
- []
-
-
-Overfull \hbox (35.56845pt too wide) detected at line 372
-[] []
- []
-
-[94]
-
-LaTeX Warning: Reference `EJCd' on page 95 undefined on input line 387.
-
-[95]
-Overfull \hbox (44.59392pt too wide) detected at line 422
-[] []
- []
-
-[96]
-Overfull \hbox (44.59392pt too wide) detected at line 434
-[] []
- []
-
-
-Overfull \hbox (16.93416pt too wide) in paragraph at lines 437--442
-[]\T1/ptm/m/n/12 Using Teo-rema []5.1.5[] with the set-valued maps $\U/eur/m/n/
-12 A\U/euf/m/n/12 (\U/eur/m/n/12 u\U/euf/m/n/12 ) =
- []
-
-) [97]
+[97]
+LaTeX Info: Redefining \. on input line 866.
+LaTeX Info: Redefining \% on input line 866.
+ [98])
+LaTeX Info: Redefining \. on input line 132.
+LaTeX Info: Redefining \% on input line 132.
+ [99]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex) [98
+ (./conclusion.tex) [100
 
 
-] (./TesisDoctoral.bbl [99
+] (./TesisDoctoral.bbl [101
 
 
-] [100] [101]
+]
+LaTeX Info: Redefining \. on input line 99.
+LaTeX Info: Redefining \% on input line 99.
+ [102]
+LaTeX Info: Redefining \. on input line 147.
+LaTeX Info: Redefining \% on input line 147.
+
+[103]
 Underfull \hbox (badness 4120) in paragraph at lines 186--189
-[]\T1/ptm/m/n/12 F. Pa-palini, \T1/ptm/m/it/12 The $\U/eur/m/n/12 K$\T1/ptm/m/i
-t/12 -midpoint $[]$ con-vex-ity [con-cav-ity] and lower [up-per] $\U/eur/m/n/12
- K$\T1/ptm/m/it/12 -
+[]\T1/ptm/m/n/12 F. Pa-pa-li-ni, \T1/ptm/m/it/12 The $\U/eur/m/n/12 K$\T1/ptm/m
+/it/12 -midpoint $[]$ con-ve-xity [con-ca-vity] and lo-wer [up-per] $\U/eur/m/n
+/12 K$\T1/ptm/m/it/12 -
  []
 
-[102] [103]) [104] (./TesisDoctoral.aux (./jurado.aux) (./dedicatoria.aux)
+LaTeX Info: Redefining \. on input line 194.
+LaTeX Info: Redefining \% on input line 194.
+[104]
+LaTeX Info: Redefining \. on input line 244.
+LaTeX Info: Redefining \% on input line 244.
+ [105])
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
+ [106] (./TesisDoctoral.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+ (./jurado.aux) (./dedicatoria.aux)
 (./agradecimientos.aux) (./resumen.aux) (./abstract.aux) (./intro.aux)
 (./conclusion.aux))
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13948 strings out of 495028
- 235982 string characters out of 6181497
- 317361 words of memory out of 5000000
- 16682 multiletter control sequences out of 15000+600000
- 63199 words of font info for 112 fonts, out of 8000000 for 9000
- 16 hyphenation exceptions out of 8191
- 63i,15n,67p,449b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 14350 strings out of 494966
+ 241201 string characters out of 6179559
+ 323563 words of memory out of 5000000
+ 17093 multiletter control sequences out of 15000+600000
+ 68415 words of font info for 114 fonts, out of 8000000 for 9000
+ 42 hyphenation exceptions out of 8191
+ 63i,15n,67p,449b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
@@ -1489,10 +1602,10 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on TesisDoctoral.pdf (105 pages, 571411 bytes).
+Output written on TesisDoctoral.pdf (107 pages, 573471 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
+ 418 PDF objects out of 1000 (max. 8388607)
+ 289 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

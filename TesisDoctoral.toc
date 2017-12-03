@@ -1,4 +1,4 @@
-\select@language {english}
+\select@language {spanish}
 \contentsline {chapter}{Resumen}{6}
 \contentsline {chapter}{Introducci\'on}{10}
 \contentsline {chapter}{\numberline {1}Espacios Topol\IeC {\'o}gicos Lineales.}{15}
@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {1.2}Espacios vectoriales.}{19}
 \contentsline {section}{\numberline {1.3}Espacios topol\IeC {\'o}gicos lineales.}{21}
 \contentsline {section}{\numberline {1.4}Conos convexos.}{27}
-\contentsline {section}{\numberline {1.5}Conjuntos $K$-convexos.}{29}
+\contentsline {section}{\numberline {1.5}Conjuntos $K$-convexos.}{30}
 \contentsline {chapter}{\numberline {2}El teorema de Bernstein--Doetsch}{34}
 \contentsline {section}{\numberline {2.1}Versi\IeC {\'o}n Original.}{35}
 \contentsline {section}{\numberline {2.2}Cambio en la estructura del espacio subyacente.}{37}
@@ -19,12 +19,12 @@
 \contentsline {section}{\numberline {3.3}El teorema de Bernstein--Doetsch para multifunciones.}{55}
 \contentsline {section}{\numberline {3.4}Convexidad fuerte.}{59}
 \contentsline {section}{\numberline {3.5}Transformaci\IeC {\'o}n de Takagi.}{60}
-\contentsline {section}{\numberline {3.6}Transformaci\IeC {\'o}n de Takagi-Tabor.}{65}
-\contentsline {chapter}{\numberline {4}T\'ermino de error de tipo Takagi-Hazy-P\'ales.}{74}
-\contentsline {section}{\numberline {4.1}Teorema de tipo Bernstein--Doetsch para multifunciones convexas}{74}
-\contentsline {section}{\numberline {4.2}Teorema de tipo Bernstein--Doetsch para multifunciones c\IeC {\'o}ncavas.}{79}
-\contentsline {section}{\numberline {4.3}Consecuencias de los teoremas previos.}{83}
-\contentsline {chapter}{\numberline {5}T\'ermino de error de tipo Takagi-Tabor.}{86}
-\contentsline {section}{\numberline {5.1}Convexidad y concavidad sobre los racionales di\'adicos.}{86}
-\contentsline {chapter}{Conclusiones}{97}
-\contentsline {chapter}{Bibliograf\'ia}{104}
+\contentsline {chapter}{\numberline {4}T\'ermino de error de tipo Takagi-Hazy-P\'ales.}{66}
+\contentsline {section}{\numberline {4.1}Teorema de tipo Bernstein--Doetsch para multifunciones convexas}{66}
+\contentsline {section}{\numberline {4.2}Teorema de tipo Bernstein--Doetsch para multifunciones c\IeC {\'o}ncavas.}{71}
+\contentsline {section}{\numberline {4.3}Consecuencias de los teoremas previos.}{75}
+\contentsline {chapter}{\numberline {5}T\'ermino de error de tipo Takagi-Tabor.}{79}
+\contentsline {section}{\numberline {5.1}Tranformaci\'on de Takagi-Tabor para una multifunci\'on}{79}
+\contentsline {section}{\numberline {5.2}Convexidad y concavidad sobre los racionales di\'adicos.}{88}
+\contentsline {chapter}{Conclusiones}{99}
+\contentsline {chapter}{Bibliograf\'ia}{106}
