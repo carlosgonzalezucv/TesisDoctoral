@@ -25,16 +25,27 @@ $$
 donde, $A(\cdot)$ y $B(\cdot)$ son multifunciones definidas en $D-D$ y que además satisfacen que para todo $x\in D-D$,
 $0\in A(x)\cap B(x)$. Ahora bien, asumiendo algunas condiciones de regularidad sobre la multifunción $F$  
 se puede demostrar que la multifunción $F(\cdot)$ satisface para $x,y\in D$ y $t\in[0,1]$
-la siguiente inclusión:
+las siguientes inclusiones:
 $$
 tF(x)+(1-t)F(y) + A^T(t,x-y) \subseteq \overline{\bigg(F(tx+(1-t)y)+B^T(t,x-y)\bigg)}.
 $$
+y
+$$
+tF(x)+(1-t)F(y) + A^\perp(t,x-y) \subseteq \overline{\bigg(F(tx+(1-t)y)+B^\perp(t,x-y)\bigg)}.
+$$
 
-Aquí, $A^T$ denota la transformación de Takagi asociada a la multifunción $A$, 
-y esta definida para $t\in[0,1]$ y $x\in D- D$ mediante la siguiente fórmula:
+Aquí, $A^T$ denota la transformación de Takagi-Hazy-P\'ales asociada a la multifunción $A$, 
+mientras que $A^\perp$ denota la transformaci\'on de Takagi-Tabor asociada a la multifunci\'on
+$A$. Estas transformaciones, estan definidas para 
+ $t\in[0,1]$ y $x\in D- D$ mediante las siguientes fórmulas:
 $$
-A^T(t,x) = \overline{\bigcup_{n=0}^{\infty}\sum_{k=0}^n{\frac1{2^k}A(2\mbox{dist}(2^kt,\Z)x)}}.
+A^T(t,x) = \overline{\bigcup_{n=0}^{\infty}\sum_{k=0}^n{\frac1{2^k}A(2\mbox{dist}(2^kt,\Z)x)}}
 $$
+y
+$$
+A^\perp(t,x) = \overline{\bigcup_{n=0}^{\infty}\sum_{k=0}^n{2\mbox{dist}(2^kt,\Z)A\bigg(\frac{x}{2^k}\bigg)}}
+$$
+respectivamente
 
 {\bf Palabras Claves:} K-Jensen convexidad/concavidad, multifunción, Transformación de Takagi, convexidad aproximada,
 convexidad fuerte.

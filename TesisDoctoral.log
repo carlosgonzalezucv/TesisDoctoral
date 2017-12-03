@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.12.3)  3 DEC 2017 13:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.12.3)  3 DEC 2017 13:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -773,9 +773,6 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \f@ncyO@olf=\skip56
 \f@ncyO@orf=\skip57
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/showkeys.sty
-Package: showkeys 2007/08/07 v3.15 Show cite and label keys (DPC, MH)
-)
 (/usr/share/texlive/texmf-dist/tex/latex/base/shortvrb.sty
 Package: shortvrb 2010/02/04 v2.1e Standard LaTeX documentation package (FMi)
 )
@@ -913,8 +910,8 @@ Writing index file TesisDoctoral.idx
 (./TesisDoctoral.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
- (./jurado.aux) (./dedicatoria.aux) (./agradecimientos.aux) (./resumen.aux) (./
-abstract.aux) (./intro.aux)
+ (./dedicatoria.aux) (./resumen.aux) (./abstract.aux)
+(./intro.aux)
 
 LaTeX Warning: Label `ETT1' multiply defined.
 
@@ -1119,68 +1116,61 @@ File: ucv.jpg Graphic file (type jpg)
 Package pdftex.def Info: ucv.jpg used on input line 22.
 (pdftex.def)             Requested size: 86.72466pt x 87.01375pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 37.
-LaTeX Font Info:    Try loading font information for U+eur on input line 37.
+(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 36.
+LaTeX Font Info:    Try loading font information for U+eur on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueur.fd
 File: ueur.fd 2013/01/14 v3.01 Euler Roman
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 37.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+euf on input line 37.
+LaTeX Font Info:    Try loading font information for U+euf on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-LaTeX Font Info:    Try loading font information for U+eus on input line 37.
+LaTeX Font Info:    Try loading font information for U+eus on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
-LaTeX Font Info:    Try loading font information for U+euex on input line 37.
+LaTeX Font Info:    Try loading font information for U+euex on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuex.fd
 File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 42.
  [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ucv.jpg>])
-\openout2 = `jurado.aux'.
-
- (./jurado.tex
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
- [1
-
-])
 \openout2 = `dedicatoria.aux'.
 
-
-(./dedicatoria.tex [2
-
+ (./dedicatoria.tex [1
 
 ])
-\openout2 = `agradecimientos.aux'.
-
- (./agradecimientos.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 112.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 112.
+
+(./TesisDoctoral.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1188,14 +1178,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3
-
-
-
-]) (./TesisDoctoral.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [4
+[2
 
 
 ])
@@ -1211,349 +1194,328 @@ Package Fancyhdr Warning: \headheight is too small (13.59999pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5]
+[3]
 \openout2 = `resumen.aux'.
 
- (./resumen.tex
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 7.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-[6
+ (./resumen.tex [4
 
 
 ])
 LaTeX Info: Redefining \. on input line 116.
 LaTeX Info: Redefining \% on input line 116.
- [7]
-\openout2 = `abstract.aux'.
-
- (./abstract.tex [8
-
-
-
-])
-LaTeX Info: Redefining \. on input line 118.
-LaTeX Info: Redefining \% on input line 118.
- [9]
+ [5]
 \openout2 = `intro.aux'.
 
- (./intro.tex [10
+ (./intro.tex [6
 
 
 
 ]
 LaTeX Info: Redefining \. on input line 74.
 LaTeX Info: Redefining \% on input line 74.
- [11]
+ [7]
 LaTeX Info: Redefining \. on input line 114.
 LaTeX Info: Redefining \% on input line 114.
- [12])
+ [8])
 LaTeX Info: Redefining \. on input line 120.
 LaTeX Info: Redefining \% on input line 120.
- [13]
+ [9]
 LaTeX Info: Redefining \. on input line 120.
 LaTeX Info: Redefining \% on input line 120.
- [14]
-(./ETL.tex
+ [10] (./ETL.tex
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
-[15
+[11
 
 
 ]
 LaTeX Info: Redefining \. on input line 87.
 LaTeX Info: Redefining \% on input line 87.
- [16]
+ [12]
 LaTeX Info: Redefining \. on input line 131.
 LaTeX Info: Redefining \% on input line 131.
- [17]
+ [13]
 LaTeX Info: Redefining \. on input line 176.
 LaTeX Info: Redefining \% on input line 176.
- [18]
+ [14]
 LaTeX Info: Redefining \. on input line 227.
 LaTeX Info: Redefining \% on input line 227.
- [19]
+ [15]
 LaTeX Info: Redefining \. on input line 273.
 LaTeX Info: Redefining \% on input line 273.
- [20]
+ [16]
 LaTeX Info: Redefining \. on input line 352.
 LaTeX Info: Redefining \% on input line 352.
- [21]
+ [17]
 LaTeX Info: Redefining \. on input line 395.
 LaTeX Info: Redefining \% on input line 395.
- [22]
+ [18]
 LaTeX Info: Redefining \. on input line 444.
 LaTeX Info: Redefining \% on input line 444.
- [23]
+ [19]
 LaTeX Info: Redefining \. on input line 490.
 LaTeX Info: Redefining \% on input line 490.
- [24]
+ [20]
 LaTeX Info: Redefining \. on input line 538.
 LaTeX Info: Redefining \% on input line 538.
- [25]
+ [21]
 LaTeX Info: Redefining \. on input line 581.
 LaTeX Info: Redefining \% on input line 581.
- [26]
+ [22]
 LaTeX Info: Redefining \. on input line 673.
 LaTeX Info: Redefining \% on input line 673.
- [27]
-Overfull \hbox (0.1618pt too wide) in paragraph at lines 704--704
-[][]\T1/ptm/m/it/12 De la de-fi-ni-ción se ob-tie-ne de in-me-dia-to que to-do 
-con-jun-to $\U/eur/m/n/12 S;$ $K$\T1/ptm/m/it/12 -acotado
- []
-
+ [23]
 LaTeX Info: Redefining \. on input line 730.
 LaTeX Info: Redefining \% on input line 730.
-[28]
+ [24]
 LaTeX Info: Redefining \. on input line 780.
 LaTeX Info: Redefining \% on input line 780.
- [29]
+ [25]
 LaTeX Info: Redefining \. on input line 834.
 LaTeX Info: Redefining \% on input line 834.
- [30]
+
+[26]
 LaTeX Info: Redefining \. on input line 879.
 LaTeX Info: Redefining \% on input line 879.
- [31]
+ [27]
 LaTeX Info: Redefining \. on input line 923.
 LaTeX Info: Redefining \% on input line 923.
- [32]) (./previo.tex
+ [28]) (./previo.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [33]
+ [29]
 Cap\'{\i }tulo 2.
-[34
+[30
 
 ]
 LaTeX Info: Redefining \. on input line 87.
 LaTeX Info: Redefining \% on input line 87.
- [35]
+ [31]
 LaTeX Info: Redefining \. on input line 134.
 LaTeX Info: Redefining \% on input line 134.
- [36]
+ [32]
 LaTeX Info: Redefining \. on input line 174.
 LaTeX Info: Redefining \% on input line 174.
- [37]
+ [33]
 LaTeX Info: Redefining \. on input line 213.
 LaTeX Info: Redefining \% on input line 213.
- [38]
+ [34]
 LaTeX Info: Redefining \. on input line 257.
 LaTeX Info: Redefining \% on input line 257.
- [39]
+ [35]
 LaTeX Info: Redefining \. on input line 308.
 LaTeX Info: Redefining \% on input line 308.
- [40]
+ [36]
 LaTeX Info: Redefining \. on input line 347.
 LaTeX Info: Redefining \% on input line 347.
- [41]
+ [37]
 LaTeX Info: Redefining \. on input line 393.
 LaTeX Info: Redefining \% on input line 393.
- [42]
+ [38]
 LaTeX Info: Redefining \. on input line 450.
 LaTeX Info: Redefining \% on input line 450.
- [43]) (./Multifunciones.tex
+ [39]) (./Multifunciones.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
-[44]
+[40]
 Cap\'{\i }tulo 3.
-[45
+[41
 
 ]
 LaTeX Info: Redefining \. on input line 91.
 LaTeX Info: Redefining \% on input line 91.
- [46]
+ [42]
 LaTeX Info: Redefining \. on input line 133.
 LaTeX Info: Redefining \% on input line 133.
- [47]
+ [43]
 LaTeX Info: Redefining \. on input line 182.
 LaTeX Info: Redefining \% on input line 182.
- [48]
+ [44]
 LaTeX Info: Redefining \. on input line 224.
 LaTeX Info: Redefining \% on input line 224.
- [49]
+ [45]
 LaTeX Info: Redefining \. on input line 273.
 LaTeX Info: Redefining \% on input line 273.
- [50]
+ [46]
 LaTeX Info: Redefining \. on input line 308.
 LaTeX Info: Redefining \% on input line 308.
- [51]
+ [47]
 LaTeX Info: Redefining \. on input line 369.
 LaTeX Info: Redefining \% on input line 369.
- [52]
+ [48]
 LaTeX Info: Redefining \. on input line 402.
 LaTeX Info: Redefining \% on input line 402.
- [53]
+ [49]
 LaTeX Info: Redefining \. on input line 447.
 LaTeX Info: Redefining \% on input line 447.
- [54]
+ [50]
 LaTeX Info: Redefining \. on input line 479.
 LaTeX Info: Redefining \% on input line 479.
- [55]
+ [51]
 LaTeX Info: Redefining \. on input line 526.
 LaTeX Info: Redefining \% on input line 526.
- [56]
+ [52]
 LaTeX Info: Redefining \. on input line 567.
 LaTeX Info: Redefining \% on input line 567.
- [57]
+ [53]
 LaTeX Info: Redefining \. on input line 617.
 LaTeX Info: Redefining \% on input line 617.
- [58]
+ [54]
 LaTeX Info: Redefining \. on input line 660.
 LaTeX Info: Redefining \% on input line 660.
- [59]
+ [55]
 LaTeX Info: Redefining \. on input line 706.
 LaTeX Info: Redefining \% on input line 706.
 
-[60]
+[56]
 LaTeX Info: Redefining \. on input line 747.
 LaTeX Info: Redefining \% on input line 747.
- [61]
+ [57]
 LaTeX Info: Redefining \. on input line 798.
 LaTeX Info: Redefining \% on input line 798.
- [62]
+ [58]
 Overfull \hbox (5.04153pt too wide) detected at line 807
 [] []
  []
 
 LaTeX Info: Redefining \. on input line 837.
 LaTeX Info: Redefining \% on input line 837.
-[63]
+[59]
 LaTeX Info: Redefining \. on input line 890.
 LaTeX Info: Redefining \% on input line 890.
- [64]) (./Hazy-Pales-Error-Term.tex
+ [60]) (./Hazy-Pales-Error-Term.tex
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
- [65]
+ [61]
 Cap\'{\i }tulo 4.
-[66
+[62
 
 ]
 LaTeX Info: Redefining \. on input line 79.
 LaTeX Info: Redefining \% on input line 79.
- [67]
+ [63]
 LaTeX Info: Redefining \. on input line 114.
 LaTeX Info: Redefining \% on input line 114.
- [68]
+ [64]
 LaTeX Info: Redefining \. on input line 144.
 LaTeX Info: Redefining \% on input line 144.
- [69]
+ [65]
 LaTeX Info: Redefining \. on input line 170.
 LaTeX Info: Redefining \% on input line 170.
- [70]
+ [66]
 LaTeX Info: Redefining \. on input line 205.
 LaTeX Info: Redefining \% on input line 205.
- [71]
+ [67]
 LaTeX Info: Redefining \. on input line 242.
 LaTeX Info: Redefining \% on input line 242.
- [72]
+ [68]
 LaTeX Info: Redefining \. on input line 266.
 LaTeX Info: Redefining \% on input line 266.
- [73]
+ [69]
 LaTeX Info: Redefining \. on input line 291.
 LaTeX Info: Redefining \% on input line 291.
- [74]
+ [70]
 LaTeX Info: Redefining \. on input line 334.
 LaTeX Info: Redefining \% on input line 334.
- [75]
+ [71]
 LaTeX Info: Redefining \. on input line 384.
 LaTeX Info: Redefining \% on input line 384.
- [76]
+ [72]
 LaTeX Info: Redefining \. on input line 422.
 LaTeX Info: Redefining \% on input line 422.
- [77])
+ [73])
 (./Tak-Tab-Error-Term.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [78]
+ [74]
 Cap\'{\i }tulo 5.
-[79
+[75
 
 ]
 LaTeX Info: Redefining \. on input line 90.
 LaTeX Info: Redefining \% on input line 90.
- [80]
+ [76]
 LaTeX Info: Redefining \. on input line 139.
 LaTeX Info: Redefining \% on input line 139.
- [81]
+ [77]
 Overfull \hbox (5.82599pt too wide) detected at line 181
 [] []
  []
 
 LaTeX Info: Redefining \. on input line 181.
 LaTeX Info: Redefining \% on input line 181.
-[82]
+[78]
 LaTeX Info: Redefining \. on input line 237.
 LaTeX Info: Redefining \% on input line 237.
- [83]
+ [79]
 LaTeX Info: Redefining \. on input line 273.
 LaTeX Info: Redefining \% on input line 273.
- [84]
+ [80]
 LaTeX Info: Redefining \. on input line 318.
 LaTeX Info: Redefining \% on input line 318.
- [85]
+ [81]
 LaTeX Info: Redefining \. on input line 358.
 LaTeX Info: Redefining \% on input line 358.
- [86]
+ [82]
 LaTeX Info: Redefining \. on input line 397.
 LaTeX Info: Redefining \% on input line 397.
- [87]
+ [83]
 LaTeX Info: Redefining \. on input line 452.
 LaTeX Info: Redefining \% on input line 452.
- [88]
+ [84]
 LaTeX Info: Redefining \. on input line 515.
 LaTeX Info: Redefining \% on input line 515.
- [89]
+ [85]
 LaTeX Info: Redefining \. on input line 564.
 LaTeX Info: Redefining \% on input line 564.
- [90]
+ [86]
 LaTeX Info: Redefining \. on input line 599.
 LaTeX Info: Redefining \% on input line 599.
- [91]
+ [87]
 LaTeX Info: Redefining \. on input line 638.
 LaTeX Info: Redefining \% on input line 638.
- [92]
+ [88]
 LaTeX Info: Redefining \. on input line 664.
 LaTeX Info: Redefining \% on input line 664.
- [93]
+ [89]
 LaTeX Info: Redefining \. on input line 727.
 LaTeX Info: Redefining \% on input line 727.
- [94]
+ [90]
 LaTeX Info: Redefining \. on input line 771.
 LaTeX Info: Redefining \% on input line 771.
- [95]
+ [91]
 LaTeX Info: Redefining \. on input line 797.
 LaTeX Info: Redefining \% on input line 797.
- [96]
+ [92]
 LaTeX Info: Redefining \. on input line 830.
 LaTeX Info: Redefining \% on input line 830.
 
-[97]
+[93]
 LaTeX Info: Redefining \. on input line 866.
 LaTeX Info: Redefining \% on input line 866.
- [98])
+ [94])
 LaTeX Info: Redefining \. on input line 132.
 LaTeX Info: Redefining \% on input line 132.
- [99]
+ [95]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex) [100
+ (./conclusion.tex) [96
 
 
-] (./TesisDoctoral.bbl [101
+] (./TesisDoctoral.bbl [97
 
 
 ]
 LaTeX Info: Redefining \. on input line 99.
 LaTeX Info: Redefining \% on input line 99.
- [102]
+ [98]
 LaTeX Info: Redefining \. on input line 147.
 LaTeX Info: Redefining \% on input line 147.
-
-[103]
+ [99]
 Underfull \hbox (badness 4120) in paragraph at lines 186--189
 []\T1/ptm/m/n/12 F. Pa-pa-li-ni, \T1/ptm/m/it/12 The $\U/eur/m/n/12 K$\T1/ptm/m
 /it/12 -midpoint $[]$ con-ve-xity [con-ca-vity] and lo-wer [up-per] $\U/eur/m/n
@@ -1562,28 +1524,27 @@ Underfull \hbox (badness 4120) in paragraph at lines 186--189
 
 LaTeX Info: Redefining \. on input line 194.
 LaTeX Info: Redefining \% on input line 194.
-[104]
+[100]
 LaTeX Info: Redefining \. on input line 244.
 LaTeX Info: Redefining \% on input line 244.
- [105])
+ [101])
 LaTeX Info: Redefining \. on input line 140.
 LaTeX Info: Redefining \% on input line 140.
- [106] (./TesisDoctoral.aux
+ [102] (./TesisDoctoral.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
- (./jurado.aux) (./dedicatoria.aux)
-(./agradecimientos.aux) (./resumen.aux) (./abstract.aux) (./intro.aux)
-(./conclusion.aux))
+ (./dedicatoria.aux) (./resumen.aux)
+(./intro.aux) (./conclusion.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14350 strings out of 494966
- 241201 string characters out of 6179559
- 323563 words of memory out of 5000000
- 17093 multiletter control sequences out of 15000+600000
- 68415 words of font info for 114 fonts, out of 8000000 for 9000
+ 14235 strings out of 494966
+ 239719 string characters out of 6179559
+ 320909 words of memory out of 5000000
+ 17005 multiletter control sequences out of 15000+600000
+ 67173 words of font info for 110 fonts, out of 8000000 for 9000
  42 hyphenation exceptions out of 8191
  63i,15n,67p,449b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1597,15 +1558,14 @@ ic/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on TesisDoctoral.pdf (107 pages, 573471 bytes).
+mbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on TesisDoctoral.pdf (103 pages, 515592 bytes).
 PDF statistics:
- 418 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
+ 402 PDF objects out of 1000 (max. 8388607)
+ 278 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
