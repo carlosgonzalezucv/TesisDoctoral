@@ -875,3 +875,227 @@ respecto a concavidad aproximada y el segundo con respecto a concavidad fuerte.
 	el hecho de que los valores de $F$ son semi-$K$-convexos, implica que estos
 	valores tambi\'en son semi-$\overline{\rec}(B)$-convexos.
 \end{proof}
+
+\section{Resultados de tipo Bernstein--Doetsch}
+\setcounter{theorem}{0}
+
+Los dos resultados que presentaremos a continuaci\'on permiten deducir
+propiedades de convexidad y concavidad de la multifunci\'on $F$ bas\'andonos
+en el \thm{ConvexTab} y en el \thm{ConcaveTab}
+
+\Thm{ConvexTab+}{
+	Sea $D\subseteq X$ un subconjunto convexo y no-vac\'io, 
+	sean $A,B:(D-D)\to\P_0(Y)$ y definamos $K:=\overline{\rec}(B)$. 
+	Sea $F:D\to\P_0(Y)$ una multifunci\'on que satisface la inclusi\'on
+	de tipo Jensen para convexidad
+	\Eq{JCV+}{
+		\dfrac{F(x) + F(y)}{2} + A(x-y) \subseteq \cl\Big(F\Big(\dfrac{x+y}{2}\Big) + B(x-y)\Big) 
+		\qquad (x,y\in D).
+	}
+	Supongamos que adem\'as las multifunciones $A,B$ y $F$ tienen las siguientes
+	propiedades
+	\begin{enumerate}[(i)]
+		\item Para todo $x\in D$, $F(x)$ es un conjunto semi-$K$-estrellado
+		con respecto a alg\'un elemento de $Y$ y tambi\'en semi-$K$ acotado
+		inferiormente. 
+		\item $F$ es direccionalmente $K$-semicontinua superior en $D$;
+		\item Para todo $u\in D-D$, los conjuntos $A(u)$ and $B(u)$ 
+		son semi-$K$-estrellados, semi-$K$ acotados inferiormente
+		y $B(u)$ tambi\'en es un conjunto semi-$K$-convexo;
+		\item Para todo $u\in D-D$, las sucesiones $\Big(A\Big(\dfrac{u}{2^k}\Big)\Big)$ y 
+		$\Big(B\Big(\dfrac{u}{2^k}\Big)\Big)$ son $K$-Cauchy en serie.
+	\end{enumerate}
+	Entonces $F$ satisface la siguiente inclusi\'on para todo $x,y\in D$ y para 
+	todo $t\in[0,1]$
+	\Eq{JCAB}{
+		tF(x) + (1-t)F(y) &+ A^\perp(t,x-y) \\ 
+		&\subseteq \cl\big(F(tx+(1-t)y)+B^\perp(t,x-y)+K\big).
+	}
+}
+	
+\begin{proof}
+	Sean $x,y\in D$, $t\in[0,1]$ fijos. Sea $U\in\U(Y)$  arbitrario y escojamos
+	$V\in\U(Y)$ tal que $[5]V\subseteq U$. Por el \lem{dusc}, existe $\delta_1\in]0,t]$
+	tal que, para $s\in[t-\delta_1,t]$
+	\Eq{tsF}{
+		tF(x) + (1-t)F(y)\subseteq sF(x)+(1-s)F(y) + V + K.
+	}
+	Aplicando el \lem{CchyConv} para las sucesiones $S_k:=A\big(\frac{u}{2^k}\big)$
+	y $S_k:=B\big(\frac{u}{2^k}\big)$, existe $\delta_2\in]0,\delta_1]$
+	tal que, para $s\in[t-\delta_2,t]$,
+	\Eq{tsTA}{
+		A^\perp(t,x-y)&\subseteq A^\perp(s,x-y)+V+K \qquad\mbox{y}\\
+		B^\perp(s,x-y)&\subseteq B^\perp(t,x-y)+V+K.
+	}
+	Sumando \eq{tsF} y la primera inclusi\'on en \eq{tsTA} lado a lado, 
+	para $s\in[t-\delta_2,t]$, obtenemos lo siguiente
+	\Eq{*}{
+		tF(x) + (1-t)F(y) + A^\perp(t,x-y) \subseteq sF(x)+(1-s)F(y) + A^\perp(s,x-y)+[2]V+K.
+	}
+	Como para $s\in\D\cap[0,1]$, tenemos como consecuencia del \thm{ConvexTab}
+	lo siguiente
+	\Eq{*}{
+		sF(x)+(1-s)F(y)+A^\perp(s,x-y) \subseteq \cl\big(F(sx+(1-s)y)+B^\perp(s,x-y)\big),
+	}
+	por lo tanto, para $s\in[t-\delta_2,t]\cap\D$, obtenemos
+	\Eq{tAsB}{
+		tF(x) + (1-t)F(y) + A^\perp(t,x-y) \subseteq F(sx+(1-s)y) + B^\perp(s,x-y)+[3]V+K.
+	}
+	Observando que $F(sx+(1-s)y)=F(tx+(1-t)y+(s-t)(x-y))$ y luego usando el hecho
+	de que $F$ es semi-$K$-semicontinua superior en el punto $tx+(1-t)y$ 
+	en la direcci\'on $x-y$, existe $\delta_3\in]0,\delta_2]$ tal que, para 
+	$s\in[t-\delta_3,t]$,
+	\Eq{FKuhc}{
+		F(sx+(1-s)y)\subseteq F(tx+(1-t)y) + V+K.
+	}
+	Combinando esta inclusi\'on y la segunda inclusi\'on en \eq{tsTA}
+	con \eq{tAsB} y tomando $s\in[t-\delta_3,t]\cap\D$
+	arbitrario, obtenemos
+	\Eq{*}{
+		tF(x) + (1-t)F(y) + A^\perp(t,x-y) 
+		&\subseteq F(tx+(1-t)y) + B^\perp(t,x-y)+[5]V+K \\
+		&\subseteq F(tx+(1-t)y) + B^\perp(t,x-y)+U.
+	}
+	Como $U$ era arbitrario, la inclusi\'on anterior implica que \eq{JCAB}
+	se cumple.
+\end{proof}
+
+Para obtener algunos corolarios de nuestros Teoremas de tipo BD
+de esta secci\'on, vamos a mantener la hip\'otesis (H3) que postulamos
+anteriormente para el \cor{Convex+1} y vamos a reemplazar (H1) y (H2)
+por los siguientes requerimientos que son algo m\'as fuertes
+\begin{enumerate}
+	\item[(H1$^*$)] $D\subseteq X$ es un conjunto convexo no-vac\'io, $Y$ es un espacio
+	vectorial topol\'ogico localmente convexo y $K\subseteq Y$ es un cono convexo no-vac\'io; 
+	\item[(H2$^*$)] $S_0\subseteq Y$ es un conjunto semi-$K$-convexo, semi-$K$-estrellado, 
+	y semi-$K$-acotado inferiormente. 
+\end{enumerate}
+
+\Cor{Convex+1+}{
+	Supongamos que (H1$^*$), (H2$^*$), and (H3) se satisfacen y $F:D\to\P_0(Y)$
+	es una multifunci\'on direccionalmente $K$-semicontinua superior tal que, 
+	para todo $x\in D$, $F(x)$ es un conjunto semi-$K$-estrellado con respecto
+	a alg\'un elemento de $Y$ y tambi\'en semi-$K$ acotada inferiormente.
+	Si $f$ satisface
+	\Eq{*}{
+		\dfrac{F(x) + F(y)}{2} \subseteq \cl\Big(F\Big(\dfrac{x+y}{2}\Big) 
+		+ \varphi(x-y)S_0 + K \Big) \qquad (x,y\in D),
+	}
+	entonces, para todo $x,y\in D$ y para todo $t\in[0,1]$
+	\Eq{*}{
+		tF(x)+(1-t)F(y) \subseteq \cl\big(F(tx+(1-t)y)+\varphi^\perp(t,x-y)S_0+K\big).
+	}
+}
+	
+\Cor{Convex+2+}{
+	Supongamos que (H1$^*$), (H2$^*$), and (H3) se satisfacen y $F:D\to\P_0(Y)$
+	es una multifunci\'on direccionalmente $K$-semicontinua superior tal que, 
+	para todo $x\in D$, $F(x)$ es un conjunto semi-$K$-estrellado con respecto
+	a alg\'un elemento de $Y$ y tambi\'en semi-$K$ acotada inferiormente.
+	Si $f$ satisface
+	\Eq{*}{
+		\dfrac{F(x) + F(y)}{2} + \varphi(x-y)S_0 \subseteq \cl\Big(F\Big(\dfrac{x+y}{2}\Big) 
+		+ K \Big) \qquad (x,y\in D),
+	}
+	entonces, para todo $x,y\in D$ y para todo $t\in[0,1]$
+	\Eq{*}{
+		tF(x)+(1-t)F(y) + \varphi^\perp(t,x-y)S_0 \subseteq \cl\big(F(tx+(1-t)y) + K \big)
+	}
+}
+	
+\begin{proof}[Demostraci\'on de los corolarios \ref{CConvex+1+} y \ref{CConvex+2+}]
+	Vamos a aplicar el \thm{ConvexTab+} con las multifunciones 
+	$A(u):=\{0\}$ y $B(u):=\varphi(u)S_0+K$ (resp., $A(u):=\varphi(u)S_0$ y $B(u):=K$).
+	Entonces, con estas definiciones, las condiciones (i) y (ii) de dicho teorema 
+	se satisfacen para $F$ y (iii) es consecuencia de (H2$^*$) y (H3$^*$). 
+	Para la demostraci\'on de la condicion (iv), aplicamos el \lem{KC} para el 
+	conjunto $S:=\{0\}$, $S:=S_0$, $S:=S_0$, and $S:=\{0\}$ respectivamente, 
+	y para la sucesi\'on $\lambda_k:=\varphi\big(\frac{x-y}{2^k}\big)$ (en cada caso)
+	y usamos que $\varphi$ satisface la condici\'on de convergencia \eq{phi} por
+	la hip\'otesis (H3).
+	
+	As\'i, por el \thm{ConvexTab+}, \eq{JCV+} implica \eq{JCAB}, la cual, aplicando
+	la \prp{Tab}, nos lleva a las inclusiones correspondientes en el \cor{Convex+1+} 
+	(resp., \cor{Convex+2+}). Note que, en ambos casos, $0\in\cl(A(u)+K)$
+	para todo $u\in D-D$.
+	
+\end{proof}
+			
+\Thm{ConcaveTab+}{
+	Sea $D\subseteq X$ un conjunto convexo no-vac\'io y sean
+	$A,B:(D-D)\to\P_0(Y)$ multifunciones. Sea $K:=\overline{\rec}(B)$.
+	Sea $F:D\to\P_0(Y)$ una multifunci\'on que satisface 
+	la inclusi\'on de tipo Jensen
+	\Eq{JCCV}{
+		F\bigg(\dfrac{x+y}{2}\bigg)+ A(x-y) \subseteq 
+		\cl\bigg(\dfrac{F(x) + F(y)}{2}  + B(x-y)\bigg) \qquad (x,y\in D).
+	}
+	Supongamos que adem\'as las multifunciones $A,B$ y $F$ tienen las 
+	siguientes propiedades
+	\begin{enumerate}[(i)]
+		\item Para todo $x\in D$, $F(x)$ es semi-$K$-convexo, semi-$K$-estrellado
+		con respecto a alg\'un elemento de $Y$ y $K$-acotado inferiormente.
+		\item $F$ es direccionalmente $K$-semicontinua superior en $D$. 
+		\item Para todo $u\in D-D$, los conjuntos $A(u)$ y $B(u)$ son semi-$K$-estrellados,
+		semi-$K$-acotados inferiormente y $B(u)$ tambi\'en es semi-$K$-convexo;
+		\item Para todo $u\in D-D$, las suceciones $\Big(A\Big(\dfrac{u}{2^k}\Big)\Big)$ y 
+		$\Big(B\Big(\dfrac{u}{2^k}\Big)\Big)$ son $K$-Cauchy en serie.
+	\end{enumerate}
+	Entonces, $F$ satisface la siguiente inclusi\'on de concavidad
+	para todo $x,y\in D$ y para todo $t\in[0,1]$
+	\Eq{JCCAB}{
+		F(tx+(1-t)y)+ & A^\perp(t,x-y) \\ 
+		&\subseteq\cl\big(tF(x) + (1-t)F(y)+B^\perp(t,x-y)+K\big).
+	}
+}
+		
+\begin{proof}
+	Usando el \thm{ConcaveTab}, el  \lem{dusc} y el \lem{CchyConv}, la demostraci\'on
+	del teorema es completamente analoga a la del \thm{ConvexTab+}. 
+\end{proof}
+		
+\Cor{Concave+1+}{
+	Supongamos que (H1$^*$), (H2$^*$), and (H3) se satisfacen y $F:D\to\P_0(Y)$
+	es una multifunci\'on direccionalmente $K$-semicontinua superior tal que, 
+	para todo $x\in D$, $F(x)$ es un conjunto semi-$K$-estrellado con respecto
+	a alg\'un elemento de $Y$ y tambi\'en semi-$K$ acotada inferiormente.
+	\Eq{*}{
+		F\Big(\dfrac{x+y}{2}\Big) \subseteq \cl\Big(\dfrac{F(x) + F(y)}{2} 
+		+ \varphi(x-y)S_0 + K \Big) \qquad (x,y\in D)
+	}
+	entonces, para todo $x,y\in D$ y para todo $t\in[0,1]$
+	\Eq{*}{
+		F(tx+(1-t)y) \subseteq \cl\big(tF(x)+(1-t)F(y) + \varphi^\perp(t,x-y)S_0 + K \big)
+	}
+}
+	
+\Cor{Concave+2+}{
+	Supongamos que (H1$^*$), (H2$^*$), and (H3) se satisfacen y $F:D\to\P_0(Y)$
+	es una multifunci\'on direccionalmente $K$-semicontinua superior tal que, 
+	para todo $x\in D$, $F(x)$ es un conjunto semi-$K$-estrellado con respecto
+	a alg\'un elemento de $Y$ y tambi\'en semi-$K$ acotada inferiormente.
+	\Eq{*}{
+		F\Big(\dfrac{x+y}{2}\Big) + \varphi(x-y)S_0 \subseteq \cl\Big(\dfrac{F(x) + F(y)}{2} 
+		+ K\Big) \qquad (x,y\in D),
+	}
+	entonces, para todo $x,y\in D$ y para todo $t\in[0,1]$ 
+	\Eq{*}{
+		F(tx+(1-t)y)+\varphi^\perp(t,x-y)S_0 \subseteq \cl\big(tF(x)+(1-t)F(y) + K \big)\qquad  
+		(x,y\in D,\,t\in[0,1]).
+	}
+}
+		
+\begin{proof}[Demostraci\'on de los corolarios \ref{CConcave+1+} y \ref{CConcave+2+}]
+	Aplicando el \thm{ConcaveTab+} con las multifunciones  
+	$A(u):=\{0\}$ y $B(u):=\varphi(u)S_0+K$ (resp., $A(u):=\varphi(u)S_0$ y $B(u):=K$)
+	y usando la misma argumentaci\'on que en la demostraci\'on de los corolarios
+	\ref{CConvex+1+} y \ref{CConvex+2+}, obtenemos que las condiciones del \thm{ConcaveTab+}
+	se satisfacen en cualquier caso.
+	
+	As\'i, por el \thm{ConvexTab+}, \eq{JCCV} implica \eq{JCCAB}, la cual, aplicando
+	la \prp{Tab}, nos ayuda a obtener las esperadas inclusiones de concavidad. En ambos
+	casos, tenemos que $K\subseteq\overline{\rec}(B)$, as\'i la hip\'otesis de que los valores
+	de $F$ son semi-$K$-convexos implica que los valores son tambi\'en 
+	semi-$\overline{\rec}(B)$-convexos.
+\end{proof}
+

@@ -17,14 +17,15 @@
 \contentsline {section}{\numberline {3.1}Definiciones B\IeC {\'a}sicas.}{45}
 \contentsline {section}{\numberline {3.2}$K$-convexidad y $K$-concavidad de multifunciones.}{51}
 \contentsline {section}{\numberline {3.3}El teorema de Bernstein--Doetsch para multifunciones.}{55}
-\contentsline {section}{\numberline {3.4}Convexidad fuerte.}{59}
-\contentsline {section}{\numberline {3.5}Transformaci\IeC {\'o}n de Takagi.}{60}
-\contentsline {chapter}{\numberline {4}T\'ermino de error de tipo Takagi-Hazy-P\'ales.}{66}
-\contentsline {section}{\numberline {4.1}Teorema de tipo Bernstein--Doetsch para multifunciones convexas}{66}
-\contentsline {section}{\numberline {4.2}Teorema de tipo Bernstein--Doetsch para multifunciones c\IeC {\'o}ncavas.}{71}
-\contentsline {section}{\numberline {4.3}Consecuencias de los teoremas previos.}{75}
-\contentsline {chapter}{\numberline {5}T\'ermino de error de tipo Takagi-Tabor.}{79}
-\contentsline {section}{\numberline {5.1}Tranformaci\'on de Takagi-Tabor para una multifunci\'on}{79}
-\contentsline {section}{\numberline {5.2}Convexidad y concavidad sobre los racionales di\'adicos.}{88}
-\contentsline {chapter}{Conclusiones}{99}
-\contentsline {chapter}{Bibliograf\'ia}{106}
+\contentsline {section}{\numberline {3.4}Convexidad fuerte.}{60}
+\contentsline {section}{\numberline {3.5}Transformaci\IeC {\'o}n de Takagi.}{62}
+\contentsline {chapter}{\numberline {4}T\'ermino de error de tipo Takagi-Hazy-P\'ales.}{67}
+\contentsline {section}{\numberline {4.1}Teorema de tipo Bernstein--Doetsch para multifunciones convexas}{67}
+\contentsline {section}{\numberline {4.2}Teorema de tipo Bernstein--Doetsch para multifunciones c\IeC {\'o}ncavas.}{72}
+\contentsline {section}{\numberline {4.3}Consecuencias de los teoremas previos.}{76}
+\contentsline {chapter}{\numberline {5}T\'ermino de error de tipo Takagi-Tabor.}{80}
+\contentsline {section}{\numberline {5.1}Tranformaci\'on de Takagi-Tabor para una multifunci\'on}{80}
+\contentsline {section}{\numberline {5.2}Convexidad y concavidad sobre los racionales di\'adicos.}{89}
+\contentsline {section}{\numberline {5.3}Resultados de tipo Bernstein--Doetsch}{100}
+\contentsline {chapter}{Conclusiones}{105}
+\contentsline {chapter}{Bibliograf\'ia}{112}

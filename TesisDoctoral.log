@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.12.3)  3 DEC 2017 13:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.12.3)  7 JAN 2018 21:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1393,167 +1393,191 @@ LaTeX Info: Redefining \% on input line 447.
 LaTeX Info: Redefining \. on input line 479.
 LaTeX Info: Redefining \% on input line 479.
  [55]
-LaTeX Info: Redefining \. on input line 526.
-LaTeX Info: Redefining \% on input line 526.
+LaTeX Info: Redefining \. on input line 530.
+LaTeX Info: Redefining \% on input line 530.
  [56]
-LaTeX Info: Redefining \. on input line 567.
-LaTeX Info: Redefining \% on input line 567.
- [57]
-LaTeX Info: Redefining \. on input line 617.
-LaTeX Info: Redefining \% on input line 617.
- [58]
-LaTeX Info: Redefining \. on input line 660.
-LaTeX Info: Redefining \% on input line 660.
- [59]
-LaTeX Info: Redefining \. on input line 706.
-LaTeX Info: Redefining \% on input line 706.
-
-[60]
-LaTeX Info: Redefining \. on input line 747.
-LaTeX Info: Redefining \% on input line 747.
- [61]
-LaTeX Info: Redefining \. on input line 798.
-LaTeX Info: Redefining \% on input line 798.
- [62]
-Overfull \hbox (5.04153pt too wide) detected at line 807
+Overfull \hbox (16.49255pt too wide) detected at line 554
 [] []
  []
 
-LaTeX Info: Redefining \. on input line 837.
-LaTeX Info: Redefining \% on input line 837.
-[63]
-LaTeX Info: Redefining \. on input line 890.
-LaTeX Info: Redefining \% on input line 890.
- [64]) (./Hazy-Pales-Error-Term.tex
+LaTeX Info: Redefining \. on input line 568.
+LaTeX Info: Redefining \% on input line 568.
+[57]
+LaTeX Info: Redefining \. on input line 613.
+LaTeX Info: Redefining \% on input line 613.
+ [58]
+LaTeX Info: Redefining \. on input line 656.
+LaTeX Info: Redefining \% on input line 656.
+ [59]
+LaTeX Info: Redefining \. on input line 696.
+LaTeX Info: Redefining \% on input line 696.
+ [60]
+LaTeX Info: Redefining \. on input line 745.
+LaTeX Info: Redefining \% on input line 745.
+ [61]
+LaTeX Info: Redefining \. on input line 784.
+LaTeX Info: Redefining \% on input line 784.
+ [62]
+LaTeX Info: Redefining \. on input line 849.
+LaTeX Info: Redefining \% on input line 849.
+ [63]
+Overfull \hbox (5.04153pt too wide) detected at line 876
+[] []
+ []
+
+LaTeX Info: Redefining \. on input line 884.
+LaTeX Info: Redefining \% on input line 884.
+[64]
+LaTeX Info: Redefining \. on input line 933.
+LaTeX Info: Redefining \% on input line 933.
+ [65]) (./Hazy-Pales-Error-Term.tex
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
- [65]
+ [66]
 Cap\'{\i }tulo 4.
-[66
+[67
 
 ]
 LaTeX Info: Redefining \. on input line 79.
 LaTeX Info: Redefining \% on input line 79.
- [67]
+ [68]
 LaTeX Info: Redefining \. on input line 114.
 LaTeX Info: Redefining \% on input line 114.
- [68]
+ [69]
 LaTeX Info: Redefining \. on input line 144.
 LaTeX Info: Redefining \% on input line 144.
- [69]
+ [70]
 LaTeX Info: Redefining \. on input line 170.
 LaTeX Info: Redefining \% on input line 170.
- [70]
+ [71]
 LaTeX Info: Redefining \. on input line 205.
 LaTeX Info: Redefining \% on input line 205.
- [71]
+ [72]
 LaTeX Info: Redefining \. on input line 242.
 LaTeX Info: Redefining \% on input line 242.
- [72]
+ [73]
 LaTeX Info: Redefining \. on input line 266.
 LaTeX Info: Redefining \% on input line 266.
- [73]
+ [74]
 LaTeX Info: Redefining \. on input line 291.
 LaTeX Info: Redefining \% on input line 291.
- [74]
+ [75]
 LaTeX Info: Redefining \. on input line 334.
 LaTeX Info: Redefining \% on input line 334.
- [75]
+ [76]
 LaTeX Info: Redefining \. on input line 384.
 LaTeX Info: Redefining \% on input line 384.
- [76]
+ [77]
 LaTeX Info: Redefining \. on input line 422.
 LaTeX Info: Redefining \% on input line 422.
- [77])
+ [78])
 (./Tak-Tab-Error-Term.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [78]
+ [79]
 Cap\'{\i }tulo 5.
-[79
+[80
 
 ]
 LaTeX Info: Redefining \. on input line 90.
 LaTeX Info: Redefining \% on input line 90.
- [80]
+ [81]
 LaTeX Info: Redefining \. on input line 139.
 LaTeX Info: Redefining \% on input line 139.
- [81]
+ [82]
 Overfull \hbox (5.82599pt too wide) detected at line 181
 [] []
  []
 
 LaTeX Info: Redefining \. on input line 181.
 LaTeX Info: Redefining \% on input line 181.
-[82]
+[83]
 LaTeX Info: Redefining \. on input line 237.
 LaTeX Info: Redefining \% on input line 237.
- [83]
+ [84]
 LaTeX Info: Redefining \. on input line 273.
 LaTeX Info: Redefining \% on input line 273.
- [84]
+ [85]
 LaTeX Info: Redefining \. on input line 318.
 LaTeX Info: Redefining \% on input line 318.
- [85]
+ [86]
 LaTeX Info: Redefining \. on input line 358.
 LaTeX Info: Redefining \% on input line 358.
- [86]
+ [87]
 LaTeX Info: Redefining \. on input line 397.
 LaTeX Info: Redefining \% on input line 397.
- [87]
+ [88]
 LaTeX Info: Redefining \. on input line 452.
 LaTeX Info: Redefining \% on input line 452.
- [88]
+ [89]
 LaTeX Info: Redefining \. on input line 515.
 LaTeX Info: Redefining \% on input line 515.
- [89]
+ [90]
 LaTeX Info: Redefining \. on input line 564.
 LaTeX Info: Redefining \% on input line 564.
- [90]
+ [91]
 LaTeX Info: Redefining \. on input line 599.
 LaTeX Info: Redefining \% on input line 599.
- [91]
+ [92]
 LaTeX Info: Redefining \. on input line 638.
 LaTeX Info: Redefining \% on input line 638.
- [92]
+ [93]
 LaTeX Info: Redefining \. on input line 664.
 LaTeX Info: Redefining \% on input line 664.
- [93]
+ [94]
 LaTeX Info: Redefining \. on input line 727.
 LaTeX Info: Redefining \% on input line 727.
- [94]
+ [95]
 LaTeX Info: Redefining \. on input line 771.
 LaTeX Info: Redefining \% on input line 771.
- [95]
+ [96]
 LaTeX Info: Redefining \. on input line 797.
 LaTeX Info: Redefining \% on input line 797.
- [96]
+ [97]
 LaTeX Info: Redefining \. on input line 830.
 LaTeX Info: Redefining \% on input line 830.
 
-[97]
+[98]
 LaTeX Info: Redefining \. on input line 866.
 LaTeX Info: Redefining \% on input line 866.
- [98])
+ [99]
+LaTeX Info: Redefining \. on input line 914.
+LaTeX Info: Redefining \% on input line 914.
+ [100]
+LaTeX Info: Redefining \. on input line 958.
+LaTeX Info: Redefining \% on input line 958.
+ [101]
+LaTeX Info: Redefining \. on input line 1004.
+LaTeX Info: Redefining \% on input line 1004.
+ [102]
+LaTeX Info: Redefining \. on input line 1050.
+LaTeX Info: Redefining \% on input line 1050.
+ [103]
+Overfull \hbox (22.59396pt too wide) detected at line 1086
+[] []
+ []
+
+LaTeX Info: Redefining \. on input line 1086.
+LaTeX Info: Redefining \% on input line 1086.
+[104])
 LaTeX Info: Redefining \. on input line 132.
 LaTeX Info: Redefining \% on input line 132.
- [99]
+ [105]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex) [100
+ (./conclusion.tex) [106
 
 
-] (./TesisDoctoral.bbl [101
+] (./TesisDoctoral.bbl [107
 
 
 ]
 LaTeX Info: Redefining \. on input line 99.
 LaTeX Info: Redefining \% on input line 99.
- [102]
+ [108]
 LaTeX Info: Redefining \. on input line 147.
 LaTeX Info: Redefining \% on input line 147.
-
-[103]
+ [109]
 Underfull \hbox (badness 4120) in paragraph at lines 186--189
 []\T1/ptm/m/n/12 F. Pa-pa-li-ni, \T1/ptm/m/it/12 The $\U/eur/m/n/12 K$\T1/ptm/m
 /it/12 -midpoint $[]$ con-ve-xity [con-ca-vity] and lo-wer [up-per] $\U/eur/m/n
@@ -1562,13 +1586,13 @@ Underfull \hbox (badness 4120) in paragraph at lines 186--189
 
 LaTeX Info: Redefining \. on input line 194.
 LaTeX Info: Redefining \% on input line 194.
-[104]
+[110]
 LaTeX Info: Redefining \. on input line 244.
 LaTeX Info: Redefining \% on input line 244.
- [105])
+ [111])
 LaTeX Info: Redefining \. on input line 140.
 LaTeX Info: Redefining \% on input line 140.
- [106] (./TesisDoctoral.aux
+ [112] (./TesisDoctoral.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
  (./jurado.aux) (./dedicatoria.aux)
@@ -1579,10 +1603,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14350 strings out of 494966
- 241201 string characters out of 6179559
- 323563 words of memory out of 5000000
- 17093 multiletter control sequences out of 15000+600000
+ 14370 strings out of 494966
+ 241387 string characters out of 6179559
+ 323861 words of memory out of 5000000
+ 17113 multiletter control sequences out of 15000+600000
  68415 words of font info for 114 fonts, out of 8000000 for 9000
  42 hyphenation exceptions out of 8191
  63i,15n,67p,449b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1602,10 +1626,10 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on TesisDoctoral.pdf (107 pages, 573471 bytes).
+Output written on TesisDoctoral.pdf (113 pages, 594201 bytes).
 PDF statistics:
- 418 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
+ 439 PDF objects out of 1000 (max. 8388607)
+ 303 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

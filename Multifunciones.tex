@@ -488,6 +488,75 @@ F(x_0)\subseteq F(x)+V+K\qquad(x\in x_0+U).
 Sea $F:D\to\P_0(Y)$ una multifunción. Se dice que $F$ es $K$-continua si
 $F$ es $K$-semicontinua superior e inferior al mismo tiempo.
 }
+\Defi{DirConSup}{ %continuidad direccional superior
+	Sea $F:D\to\P_0(Y)$ una multifunci\'on. Decimos que $F$ es
+	\emph{direccionalmente $K$-semicontinua superior en el punto $p\in D$} 
+	si, para cualquier direcci\'on $h\in X$ 
+	y para todo entorno abierto $U\in\U(Y)$, existe un n\'umero positivo
+	$\delta$ tal que
+	\Eq{*}{
+		F(p+th)\subseteq F(p)+U+K
+	}
+	para todo $0<t<\delta$ con $p+th\in D$. En el caso particular cuando
+	$K=\{0\}$, nos referiremos a esta definici\'on como 
+	\textit{semicontinuidad direccional superior en $p$}. 
+}
+Claramente, toda multifunci\'on direccionalmente semicontinua superior
+es direccionalmente $K$-semicontinua superior para cualquier
+cono $K$. An\'alogamente, tenemos la siguiente 
+\Defi{DirConInf} {
+	Sea $F:D\to\P_0(Y)$ una multifunci\'on. Decimos que $F$ es
+	\emph{direccionalmente $K$-semicontinua inferior en el punto $p\in D$} 
+	si, para cualquier direcci\'on $h\in X$ 
+	y para todo entorno abierto $U\in\U(Y)$, existe un n\'umero positivo
+	$\delta$ tal que
+	\Eq{*}{
+		F(p)\subseteq F(p+th)+U+K
+	}
+	para todo $0<t<\delta$ con $p+th\in D$. En el caso particular cuando
+	$K=\{0\}$, nos referiremos a esta definici\'on como 
+	\emph{semicontinuidad direccional inferior en $p$}.
+}
+\Defi{ContDir} { % Continuidad direccional
+	Si $F$ es al mismo tiempo direccionalmente $K$-semicontiua superior e inferior
+	en $p$, entonces diremos que $F$ es \emph{direccionalmente $K$-continua en $p$.}	
+}
+	
+\Lem{dusc}{
+	Sea $K\subseteq Y$ un cono convexo y $S,T\subseteq Y$ conjuntos no-vac\'ios 
+	y semi-$K$-acotados inferiormente que son semi-$K$-estrellados con respecto a algunos 
+	elementos de $Y$. Entonces, la multifunci\'on $t\mapsto tS+(1-t)T$ 
+	es direccionalmente $K$-continua en $[0,1]$.
+}
+\begin{proof}
+	Sea $U\in\U(X)$. Es suficiente demostrar que existe un n\'umero real positivo
+	$\delta$ tal que, para $s,t\in[0,1]$ con $|t-s|<\delta$,  
+	\Eq{st}{
+		tS+(1-t)T\subseteq sS+(1-s)T + U+K.
+	}
+	Primero, escojamos $V\in\U(Y)$ tal que $[3]V\subseteq U$.
+	Obviamente, \eq{st} es v\'alida para $s=t$. Sin p\'erdida de generalidad,
+	podemos asumir que $0\leq s<t\leq 1$. Supongamos que  $T$ es semi-$K$-estrellado con 
+	respecto a $v\in Y$. Entonces, tenemos
+	\Eq{est}{
+		tS+(1-t)T
+		&\subseteq sS + (t-s)S + (1-t)T + (t-s)v+(s-t)v \\
+		&= sS + (t-s)S + (1-s)\bigg(\frac{1-t}{1-s}T+ \frac{t-s}{1-s}v\bigg)+(s-t)v \\
+		&\subseteq sS + (t-s)(S-v) + (1-s)\cl(T+K) \\
+		&\subseteq sS + (1-s)T + (t-s)(S-v) +V+K.
+	}
+	Como el conjunto $(S-v)$ es semi-$K$-acotado inferiormente, existe un subconjunto 
+	acotado $H\subseteq Y$ tal que $S-v\subseteq\cl(H+K)$. Como el conjunto $H$
+	es acotado, existe un n\'umero positivo $\delta\leq 1$ tal que $\delta H\subseteq V$.
+	Por lo tanto, si $t-s<\delta$, entonces 	
+	\Eq{*}{
+		(t-s)(S-v)\subseteq (t-s)\cl(H+K)\subseteq (t-s)(H+V+K) \subseteq (t-s)H+V+K \subseteq [2]V+K.
+	}
+	Combinando estas estimaciones con \eq{est}, obtenemos que \eq{st} se cumple.
+	La demostraci\'on para el caso $t<s$ es completamente an\'aloga y usa que $S$
+	es $K$ estrellado y $T$ es semi-$K$-acotado inferiormente.
+\end{proof}
+	
 
 \Rem{semCon}{
 Cuando $K=\{0\}$, la $K$-continuidad de una multifunción equivale a la continuidad con 
