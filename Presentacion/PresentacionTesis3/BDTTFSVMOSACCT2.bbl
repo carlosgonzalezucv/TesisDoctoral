@@ -1,0 +1,172 @@
+\def\cprime{$'$} \def\R{\mathbb R} \def\Z{\mathbb Z} \def\Q{\mathbb Q}
+  \def\C{\mathbb C}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{GNPR14}
+
+\bibitem[AGNS11]{AzoGimNikSan11}
+A.~Azócar, J.~Giménez, K.~Nikodem, and J.~L. Sánchez, \emph{On strongly
+  midconvex functions}, Opuscula Math. \textbf{31} (2011), no.~1, 15–26.
+
+\bibitem[BD15]{BerDoe15}
+F.~Bernstein and G.~Doetsch, \emph{Zur theorie der konvexen funktionen}, Math.
+  Ann. \textbf{76} (1915), no.~4, 514--526. \MR{1511840}
+
+\bibitem[BHJ09]{BurHazJuh09}
+P.~Burai, A.~Házy, and T.~Juhász, \emph{{Bernstein–{D}oetsch type results
+  for $s$-convex functions}}, Publ. Math. Debrecen \textbf{75} (2009), no.~1-2,
+  23–31.
+
+\bibitem[Bor08]{Bor08}
+Z.~Boros, \emph{{An inequality for the {T}akagi function}}, Math. Inequal.
+  Appl. \textbf{11} (2008), no.~4, 757–765. \MR{2009f:39047}
+
+\bibitem[CM99]{ChadMir99JST}
+A~Chademan and F~Mirzapour, \emph{Midconvex functions in locally compact
+  groups}, Proceedings of the American Mathematical Society (1999), 2961--2968.
+
+\bibitem[GNP04]{GilNikPal04}
+A.~Gilányi, K.~Nikodem, and Zs. Páles, \emph{{Bernstein–{D}oetsch type
+  results for quasiconvex functions}}, Math. Inequal. Appl. \textbf{7} (2004),
+  no.~2, 169–175. \MR{2004m:26011}
+
+\bibitem[GNPR14]{GonNikPalRoa14}
+Carlos Gonz{\'a}lez, Kazimierz Nikodem, Zsolt P{\'a}les, and Gari Roa,
+  \emph{Bernstein--doetsch type theorems for set-valued maps of strongly and
+  approximately convex and concave type}, Pub. Math. Debrecen \textbf{84}
+  (2014).
+
+\bibitem[GTP11]{GilTro11}
+A.~Gilányi and K.~Troczka-Pawelec, \emph{{Regularity of weakly subquadratic
+  functions}}, J. Math. Anal. Appl. \textbf{382} (2011), 814–821.
+
+\bibitem[Há09]{Haz09a}
+A.~Házy, \emph{{Bernstein–{D}oetsch type results for {B}reckner $s$-convex
+  functions}}, {Proc. MicroCAD 2009 Int. Sci. Conf.}, vol.~G, 2009, p.~17–22.
+
+\bibitem[Há10]{Haz10}
+\bysame, \emph{{Bernstein–{D}oetsch type results for generalized
+  approximately convex functions}}, {Proc. MicroCAD 2010 Int. Sci. Conf.},
+  vol.~H, 2010, p.~27–32.
+
+\bibitem[Há11]{Haz11}
+\bysame, \emph{{Bernstein–{D}oetsch type results for $h$-convex functions}},
+  Math. Inequal. Appl. \textbf{14} (2011), no.~3, 499–508.
+
+\bibitem[HB10]{HazBur10}
+A.~Házy and P.~Burai, \emph{{Bernstein–{D}oetsch type results for
+  generalized convex function}}, {Proc. 12th Symp. Math. Appl. (November 5-7,
+  2009)} (University of Timişoara), Editura Politechnica, 2010, p.~118–123.
+
+\bibitem[HP04]{HazPal04}
+A.~Házy and Zs. Páles, \emph{{On approximately midconvex functions}}, Bull.
+  London Math. Soc. \textbf{36} (2004), no.~3, 339–350. \MR{2004j:26020}
+
+\bibitem[HP05]{HazPal05}
+\bysame, \emph{{On approximately $t$-convex functions}}, Publ. Math. Debrecen
+  \textbf{66} (2005), 489–501. \MR{2006c:26023}
+
+\bibitem[HU52]{HyeUla52}
+D.~H. Hyers and S.~M. Ulam, \emph{Approximately convex functions}, Proc. Amer.
+  Math. Soc. \textbf{3} (1952), 821–828. \MR{14,254b}
+
+\bibitem[Hua10]{Hua10}
+Hui Huang, \emph{Global error bounds with exponents for multifunctions with set
+  constraints}, Communications in Contemporary Mathematics \textbf{12} (2010),
+  no.~03, 417--435.
+
+\bibitem[KK89]{KomKuc89b}
+Z.~Kominek and M.~Kuczma, \emph{Theorems of {B}ernstein-{D}oetsch, {P}iccard
+  and {M}ehdi and semilinear topology}, Arch. Math. (Basel) \textbf{52} (1989),
+  no.~6, 595–602. \MR{90i:46017}
+
+\bibitem[KK91]{KomKuc91b}
+\bysame, \emph{Theorem of {B}ernstein-{D}oetsch in {B}aire spaces}, Ann. Math.
+  Sil. (1991), no.~5, 10–17. \MR{93j:26008}
+
+\bibitem[Kuc85]{Kuc85}
+M.~Kuczma, \emph{An {I}ntroduction to the {T}heory of {F}unctional {E}quations
+  and {I}nequalities}, Prace Naukowe Uniwersytetu Śląskiego w Katowicach,
+  vol. 489, Państwowe Wydawnictwo Naukowe — Uniwersytet Śląski,
+  Warszawa–Kraków–Katowice, 1985. \MR{86i:39008}
+
+\bibitem[Lac99]{Lac99}
+M.~Laczkovich, \emph{The local stability of convexity, affinity and of the
+  {J}ensen equation}, Aequationes Math. \textbf{58} (1999), 135–142.
+
+\bibitem[LMNS13]{LeiMerNikSan13}
+H.~Leiva, N.~Merentes, K.~Nikodem, and J.~L. Sánchez, \emph{Strongly convex
+  set-valued maps}, J. Global Optim. (2013).
+
+\bibitem[MP12]{MakPal12a}
+J.~Makó and Zs. Páles, \emph{{On $\varphi$-convexity}}, Publ. Math. Debrecen
+  \textbf{80} (2012), no.~1-2, 107–126.
+
+\bibitem[Mur12]{Mur12DM}
+Anna Mure{\'n}ko, \emph{A generalization of bernstein-doetsch theorem},
+  DEMONSTRATIO MATHEMATICA \textbf{45} (2012), no.~1.
+
+\bibitem[Nik86]{Nik86}
+K.~Nikodem, \emph{Continuity of ${K}$-convex set-valued functions}, Bull.
+  Polish Acad. Sci. Math. \textbf{34} (1986), no.~7-8, 393–400.
+
+\bibitem[Nik87a]{Nik87a}
+\bysame, \emph{On concave and midpoint concave set-valued functions}, Glas.
+  Mat. Ser. III \textbf{22(42)} (1987), no.~1, 69–76. \MR{89g:39017}
+
+\bibitem[Nik87b]{Nik87c}
+\bysame, \emph{On midpoint convex set-valued functions}, Aequationes Math.
+  \textbf{33} (1987), no.~1, 46–56. \MR{88h:90171}
+
+\bibitem[Nik89]{Nik89}
+K~Nikodem, \emph{{$K$}-convex and {$K$}-concave set-valued functions}, Zeszyty
+  Nauk. Politech. Łódz. Mat. (Łódz) \textbf{559} (1989), 1–75, (Rozprawy
+  Nauk. 114).
+
+\bibitem[Nik01]{Nik01}
+K.~Nikodem, \emph{Continuity properties of midconvex set-valued maps},
+  Aequationes Math. \textbf{62} (2001), no.~1-2, 175–183. \MR{2002f:54014}
+
+\bibitem[Nik03]{Nik03}
+\bysame, \emph{Continuity properties of convex-type set-valued maps}, JIPAM. J.
+  Inequal. Pure Appl. Math. \textbf{4} (2003), no.~3, Article 52, 6 pp.
+  (electronic). \MR{2005h:47092}
+
+\bibitem[NN93]{NgNik93}
+C.~T. Ng and K.~Nikodem, \emph{On approximately convex functions}, Proc. Amer.
+  Math. Soc. \textbf{118} (1993), no.~1, 103–108.
+
+\bibitem[NP01]{NikPal01}
+K.~Nikodem and Zs. Páles, \emph{{On approximately {J}ensen-convex and
+  {W}right-convex functions}}, C. R. Math. Rep. Acad. Sci. Canada \textbf{23}
+  (2001), no.~4, 141–147. \MR{2003a:39037}
+
+\bibitem[Pá00]{Pal00b}
+Zs. Páles, \emph{{Bernstein–{D}oetsch-type results for general functional
+  inequalities}}, Rocznik Nauk.-Dydakt. Prace Mat. \textbf{17} (2000),
+  197–206. \MR{2001k:26015}
+
+\bibitem[Pol66]{Pol66}
+B.~T. Polyak, \emph{Existence theorems and convergence of minimizing sequences
+  for extremal problems with constraints}, Dokl. Akad. Nauk SSSR \textbf{166}
+  (1966), 287–290. \MR{33 \#6466}
+
+\bibitem[Tru84]{Tru84}
+L.~I. Trudzik, \emph{Continuity properties of vector-valued convex functions},
+  J. Austral. Math. Soc. Ser. A \textbf{36} (1984), no.~3, 404–415.
+  \MR{733912 (85d:46062)}
+
+\bibitem[TT09a]{TabTab09b}
+Ja. Tabor and Jó. Tabor, \emph{Generalized approximate midconvexity}, Control
+  Cybernet. \textbf{38} (2009), no.~3, 655–669.
+
+\bibitem[TT09b]{TabTab09a}
+\bysame, \emph{Takagi functions and approximate midconvexity}, J. Math. Anal.
+  Appl. \textbf{356} (2009), no.~2, 729–737.
+
+\end{thebibliography}

@@ -1,0 +1,17 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}n.}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Funciones a valores reales.}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Multifunciones.}{5}{0}{1}
+\beamer@sectionintoc {2}{Antecedentes.}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{El Teorema de Bernstein--Doetsch.}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Convexidad aproximada.}{10}{0}{2}
+\beamer@subsectionintoc {2}{3}{Convexidad fuerte.}{18}{0}{2}
+\beamer@sectionintoc {3}{Un problema general.}{25}{0}{3}
+\beamer@subsectionintoc {3}{1}{Planteamiento.}{25}{0}{3}
+\beamer@subsectionintoc {3}{2}{Definiciones y resultados auxiliares.}{27}{0}{3}
+\beamer@subsectionintoc {3}{3}{Transformaci\IeC {\'o}n de Takagi de una multifunci\IeC {\'o}n.}{31}{0}{3}
+\beamer@sectionintoc {4}{Resultados principales.}{37}{0}{4}
+\beamer@subsectionintoc {4}{1}{Teoremas.}{37}{0}{4}
+\beamer@subsectionintoc {4}{2}{Corolarios.}{45}{0}{4}
+\beamer@sectionintoc {5}{Referencias}{49}{0}{5}

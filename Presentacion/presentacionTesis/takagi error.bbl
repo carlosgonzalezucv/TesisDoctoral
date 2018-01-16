@@ -1,0 +1,87 @@
+\def\cprime{$'$} \def\R{\mathbb R} \def\Z{\mathbb Z} \def\Q{\mathbb Q}
+  \def\C{\mathbb C}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{GNPR14}
+
+\bibitem[AC90]{AveCar90}
+A.~Averna and T.~Cardinali, \emph{On the concepts of {$K$}-convexity
+  [{$K$}-concavity] and {$K$}-convexity{$^*$} [{$K$}-concavity{$^*$}]}, Riv.
+  Mat. Univ. Parma (4) \textbf{16} (1990), no.~1-2, 311–330. \MR{1105752
+  (92h:26031)}
+
+\bibitem[AGNS11]{AzoGimNikSan11}
+A.~Azócar, J.~Giménez, K.~Nikodem, and J.~L. Sánchez, \emph{On strongly
+  midconvex functions}, Opuscula Math. \textbf{31} (2011), no.~1, 15–26.
+
+\bibitem[BD15]{BerDoe15}
+F.~Bernstein and G.~Doetsch, \emph{Zur theorie der konvexen funktionen}, Math.
+  Ann. \textbf{76} (1915), no.~4, 514--526. \MR{1511840}
+
+\bibitem[Bor77]{Bor77}
+J.M. Borwein, \emph{Multivalued convexity and optimization: a unified approach
+  to inequality and equality constraints}, Math. Programming \textbf{13}
+  (1977), no.~2, 183–199. \MR{0451166 (56 \#9453)}
+
+\bibitem[CNP93]{CarNikPap93}
+T.~Cardinali, K.~Nikodem, and F.~Papalini, \emph{Some results on stability and
+  on characterization of ${K}$-convexity of set-valued functions}, Ann. Polon.
+  Math. \textbf{58} (1993), no.~2, 185–192.
+
+\bibitem[GNPR14]{GonNikPalRoa14}
+Carlos Gonz{\'a}lez, Kazimierz Nikodem, Zsolt P{\'a}les, and Gari Roa,
+  \emph{Bernstein--doetsch type theorems for set-valued maps of strongly and
+  approximately convex and concave type}, Pub. Math. Debrecen \textbf{84}
+  (2014).
+
+\bibitem[HP04]{HazPal04}
+A.~Házy and Zs. Páles, \emph{{On approximately midconvex functions}}, Bull.
+  London Math. Soc. \textbf{36} (2004), no.~3, 339–350. \MR{2004j:26020}
+
+\bibitem[Kuc85]{Kuc85}
+M.~Kuczma, \emph{An {I}ntroduction to the {T}heory of {F}unctional {E}quations
+  and {I}nequalities}, Prace Naukowe Uniwersytetu Śląskiego w Katowicach,
+  vol. 489, Państwowe Wydawnictwo Naukowe — Uniwersytet Śląski,
+  Warszawa–Kraków–Katowice, 1985. \MR{86i:39008}
+
+\bibitem[LMNS13]{LeiMerNikSan13}
+H.~Leiva, N.~Merentes, K.~Nikodem, and J.~L. Sánchez, \emph{Strongly convex
+  set-valued maps}, J. Global Optim. (2013).
+
+\bibitem[Nik86]{Nik86}
+K.~Nikodem, \emph{Continuity of ${K}$-convex set-valued functions}, Bull.
+  Polish Acad. Sci. Math. \textbf{34} (1986), no.~7-8, 393–400.
+
+\bibitem[Nik87a]{Nik87a}
+\bysame, \emph{On concave and midpoint concave set-valued functions}, Glas.
+  Mat. Ser. III \textbf{22(42)} (1987), no.~1, 69–76. \MR{89g:39017}
+
+\bibitem[Nik87b]{Nik87c}
+\bysame, \emph{On midpoint convex set-valued functions}, Aequationes Math.
+  \textbf{33} (1987), no.~1, 46–56. \MR{88h:90171}
+
+\bibitem[Nik89]{Nik89}
+K~Nikodem, \emph{{$K$}-convex and {$K$}-concave set-valued functions}, Zeszyty
+  Nauk. Politech. Łódz. Mat. (Łódz) \textbf{559} (1989), 1–75, (Rozprawy
+  Nauk. 114).
+
+\bibitem[NN93]{NgNik93}
+C.~T. Ng and K.~Nikodem, \emph{On approximately convex functions}, Proc. Amer.
+  Math. Soc. \textbf{118} (1993), no.~1, 103–108.
+
+\bibitem[Pap90]{Pap90}
+F.~Papalini, \emph{The {$K$}-midpoint {$^*$} convexity [concavity] and lower
+  [upper] {$K$}-semicontinuity of a multifunction}, Riv. Mat. Univ. Parma (4)
+  \textbf{16} (1990), no.~1-2, 149–159 (1991). \MR{1105736 (92h:26032)}
+
+\bibitem[Pol66]{Pol66}
+B.~T. Polyak, \emph{Existence theorems and convergence of minimizing sequences
+  for extremal problems with constraints}, Dokl. Akad. Nauk SSSR \textbf{166}
+  (1966), 287–290. \MR{33 \#6466}
+
+\end{thebibliography}
