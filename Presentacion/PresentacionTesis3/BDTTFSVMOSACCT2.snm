@@ -44,3 +44,16 @@
 \beamer@slide {ECC+1}{47}
 \beamer@slide {EJCC+2}{48}
 \beamer@slide {ECC+2}{48}
+\beamer@slide {De-Cvx}{50}
+\beamer@slide {Ee-Cvx}{50}
+\beamer@slide {DStrCvx}{53}
+\beamer@slide {EStrCvx}{53}
+\beamer@slide {DKCvxSvm}{54}
+\beamer@slide {EKCvxSvm}{54}
+\beamer@slide {DRecCone}{55}
+\beamer@slide {ErecH}{55}
+\beamer@slide {Dbdd1}{56}
+\beamer@slide {Dbdd2}{56}
+\beamer@slide {DTakTabT}{58}
+\beamer@slide {ETakagiT}{58}
+\beamer@slide {ES-St}{58}

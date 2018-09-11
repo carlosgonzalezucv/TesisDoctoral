@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.12.3)  10 SEP 2018 23:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.12.3)  11 SEP 2018 00:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1471,15 +1471,15 @@ Package: beamercolorthemewhale 2010/06/17  (rcs-revision d02a7cf4d8ae)
 ))
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 159.
+(hyperref)                removing `\\' on input line 160.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 159.
+(hyperref)                removing `\new@ifnextchar' on input line 160.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 159.
+(hyperref)                removing `\\' on input line 160.
 
 (./BDTTFSVMOSACCT2.aux
 
@@ -1497,47 +1497,65 @@ LaTeX Warning: Label `Ea-tak' multiply defined.
 
 LaTeX Warning: Label `ECvx' multiply defined.
 
+
+LaTeX Warning: Label `DRecCone' multiply defined.
+
+
+LaTeX Warning: Label `ErecH' multiply defined.
+
+
+LaTeX Warning: Label `Dbdd1' multiply defined.
+
+
+LaTeX Warning: Label `Dbdd2' multiply defined.
+
+
+LaTeX Warning: Label `ETakagiT' multiply defined.
+
+
+LaTeX Warning: Label `ES-St' multiply defined.
+
 )
 \openout1 = `BDTTFSVMOSACCT2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/pxmi/m/it on input line 181.
-LaTeX Font Info:    Try loading font information for OML+pxmi on input line 181
+LaTeX Font Info:    Checking defaults for OML/pxmi/m/it on input line 182.
+LaTeX Font Info:    Try loading font information for OML+pxmi on input line 182
 .
  (/usr/share/texlive/texmf-dist/tex/latex/pxfonts/omlpxmi.fd
 File: omlpxmi.fd 2000/12/14 v1.0
 )
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OMS/pxsy/m/n on input line 181.
-LaTeX Font Info:    Try loading font information for OMS+pxsy on input line 181
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OMS/pxsy/m/n on input line 182.
+LaTeX Font Info:    Try loading font information for OMS+pxsy on input line 182
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/pxfonts/omspxsy.fd
 File: omspxsy.fd 2000/12/14 v1.0
 )
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OMX/pxex/m/n on input line 181.
-LaTeX Font Info:    Try loading font information for OMX+pxex on input line 181
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OMX/pxex/m/n on input line 182.
+LaTeX Font Info:    Try loading font information for OMX+pxex on input line 182
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/pxfonts/omxpxex.fd
 File: omxpxex.fd 2000/12/14 v1.0
 )
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for U/pxexa/m/n on input line 181.
-LaTeX Font Info:    Try loading font information for U+pxexa on input line 181.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for U/pxexa/m/n on input line 182.
+LaTeX Font Info:    Try loading font information for U+pxexa on input line 182.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxexa.fd
 File: upxexa.fd 2000/12/14 v1.0
 )
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Try loading font information for T1+pxr on input line 181.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Try loading font information for T1+pxr on input line 182.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pxfonts/t1pxr.fd
 File: t1pxr.fd 2000/12/14 v1.0
@@ -1593,7 +1611,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box75
-Package hyperref Info: Link coloring OFF on input line 181.
+Package hyperref Info: Link coloring OFF on input line 182.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1603,9 +1621,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count359
 )
-LaTeX Info: Redefining \ref on input line 181.
-LaTeX Info: Redefining \pageref on input line 181.
-LaTeX Info: Redefining \nameref on input line 181.
+LaTeX Info: Redefining \ref on input line 182.
+LaTeX Info: Redefining \pageref on input line 182.
+LaTeX Info: Redefining \nameref on input line 182.
 
 (./BDTTFSVMOSACCT2.out) (./BDTTFSVMOSACCT2.out)
 \@outlinefile=\write5
@@ -1614,41 +1632,41 @@ LaTeX Info: Redefining \nameref on input line 181.
 \symnumbers=\mathgroup11
 \sympureletters=\mathgroup12
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/pxr/m/n --> T1/pxr/m/n on input line 181.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 181.
+(Font)                  OT1/pxr/m/n --> T1/pxr/m/n on input line 182.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/pxr/bx/n --> T1/pxr/bx/n on input line 181.
+(Font)                  OT1/pxr/bx/n --> T1/pxr/bx/n on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/pxr/bx/n --> T1/pxr/bx/n on input line 181.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 181.
+(Font)                  OT1/pxr/bx/n --> T1/pxr/bx/n on input line 182.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/pxss/m/n --> T1/pxss/m/n on input line 181.
+(Font)                  OT1/pxss/m/n --> T1/pxss/m/n on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/pxss/b/n --> T1/pxss/m/n on input line 181.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 181.
+(Font)                  OT1/pxss/b/n --> T1/pxss/m/n on input line 182.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/pxr/m/it --> T1/pxr/m/it on input line 181.
+(Font)                  OT1/pxr/m/it --> T1/pxr/m/it on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/pxr/bx/it --> T1/pxr/m/it on input line 181.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 181.
+(Font)                  OT1/pxr/bx/it --> T1/pxr/m/it on input line 182.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/pxtt/m/n --> T1/pxtt/m/n on input line 181.
+(Font)                  OT1/pxtt/m/n --> T1/pxtt/m/n on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/pxtt/b/n --> T1/pxtt/m/n on input line 181.
+(Font)                  OT1/pxtt/b/n --> T1/pxtt/m/n on input line 182.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/pxr/m/n --> T1/pxr/bx/n on input line 181.
+(Font)                  T1/pxr/m/n --> T1/pxr/bx/n on input line 182.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/pxr/m/it --> T1/pxr/bx/it on input line 181.
+(Font)                  T1/pxr/m/it --> T1/pxr/bx/it on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/pxr/bx/n --> T1/pxr/bx/n on input line 181.
+(Font)                  OT1/pxr/bx/n --> T1/pxr/bx/n on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/pxr/bx/n --> T1/pxr/bx/n on input line 181.
+(Font)                  T1/pxr/bx/n --> T1/pxr/bx/n on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/pxss/m/n --> T1/pxss/bx/n on input line 181.
+(Font)                  T1/pxss/m/n --> T1/pxss/bx/n on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/pxr/m/it --> T1/pxr/bx/it on input line 181.
+(Font)                  T1/pxr/m/it --> T1/pxr/bx/it on input line 182.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/pxtt/m/n --> T1/pxtt/bx/n on input line 181.
+(Font)                  T1/pxtt/m/n --> T1/pxtt/bx/n on input line 182.
 
 (/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-basic-dicti
 onary/translator-basic-dictionary-English.dict
@@ -1698,45 +1716,48 @@ Dictionary: translator-theorem-dictionary, Language: English
 tionary/translator-theorem-dictionary-Spanish.dict
 Dictionary: translator-theorem-dictionary, Language: Spanish 
 )
-LaTeX Info: Redefining \includegraphics on input line 181.
+LaTeX Info: Redefining \includegraphics on input line 182.
  (./BDTTFSVMOSACCT2.nav)
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./logo_ucv.jpg>]
-(./BDTTFSVMOSACCT2.toc) [2
+(./BDTTFSVMOSACCT2.toc)
+Overfull \vbox (17.3282pt too high) detected at line 191
+ []
+
+[2
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+pxr on input line 213.
+LaTeX Font Info:    Try loading font information for OT1+pxr on input line 214.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/ot1pxr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/pxfonts/ot1pxr.fd
 File: ot1pxr.fd 2000/12/14 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+pxsya on input line 213.
+LaTeX Font Info:    Try loading font information for U+pxsya on input line 214.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxsya.fd
 File: upxsya.fd 2000/12/14 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+pxsyb on input line 213.
+LaTeX Font Info:    Try loading font information for U+pxsyb on input line 214.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxsyb.fd
 File: utxsyb.fd 2000/12/14 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+pxmia on input line 213.
+LaTeX Font Info:    Try loading font information for U+pxmia on input line 214.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxmia.fd
 File: upxmia.fd 2000/12/14 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+pxsyc on input line 213.
+LaTeX Font Info:    Try loading font information for U+pxsyc on input line 214.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxsyc.fd
 File: upxsyc.fd 2000/12/14 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 213.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 214.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -1787,7 +1808,7 @@ g> <./prueba1-14.png> <./prueba1-15.png> <./prueba1-16.png> <./prueba1-17.png>
 M}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.631 \end{frame}
+l.632 \end{frame}
                   [21
 
 ] [22
@@ -1802,12 +1823,12 @@ l.631 \end{frame}
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.731 \end{frame}
+l.732 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{EcvxTh}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.731 \end{frame}
+l.732 \end{frame}
                   [26
 
 ] [27
@@ -1828,7 +1849,7 @@ l.731 \end{frame}
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.886 \end{frame}
+l.887 \end{frame}
                   [34
 
 ] <./dibujos2/SolTak2-53.png> <./dibujos2/SolTak2-54.png> <./dibujos2/SolTak2-5
@@ -1878,7 +1899,7 @@ jos2/SolTak2-166.png> <./dibujos2/SolTak2-167.png> <./dibujos2/SolTak2-168.png>
 SolTak2-174.png> <./dibujos2/SolTak2-175.png> <./dibujos2/SolTak2-176.png> <./d
 ibujos2/SolTak2-177.png> <./dibujos2/SolTak2-178.png> <./dibujos2/SolTak2-179.p
 ng> <./dibujos2/SolTak2-180.png> <./dibujos2/SolTak2-181.png>
-Overfull \hbox (17.88983pt too wide) in paragraph at lines 905--905
+Overfull \hbox (17.88983pt too wide) in paragraph at lines 906--906
  [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1893,7 +1914,7 @@ Overfull \hbox (17.88983pt too wide) in paragraph at lines 905--905
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.962 \end{frame}
+l.963 \end{frame}
                   [37
 
 ] [38
@@ -1924,15 +1945,59 @@ l.962 \end{frame}
 ]
 [48
 
-] (./BDTTFSVMOSACCT2.bbl) [49
+] [49
 
 ] [50
 
-
 ] [51
 
-
 ] [52
+
+] [53
+
+] [54
+
+]pdfTeX warning (ext4): destination with the same identifier (name{DRecCone}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1331 \end{frame}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{ErecH}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1331 \end{frame}
+                   [55
+
+]pdfTeX warning (ext4): destination with the same identifier (name{Dbdd1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1369 \end{frame}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{Dbdd2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1369 \end{frame}
+                   [56
+
+] [57
+
+]pdfTeX warning (ext4): destination with the same identifier (name{ETakagiT}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1414 \end{frame}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{ES-St}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1414 \end{frame}
+                   [58
+
+] (./BDTTFSVMOSACCT2.bbl) [59
+
+] [60
 
 
 ]
@@ -1945,25 +2010,26 @@ l.962 \end{frame}
 \tf@snm=\write8
 \openout8 = `BDTTFSVMOSACCT2.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1221.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1221.
- (./BDTTFSVMOSACCT2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1221.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1221.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1446.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1446.
+
+(./BDTTFSVMOSACCT2.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1446.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1446.
 
 Package rerunfilecheck Info: File `BDTTFSVMOSACCT2.out' has not changed.
-(rerunfilecheck)             Checksum: 013A9D04AA85A0C1563EF5701D0BD991;1000.
+(rerunfilecheck)             Checksum: 79B0682895831656B5B25E0C956E274A;1429.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1221.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1446.
  ) 
 Here is how much of TeX's memory you used:
- 28901 strings out of 494966
- 553757 string characters out of 6179559
- 694593 words of memory out of 5000000
- 31090 multiletter control sequences out of 15000+600000
+ 28920 strings out of 494966
+ 553636 string characters out of 6179559
+ 704552 words of memory out of 5000000
+ 31098 multiletter control sequences out of 15000+600000
  37692 words of font info for 94 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  50i,20n,62p,10408b,899s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1978,10 +2044,10 @@ are/texlive/texmf-dist/fonts/type1/public/pxfonts/rpxr.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on BDTTFSVMOSACCT2.pdf (52 pages, 1793889 bytes).
+Output written on BDTTFSVMOSACCT2.pdf (60 pages, 1863190 bytes).
 PDF statistics:
- 5456 PDF objects out of 6186 (max. 8388607)
- 4667 compressed objects within 47 object streams
- 197 named destinations out of 1000 (max. 500000)
- 2817 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6842 PDF objects out of 7423 (max. 8388607)
+ 6019 compressed objects within 61 object streams
+ 208 named destinations out of 1000 (max. 500000)
+ 2865 words of extra memory for PDF output out of 10000 (max. 10000000)
 

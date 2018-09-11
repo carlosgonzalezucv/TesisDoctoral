@@ -22,7 +22,8 @@
 
 \renewcommand{\P}{\mathcal{P}}
 \newcommand{\U}{\mathcal{U}}
-
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\MS}{\mathcal{S}}
 
 \newcommand{\ds}{\displaystyle}
 \newcommand{\implica}{\Rightarrow}
@@ -1189,6 +1190,230 @@ para todo $x,y\in D.$ Entonces
 para todo $x,y\in D$ y para todo $t\in[0,1].$
 }{\cite{GonNikPalRoa14}, Corollary 4.7}
 \end{frame}
+
+\subsection{El Teorema de Bernstein--Doetsch.}
+
+\begin{frame}{El Teorema de Bernstein--Doetsch.}
+	\Thm{*}{
+		Toda función Jensen-convexa $f:D\to\R$ en $D$, localmente acotada superior en un punto 
+		$x_0\in D$ is continua y por lo tanto convexa en $D$.
+	}{\cite{Kuc85}, Teorema 6.4.2}
+	Este teorema teorema fue formulado por F. Bernstein and G. Doetsch en 1915 
+	\cite{BerDoe15}, y desde entonces ha sido muy importante en la teoría de convexidad,
+	razón por la cual ha sido generalizado de muchas maneras diferentes y por varios autores.
+	Como consecuencia directa se tiene el siguiente
+	\Cor{*}{
+		Una función $f:D\to\R$ es convexa si y sólo si es 
+		continua y Jensen-convexa.
+	}{\cite{Kuc85}, Teorema 7.1.1}
+\end{frame}
+
+\subsection{Convexidad aproximada}
+
+\begin{frame}{Funciones aproximadamente convexas.}
+	Sea $\alpha:\R^+\to\R^+$, una función no-decreciente.
+	\Defi{e-Cvx}{
+		Se dice que la función, $f:D\to\R$ es \textbf{$\alpha$-Jensen-convexa}
+		en $D,$ si para todo $x,y \in D$
+		\Eq{e-Cvx}{
+			f\bigg(\frac{x+y}2\bigg) \leq \frac{f(x)+f(y)}2 + \alpha(|x-y|).
+		}
+	}
+	\Rem{*}{
+		Cuando $\alpha(x)=\epsilon>0,$ entonces, $\alpha$-Jensen convexidad es simplemente,
+		$\epsilon$-Jensen convexidad \cite{HyeUla52}. Resultados de tipo B-D para este tipo de convexidad
+		fueron obtenidos por Ng y Nikodem en 1993 \cite{NgNik93}.
+	}
+\end{frame}
+
+\begin{frame}
+	\Thm{*}{
+		Sea $D\subseteq \R$ un subconjunto abierto y convexo de la recta real.
+		Si $f:D\to\R$ es una función localmente acotada superior en un punto y 
+		$\alpha$-Jensen-convexa en $D$, entonces, para todo $x,y\in D$ y para todo
+		$t\in[0,1]$ 
+		$$
+		f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)+\T_\alpha(t,|x-y|),
+		$$
+		donde 
+		$$
+		\T_\alpha(t,u)=\sum_{n=0}^{\infty}\frac{1}{2^n}\alpha(2\dist_\Z(2^nt)u),\quad
+		t\in[0,1], u\in D-D.
+		$$
+	}{\cite{HazPal04,MakPal10b}}
+	\Rem{*}{
+		Si $\alpha(u)=\epsilon |u|^p + \delta,$ con $\epsilon,\delta,p >0$ y $u\in\R$. Entonces 
+		$$
+		\T_\alpha(t,u)=\epsilon\Bigg(\sum_{n=0}^{\infty}2^{p-n}\dist_\Z^p(2^nt)\Bigg)|u|^p
+		+2\delta = \epsilon T_p(t)|u|^p + 2\delta.
+		$$
+	}	
+\end{frame}
+
+\begin{frame}
+	\Thm{*}{
+		Sea $D\subseteq \R$ un subconjunto abierto y convexo de la recta real.
+		Si $\sum_{n=0}^\infty\alpha(2^{-n})<\infty$ y
+		$f:D\to\R$ es una función localmente acotada superior en un punto y 
+		$\alpha$-Jensen-convexa en $D$, entonces, para todo $x,y\in D$ y para todo
+		$t\in[0,1]$ 
+		$$
+		f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)+\MS_\alpha(t,\|x-y\|),
+		$$
+		donde 
+		$$
+		\MS_\alpha(t,u)=\sum_{n=0}^{\infty}2\dist_\Z(2^nt)\alpha\Big(\frac{u}{2^{n+1}}\Big),\quad
+		t\in[0,1], u\in D-D.
+		$$
+	}{\cite{TabTab09b}}
+	\Rem{*}{
+		Si $\alpha(u)=\epsilon |u|^p,$ con $\epsilon,p >0$ y $u\in\R$. Entonces 
+		$$
+		\MS_\alpha(t,u)=\epsilon\Bigg(\sum_{n=0}^{\infty}
+		\frac{\dist_\Z(2^nt)}{2^{np+p+1}} \Bigg)|u|^p 
+		= \epsilon S_p(t)|u|^p.
+		$$
+	}
+\end{frame}
+
+\begin{frame}{Funciones fuertemente convexas.}
+	Sea $c$ un número real positivo. Siguiendo a Polyak, \cite{Pol66}
+	\Defi{StrCvx}{
+		Una función $f:D\to \R$ es \textbf{fuertemente convexa}
+		con módulo $c$ si para todo $x,y\in D$ y para todo $t\in[0,1]$
+		\Eq{StrCvx}{
+			f(tx+(1-t)y)\leq tf(x) + (1-t)f(y) - ct(1-t)|x-y|^2 
+		}
+	}
+	\Thm{*}{
+		Si $f:D\to\R$ es fuertemente Jensen-convexa con módulo $c$,
+		y localmente acotada superior en un punto de $D$ entonces 
+		$f$ es continua y fuertemente convexa con módulo $c$.
+	}{\cite{AzoGimNikSan11}, Teorema 2.3}
+\end{frame}
+
+\section{Multifunciones.}
+\subsection{Terminología básica.}
+
+\begin{frame}{Multifunciones $K$-Convexas.}
+	Sean $X,Y$ espacios topológicos lineales, $K\subseteq Y$
+	un cono convexo cerrado y $D\subseteq X$ un conjunto convexo
+	y abierto.
+	Denote por $\P(Y)$ a la clase de subconjuntos no-vacios de $Y$.
+	\Defi{KCvxSvm}{
+		Una multifunción $F:D\to \P(Y)$ 
+		es \textbf{$K$-convexa} en $D$, si para todo $x,y\in D$ y todo 
+		$t\in [0,1]$
+		\Eq{KCvxSvm}{
+			tF(x) + (1-t)F(y) \subseteq F(tx+(1-t)y) + K.
+		}
+	}
+\end{frame}
+
+\begin{frame}{Cono Recesión.}
+	\Defi{RecCone}{
+		Sea $H\subseteq X$ un conjunto no vacío. El \textbf{cono recesión} de $H$ 
+		denotado por $\rec(H)$ es el conjunto
+		\Eq{recH}{
+			rec(H):=\{x\in X \,|\, tx + H\subseteq H,\mbox{ for all } t\geq0\}.
+		}
+	}
+	\begin{block}{Propiedades.}
+		\begin{enumerate}
+			\item $\rec(H)$ es un cono convexo que contiene al origen;
+			\item $K=\rec(H)$ es el cono más grande con la propiedad $K+H\subseteq H$;
+			\item $\overline{\rec}(H)\subseteq\rec(\overline{H});$
+			\item para todo $x\in X$, $t>0,$ $\rec(tx+H) = \rec(H);$
+			\item %Para todo par de conjuntos $H_1,H_2\subseteq X$,
+			$\rec(H_1)+\rec(H_2)\subseteq\rec(H_1+H_2),$ para todo $H_1,H_2\subseteq X$.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+%\begin{frame}{Cono Recesión de una multifunción.}
+%\Defi{recSvm}{
+%Given a set valued map $S:D\to\P(Y)$, \textbf{the recession cone} of $S$,
+%denoted by $\rec(S)$, is the set:
+%\Eq{recSvm}{
+%\rec(S) = \bigcap_{x\in D}\rec(S(x)).
+%}
+%}
+%\begin{block}{Properties}
+%\begin{enumerate}
+%\item $\rec(S)\neq\emptyset$.
+%\item If $S(x)$ is bounded for some $x\in D$, then $\rec(S)=\{0\}$.
+%\item $\rec(S)+S(x) \subseteq S(x)$ for all $x\in D$.
+%\end{enumerate}
+%\end{block}
+%\end{frame}
+
+\begin{frame}{Multifunciones acotadas.}
+	\Defi{bdd1}{
+		Sea $S:D\to\P(Y)$ una multifunción. Se dice que $S$ es 
+		\textbf{localmente semi-$K$-acotada inferior} si para todo $x\in D$ existe
+		un entorno abierto $U\subseteq X$ de $x$ y un conjunto acotado $H\subseteq X$,
+		tal que 
+		\Eq{*}{
+			S(u)\subseteq\cl(H+K), \qquad (u\in U\cap D). 
+		}
+	}
+	\Defi{bdd2}{
+		Sea $S:D\to\P(Y)$ una multifunción. Se dice que $S$ es 
+		\textbf{localmente débil-semi-$K$-acotada superior} si para todo $x\in D$ existe
+		un entorno abierto $U\subseteq X$ de $x$ y un conjunto acotado $H\subseteq X$,
+		tal que
+		\Eq{*}{
+			0\in\cl(S(u)+H+K), \qquad (u\in U\cap D). 
+		}
+	}
+\end{frame}
+
+\begin{frame}{$K$-continuidad direccional.}
+	%Sea $F:D\to\P(Y)$ una multifunción. 
+	\Defi{*}{
+		Decimos que $F$ es direccionalmente $K$-semicontinua superior en un punto 
+		$p\in D$, si para toda dirección $h\in X$ y para todo entorno abierto 
+		$U$ de $0\in Y$, existe un nùmero positivo $\delta$ tal que
+		$$
+		F(p+th)\subseteq F(p) + U +K,
+		$$
+		para todo $t\in(0,\delta)$ tal que $p+th\in D.$
+	}
+	\Defi{*}{
+		Decimos que $F$ es direccionalmente $K$-semicontinua inferior en un punto 
+		$p\in D$, si para toda dirección $h\in X$ y para todo entorno abierto 
+		$U$ de $0\in Y$, existe un nùmero positivo $\delta$ tal que
+		$$
+		F(p)\subseteq F(p+th) + U +K,
+		$$
+		para todo $t\in(0,\delta)$ tal que $p+th\in D.$
+	}
+\end{frame}
+
+\subsection{Transformación de Takagi-Tabor.}
+\begin{frame}
+	Asumamos que $D\subseteq X$ es un conjunto estrellado.
+	\Defi{TakTabT}{
+		Para una multifunción $S:D\to\P(Y)$, tal que $0\in S(x)$
+		para todo $x\in D$, definimos la 
+		\textbf{transformación de Takagi-Tabor} de $S$, como la multifunción
+		$S^\perp:\R\times D\to\P(Y)$ tal que
+		\Eq{TakagiT}{
+			S^\perp(t,x):= \cl\Bigg(
+			\bigcup_{n=0}^\infty\sum_{k=0}^n2\dist(2^kt,\Z)S\bigg(\frac{x}{2^{n+1}}\bigg)
+			\Bigg).
+		}
+	}
+	\begin{block}{Relación entre $S$ y $S^\perp$.}
+		Sea $S:D\to\P(Y)$ una multifunción tal que $0\in S(x)$
+		para todo $x\in D$. Entonces
+		\Eq{S-St}{
+			S^\perp\big(\tfrac12,x\big)=\cl(S(x))\qquad (x\in D).
+		} 
+	\end{block}
+\end{frame}
+
+\section{Resultados principales}
 
 %\begin{frame}
 	%\begin{block}{Observaciones.}

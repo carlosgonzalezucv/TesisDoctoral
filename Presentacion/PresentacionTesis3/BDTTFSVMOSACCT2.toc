@@ -14,4 +14,10 @@
 \beamer@sectionintoc {4}{Resultados principales.}{37}{0}{4}
 \beamer@subsectionintoc {4}{1}{Teoremas.}{37}{0}{4}
 \beamer@subsectionintoc {4}{2}{Corolarios.}{45}{0}{4}
-\beamer@sectionintoc {5}{Referencias}{49}{0}{5}
+\beamer@subsectionintoc {4}{3}{El Teorema de Bernstein--Doetsch.}{49}{0}{4}
+\beamer@subsectionintoc {4}{4}{Convexidad aproximada}{50}{0}{4}
+\beamer@sectionintoc {5}{Multifunciones.}{54}{0}{5}
+\beamer@subsectionintoc {5}{1}{Terminolog\IeC {\'\i }a b\IeC {\'a}sica.}{54}{0}{5}
+\beamer@subsectionintoc {5}{2}{Transformaci\IeC {\'o}n de Takagi-Tabor.}{58}{0}{5}
+\beamer@sectionintoc {6}{Resultados principales}{59}{0}{6}
+\beamer@sectionintoc {7}{Referencias}{59}{0}{7}
