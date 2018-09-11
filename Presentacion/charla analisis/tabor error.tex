@@ -1,0 +1,526 @@
+\documentclass[notheorems,envcountsect,serif,mathserif,professionalfonts,spanish,10pt]{beamer}
+%envcountsect,serif,mathserif,professionalfont
+%\setbeamertemplate{theorems}[numbered]
+
+\setbeamertemplate{bibliography item}[text]
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{times,ifthen,lmodern,pxfonts,eulervm}
+\usepackage[T1]{fontenc}
+\usepackage{mathrsfs} 
+
+\newcommand{\phii}{\varphi}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\D}{\mathbb{D}}
+
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\MS}{\mathcal{S}}
+
+\renewcommand{\P}{\mathscr{P}}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\implica}{\Rightarrow}
+\newcommand{\suma}[2]{\ds\sum_{k = #1}^{#2} }
+\newcommand{\pr}[1]{\left( #1\right) }
+\newcommand{\ch}[1]{\left[ #1\right] }
+
+\newcommand{\dist}{\mathop{\hbox{\rm dist}}\nolimits}
+\newcommand{\conv}{\mathop{\hbox{\rm conv}}\nolimits}
+\newcommand{\rec}{\mathop{\hbox{\rm rec}}\nolimits}
+\newcommand{\rsg}{\mathop{\hbox{\rm rsg}}\nolimits} 
+\newcommand{\cl}{\mathop{\hbox{\rm cl}}\nolimits}
+\newcommand{\dx}{\mathop{\hbox{\rm dx}}\nolimits}
+\newcommand{\Dom}{\mathop{\hbox{\rm Dom}}\nolimits}
+
+
+\newtheorem{theorem}{Teorema}
+\renewcommand{\thetheorem}{\textrm{\thesection.\arabic{theorem}}}
+\newtheorem{theorem*}{Teorema}
+\def\Thm#1#2#3{\ifthenelse{\equal{#1}{*}}{\begin{theorem*}[#3]#2\end{theorem*}}
+  {\begin{theorem}[#3]\label{T#1}#2\end{theorem}}}
+\newtheorem{Atheorem}{Theorem}
+\renewcommand{\theAtheorem}{\Alph{Atheorem}}
+\def\THM#1#2{\begin{Atheorem}\label{T#1}#2\end{Atheorem}}
+\def\thm#1{Teorema~\ref{T#1}}
+\newtheorem{proposition}{Proposición}
+\newtheorem{proposition*}{Proposición}
+\def\Prp#1#2{\ifthenelse{\equal{#1}{*}}{\begin{proposition*}#2\end{proposition*}}
+             {\begin{proposition}\label{P#1}#2\end{proposition}}}
+\def\prp#1{Proposición~\ref{P#1}}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem*{corollary*}{Corolario}
+\def\Cor#1#2#3{\ifthenelse{\equal{#1}{*}}{\begin{corollary*}[#3]#2\end{corollary*}}
+             {\begin{corollary}[#3]\label{C#1}#2\end{corollary}}}
+\def\cor#1{Corolario~\ref{C#1}}
+\newtheorem{lemma}{Lema}
+\newtheorem{lemma*}{Lema}
+\def\Lem#1#2{\ifthenelse{\equal{#1}{*}}{\begin{lemma*}#2\end{lemma*}}
+             {\begin{lemma}\label{L#1}#2\end{lemma}}}
+\def\lem#1{Lema~\ref{L#1}}
+\newtheorem{example}{Ejemplo}
+\newtheorem{example*}{Ejemplo}
+\long\def\Exa#1#2{\ifthenelse{\equal{#1}{*}}{\begin{example*}\rm #2\end{example*}}
+            {\begin{example}\label{Ex#1}\rm #2\end{example}}}
+\def\exa#1{Example~\ref{E#1}}
+\newtheorem{problem}[subsection]{Problem}
+\def\Prob#1#2{\begin{problem}\label{Prob#1}\rm #2\end{problem}}
+\def\prob#1{Problem~\ref{Prob#1}}
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}
+\newtheorem*{definition*}{Definición}
+\def\Defi#1#2{\ifthenelse{\equal{#1}{*}}{\begin{definition*}#2\end{definition*}}
+      {\begin{definition}\label{D#1}#2\end{definition}}}
+\def\defi#1{Definición~\ref{D#1}}
+\newtheorem{remark}{Observación}
+\newtheorem{remark*}{Observación}
+\long\def\Rem#1#2{\ifthenelse{\equal{#1}{*}}{\begin{remark*}#2\end{remark*}}
+             {\begin{remark}\label{R#1}#2\end{remark}}}
+\def\rem#1{Observación~\ref{R#1}}
+\def\eq#1{{\rm(\ref{E#1})}}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\def\Eq#1#2{\ifthenelse{\equal{#1}{*}}
+  {\begin{equation*}\begin{aligned}[]#2\end{aligned}\end{equation*}}
+  {\begin{equation}\begin{aligned}[]\label{E#1}#2\end{aligned}\end{equation}}}
+
+\mode<presentation>
+{
+  %\usetheme{Warsaw}
+	\usetheme{Darmstadt}
+	%\usecolortheme{dove}
+  % or ...
+
+  %\setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+\title% (optional, use only with long paper titles)
+{Teoremas de tipo Bernstein-Doetsch con errores de tipo Tabor para multifunciones
+aproximadamente y fuertemente midconvexas.}
+
+
+\author[C. Gonz\'alez, K. Nikodem, Z. P\'ales, G. Roa.]
+{
+	Attila Gilányi\inst{1} \and
+\underline{Carlos~Gonz\'alez}\inst{2} \and
+  Kazimierz~Nikodem\inst{3} \and
+  Zsolt~P\'ales\inst{1}  
+}
+\institute[Central University of Venezuela, University of Bielsko-Biala, 
+University of Debrecen, Central Bank of Venezuela.]
+{
+	\inst{1}%
+	Universidad de Debrecen, Hungria.
+  \inst{2}%
+  Universidad Central de Venezuela.
+  \inst{3}%
+  Universidad de Bielsko-Biala, Polonia.
+  }
+\date[XXVIII-JVM] % (optional, should be abbreviation of conference name)
+{XXVIII Jornadas Venezolanas de Matemática, 2015}
+
+\subject{Mathematical analysis, Inequalities.}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+\pgfdeclareimage[height=.5cm]{university-logo}{logo_ucv}
+\logo{\pgfuseimage{university-logo}}
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Contenido}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+\section{Introducción}
+
+\subsection{Funciones convexas y cóncavas a valores reales.}
+\begin{frame}{Funciones a valores reales.}
+Sean $X$ un espacio normado real, $D\subseteq X$ un subconjunto abierto y convexo y 
+$f:D\to\R$ una función.
+\Defi{Cvx}{
+Se dice que la función $f$ es \textbf{convexa} en $D,$ si para todo $x,y\in D$:
+\Eq{Cvx}{
+f(tx+(1-t)y)\leq tf(x)+(1-t)f(y), \quad t\in[0,1].
+}
+}
+\Defi{Ccv}{
+Se dice que la función $f$ es \textbf{cóncava} en $D,$ si para todo $x,y\in D$:
+\Eq{Ccv}{
+tf(x)+(1-t)f(y) \leq f(tx+(1-t)y),\quad t\in[0,1].
+}
+}
+\begin{block}{Obervación.}
+Es evidente que $f$ es cóncava si y sólo si $-f$ es convexa.
+\end{block}
+\end{frame}
+
+\begin{frame}{Funciones Jensen-convexas a valores reales.}
+\Defi{MidCvx}{
+Se dice que la función $f$ es \textbf{Jensen-convexa} en $D,$ si para todo
+$x,y\in D$:
+\Eq{MidCvx}{
+f\bigg(\frac{x+y}2\bigg)\leq\frac{f(x)+f(y)}2.
+} 
+}
+\Thm{*}{
+Sea $D\subseteq X$ un subconjunto abierto y convexo, y sea $f:D\to\R$ una
+función Jensen-convexa. Entonces $f$ satisface la siguiente desigualdad para todo
+$x,y\in D$ y para todo $t\in[0,1]\cap\Q$:
+\Eq{cvx}{
+f(tx+(1-t)y)\leq tf(x)+(1-t)f(y).
+}
+}{\cite{Kuc85}, Teorema 5.3.5.}
+\end{frame}
+
+\subsection{El Teorema de Bernstein--Doetsch.}
+
+\begin{frame}{El Teorema de Bernstein--Doetsch.}
+\Thm{*}{
+Toda función Jensen-convexa $f:D\to\R$ en $D$, localmente acotada superior en un punto 
+$x_0\in D$ is continua y por lo tanto convexa en $D$.
+}{\cite{Kuc85}, Teorema 6.4.2}
+Este teorema teorema fue formulado por F. Bernstein and G. Doetsch en 1915 
+\cite{BerDoe15}, y desde entonces ha sido muy importante en la teoría de convexidad,
+razón por la cual ha sido generalizado de muchas maneras diferentes y por varios autores.
+Como consecuencia directa se tiene el siguiente
+\Cor{*}{
+Una función $f:D\to\R$ es convexa si y sólo si es 
+continua y Jensen-convexa.
+}{\cite{Kuc85}, Teorema 7.1.1}
+\end{frame}
+
+\subsection{Convexidad aproximada}
+
+\begin{frame}{Funciones aproximadamente convexas.}
+Sea $\alpha:\R^+\to\R^+$, una función no-decreciente.
+\Defi{e-Cvx}{
+Se dice que la función, $f:D\to\R$ es \textbf{$\alpha$-Jensen-convexa}
+en $D,$ si para todo $x,y \in D$
+\Eq{e-Cvx}{
+f\bigg(\frac{x+y}2\bigg) \leq \frac{f(x)+f(y)}2 + \alpha(|x-y|).
+}
+}
+\Rem{*}{
+Cuando $\alpha(x)=\epsilon>0,$ entonces, $\alpha$-Jensen convexidad es simplemente,
+$\epsilon$-Jensen convexidad \cite{HyeUla52}. Resultados de tipo B-D para este tipo de convexidad
+fueron obtenidos por Ng y Nikodem en 1993 \cite{NgNik93}.
+}
+\end{frame}
+
+\begin{frame}
+\Thm{*}{
+Sea $D\subseteq \R$ un subconjunto abierto y convexo de la recta real.
+Si $f:D\to\R$ es una función localmente acotada superior en un punto y 
+$\alpha$-Jensen-convexa en $D$, entonces, para todo $x,y\in D$ y para todo
+$t\in[0,1]$ 
+$$
+f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)+\T_\alpha(t,|x-y|),
+$$
+donde 
+$$
+\T_\alpha(t,u)=\sum_{n=0}^{\infty}\frac{1}{2^n}\alpha(2\dist_\Z(2^nt)u),\quad
+t\in[0,1], u\in D-D.
+$$
+}{\cite{HazPal04,MakPal10b}}
+\Rem{*}{
+Si $\alpha(u)=\epsilon |u|^p + \delta,$ con $\epsilon,\delta,p >0$ y $u\in\R$. Entonces 
+$$
+\T_\alpha(t,u)=\epsilon\Bigg(\sum_{n=0}^{\infty}2^{p-n}\dist_\Z^p(2^nt)\Bigg)|u|^p
++2\delta = \epsilon T_p(t)|u|^p + 2\delta.
+$$
+}
+
+\end{frame}
+
+\begin{frame}
+\Thm{*}{
+Sea $D\subseteq \R$ un subconjunto abierto y convexo de la recta real.
+Si $\sum_{n=0}^\infty\alpha(2^{-n})<\infty$ y
+$f:D\to\R$ es una función localmente acotada superior en un punto y 
+$\alpha$-Jensen-convexa en $D$, entonces, para todo $x,y\in D$ y para todo
+$t\in[0,1]$ 
+$$
+f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)+\MS_\alpha(t,\|x-y\|),
+$$
+donde 
+$$
+\MS_\alpha(t,u)=\sum_{n=0}^{\infty}2\dist_\Z(2^nt)\alpha\Big(\frac{u}{2^{n+1}}\Big),\quad
+t\in[0,1], u\in D-D.
+$$
+}{\cite{TabTab09b}}
+\Rem{*}{
+Si $\alpha(u)=\epsilon |u|^p,$ con $\epsilon,p >0$ y $u\in\R$. Entonces 
+$$
+\MS_\alpha(t,u)=\epsilon\Bigg(\sum_{n=0}^{\infty}
+													\frac{\dist_\Z(2^nt)}{2^{np+p+1}} \Bigg)|u|^p 
+							 = \epsilon S_p(t)|u|^p.
+$$
+}
+\end{frame}
+
+\begin{frame}{Funciones fuertemente convexas.}
+Sea $c$ un número real positivo. Siguiendo a Polyak, \cite{Pol66}
+\Defi{StrCvx}{
+Una función $f:D\to \R$ es \textbf{fuertemente convexa}
+con módulo $c$ si para todo $x,y\in D$ y para todo $t\in[0,1]$
+\Eq{StrCvx}{
+f(tx+(1-t)y)\leq tf(x) + (1-t)f(y) - ct(1-t)|x-y|^2 
+}
+}
+\Thm{*}{
+Si $f:D\to\R$ es fuertemente Jensen-convexa con módulo $c$,
+y localmente acotada superior en un punto de $D$ entonces 
+$f$ es continua y fuertemente convexa con módulo $c$.
+}{\cite{AzoGimNikSan11}, Teorema 2.3}
+\end{frame}
+
+\section{Multifunciones.}
+\subsection{Terminología básica.}
+
+\begin{frame}{Multifunciones $K$-Convexas.}
+Sean $X,Y$ espacios topológicos lineales, $K\subseteq Y$
+un cono convexo cerrado y $D\subseteq X$ un conjunto convexo
+y abierto.
+Denote por $\P(Y)$ a la clase de subconjuntos no-vacios de $Y$.
+\Defi{KCvxSvm}{
+Una multifunción $F:D\to \P(Y)$ 
+es \textbf{$K$-convexa} en $D$, si para todo $x,y\in D$ y todo 
+$t\in [0,1]$
+\Eq{KCvxSvm}{
+tF(x) + (1-t)F(y) \subseteq F(tx+(1-t)y) + K.
+}
+}
+\end{frame}
+
+\begin{frame}{Cono Recesión.}
+\Defi{RecCone}{
+Sea $H\subseteq X$ un conjunto no vacío. El \textbf{cono recesión} de $H$ 
+denotado por $\rec(H)$ es el conjunto
+\Eq{recH}{
+rec(H):=\{x\in X \,|\, tx + H\subseteq H,\mbox{ for all } t\geq0\}.
+}
+}
+\begin{block}{Propiedades.}
+\begin{enumerate}
+	\item $\rec(H)$ es un cono convexo que contiene al origen;
+	\item $K=\rec(H)$ es el cono más grande con la propiedad $K+H\subseteq H$;
+	\item $\overline{\rec}(H)\subseteq\rec(\overline{H});$
+	\item para todo $x\in X$, $t>0,$ $\rec(tx+H) = \rec(H);$
+	\item %Para todo par de conjuntos $H_1,H_2\subseteq X$,
+	$\rec(H_1)+\rec(H_2)\subseteq\rec(H_1+H_2),$ para todo $H_1,H_2\subseteq X$.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+%\begin{frame}{Cono Recesión de una multifunción.}
+%\Defi{recSvm}{
+%Given a set valued map $S:D\to\P(Y)$, \textbf{the recession cone} of $S$,
+%denoted by $\rec(S)$, is the set:
+%\Eq{recSvm}{
+%\rec(S) = \bigcap_{x\in D}\rec(S(x)).
+%}
+%}
+%\begin{block}{Properties}
+%\begin{enumerate}
+	%\item $\rec(S)\neq\emptyset$.
+	%\item If $S(x)$ is bounded for some $x\in D$, then $\rec(S)=\{0\}$.
+	%\item $\rec(S)+S(x) \subseteq S(x)$ for all $x\in D$.
+%\end{enumerate}
+%\end{block}
+%\end{frame}
+
+\begin{frame}{Multifunciones acotadas.}
+\Defi{bdd1}{
+Sea $S:D\to\P(Y)$ una multifunción. Se dice que $S$ es 
+\textbf{localmente semi-$K$-acotada inferior} si para todo $x\in D$ existe
+un entorno abierto $U\subseteq X$ de $x$ y un conjunto acotado $H\subseteq X$,
+tal que 
+\Eq{*}{
+S(u)\subseteq\cl(H+K), \qquad (u\in U\cap D). 
+}
+}
+\Defi{bdd2}{
+Sea $S:D\to\P(Y)$ una multifunción. Se dice que $S$ es 
+\textbf{localmente débil-semi-$K$-acotada superior} si para todo $x\in D$ existe
+un entorno abierto $U\subseteq X$ de $x$ y un conjunto acotado $H\subseteq X$,
+tal que
+\Eq{*}{
+0\in\cl(S(u)+H+K), \qquad (u\in U\cap D). 
+}
+}
+\end{frame}
+
+\begin{frame}{$K$-continuidad direccional.}
+%Sea $F:D\to\P(Y)$ una multifunción. 
+\Defi{*}{
+Decimos que $F$ es direccionalmente $K$-semicontinua superior en un punto 
+$p\in D$, si para toda dirección $h\in X$ y para todo entorno abierto 
+$U$ de $0\in Y$, existe un nùmero positivo $\delta$ tal que
+$$
+F(p+th)\subseteq F(p) + U +K,
+$$
+para todo $t\in(0,\delta)$ tal que $p+th\in D.$
+}
+\Defi{*}{
+Decimos que $F$ es direccionalmente $K$-semicontinua inferior en un punto 
+$p\in D$, si para toda dirección $h\in X$ y para todo entorno abierto 
+$U$ de $0\in Y$, existe un nùmero positivo $\delta$ tal que
+$$
+F(p)\subseteq F(p+th) + U +K,
+$$
+para todo $t\in(0,\delta)$ tal que $p+th\in D.$
+}
+\end{frame}
+
+\subsection{Transformación de Takagi-Tabor.}
+\begin{frame}
+Asumamos que $D\subseteq X$ es un conjunto estrellado.
+\Defi{TakTabT}{
+Para una multifunción $S:D\to\P(Y)$, tal que $0\in S(x)$
+para todo $x\in D$, definimos la 
+\textbf{transformación de Takagi-Tabor} de $S$, como la multifunción
+$S^\perp:\R\times D\to\P(Y)$ tal que
+\Eq{TakagiT}{
+S^\perp(t,x):= \cl\Bigg(
+\bigcup_{n=0}^\infty\sum_{k=0}^n2\dist(2^kt,\Z)S\bigg(\frac{x}{2^{n+1}}\bigg)
+\Bigg).
+}
+}
+\begin{block}{Relación entre $S$ y $S^\perp$.}
+Sea $S:D\to\P(Y)$ una multifunción tal que $0\in S(x)$
+para todo $x\in D$. Entonces
+\Eq{S-St}{
+S^\perp\big(\tfrac12,x\big)=\cl(S(x))\qquad (x\in D).
+} 
+\end{block}
+\end{frame}
+
+\section{Resultados principales}
+
+\subsection{Teoremas.}
+
+\begin{frame}
+\Thm{*}{
+Sean $D\subseteq X$ un subconjunto convexo no-vacío, y $A,B:(D-D)\to\P_0(Y)$ 
+tales que los valores de la multifunción $B$ son semi-$K$-convexos, donde 
+$K:=\overline{\rec}(B)$. 
+Sea $F:D\to\P_0(Y)$ una multifunción que satisface la siguiente inclusión de 
+tipo Jensen para $x,y\in D$
+\Eq{JCV}{
+\dfrac{F(x) + F(y)}{2} + A(x-y) \subseteq \cl\bigg(F\bigg(\dfrac{x+y}{2}\bigg) + B(x-y)\bigg).
+}
+Entonces, $F$ satisface
+\Eq{CV}{
+ tF(x)&+(1-t)F(y)+\sum_{k=0}^{\infty} 2d_{\Z}\big(2^k t\big)A\Big(\dfrac{x-y}{2^k}\Big) \\
+&\subseteq \cl\bigg(F(tx+(1-t)y)+\sum_{k=0}^{\infty} 2d_{\Z}\big(2^k t\big)B\Big(\dfrac{x-y}{2^k}\Big)\bigg),   
+}
+para todo $x,y\in D$ y $t\in\D\cap[0,1].$
+}{}
+\end{frame}
+
+\begin{frame}
+	
+\Lem{*}{
+Sean $K\subseteq Y$ un cono convexo y $S,T\subseteq Y$ subconjuntos no vacíos 
+tales que 
+\begin{enumerate}[(i)]
+	\item $S$ y $T$ son conjuntos semi-$K$-acotados inferiormente,
+	\item $S$ y $T$ son semi-$K$-estrellados con respecto a algún elemento de $Y$, i.e, 
+	existen $u,v\in Y$ tal que
+	\Eq{*}{
+	tu + (1-t)S &\subseteq S\qquad (t\in[0,1]), \\
+	tv + (1-t)T &\subseteq T\qquad (t\in[0,1]). 
+  }
+\end{enumerate} 
+ Entonces, la multifunción 
+$t\mapsto tS+(1-t)T$ es direccionalmente $K$-continua en $[0,1]$.
+}{ }
+	
+\end{frame}
+
+\begin{frame}
+	
+	\Lem{*}{
+Sea $K\subseteq Y$ un cono convexo y sea $(S_k)$ una sucesión de subconjuntos
+no vacíos de $Y$ tales que 
+\begin{enumerate}[(i)]
+  \item Para todo $k\geq 0$, el conjunto $S_k$ es semi-$K$-estrellado y 
+	semi-$K$-acotado inferior.
+  \item La sucesión $(S_k)$ es $K$-Cauchy, i.e., para todo abierto $V\subseteq Y$,
+	entorno de $0\in Y$, existe $m\in\N$ tal que, para todo $n\geq m$,
+\Eq{iii}{
+ \sum_{k=m}^nS_k \subseteq V+K.
+}
+\end{enumerate}
+Entonces, para todo $U\in U(Y)$, existe un número positivo $\delta$ tal que,
+para todo $t,s\in\R$ con $|t-s|<\delta$, 
+\Eq{ts0}{
+\cl\bigg(\bigcup_{n=0}^\infty\sum_{k=0}^n d_\Z(2^kt)S_k\bigg) 
+  \subseteq \cl\bigg(\bigcup_{n=0}^\infty\sum_{k=0}^n d_\Z(2^ks)S_k\bigg) + U + K.
+}
+}{}
+	
+\end{frame}
+
+\begin{frame}
+	
+\Thm{*}{
+Sean $D\subseteq X$ un subconjunto convexo no-vacío, y $A,B:(D-D)\to\P_0(Y)$.
+Sea $K:=\overline{\rec}(B)$ y sea $F:D\to\P_0(Y)$ una multifunción que satisface la inclusión de tipo Jensen \eq{JCV}.
+Supongamos que además
+\begin{enumerate}[(i)]
+	\item Para todo $x\in D$, $F(x)$ es semi-$K$-estrellado con respecto a algún 
+	 elemento de $Y$ y también semi-$K$-acotado inferior.
+	\item $F$ es direccionalmente $K$-semicontinua en $D$.
+	\item Para todo $u\in D-D$, los conjuntos $A(u)$ y $B(u)$ son semi-$K$-acotados 		
+	inferiores, además $A(u)$ es semi-$K$-estrellado y $B(u)$ es semi-$K$-convexo.
+	\item Para todo $u\in D-D$, las sucesiones $\Big(A\Big(\dfrac{u}{2^k}\Big)\Big)$ y 
+	$\Big(B\Big(\dfrac{u}{2^k}\Big)\Big)$ son $K$-Cauchy.
+\end{enumerate}
+Entonces, para todo $t\in[0,1]$ y para todo $x,y\in D,$ la multifunción
+$F$ satisface la siguiente inclusión 
+\Eq{*}{
+tF(x) &+ (1-t)F(y)+ A^\perp(t,x-y) \\
+&\subseteq\cl\big(F(tx+(1-t)y)+B^\perp(t,x-y)+K\big).
+} 
+}{ }
+	
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{References}
+   
+	\scriptsize{\bibliographystyle{amsalpha}}
+	\nocite{GilGonNikPal15}
+  \bibliography{funcequ,publ}
+	
+  \beamertemplatearticlebibitems
+
+
+\end{frame}
+
+
+
+\end{document}
+
