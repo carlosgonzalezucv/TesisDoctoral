@@ -9,7 +9,7 @@
 \usepackage{latexsym} % Símbolos
 \usepackage{fancybox}
 \usepackage{fancyhdrtesis}
-\usepackage{showkeys}
+%\usepackage{showkeys}
 \usepackage{shortvrb}
 
 %\usepackage[latin1]{inputenc} % Caracteres con acentos.
@@ -104,24 +104,23 @@
 %\pagenumbering{Roman}
 \input{portada}
 
-\include{jurado}
+%\include{jurado}
 
-\include{dedicatoria}
-\include{agradecimientos}
+%\include{dedicatoria}
+%\include{agradecimientos}
 
 \tableofcontents
 \newpage 
 
 \addcontentsline{toc}{chapter}{Resumen}
 \include{resumen}
-%\addcontentsline{toc}{chapter}{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
 \include{abstract}
 \addcontentsline{toc}{chapter}{Introducci\'on}
 \include{intro}
 %\pagenumbering{Arabic}
 %\addtocounter{page}{13}
 
-%\input{intro}
 \input{ETL}
 \input{previo}
 \input{Multifunciones}
