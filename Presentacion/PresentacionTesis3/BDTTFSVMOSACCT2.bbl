@@ -1,0 +1,90 @@
+\def\cprime{$'$} \def\R{\mathbb R} \def\Z{\mathbb Z} \def\Q{\mathbb Q}
+  \def\C{\mathbb C}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{GNPR14}
+
+\bibitem[AGNS11]{AzoGimNikSan11}
+A.~Azócar, J.~Giménez, K.~Nikodem, and J.~L. Sánchez, \emph{On strongly
+  midconvex functions}, Opuscula Math. \textbf{31} (2011), no.~1, 15–26.
+
+\bibitem[BD15]{BerDoe15}
+F.~Bernstein and G.~Doetsch, \emph{Zur theorie der konvexen funktionen}, Math.
+  Ann. \textbf{76} (1915), no.~4, 514--526. \MR{1511840}
+
+\bibitem[Bor08]{Bor08}
+Z.~Boros, \emph{{An inequality for the {T}akagi function}}, Math. Inequal.
+  Appl. \textbf{11} (2008), no.~4, 757–765. \MR{2009f:39047}
+
+\bibitem[GNPR14]{GonNikPalRoa14}
+Carlos Gonz{\'a}lez, Kazimierz Nikodem, Zsolt P{\'a}les, and Gari Roa,
+  \emph{Bernstein--doetsch type theorems for set-valued maps of strongly and
+  approximately convex and concave type}, Pub. Math. Debrecen \textbf{84}
+  (2014).
+
+\bibitem[HP04]{HazPal04}
+A.~Házy and Zs. Páles, \emph{{On approximately midconvex functions}}, Bull.
+  London Math. Soc. \textbf{36} (2004), no.~3, 339–350. \MR{2004j:26020}
+
+\bibitem[HU52]{HyeUla52}
+D.~H. Hyers and S.~M. Ulam, \emph{Approximately convex functions}, Proc. Amer.
+  Math. Soc. \textbf{3} (1952), 821–828. \MR{14,254b}
+
+\bibitem[Hua10]{Hua10}
+Hui Huang, \emph{Global error bounds with exponents for multifunctions with set
+  constraints}, Communications in Contemporary Mathematics \textbf{12} (2010),
+  no.~03, 417--435.
+
+\bibitem[Kuc85]{Kuc85}
+M.~Kuczma, \emph{An {I}ntroduction to the {T}heory of {F}unctional {E}quations
+  and {I}nequalities}, Prace Naukowe Uniwersytetu Śląskiego w Katowicach,
+  vol. 489, Państwowe Wydawnictwo Naukowe — Uniwersytet Śląski,
+  Warszawa–Kraków–Katowice, 1985. \MR{86i:39008}
+
+\bibitem[Lac99]{Lac99}
+M.~Laczkovich, \emph{The local stability of convexity, affinity and of the
+  {J}ensen equation}, Aequationes Math. \textbf{58} (1999), 135–142.
+
+\bibitem[LMNS13]{LeiMerNikSan13}
+H.~Leiva, N.~Merentes, K.~Nikodem, and J.~L. Sánchez, \emph{Strongly convex
+  set-valued maps}, J. Global Optim. (2013).
+
+\bibitem[MP10]{MakPal10b}
+J.~Makó and Zs. Páles, \emph{{Approximate convexity of {T}akagi type
+  functions}}, J. Math. Anal. Appl. \textbf{369} (2010), 545–554.
+
+\bibitem[MP12]{MakPal12a}
+\bysame, \emph{{On $\varphi$-convexity}}, Publ. Math. Debrecen \textbf{80}
+  (2012), no.~1-2, 107–126.
+
+\bibitem[Nik86]{Nik86}
+K.~Nikodem, \emph{Continuity of ${K}$-convex set-valued functions}, Bull.
+  Polish Acad. Sci. Math. \textbf{34} (1986), no.~7-8, 393–400.
+
+\bibitem[Nik87a]{Nik87a}
+\bysame, \emph{On concave and midpoint concave set-valued functions}, Glas.
+  Mat. Ser. III \textbf{22(42)} (1987), no.~1, 69–76. \MR{89g:39017}
+
+\bibitem[Nik87b]{Nik87c}
+\bysame, \emph{On midpoint convex set-valued functions}, Aequationes Math.
+  \textbf{33} (1987), no.~1, 46–56. \MR{88h:90171}
+
+\bibitem[NN93]{NgNik93}
+C.~T. Ng and K.~Nikodem, \emph{On approximately convex functions}, Proc. Amer.
+  Math. Soc. \textbf{118} (1993), no.~1, 103–108.
+
+\bibitem[Pol66]{Pol66}
+B.~T. Polyak, \emph{Existence theorems and convergence of minimizing sequences
+  for extremal problems with constraints}, Dokl. Akad. Nauk SSSR \textbf{166}
+  (1966), 287–290. \MR{33 \#6466}
+
+\bibitem[TT09]{TabTab09b}
+Ja. Tabor and Jó. Tabor, \emph{Generalized approximate midconvexity}, Control
+  Cybernet. \textbf{38} (2009), no.~3, 655–669.
+
+\end{thebibliography}

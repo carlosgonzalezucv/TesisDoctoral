@@ -1,0 +1,31 @@
+\select@language {spanish}
+\contentsline {chapter}{Resumen}{6}
+\contentsline {chapter}{Introducci\'on}{10}
+\contentsline {chapter}{\numberline {1}Espacios Topol\IeC {\'o}gicos Lineales.}{15}
+\contentsline {section}{\numberline {1.1}Espacios topol\IeC {\'o}gicos.}{15}
+\contentsline {section}{\numberline {1.2}Espacios vectoriales.}{19}
+\contentsline {section}{\numberline {1.3}Espacios topol\IeC {\'o}gicos lineales.}{21}
+\contentsline {section}{\numberline {1.4}Conos convexos.}{27}
+\contentsline {section}{\numberline {1.5}Conjuntos $K$-convexos.}{30}
+\contentsline {chapter}{\numberline {2}El teorema de Bernstein--Doetsch}{34}
+\contentsline {section}{\numberline {2.1}Versi\IeC {\'o}n Original.}{35}
+\contentsline {section}{\numberline {2.2}Cambio en la estructura del espacio subyacente.}{37}
+\contentsline {section}{\numberline {2.3}Convexidad Aproximada.}{38}
+\contentsline {subsection}{\numberline {2.3.1}$\alpha (\cdot )$-convexidad.}{42}
+\contentsline {section}{\numberline {2.4}Convexidad fuerte.}{43}
+\contentsline {chapter}{\numberline {3}Multifunciones.}{45}
+\contentsline {section}{\numberline {3.1}Definiciones B\IeC {\'a}sicas.}{45}
+\contentsline {section}{\numberline {3.2}$K$-convexidad y $K$-concavidad de multifunciones.}{51}
+\contentsline {section}{\numberline {3.3}El teorema de Bernstein--Doetsch para multifunciones.}{55}
+\contentsline {section}{\numberline {3.4}Convexidad fuerte.}{60}
+\contentsline {section}{\numberline {3.5}Transformaci\IeC {\'o}n de Takagi.}{62}
+\contentsline {chapter}{\numberline {4}T\'ermino de error de tipo Takagi-Hazy-P\'ales.}{67}
+\contentsline {section}{\numberline {4.1}Teorema de tipo Bernstein--Doetsch para multifunciones convexas}{67}
+\contentsline {section}{\numberline {4.2}Teorema de tipo Bernstein--Doetsch para multifunciones c\IeC {\'o}ncavas.}{72}
+\contentsline {section}{\numberline {4.3}Consecuencias de los teoremas previos.}{76}
+\contentsline {chapter}{\numberline {5}T\'ermino de error de tipo Takagi-Tabor.}{80}
+\contentsline {section}{\numberline {5.1}Tranformaci\'on de Takagi-Tabor para una multifunci\'on}{80}
+\contentsline {section}{\numberline {5.2}Convexidad y concavidad sobre los racionales di\'adicos.}{89}
+\contentsline {section}{\numberline {5.3}Resultados de tipo Bernstein--Doetsch}{100}
+\contentsline {chapter}{Conclusiones}{105}
+\contentsline {chapter}{Bibliograf\'ia}{112}

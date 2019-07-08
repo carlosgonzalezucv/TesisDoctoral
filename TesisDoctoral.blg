@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: TesisDoctoral.aux
+A level-1 auxiliary file: jurado.aux
+A level-1 auxiliary file: dedicatoria.aux
+A level-1 auxiliary file: agradecimientos.aux
+A level-1 auxiliary file: resumen.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: intro.aux
+A level-1 auxiliary file: conclusion.aux
+The style file: amsplain.bst
+Database file #1: funcequ.bib
+Database file #2: publ.bib
+Warning--missing pages in GonNikPalRoa
+Warning--can't use both author and editor fields in Kuc09
+Warning--missing pages in LeiMerNikSan13
+You've used 52 entries,
+            2213 wiz_defined-function locations,
+            904 strings with 10809 characters,
+and the built_in function-call counts, 15727 in all, are:
+= -- 1405
+> -- 489
+< -- 0
++ -- 209
+- -- 152
+* -- 1537
+:= -- 2458
+add.period$ -- 52
+call.type$ -- 52
+change.case$ -- 245
+chr.to.int$ -- 0
+cite$ -- 55
+duplicate$ -- 575
+empty$ -- 1504
+format.name$ -- 152
+if$ -- 3258
+int.to.chr$ -- 0
+int.to.str$ -- 52
+missing$ -- 107
+newline$ -- 167
+num.names$ -- 92
+pop$ -- 210
+preamble$ -- 2
+purify$ -- 191
+quote$ -- 0
+skip$ -- 303
+stack$ -- 0
+substring$ -- 1485
+swap$ -- 83
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 202
+warning$ -- 3
+while$ -- 141
+width$ -- 54
+write$ -- 492
+(There were 3 warnings)

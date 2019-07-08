@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: BDTTFSVMOSACCT2.aux
+The style file: amsalpha.bst
+Database file #1: funcequ.bib
+Database file #2: publ.bib
+Warning--missing pages in GonNikPalRoa14
+Warning--missing pages in LeiMerNikSan13
+You've used 18 entries,
+            2624 wiz_defined-function locations,
+            705 strings with 6869 characters,
+and the built_in function-call counts, 6884 in all, are:
+= -- 625
+> -- 277
+< -- 9
++ -- 93
+- -- 90
+* -- 654
+:= -- 1106
+add.period$ -- 18
+call.type$ -- 18
+change.case$ -- 106
+chr.to.int$ -- 17
+cite$ -- 20
+duplicate$ -- 262
+empty$ -- 559
+format.name$ -- 116
+if$ -- 1374
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 37
+newline$ -- 65
+num.names$ -- 51
+pop$ -- 90
+preamble$ -- 2
+purify$ -- 124
+quote$ -- 0
+skip$ -- 181
+stack$ -- 0
+substring$ -- 507
+swap$ -- 30
+text.length$ -- 9
+text.prefix$ -- 8
+top$ -- 0
+type$ -- 140
+warning$ -- 2
+while$ -- 59
+width$ -- 24
+write$ -- 209
+(There were 2 warnings)

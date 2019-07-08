@@ -1,0 +1,245 @@
+\def\cprime{$'$} \def\R{\mathbb R} \def\Z{\mathbb Z} \def\Q{\mathbb Q}
+  \def\C{\mathbb C}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{AubPieFra09}
+Jean~Pierre Aubin and H{\^a}el{\'a}ene Frankowska, \emph{Set-valued analysis},
+  Springer, 2009.
+
+\bibitem{AveCar90}
+A.~Averna and T.~Cardinali, \emph{On the concepts of {$K$}-convexity
+  [{$K$}-concavity] and {$K$}-convexity{$^*$} [{$K$}-concavity{$^*$}]}, Riv.
+  Mat. Univ. Parma (4) \textbf{16} (1990), no.~1-2, 311–330. \MR{1105752
+  (92h:26031)}
+
+\bibitem{AzoGimNikSan11}
+A.~Azócar, J.~Giménez, K.~Nikodem, and J.~L. Sánchez, \emph{On strongly
+  midconvex functions}, Opuscula Math. \textbf{31} (2011), no.~1, 15–26.
+
+\bibitem{BerDoe15}
+F.~Bernstein and G.~Doetsch, \emph{Zur {T}heorie der konvexen {F}unktionen},
+  Math. Ann. \textbf{76} (1915), no.~4, 514–526. \MR{1511840}
+
+\bibitem{Bil82}
+P.~Billingsley, \emph{Notes: {V}an {D}er {W}aerden's {C}ontinuous {N}owhere
+  {D}ifferentiable {F}unction}, Amer. Math. Monthly \textbf{89} (1982), no.~9,
+  691. \MR{1540053}
+
+\bibitem{Bor08}
+Z.~Boros, \emph{{An inequality for the {T}akagi function}}, Math. Inequal.
+  Appl. \textbf{11} (2008), no.~4, 757–765. \MR{2009f:39047}
+
+\bibitem{Bor77}
+J.M. Borwein, \emph{Multivalued convexity and optimization: a unified approach
+  to inequality and equality constraints}, Math. Programming \textbf{13}
+  (1977), no.~2, 183–199. \MR{0451166 (56 \#9453)}
+
+\bibitem{CarNikPap93}
+T.~Cardinali, K.~Nikodem, and F.~Papalini, \emph{Some results on stability and
+  on characterization of ${K}$-convexity of set-valued functions}, Ann. Polon.
+  Math. \textbf{58} (1993), no.~2, 185–192.
+
+\bibitem{Cat84}
+F.~S. Cater, \emph{On van der {W}aerden's nowhere differentiable function},
+  Amer. Math. Monthly \textbf{91} (1984), no.~5, 307–308. \MR{740246
+  (85j:26009)}
+
+\bibitem{DeBPia83}
+F.S. De~Blasi and G.~Pianigiani, \emph{Remarks on hausdorff continuous
+  multifunction and selections}, Commentationes Mathematicae Universitatis
+  Carolinae \textbf{024} (1983), no.~3, 553--561 (eng).
+
+\bibitem{GonNikPalRoa}
+Carlos Gonz{\'a}lez, Kazimierz Nikodem, Zsolt P{\'a}les, and Gari Roa,
+  \emph{Bernstein--doetsch type theorems for set-valued maps of strongly and
+  approximately convex and concave type}, Publicationes Mathematicae
+  \textbf{84} (2014).
+
+\bibitem{Hua10}
+Hui Huang, \emph{Global error bounds with exponents for multifunctions with set
+  constraints}, Communications in Contemporary Mathematics \textbf{12} (2010),
+  no.~03, 417--435.
+
+\bibitem{HyeUla52}
+D.~H. Hyers and S.~M. Ulam, \emph{Approximately convex functions}, Proc. Amer.
+  Math. Soc. \textbf{3} (1952), 821–828. \MR{14,254b}
+
+\bibitem{Haz05a}
+A.~Házy, \emph{{On approximate $t$-convexity}}, Math. Inequal. Appl.
+  \textbf{8} (2005), no.~3, 389–402. \MR{2006c:26019}
+
+\bibitem{Haz07b}
+\bysame, \emph{{On the stability of $t$-convex functions}}, Aequationes Math.
+  \textbf{74} (2007), no.~3, 210–218. \MR{2008j:26012}
+
+\bibitem{HazPal04}
+A.~Házy and Zs. Páles, \emph{{On approximately midconvex functions}}, Bull.
+  London Math. Soc. \textbf{36} (2004), no.~3, 339–350. \MR{2004j:26020}
+
+\bibitem{HazPal05}
+\bysame, \emph{{On approximately $t$-convex functions}}, Publ. Math. Debrecen
+  \textbf{66} (2005), 489–501. \MR{2006c:26023}
+
+\bibitem{HazPal09}
+\bysame, \emph{{On a certain stability of the {H}ermite–{H}adamard
+  inequality}}, Proc. R. Soc. Lond. Ser. A Math. Phys. Eng. Sci. \textbf{465}
+  (2009), 571–583. \MR{2009k:39033}
+
+\bibitem{Jen06}
+J.~L. W.~V. Jensen, \emph{Sur les fonctions convexes et les inégualités entre
+  les valeurs moyennes}, Acta Math. \textbf{30} (1906), 175–193.
+
+\bibitem{Kai98}
+H.-H. Kairies, \emph{Takagi's function and its functional equations}, Rocznik
+  Nauk.-Dydakt. Prace Mat. (1998), no.~15, 73–83. \MR{2002b:39014}
+
+\bibitem{Kno18}
+K.~Knopp, \emph{Ein einfaches {V}erfahren zur {B}ildüng stetiger nirgends
+  differenzierbarer {F}unktionen}, Math. Z. \textbf{2} (1918), no.~1-2, 1–26.
+  \MR{1544308}
+
+\bibitem{Kom87a}
+Z.~Kominek, \emph{On additive and convex functionals}, Rad. Mat. \textbf{3}
+  (1987), no.~2, 267–279. \MR{89e:26029}
+
+\bibitem{KomKuc89a}
+Z.~Kominek and M.~Kuczma, \emph{On the lower hull of convex functions},
+  Aequationes Math. \textbf{38} (1989), no.~2-3, 192–210. \MR{90i:26012}
+
+\bibitem{KomKuc89b}
+\bysame, \emph{Theorems of {B}ernstein-{D}oetsch, {P}iccard and {M}ehdi and
+  semilinear topology}, Arch. Math. (Basel) \textbf{52} (1989), no.~6,
+  595–602. \MR{90i:46017}
+
+\bibitem{Kuc09}
+M.~Kuczma, \emph{{An introduction to the theory of functional equations and
+  inequalities. {C}auchy's equation and Jensen's inequality}}, 2nd ed.,
+  Birkhäuser Verlag, 2009 (English).
+
+\bibitem{Lac99}
+M.~Laczkovich, \emph{The local stability of convexity, affinity and of the
+  {J}ensen equation}, Aequationes Math. \textbf{58} (1999), 135–142.
+
+\bibitem{LeiMerNikSan13}
+H.~Leiva, N.~Merentes, K.~Nikodem, and J.~L. Sánchez, \emph{Strongly convex
+  set-valued maps}, J. Global Optim. (2013).
+
+\bibitem{MakPal10b}
+J.~Makó and Zs. Páles, \emph{{Approximate convexity of {T}akagi type
+  functions}}, J. Math. Anal. Appl. \textbf{369} (2010), 545–554.
+
+\bibitem{MakPal12b}
+\bysame, \emph{{Implications between approximate convexity properties and
+  approximate {H}ermite–{H}adamard inequalities}}, Cent. Eur. J. Math.
+  \textbf{10} (2012), no.~3, 1017–1041.
+
+\bibitem{MakPal12c}
+\bysame, \emph{{Korovkin type theorems and approximate {H}ermite–{H}adamard
+  inequalities}}, J. Approx. Theory \textbf{164} (2012), no.~8, 1111–1142.
+
+\bibitem{MakPal12a}
+\bysame, \emph{{On $\varphi$-convexity}}, Publ. Math. Debrecen \textbf{80}
+  (2012), no.~1-2, 107–126.
+
+\bibitem{MakPal13b}
+\bysame, \emph{On approximately convex {T}akagi type functions}, Proc. Amer.
+  Math. Soc. \textbf{141} (2013), no.~6, 2069–2080.
+
+\bibitem{Meh64}
+M.~R. Mehdi, \emph{On convex functions}, J. London Math. Soc. \textbf{39}
+  (1964), 321–326. \MR{28 \#5153}
+
+\bibitem{MurTabTab12}
+A.~Mureńko, Ja. Tabor, and Jó. Tabor, \emph{Applications of de {R}ham
+  {T}heorem in approximate midconvexity}, J. Diff. Equat. Appl. \textbf{18}
+  (2012), no.~3, 335–344.
+
+\bibitem{NgNik93}
+C.~T. Ng and K.~Nikodem, \emph{On approximately convex functions}, Proc. Amer.
+  Math. Soc. \textbf{118} (1993), no.~1, 103–108.
+
+\bibitem{Nik86}
+K.~Nikodem, \emph{Continuity of ${K}$-convex set-valued functions}, Bull.
+  Polish Acad. Sci. Math. \textbf{34} (1986), no.~7-8, 393–400.
+
+\bibitem{Nik87a}
+\bysame, \emph{On concave and midpoint concave set-valued functions}, Glas.
+  Mat. Ser. III \textbf{22(42)} (1987), no.~1, 69–76. \MR{89g:39017}
+
+\bibitem{Nik87c}
+\bysame, \emph{On midpoint convex set-valued functions}, Aequationes Math.
+  \textbf{33} (1987), no.~1, 46–56. \MR{88h:90171}
+
+\bibitem{Nik89}
+K~Nikodem, \emph{{$K$}-convex and {$K$}-concave set-valued functions}, Zeszyty
+  Nauk. Politech. Łódz. Mat. (Łódz) \textbf{559} (1989), 1–75, (Rozprawy
+  Nauk. 114).
+
+\bibitem{Pap90}
+F.~Papalini, \emph{The {$K$}-midpoint {$^*$} convexity [concavity] and lower
+  [upper] {$K$}-semicontinuity of a multifunction}, Riv. Mat. Univ. Parma (4)
+  \textbf{16} (1990), no.~1-2, 149–159 (1991). \MR{1105736 (92h:26032)}
+
+\bibitem{Pol66}
+B.~T. Polyak, \emph{Existence theorems and convergence of minimizing sequences
+  for extremal problems with constraints}, Dokl. Akad. Nauk SSSR \textbf{166}
+  (1966), 287–290. \MR{33 \#6466}
+
+\bibitem{ISFE41}
+Z.~Páles, \emph{The {F}orty-{F}irst {I}nternational {S}ymposium on
+  {F}unctional {E}quations}, Aequationes Math. \textbf{68} (2004), no.~1-2,
+  307, 7. Problem in report of meeting. \MR{2126193}
+
+\bibitem{Pal03a}
+Zs. Páles, \emph{{On approximately convex functions}}, Proc. Amer. Math. Soc.
+  \textbf{131} (2003), no.~1, 243–252. \MR{2003h:26015}
+
+\bibitem{Rad52}
+Hans R{\aa}dstr{\"o}m, \emph{An embedding theorem for spaces of convex sets},
+  Proceedings of the American Mathematical Society \textbf{3} (1952), no.~1,
+  165--169.
+
+\bibitem{Rud91}
+W.~Rudin, \emph{Functional {A}nalysis}, second ed., International Series in
+  Pure and Applied Mathematics, McGraw-Hill Inc., New York, 1991. \MR{1157815
+  (92k:46001)}
+
+\bibitem{TabTab09b}
+Ja. Tabor and Jó. Tabor, \emph{Generalized approximate midconvexity}, Control
+  Cybernet. \textbf{38} (2009), no.~3, 655–669.
+
+\bibitem{TabTab09a}
+\bysame, \emph{Takagi functions and approximate midconvexity}, J. Math. Anal.
+  Appl. \textbf{356} (2009), no.~2, 729–737.
+
+\bibitem{TabTabZol10b}
+Ja. Tabor, Jó. Tabor, and M.~Żołdak, \emph{Approximately convex functions on
+  topological vector spaces}, Publ. Math. Debrecen \textbf{77} (2010),
+  115–123. \MR{2675738}
+
+\bibitem{TabTabZol10a}
+\bysame, \emph{Optimality estimations for approximately midconvex functions},
+  Aequationes Math. \textbf{80} (2010), 227–237. \MR{2736954}
+
+\bibitem{Tak03}
+T.~Takagi, \emph{A simple example of the continuous function without
+  derivative}, J. Phys. Math. Soc. Japan \textbf{1} (1903), 176–177.
+
+\bibitem{Tru84}
+L.~I. Trudzik, \emph{Continuity properties of vector-valued convex functions},
+  J. Austral. Math. Soc. Ser. A \textbf{36} (1984), no.~3, 404–415.
+  \MR{733912 (85d:46062)}
+
+\bibitem{Wae30}
+B.~L. van~der Waerden, \emph{Ein einfaches {B}eispiel einer
+  nichtdifferenzierbaren stetigen {F}unktion}, Math. Z. \textbf{32} (1930),
+  474–475.
+
+\end{thebibliography}

@@ -1,0 +1,56 @@
+\def\cprime{$'$} \def\R{\mathbb R} \def\Z{\mathbb Z} \def\Q{\mathbb Q}
+  \def\C{\mathbb C}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{AGNP15}
+
+\bibitem[AGNP15]{GilGonNikPal15}
+Gilányi Attila, Carlos González, Kazimierz Nikodem, and Zsolt Páles,
+  \emph{Bernstein–-doetsch type theorems with tabor type error terms for
+  set-valued maps}, On Preparation (2015).
+
+\bibitem[AGNS11]{AzoGimNikSan11}
+A.~Azócar, J.~Giménez, K.~Nikodem, and J.~L. Sánchez, \emph{On strongly
+  midconvex functions}, Opuscula Math. \textbf{31} (2011), no.~1, 15–26.
+
+\bibitem[BD15]{BerDoe15}
+F.~Bernstein and G.~Doetsch, \emph{Zur theorie der konvexen funktionen}, Math.
+  Ann. \textbf{76} (1915), no.~4, 514--526. \MR{1511840}
+
+\bibitem[HP04]{HazPal04}
+A.~Házy and Zs. Páles, \emph{{On approximately midconvex functions}}, Bull.
+  London Math. Soc. \textbf{36} (2004), no.~3, 339–350. \MR{2004j:26020}
+
+\bibitem[HU52]{HyeUla52}
+D.~H. Hyers and S.~M. Ulam, \emph{Approximately convex functions}, Proc. Amer.
+  Math. Soc. \textbf{3} (1952), 821–828. \MR{14,254b}
+
+\bibitem[Kuc85]{Kuc85}
+M.~Kuczma, \emph{An {I}ntroduction to the {T}heory of {F}unctional {E}quations
+  and {I}nequalities}, Prace Naukowe Uniwersytetu Śląskiego w Katowicach,
+  vol. 489, Państwowe Wydawnictwo Naukowe — Uniwersytet Śląski,
+  Warszawa–Kraków–Katowice, 1985. \MR{86i:39008}
+
+\bibitem[MP10]{MakPal10b}
+J.~Makó and Zs. Páles, \emph{{Approximate convexity of {T}akagi type
+  functions}}, J. Math. Anal. Appl. \textbf{369} (2010), 545–554.
+
+\bibitem[NN93]{NgNik93}
+C.~T. Ng and K.~Nikodem, \emph{On approximately convex functions}, Proc. Amer.
+  Math. Soc. \textbf{118} (1993), no.~1, 103–108.
+
+\bibitem[Pol66]{Pol66}
+B.~T. Polyak, \emph{Existence theorems and convergence of minimizing sequences
+  for extremal problems with constraints}, Dokl. Akad. Nauk SSSR \textbf{166}
+  (1966), 287–290. \MR{33 \#6466}
+
+\bibitem[TT09]{TabTab09b}
+Ja. Tabor and Jó. Tabor, \emph{Generalized approximate midconvexity}, Control
+  Cybernet. \textbf{38} (2009), no.~3, 655–669.
+
+\end{thebibliography}
